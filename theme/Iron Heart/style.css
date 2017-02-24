@@ -1,0 +1,293 @@
+#indication {
+    background: #111 url(./background-stripes.gif);
+}
+#status_box, #hotot_menu, #slider_menu {
+    box-shadow: 2px 2px 3px #111;
+    -webkit-box-shadow: 2px 2px 3px #111;
+}
+#main_page {
+    display: none;
+    background: #232223; 
+    position: relative;
+}
+
+#main_page_slider {
+    height: 100%;
+    width: auto;
+}
+
+.people_vcard {
+    color: #333;
+    padding: 5px;
+    position: relative;
+}
+#indication span.shape {
+    border-bottom-color: #393939;
+}
+#view_title_bar {
+    border-bottom: 1px #4AC3FF solid;
+}
+#view_title_bar .view_title {
+    background: #393939;
+    color: white;
+    font-weight: bold;
+    border-bottom: 1px #393939 solid;
+    border-left: 1px #393939 solid;
+}
+#view_title_bar .setting_btn {
+    background-image: url(./ic16_gear.png);
+}
+#view_title_bar .close_btn {
+    background-image: url(./ic16_close.png);
+}
+#indication_slot {
+    background-color: #393939;
+    border-bottom: 1px #222 solid;
+}
+#indication_light {
+    background: #4AC3FF;
+    -webkit-box-shadow: 0 0 10px #4AC3FF;
+    box-shadow: 0 0 10px #4AC3FF;
+}
+.tweetview .listview_body {
+    border-color: #333 !important;
+}
+.card {
+    border-top: 1px #333 solid;
+    color: #ECE8DD;
+    border-bottom: 0px #111 solid;
+    padding-left: 0;
+    margin-left: 10px;
+}
+.card > .tweet_selected_indicator, .card > .tweet_color_label {
+    left: -10px;
+}
+.card > .tweet_selected_indicator {
+    background-color: #4C6CF5;
+}
+.card.normal a {
+    color: #4AC3FF;
+}
+.card.me a {
+    color: #F9BA5E;
+}
+.card.mention a {
+    color: #94C631;
+}
+a {
+    color: #4AC3FF;
+}
+.card.deleted a {
+    color: gray;
+}
+.card.deleted .text {
+    color: gray;
+}
+.card.selected {
+    background-color: #232223;
+    border-bottom: 0px #111 solid;
+}
+.card:last-child {
+    border-bottom: 0;
+}
+.tweet_meta a {
+    color: #888 !important;
+}
+.header_content {
+    border-left: 1px #333 solid;
+}
+.profile_img_wrapper {
+    -webkit-box-reflect: none;
+    box-shadow: inset 0 0 10px #111;
+}
+.tweet_bar_btn {
+    background-position-y: -24px;
+}
+.tweet_bar_btn:hover {
+    background-position-y: 0px;
+}
+.search_box, .vcard, .header_inner {
+    background-color: #1D1D1D;
+    border: #333 solid 1px;
+}
+.search_box, .search_people_result span:first-child {
+    color: #4e4e4e;
+}
+.vcard_tabs_page {
+    color: #eee;
+}
+.tweet_thread {
+    border-top: 1px #555 dashed;
+}
+.vcard_action_btns {
+    border-top: 1px #333 solid;
+}
+
+.tt_title {
+	color: #eee;
+}
+
+#main_page .mochi_button {
+    color: #4ac3ff;
+background: #666666;
+background: -moz-linear-gradient(top,  #666666 2%, #444444 4%, #282828 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(2%,#666666), color-stop(4%,#444444), color-stop(100%,#282828));
+background: -webkit-linear-gradient(top,  #666666 2%,#444444 4%,#282828 100%);
+background: -o-linear-gradient(top,  #666666 2%,#444444 4%,#282828 100%);
+background: -ms-linear-gradient(top,  #666666 2%,#444444 4%,#282828 100%);
+background: linear-gradient(to bottom,  #666666 2%,#444444 4%,#282828 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#282828',GradientType=0 );
+    border: 1px #333 solid;
+    text-shadow: #4ac3ff 0 0 15px; 
+}
+
+#main_page .mochi_button:hover {
+background: #666666;
+background: -moz-linear-gradient(top,  #666666 2%, #444444 4%, #333333 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(2%,#666666), color-stop(4%,#444444), color-stop(100%,#333333));
+background: -webkit-linear-gradient(top,  #666666 2%,#444444 4%,#333333 100%);
+background: -o-linear-gradient(top,  #666666 2%,#444444 4%,#333333 100%);
+background: -ms-linear-gradient(top,  #666666 2%,#444444 4%,#333333 100%);
+background: linear-gradient(to bottom,  #666666 2%,#444444 4%,#333333 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#333333',GradientType=0 );
+}
+
+#main_page .mochi_button:active {
+    -webkit-box-shadow: inset #222 0 0 10px;
+    -moz-box-shadow: inset #222 0 0 10px;
+    box-shadow: inset #222 0 0 10px;
+}
+#main_page .entry:focus {
+    -webkit-box-shadow: inset 0 1px 4px #4ac3ff;
+    -moz-box-shadow: inset 0 1px 4px #4ac3ff;
+    box-shadow: inset 0 1px 4px #4ac3ff;
+}
+
+#main_page .entry {
+    border-color: #333;
+    background-color: #ccc;
+}
+
+#main_page .mochi_button_group > li > .mochi_button_group_item {
+background: #666666;
+background: -moz-linear-gradient(top,  #666666 2%, #444444 4%, #282828 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(2%,#666666), color-stop(4%,#444444), color-stop(100%,#282828));
+background: -webkit-linear-gradient(top,  #666666 2%,#444444 4%,#282828 100%);
+background: -o-linear-gradient(top,  #666666 2%,#444444 4%,#282828 100%);
+background: -ms-linear-gradient(top,  #666666 2%,#444444 4%,#282828 100%);
+background: linear-gradient(to bottom,  #666666 2%,#444444 4%,#282828 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#282828',GradientType=0 );
+    color: #ddd;
+    text-shadow: #333 0 -1px 1px; 
+    border-right: 1px #333 solid;
+    border-bottom: 1px #333 solid;
+    border-top: 1px #333 solid;
+}
+#main_page .mochi_button_group > li > .mochi_button_group_item:hover {
+    color: #eee;
+}
+#main_page .mochi_button_group > li:first-child > .mochi_button_group_item {
+    border-color: #333;
+}
+#main_page .mochi_button_group > li > .mochi_button_group_item.selected {
+    color: #4ac3ff;
+    text-shadow: #4ac3ff 0 0 15px; 
+background: #282828;
+background: -moz-linear-gradient(top,  #282828 0%, #444444 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#282828), color-stop(100%,#444444));
+background: -webkit-linear-gradient(top,  #282828 0%,#444444 100%);
+background: -o-linear-gradient(top,  #282828 0%,#444444 100%);
+background: -ms-linear-gradient(top,  #282828 0%,#444444 100%);
+background: linear-gradient(to bottom,  #282828 0%,#444444 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#282828', endColorstr='#444444',GradientType=0 );
+    border-color: #333;
+}
+.btn_tweet_thread {
+    background-image: url(fold.png);
+}
+
+.btn_tweet_thread.expand {
+    background-image: url(expand.png);
+}
+.scrollbar_track {  
+	width: 10px;
+}
+
+.scrollbar_track .scrollbar_slot { 
+	background-color: transparent;  
+	width: 3px;
+	margin: 0 3px 0 4px;
+}
+
+.scrollbar_handle {  
+  background: #4AC3FF;
+  box-shadow: 0 0 5px #4AC3FF;
+	width: 3px;  
+	opacity: 0.8;
+}
+.scrollbar_track.active .scrollbar_slot,
+.scrollbar_track:hover .scrollbar_slot { 
+	background-color: rgba(200,200,200,0.1);  
+	width: 10px;
+	margin: 0;
+}
+.scrollbar_track.active .scrollbar_handle,
+.scrollbar_track:hover .scrollbar_handle { 
+	width: 10px;
+	opacity: 0.8;
+}
+
+.mochi_list.mochi_dm {
+    border: 1px solid #333;
+    border-bottom: 1px solid #666;
+}
+.mochi_list_item.mochi_dm {
+    background: #525253 url(../../image/dark-bg.png);
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #333;
+}
+.mochi_list_item.mochi_dm .more:after, .mochi_list_item.dm .more:before {
+    background: #4ac3ff;
+}
+.mochi_list_item.mochi_dm .value {
+    color: #4ac3ff;
+}
+
+.mochi_list_item .mochi_dm .label {
+	color: #eee;
+}
+.mochi_list_item .mochi_dm:hover .label {
+	color: #333;
+}
+
+.mochi_list_item .mochi_dm:hover {
+background: #ffffff;
+background: -moz-linear-gradient(top,  #ffffff 0%, #eeeeee 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#eeeeee));
+background: -webkit-linear-gradient(top,  #ffffff 0%,#eeeeee 100%);
+background: -o-linear-gradient(top,  #ffffff 0%,#eeeeee 100%);
+background: -ms-linear-gradient(top,  #ffffff 0%,#eeeeee 100%);
+background: linear-gradient(to bottom,  #ffffff 0%,#eeeeee 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 );
+}
+
+.ttlabel{
+	color: #eee;
+}
+
+.dm_view_users {
+background: #1d1d1d;
+}
+
+#notification {
+background: #353535;
+background: -moz-linear-gradient(top,  #353535 0%, #3f3f3f 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#353535), color-stop(100%,#3f3f3f));
+background: -webkit-linear-gradient(top,  #353535 0%,#3f3f3f 100%);
+background: -o-linear-gradient(top,  #353535 0%,#3f3f3f 100%);
+background: -ms-linear-gradient(top,  #353535 0%,#3f3f3f 100%);
+background: linear-gradient(to bottom,  #353535 0%,#3f3f3f 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#353535', endColorstr='#3f3f3f',GradientType=0 );
+	border: 1px solid #1d1d1d;
+	color: #4ac3e8;
+}

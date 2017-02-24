@@ -1,0 +1,176 @@
+#header_inner {
+    background: #333 url(../../image/mask.png);
+    border-bottom: 1px #2d2d2d solid;
+}
+#indication {
+    -webkit-box-shadow: inset 0 0 5px black;
+    -moz-box-shadow: inset 0 0 5px black;
+    box-shadow: inset 0 0 5px black;
+}
+#main_page {
+    background: #ddd; 
+}
+
+.people_vcard {
+    color: #333;
+    padding: 5px;
+}
+.tweet_bar_btn {
+    background-position-y: -48px;
+}
+.tweet_bar_btn:hover {
+    background-position-y: -72px;
+}
+.tweet_meta a {
+    color: #666 !important;
+}
+.vcard_action_btns {
+    border-top: 1px #ccc solid;
+}
+.header_content {
+    border-left: 1px #ddd solid;
+}
+.search_box, .vcard, .header_inner {
+background: #f6f6f8;
+background: -moz-linear-gradient(top,  #f6f6f8 0%, #ededed 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6f6f8), color-stop(100%,#ededed));
+background: -webkit-linear-gradient(top,  #f6f6f8 0%,#ededed 100%);
+background: -o-linear-gradient(top,  #f6f6f8 0%,#ededed 100%);
+background: -ms-linear-gradient(top,  #f6f6f8 0%,#ededed 100%);
+background: linear-gradient(to bottom,  #f6f6f8 0%,#ededed 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f8', endColorstr='#ededed',GradientType=0 );
+  border: #E5E5E5 solid 1px;
+}
+.card {
+    border-top: 1px #ddd solid;
+    color: #111;
+    border-bottom: 1px #CCC solid;
+background: #eeeeee;
+background: -moz-linear-gradient(top,  #eeeeee 0%, #cdcdcd 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#cdcdcd));
+background: -webkit-linear-gradient(top,  #eeeeee 0%,#cdcdcd 100%);
+background: -o-linear-gradient(top,  #eeeeee 0%,#cdcdcd 100%);
+background: -ms-linear-gradient(top,  #eeeeee 0%,#cdcdcd 100%);
+background: linear-gradient(to bottom,  #eeeeee 0%,#cdcdcd 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cdcdcd',GradientType=0 );
+}
+
+.card:first-child {
+    border-top: 0; 
+}
+
+.card.selected {
+    background-color: #fafafa;
+    border-bottom: 1px #bbb solid;
+}
+
+.card > .tweet_selected_indicator {
+    background-color: #4C6CF5;
+}
+.card.normal a {
+    color: DarkGoldenRod ;
+}
+
+.card.me a {
+    color: #492;
+}
+
+.card.message a {
+    color: MidnightBlue ;
+}
+
+.card.mention a {
+    color: FireBrick  ;
+}
+.card.deleted a {
+    color: DarkGray;
+}
+.card.deleted .text {
+    color: DarkGray;
+}
+.btn_tweet_thread_more {
+    border-top: 1px #ddd solid;
+}
+.profile_img_wrapper {
+	border-radius: 3px;
+	box-shadow: 1px 1px 3px #aaa;
+}
+::selection {
+    background: #a8d1ff;
+}
+#indication {
+background: #333333;
+background: -moz-linear-gradient(top,  #333333 0%, #111111 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#333333), color-stop(100%,#111111));
+background: -webkit-linear-gradient(top,  #333333 0%,#111111 100%);
+background: -o-linear-gradient(top,  #333333 0%,#111111 100%);
+background: -ms-linear-gradient(top,  #333333 0%,#111111 100%);
+background: linear-gradient(to bottom,  #333333 0%,#111111 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#111111',GradientType=0 );
+}
+#indication_light {
+    background: #111;
+}
+.scrollbar_track {  
+	width: 10px;
+}
+
+.scrollbar_track .scrollbar_slot { 
+	width: 3px;
+	margin: 0 3px 0 4px;
+	background: transparent;
+}
+
+.scrollbar_handle {  
+	background-color: gray;  
+	width: 3px;  
+	opacity: 0.8;
+}
+.scrollbar_track.active .scrollbar_slot,
+.scrollbar_track:hover .scrollbar_slot { 
+	width: 10px;
+	margin: 0;
+	background: rgba(0,0,0,0.1);
+}
+.scrollbar_track.active .scrollbar_handle,
+.scrollbar_track:hover .scrollbar_handle { 
+	width: 10px;
+	opacity: 0.8;
+}
+.mochi_list_item .mochi_dm {
+background: #ffffff;
+background: -moz-linear-gradient(top,  #ffffff 0%, #eeeeee 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#eeeeee));
+background: -webkit-linear-gradient(top,  #ffffff 0%,#eeeeee 100%);
+background: -o-linear-gradient(top,  #ffffff 0%,#eeeeee 100%);
+background: -ms-linear-gradient(top,  #ffffff 0%,#eeeeee 100%);
+background: linear-gradient(to bottom,  #ffffff 0%,#eeeeee 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 );
+}
+.mochi_list_item .mochi_dm .label {
+	color: #555;
+}
+.mochi_list_item .mochi_dm:hover {
+background: #838383;
+background: -moz-linear-gradient(top,  #838383 2%, #737373 4%, #484649 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(2%,#838383), color-stop(4%,#737373), color-stop(100%,#484649));
+background: -webkit-linear-gradient(top,  #838383 2%,#737373 4%,#484649 100%);
+background: -o-linear-gradient(top,  #838383 2%,#737373 4%,#484649 100%);
+background: -ms-linear-gradient(top,  #838383 2%,#737373 4%,#484649 100%);
+background: linear-gradient(to bottom,  #838383 2%,#737373 4%,#484649 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#838383', endColorstr='#484649',GradientType=0 );
+}
+.mochi_list_item .mochi_dm:hover .label {
+	color: white;
+}
+.dm_view_users {
+background: #f6f6f8;
+background: -moz-linear-gradient(top,  #f6f6f8 0%, #ededed 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6f6f8), color-stop(100%,#ededed));
+background: -webkit-linear-gradient(top,  #f6f6f8 0%,#ededed 100%);
+background: -o-linear-gradient(top,  #f6f6f8 0%,#ededed 100%);
+background: -ms-linear-gradient(top,  #f6f6f8 0%,#ededed 100%);
+background: linear-gradient(to bottom,  #f6f6f8 0%,#ededed 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f8', endColorstr='#ededed',GradientType=0 );
+	border-bottom: 1px #CCC solid;
+}

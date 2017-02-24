@@ -1,0 +1,29 @@
+{
+   "author": "Red Squirrel",
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": "image/ic24_hotot.png",
+      "default_title": "__MSG_hotot_goto__"
+   },
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://maps.googleapis.com/ https://*.twitter.com; object-src 'self' https://www.youtube.com",
+   "default_locale": "en",
+   "description": "__MSG_hotot_description__",
+   "homepage_url": "http://www.redsquirrel87.com/Hotot+.php",
+   "icons": {
+      "128": "image/ic128_hotot.png",
+      "16": "image/ic16_hotot.png",
+      "24": "image/ic24_hotot.png",
+      "48": "image/ic48_hotot.png",
+      "64": "image/ic64_hotot.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA05ZyrjetZc694O5J5BDfZAvD2JoG9Fkkz/axyBfQ5OIotYdS8aYHhzknZ75NF79CvlP4pEXSilUXeZYaRCTMwdGDKgmmadLKutvCZ059W4j4/OTrz4S6GtHPodUThdQdthk1A6qsuA6VY1+PbHU5pK3SAamjIiRVx3V20qMwEnJq1V425oi+EpP62hig/j2FsWN4LlVNhuYS0Uo92u8Vwywv044ZUcHYOwcYKNDXMnOygtAjGOaS93Kj1yNGGy+x2HRbh/7WPx9Zb+RWNvbQMFeEBYlfCK+diKYo7vANtVnwvn54a2ZGfKFGvnuoLXrrdsRltR6sB+QpATr3pWV2ewIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "40",
+   "name": "Hotot+",
+   "permissions": [ "contextMenus", "tabs", "unlimitedStorage", "notifications", "storage", "*://*/*" ],
+   "short_name": "Hotot+",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "9.6"
+}

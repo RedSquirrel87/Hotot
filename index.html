@@ -1,0 +1,2227 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Home | Hotot+</title>
+    <link rel="stylesheet" href="css/hotot.widget.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/mochi.min.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+    <link id="hotot_theme" rel="stylesheet" href="theme/New Hope/style.css" type="text/css" media="screen" />
+</head>
+<body style='background: transparent repeat 0 0;'>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.layout-latest.js"></script>
+    <script type="text/javascript" src="js/jquery.transit.min.js"></script>
+    <script type="text/javascript" src="js/base64.js"></script>
+    <script type="text/javascript" src="js/sha1.js"></script>
+    <script type="text/javascript" src="js/lib.network.js"></script>
+    <script type="text/javascript" src="js/lib.twitter.js"></script>
+    
+    <script type="text/javascript" src="js/lib.oauth.js"></script>
+    <script type="text/javascript" src="js/moment.min.js"></script>
+
+    <script type="text/javascript" src="js/widget.button.js"></script>
+    <script type="text/javascript" src="js/widget.radio_group.js"></script>
+    <script type="text/javascript" src="js/widget.dialog.js"></script>
+    <script type="text/javascript" src="js/widget.bubble.js"></script>
+    <script type="text/javascript" src="js/widget.scrollbar.js"></script>
+    <script type="text/javascript" src="js/widget.listview.js"></script>
+    <script type="text/javascript" src="js/widget.autocomplete.js"></script>
+    <script type="text/javascript" src="js/mochi.js"></script>
+
+    <script type="text/javascript" src="js/hotkey.js"></script>
+    <script type="text/javascript" src="js/util.js"></script>
+    <script type="text/javascript" src="js/db.js"></script>
+    <script type="text/javascript" src="js/conf.js"></script>
+    <script type="text/javascript" src="js/i18n.js"></script>
+    <script type="text/javascript" src="js/filter.js"></script>
+    <script type="text/javascript" src="js/toast.js"></script>
+    <script type="text/javascript" src="js/notification.js"></script>
+    <script type="text/javascript" src="js/readlater.js"></script>
+    <script type="text/javascript" src="js/daemon.js"></script>
+    
+    <script type="text/javascript" src="js/ui.header.js"></script>
+    <script type="text/javascript" src="js/ui.status_box.js"></script>
+    <script type="text/javascript" src="js/ui.slider.js"></script>
+    <script type="text/javascript" src="js/ui.welcome.js"></script>
+    <script type="text/javascript" src="js/ui.template.js"></script>
+    <script type="text/javascript" src="js/ui.main.js"></script>
+    <script type="text/javascript" src="js/ui.home_tabs.js"></script>
+    <script type="text/javascript" src="js/ui.dm_tabs.js"></script>
+    <script type="text/javascript" src="js/ui.peopleview.js"></script>
+    <script type="text/javascript" src="js/ui.listview.js"></script>
+    <script type="text/javascript" src="js/ui.searchview.js"></script>
+    <script type="text/javascript" src="js/ui.pin_dlg.js"></script>
+    <script type="text/javascript" src="js/ui.prefs_dlg.js"></script>
+    <script type="text/javascript" src="js/ui.profile_dlg.js"></script>
+    <script type="text/javascript" src="js/ui.list_attr_dlg.js"></script>
+    <script type="text/javascript" src="js/ui.imageuploader.js"></script>
+    <script type="text/javascript" src="js/ui.videouploader.js"></script>
+    <script type="text/javascript" src="js/ui.info_dlg.js"></script>
+    <script type="text/javascript" src="js/ui.error_dlg.js"></script>
+    <script type="text/javascript" src="js/ui.about_dlg.js"></script>
+    <script type="text/javascript" src="js/ui.add_to_list_dlg.js"></script>
+    <script type="text/javascript" src="js/ui.filter_dlg.js"></script>
+    <script type="text/javascript" src="js/ui.form_checker.js"></script>
+    <script type="text/javascript" src="js/ui.context_menu.js"></script>
+    <script type="text/javascript" src="js/ui.previewer.js"></script>
+    <script type="text/javascript" src="js/ui.trending_topicsview.js"></script>
+    <script type="text/javascript" src="js/ui.gmaps.js"></script>
+
+    <script type="text/javascript" src="js/hotot.js"></script>
+
+    <script type="text/javascript" src="js/twemoji.min.js"></script>  
+    <script type="text/javascript" src="js/twitter-text.js"></script>  
+    <script type="text/javascript" src="js/hls.min.js"></script>
+<div id="container">
+
+<section id="center">   
+<div id="welcome_page" class="page">
+	<h1 data-i18n-text="hotot">Hotot+</h1>
+	<div id="welcome_idicators">
+		<a id="btn_welcome_about" href="#" data-i18n-text="help">Help</a>
+		<select id="sel_welcome_lang" class="combo dark"
+				title="Select a language"
+				style="height: 24px; line-height: 24px; width: 100px;"
+				data-i18n-title="select_a_language">
+				<!--<option value="auto" data-i18n-text="language">Language</option>-->
+				<option value="en">English</option>
+				<option value="it">Italiano</option>
+		</select>
+	</div>
+	<div id="welcome_page_main">
+		<ul id="profile_avatar_list">
+			<li class="new_profile_item"><a id="btn_new_profile_item" title="Create a new profile" href="default" idx="0" data-i18n-title="create_a_new_profile"></a></li>
+		</ul>
+		<div id="sign_in_block">
+			<div class="inner">
+				<a class="go" href="#"></a>
+				<div class="profile_title"></div>
+				<div id="service_page_twitter" class="service_tabs_page">
+					<p style="font-style: italic;">
+					<label id="access_token_status_hint" class="label" data-i18n-text="access_token_doesnt_exist">Access token doesn't exist.</label>
+					<input id="tbox_profile_password" class="entry" style="width: 150px;" type="password" value="" 
+						placeholder="Password" title="If you have protected this profile with a password, enter it here" 
+						data-i18n-title="profile_password_title"
+						data-i18n-placeholder="profile_password"/>
+					</p>
+					<p id="token_pass" style="font-size: 10px; text-transform:uppercase">
+					<a id="clear_token_btn" style="color:red; text-decoration:none;" href="#" data-i18n-text="clear_token">Clear token</a> / <a id="manage_password_btn" style="color:red; text-decoration:none;" href="#" data-i18n-text="password_manage">Manage password</a>
+					</p>
+				</div>
+
+				<div id="service_page_new" class="service_tabs_page">
+					<input id="tbox_new_profile_name" class="entry" style="width: 120px;" type="text" value="" placeholder="Profile Name" data-i18n-placeholder="profile_name"/>
+					<input id="tbox_new_profile_password" class="entry" style="width: 75px;" type="text" value="" placeholder="Password" 
+					title="Protect the profile with a password (optional, leave it blank if you won't use it)" 
+					data-i18n-title="profile_password_title_hint"
+					data-i18n-placeholder="profile_password"/>
+					<ul class="service_chooser">
+						<li><a href="#twitter" title="Twitter" class="twitter selected">Twitter</a></li>
+					</ul>
+				</div>
+			</div> <!-- END of #sign_in_block .inner -->
+			<div style="clear:both"></div>
+			<div class="bottom">
+				<a id="btn_welcome_delete_profile" title="Delete this account" data-i18n-title="delete_account" href="#" data-i18n-text="delete">Delete</a>
+				<a id="btn_welcome_prefs" href="#" data-i18n-text="preferences">Preferences</a>
+			</div>
+		</div><!-- END of #sign_in_block -->
+	</div><!-- END of #welcome_page_main -->
+	<div id="welcome_page_loading">
+		<div class="inner">
+			<p><img src="image/ani_loading_bar.gif"/></p>
+			<p data-i18n-text="loading_resources_hint">Loading Resources ...</p>
+		</div>
+	</div>
+</div>
+
+<div id="main_page" class="page">
+	<div id="header_flap"></div> 
+	<div id="main_page_slider"></div>
+	<div id="empty_view_hint">
+		<h2 data-i18n-text="hey">Hey!</h2>
+		<p data-i18n-text="you_dont_have_a_view">You don't have a view.</p>
+		<p data-i18n-text="you_should_surely_add_one_or_more_views_by_clicking_the_add_button_above">You should surely add one or more views by clicking the "Add" button above.</p>
+	</div>
+	
+	<!-- 1.1 -->
+	<ul id="hashtag_menu" class="hotot_menu">
+		<li><a id="hashtag_search_btn" class="tweet_more_menu_btn"
+			title="Search for this hashtag"
+			data-i18n-title="search_this_hashtag_title"
+			href="#"
+			data-i18n-text="search_this_hashtag_text"
+			>Search for...</a>
+		</li>
+		<li><a id="hashtag_filter_btn" class="tweet_more_menu_btn"
+			title="Mute this hashtag"
+			data-i18n-title="mute_this_hashtag_title"
+			href="#"
+			data-i18n-text="mute_this_hashtag_text"
+			>Mute</a>
+		</li>
+		<!-- 5.5 -->
+		<li><a id="hashtag_follow_btn" class="tweet_more_menu_btn"
+			title="Follow this hashtag"
+			data-i18n-title="follow_this_hashtag_title"
+			href="#"
+			data-i18n-text="follow"
+			>Follow</a>
+		</li>
+		<li><a id="hashtag_unfollow_btn" class="tweet_more_menu_btn"
+			title="Unfollow this hashtag"
+			data-i18n-title="unfollow_this_hashtag_title"
+			href="#"
+			data-i18n-text="unfollow"
+			>Unfollow</a>
+		</li>
+	</ul>
+	
+	<ul id="tweet_more_menu" class="hotot_menu">
+		<li><a id="tweet_alt_retweet_btn" class="tweet_retweet tweet_more_menu_btn"
+			title="Retweet this tweet"
+			data-i18n-title="retweet_title"
+			href="#"
+			data-i18n-text="retweet"
+			>Retweet</a></li>
+		<li><a id="tweet_rt_btn" class="tweet_rt tweet_more_menu_btn"
+			title="Quote this tweet"
+			data-i18n-title="quote_title"
+			href="#"
+			data-i18n-text="quote"
+			>Quote</a></li>
+		<li><a id="quote_link_btn" class="tweet_more_menu_btn"
+			title="Quote link to this tweet"
+			data-i18n-title="quote_link_title"
+			href="#"
+			data-i18n-text="quote_link"
+			>Quote tweet link</a></li>	
+		<li class="separator"><span></span></li>		
+		<li><a id="tweet_reply_all_btn"
+			class="tweet_more_menu_btn"
+			href="#"
+			title="Reply All"
+			data-i18n-title="reply_all_title"
+			data-i18n-text="reply_all"
+			>Reply All</a></li>
+		<li><a id="tweet_alt_reply_btn" class="tweet_reply tweet_more_menu_btn"
+			title="Reply this tweet"
+			data-i18n-title="reply_title"
+			href="#"
+			data-i18n-text="reply"
+			>Reply</a></li>
+		<li><a id="tweet_dm_btn"
+			class="tweet_more_menu_btn"
+			href="#"
+			title="Send Message to them"
+			data-i18n-title="send_message_title"
+			data-i18n-text="send_message"
+			>Send Message</a></li>
+		<li><a id="tweet_edit_btn"
+			class="tweet_more_menu_btn"
+			href="#"
+			title="Edit this tweet"
+			data-i18n-title="edit_title"
+			data-i18n-text="edit"
+			>Edit</a>
+		</li>
+		<li><a id="tweet_del_btn"
+			class="tweet_more_menu_btn"
+			href="#"
+			title="Delete this tweet"
+			data-i18n-title="delete_title"
+			data-i18n-text="delete"
+			>Delete</a>
+		</li>
+		<li class="separator"><span></span></li>
+		<li>
+		<a id="tweet_set_color_btn"
+			class="tweet_more_menu_btn"
+			href="#"
+			title="Set color label to the sender"
+			data-i18n-title="label_with_color_title"
+			data-i18n-text="label_with_color"
+			>Label with color</a>
+		</li>
+		<li>
+		<a id="tweet_hide_btn"
+			class="tweet_more_menu_btn"
+			href="#"
+			title="Temporarily hide this tweet"
+			data-i18n-title="hide_title"
+			data-i18n-text="hide"
+			>Hide</a>
+		</li>
+		<li class="separator"><span></span></li>
+		<li>
+		<a id="tweet_filter_btn"
+			class="tweet_more_menu_btn"
+			href="#"
+			title="Filter this tweet"
+			data-i18n-title="filter_tweets_like_it_title"
+			data-i18n-text="filter_tweets_like_it"
+			>Filter tweets like it</a>
+		</li>
+		<li>
+		<a id="tweet_readlater_btn"
+			class="tweet_more_menu_btn"
+			href="#"
+			title="Read Later"
+			data-i18n-title="read_later_title"
+			data-i18n-text="read_later"
+			>Read Later</a>
+		</li>
+		<li>
+		<a id="tweet_translate_btn"
+			class="tweet_more_menu_btn"
+			href="#"
+			title="Translate the tweet into your language"
+			data-i18n-title="translate_title"
+			data-i18n-text="translate"
+			>Translate</a>
+		</li>
+		<!-- 4.0: Expand urls 
+		<li>
+		<a id="tweet_expand_url_btn"
+			class="tweet_more_menu_btn"
+			href="#"
+			title="Expand each shortened URL in this tweet using longurl.org"
+			data-i18n-title="expand_url_title"
+			data-i18n-text="expand_url_text"
+			>Expand URLs</a>
+		</li>
+		-->
+		<li>
+		<a id="tweet_view_replies_btn"
+			class="tweet_more_menu_btn"
+			href="#"
+			title="Search for all replies to this tweet"
+			data-i18n-title="view_replies_title"
+			data-i18n-text="view_replies_text"
+			>View replies</a>
+		</li>		
+	</ul>
+	<a id="btn_my_profile" class="profile_img_wrapper" href="#"></a>
+</div>
+</section><!-- center -->
+<section id="header">
+    <div id="header_inner">
+    <div id="indication">
+        <div id="indicator_btns">
+            <div class="stick_left">
+                <a id="hotot_button" class="indicator_btn action_button" href="#hotot" title="Click to expand menu" 
+		data-i18n-title="click_to_expand_menu"><span class="icon ic_hotot" style="margin-top: 6px;"></span></a>
+            </div>
+	    <div class="stick_left" style="width: 150px; left: 40px;">
+		<a id="indicator_compose_btn"
+			class="indicator_btn action_button"
+			href="#compose"
+			data-i18n-title="compose" title="Compose">
+		<span class="icon ic_compose"></span>
+		<span data-i18n-text="compose" style="float:left; margin-left: 10px;">Compose</span>
+		</a>
+            </div>
+            <div class="no_stick">
+                <a id="indicator_add_btn" class="indicator_btn action_button" href="#add" title="Add new views" data-i18n-title="add_new_views"><span class="icon ic_add"></span></a>
+            </div>
+	    <!-- 2.2: Close all views -->
+	    <div class="no_stick">
+		<a id="btn_close_all_views" class="indicator_btn action_button" href="#close" title="Close all views" data-i18n-title="close_all_views"><span class="icon ic_close_all"></span></a>
+	    </div>
+	    <!-- 4.0: 1-button mode -->
+	    <div class="stick_very_right">
+                <a id="indicator_menu_btn" class="indicator_btn action_button" style="display:none;" href="#columns" title="Columns" data-i18n-title="columns"><span class="icon ic_list"></span></a>
+            </div>
+        </div>
+        <div id="indication_slot">
+            <div id="indication_slot_border"></div>
+            <div id="indication_light"></div>
+        </div>
+    </div>
+    <div id="view_title_bar">
+        <div class="view_title">
+            <span class="title"></span>
+            <a href="#" class="close_btn ic_close"></a>
+            <a href="#" class="setting_btn ic_gear"></a>
+        </div><div class="view_title">
+            <span class="title"></span>
+            <a href="#" class="close_btn ic_close"></a>
+            <a href="#" class="setting_btn ic_gear"></a>
+        </div><div class="view_title">
+            <span class="title"></span>
+            <a href="#" class="close_btn ic_close"></a>
+            <a href="#" class="setting_btn ic_gear"></a>
+        </div><div class="view_title">
+            <span class="title"></span>
+            <a href="#" class="close_btn ic_close"></a>
+            <a href="#" class="setting_btn ic_gear"></a>
+        </div><div class="view_title">
+            <span class="title"></span>
+            <a href="#" class="close_btn ic_close"></a>
+            <a href="#" class="setting_btn ic_gear"></a>
+        </div><div class="view_title">
+            <span class="title"></span>
+            <a href="#" class="close_btn ic_close"></a>
+            <a href="#" class="setting_btn ic_gear"></a>
+        </div><div class="view_title">
+            <span class="title"></span>
+            <a href="#" class="close_btn ic_close"></a>
+            <a href="#" class="setting_btn ic_gear"></a>
+        </div><div class="view_title">
+            <span class="title"></span>
+            <a href="#" class="close_btn ic_close"></a>
+            <a href="#" class="setting_btn ic_gear"></a>
+        </div><div class="view_title">
+            <span class="title"></span>
+            <a href="#" class="close_btn ic_close"></a>
+            <a href="#" class="setting_btn ic_gear"></a>
+        </div><div class="view_title">
+            <span class="title"></span>
+            <a href="#" class="close_btn ic_close"></a>
+            <a href="#" class="setting_btn ic_gear"></a>
+        </div><div class="view_title">
+            <span class="title"></span>
+            <a href="#" class="close_btn ic_close"></a>
+            <a href="#" class="setting_btn ic_gear"></a>
+        </div><div class="view_title">
+            <span class="title"></span>
+            <a href="#" class="close_btn ic_close"></a>
+            <a href="#" class="setting_btn ic_gear"></a>
+        </div>
+    </div>
+    <div id="hotot_menu">
+        <div id="sys_menu_frame">
+            <ul id="sys_menu" class="hotot_menu">
+                <li>
+                    <a id="btn_prefs" title="Preferences" href="#" data-i18n-title="preferences" data-i18n-text="preferences">Preferences</a>
+                </li><li>
+                    <a id="btn_filter" title="" href="#" data-i18n-text="mute_filters">Mute Filters</a>
+                </li><li>
+                    <a id="btn_ftags" title="" href="#" data-i18n-text="following_hashtags">Following Hashtags</a>
+                </li>	    
+		<li class="separator"><span></span></li>
+		<li>
+                    <a id="btn_about" title="About & Help" href="#" data-i18n-title="about_and_help" data-i18n-text="about_and_help">About &amp; Help</a>
+                </li>
+		<li>
+                    <a id="btn_report_bug" title="Report a bug" href="#" data-i18n-title="report_bug" data-i18n-text="report_bug">Report a bug</a>
+                </li>
+                <li class="separator"><span></span></li>
+                <li>
+                     <a id="btn_restart_streams" title="Restart the user streaming API connection" href="#" data-i18n-title="restart_streams_title"  data-i18n-text="restart_streams_text">Restart Streams</a>
+                </li>		
+                <li>
+                     <a id="btn_sign_out" href="#" data-i18n-text="sign_out">Sign out</a>
+                </li>
+            </ul>
+        </div>
+    </div> <!-- hotot_menu -->
+    
+    <ul id="slider_menu" class="hotot_menu">
+        <li>
+            <a href="#home" data-i18n-text="home_view">Home view</a>
+        </li>
+        <li>
+            <a href="#mentions" data-i18n-text="mentions_view">Mentions view</a>
+        </li>
+        <li>
+            <a href="#messages" data-i18n-text="messages_view">Messages view</a>
+        </li>
+        <li>
+            <a href="#retweets" data-i18n-text="retweets_view">Retweets view</a>
+        </li>
+        <li>
+            <a href="#favs" data-i18n-text="favs_view">Favourites/Likes view</a>
+        </li>
+        <li>
+            <a href="#search" data-i18n-text="search_view">Search view</a>
+        </li>
+        <li>
+            <a href="#trends" data-i18n-text="trends_view">Trending Topics view</a> <!-- 2.2: TT restore -->
+        </li>		
+        <li>
+            <a href="#people" data-i18n-text="open_a_profile_dots">Open a Profile...</a>
+        </li>
+        <li>
+            <a href="#list" data-i18n-text="open_a_list_dots">Open a List...</a>
+        </li>
+        <li>
+            <a href="#allmylist" data-i18n-text="open_all_list_dots">Open all my Lists...</a>
+        </li>	
+    </ul>
+    <!-- 4.0: 1-button mode -->
+    <ul id="indicator_menu_slider" class="hotot_menu"></ul>
+    </div>
+</section>
+<section id="bottom">
+</section> <!-- bottom -->
+
+</div><!-- container -->
+
+<!-- The section below is the definition of the 'dialog' where you enter a new status.
+     The scripts for this dialog are in data/js/ui.status_box.js -->
+<section id="status_box" class="closed dialog">
+  <div class="dialog_bar">
+    <h2 class="dialog_title" data-i18n-text="compose">Compose</h2>
+    <a class="dialog_close_btn" title="Close" href="#" data-i18n-title="close"></a>
+  </div>
+  <div class="dialog_container">
+    <div class="dialog_header" ></div>
+    
+    <!-- 4.0: Multi Image support -->
+    <div id="status_uploading" style="display:none;padding:10px;">
+        <div class="dialog_block hint" data-i18n-text="uploading_note">
+		Note: closing in any way this dialog will abort the posting process!
+	</div>
+	<div>
+		<span data-i18n-text="uploading_please_wait" >Processing your request, please wait...</span>
+	</div>
+	<div id="image1" style="display:none;">
+		>> <span data-i18n-text="uploading_image">Uploading image</span> 1 <img src="image/ic16_loading.gif" />
+	</div>
+	<div id="image2" style="display:none;">
+		>> <span data-i18n-text="uploading_image">Uploading image</span> 2 <img src="image/ic16_loading.gif" />
+	</div>
+	<div id="image3" style="display:none;">
+		>> <span data-i18n-text="uploading_image">Uploading image</span> 3 <img src="image/ic16_loading.gif" />
+	</div>
+	<div id="image4" style="display:none;">
+		>> <span data-i18n-text="uploading_image">Uploading image</span> 4 <img src="image/ic16_loading.gif" />
+	</div>
+	<div id="tweeting" style="display:none;">
+		>> <span data-i18n-text="tweeting">Posting tweet</span> <img src="image/ic16_loading.gif" />
+	</div>
+	<a id="btn_uploading_box_close" class="mochi_button blue" data-i18n-text="close" style="margin:10px 0 10px;display:block;float:right;">Close</a>
+    </div>
+    
+    <!-- 6.0: Video upload support -->
+    <div id="video_uploading" style="display:none;padding:10px;">
+        <div class="dialog_block hint" data-i18n-text="uploading_note">
+		Note: closing in any way this dialog will abort the posting process!
+	</div>
+	<div>
+		<span data-i18n-text="uploading_please_wait" >Processing your request, please wait...</span>
+	</div>
+	<div id="chunk0" style="display:none;">
+		>> <span data-i18n-text="uploading_chunk_init">Initializing video upload</span>... <img src="image/ic16_loading.gif" />
+	</div>
+	<div id="chunk1" style="display:none;">
+		>> <span data-i18n-text="uploading_chunk">Uploading video chunk</span> 1 <img src="image/ic16_loading.gif" />
+	</div>
+	<div id="chunk2" style="display:none;">
+		>> <span data-i18n-text="uploading_chunk">Uploading video chunk</span> 2 <img src="image/ic16_loading.gif" />
+	</div>
+	<div id="chunk3" style="display:none;">
+		>> <span data-i18n-text="uploading_chunk">Uploading video chunk</span> 3 <img src="image/ic16_loading.gif" />
+	</div>
+	<div id="chunk4" style="display:none;">
+		>> <span data-i18n-text="uploading_chunk_finalize">Finalizing video upload</span>... <img src="image/ic16_loading.gif" />
+	</div>
+	<div id="tweeting" style="display:none;">
+		>> <span data-i18n-text="tweeting">Posting tweet</span> <img src="image/ic16_loading.gif" />
+	</div>
+	<a id="btn_videouploading_box_close" class="mochi_button blue" data-i18n-text="close" style="margin:10px 0 10px;display:block;float:right;">Close</a>
+    </div>
+			    
+    <div class="dialog_body" id="status_dialog">
+		
+			<div class="reply_status_info status_info">
+				<span class="label" data-i18n-text="reply_to">Reply to</span>
+				@<span class="who"></span>: &ldquo;<span class="quote"></span>&rdquo;
+			</div>
+			<div class="dm_status_info status_info">
+				<span class="label" data-i18n-text="to">to</span>
+				<input type="text" id="tbox_dm_target" class="mochi_entry" value="">
+			</div>
+			<div class="quote_status_info status_info">
+				<span class="label" data-i18n-text="include_status">Quote tweet</span>: <span class="quote_link"></span>
+			</div>			
+			<div id="tbox_status_wrapper" class="mochi_textarea">
+					<textarea id="tbox_status" class="closed" placeholder="Type or drag a photo here." data-i18n-placeholder="type_or_drag_a_photo_here"></textarea>
+					<div id="status_smiley">
+							<div id="status_smiley_inner">
+								<!-- 2.2: Emoji support --> 
+								 <ul class="emoji-list"> <li>&#x1F004;</li><li>&#x1F0CF;</li><li>&#x1F170;</li><li>&#x1F171;</li><li>&#x1F17E;</li><li>&#x1F17F;</li><li>&#x1F18E;</li><li>&#x1F191;</li><li>&#x1F192;</li><li>&#x1F193;</li><li>&#x1F194;</li><li>&#x1F195;</li><li>&#x1F196;</li><li>&#x1F197;</li><li>&#x1F198;</li><li>&#x1F199;</li><li>&#x1F19A;</li><li>&#x1F1E6;&#x1F1E8;</li><li>&#x1F1E6;&#x1F1E9;</li><li>&#x1F1E6;&#x1F1EA;</li><li>&#x1F1E6;&#x1F1EB;</li><li>&#x1F1E6;&#x1F1EC;</li><li>&#x1F1E6;&#x1F1EE;</li><li>&#x1F1E6;&#x1F1F1;</li><li>&#x1F1E6;&#x1F1F2;</li><li>&#x1F1E6;&#x1F1F4;</li><li>&#x1F1E6;&#x1F1F6;</li><li>&#x1F1E6;&#x1F1F7;</li><li>&#x1F1E6;&#x1F1F8;</li><li>&#x1F1E6;&#x1F1F9;</li><li>&#x1F1E6;&#x1F1FA;</li><li>&#x1F1E6;&#x1F1FC;</li><li>&#x1F1E6;&#x1F1FD;</li><li>&#x1F1E6;&#x1F1FF;</li><li>&#x1F1E6;</li><li>&#x1F1E7;&#x1F1E6;</li><li>&#x1F1E7;&#x1F1E7;</li><li>&#x1F1E7;&#x1F1E9;</li><li>&#x1F1E7;&#x1F1EA;</li><li>&#x1F1E7;&#x1F1EB;</li><li>&#x1F1E7;&#x1F1EC;</li><li>&#x1F1E7;&#x1F1ED;</li><li>&#x1F1E7;&#x1F1EE;</li><li>&#x1F1E7;&#x1F1EF;</li><li>&#x1F1E7;&#x1F1F1;</li><li>&#x1F1E7;&#x1F1F2;</li><li>&#x1F1E7;&#x1F1F3;</li><li>&#x1F1E7;&#x1F1F4;</li><li>&#x1F1E7;&#x1F1F6;</li><li>&#x1F1E7;&#x1F1F7;</li><li>&#x1F1E7;&#x1F1F8;</li><li>&#x1F1E7;&#x1F1F9;</li><li>&#x1F1E7;&#x1F1FB;</li><li>&#x1F1E7;&#x1F1FC;</li><li>&#x1F1E7;&#x1F1FE;</li><li>&#x1F1E7;&#x1F1FF;</li><li>&#x1F1E7;</li><li>&#x1F1E8;&#x1F1E6;</li><li>&#x1F1E8;&#x1F1E8;</li><li>&#x1F1E8;&#x1F1E9;</li><li>&#x1F1E8;&#x1F1EB;</li><li>&#x1F1E8;&#x1F1EC;</li><li>&#x1F1E8;&#x1F1ED;</li><li>&#x1F1E8;&#x1F1EE;</li><li>&#x1F1E8;&#x1F1F0;</li><li>&#x1F1E8;&#x1F1F1;</li><li>&#x1F1E8;&#x1F1F2;</li><li>&#x1F1E8;&#x1F1F3;</li><li>&#x1F1E8;&#x1F1F4;</li><li>&#x1F1E8;&#x1F1F5;</li><li>&#x1F1E8;&#x1F1F7;</li><li>&#x1F1E8;&#x1F1FA;</li><li>&#x1F1E8;&#x1F1FB;</li><li>&#x1F1E8;&#x1F1FC;</li><li>&#x1F1E8;&#x1F1FD;</li><li>&#x1F1E8;&#x1F1FE;</li><li>&#x1F1E8;&#x1F1FF;</li><li>&#x1F1E8;</li><li>&#x1F1E9;&#x1F1EA;</li><li>&#x1F1E9;&#x1F1EC;</li><li>&#x1F1E9;&#x1F1EF;</li><li>&#x1F1E9;&#x1F1F0;</li><li>&#x1F1E9;&#x1F1F2;</li><li>&#x1F1E9;&#x1F1F4;</li><li>&#x1F1E9;&#x1F1FF;</li><li>&#x1F1E9;</li><li>&#x1F1EA;&#x1F1E6;</li><li>&#x1F1EA;&#x1F1E8;</li><li>&#x1F1EA;&#x1F1EA;</li><li>&#x1F1EA;&#x1F1EC;</li><li>&#x1F1EA;&#x1F1ED;</li><li>&#x1F1EA;&#x1F1F7;</li><li>&#x1F1EA;&#x1F1F8;</li><li>&#x1F1EA;&#x1F1F9;</li><li>&#x1F1EA;&#x1F1FA;</li><li>&#x1F1EA;</li><li>&#x1F1EB;&#x1F1EE;</li><li>&#x1F1EB;&#x1F1EF;</li><li>&#x1F1EB;&#x1F1F0;</li><li>&#x1F1EB;&#x1F1F2;</li><li>&#x1F1EB;&#x1F1F4;</li><li>&#x1F1EB;&#x1F1F7;</li><li>&#x1F1EB;</li><li>&#x1F1EC;&#x1F1E6;</li><li>&#x1F1EC;&#x1F1E7;</li><li>&#x1F1EC;&#x1F1E9;</li><li>&#x1F1EC;&#x1F1EA;</li><li>&#x1F1EC;&#x1F1EB;</li><li>&#x1F1EC;&#x1F1EC;</li><li>&#x1F1EC;&#x1F1ED;</li><li>&#x1F1EC;&#x1F1EE;</li><li>&#x1F1EC;&#x1F1F1;</li><li>&#x1F1EC;&#x1F1F2;</li><li>&#x1F1EC;&#x1F1F3;</li><li>&#x1F1EC;&#x1F1F5;</li><li>&#x1F1EC;&#x1F1F6;</li><li>&#x1F1EC;&#x1F1F7;</li><li>&#x1F1EC;&#x1F1F8;</li><li>&#x1F1EC;&#x1F1F9;</li><li>&#x1F1EC;&#x1F1FA;</li><li>&#x1F1EC;&#x1F1FC;</li><li>&#x1F1EC;&#x1F1FE;</li><li>&#x1F1EC;</li><li>&#x1F1ED;&#x1F1F0;</li><li>&#x1F1ED;&#x1F1F2;</li><li>&#x1F1ED;&#x1F1F3;</li><li>&#x1F1ED;&#x1F1F7;</li><li>&#x1F1ED;&#x1F1F9;</li><li>&#x1F1ED;&#x1F1FA;</li><li>&#x1F1ED;</li><li>&#x1F1EE;&#x1F1E8;</li><li>&#x1F1EE;&#x1F1E9;</li><li>&#x1F1EE;&#x1F1EA;</li><li>&#x1F1EE;&#x1F1F1;</li><li>&#x1F1EE;&#x1F1F2;</li><li>&#x1F1EE;&#x1F1F3;</li><li>&#x1F1EE;&#x1F1F4;</li><li>&#x1F1EE;&#x1F1F6;</li><li>&#x1F1EE;&#x1F1F7;</li><li>&#x1F1EE;&#x1F1F8;</li><li>&#x1F1EE;&#x1F1F9;</li><li>&#x1F1EE;</li><li>&#x1F1EF;&#x1F1EA;</li><li>&#x1F1EF;&#x1F1F2;</li><li>&#x1F1EF;&#x1F1F4;</li><li>&#x1F1EF;&#x1F1F5;</li><li>&#x1F1EF;</li><li>&#x1F1F0;&#x1F1EA;</li><li>&#x1F1F0;&#x1F1EC;</li><li>&#x1F1F0;&#x1F1ED;</li><li>&#x1F1F0;&#x1F1EE;</li><li>&#x1F1F0;&#x1F1F2;</li><li>&#x1F1F0;&#x1F1F3;</li><li>&#x1F1F0;&#x1F1F5;</li><li>&#x1F1F0;&#x1F1F7;</li><li>&#x1F1F0;&#x1F1FC;</li><li>&#x1F1F0;&#x1F1FE;</li><li>&#x1F1F0;&#x1F1FF;</li><li>&#x1F1F0;</li><li>&#x1F1F1;&#x1F1E6;</li><li>&#x1F1F1;&#x1F1E7;</li><li>&#x1F1F1;&#x1F1E8;</li><li>&#x1F1F1;&#x1F1EE;</li><li>&#x1F1F1;&#x1F1F0;</li><li>&#x1F1F1;&#x1F1F7;</li><li>&#x1F1F1;&#x1F1F8;</li><li>&#x1F1F1;&#x1F1F9;</li><li>&#x1F1F1;&#x1F1FA;</li><li>&#x1F1F1;&#x1F1FB;</li><li>&#x1F1F1;&#x1F1FE;</li><li>&#x1F1F1;</li><li>&#x1F1F2;&#x1F1E6;</li><li>&#x1F1F2;&#x1F1E8;</li><li>&#x1F1F2;&#x1F1E9;</li><li>&#x1F1F2;&#x1F1EA;</li><li>&#x1F1F2;&#x1F1EB;</li><li>&#x1F1F2;&#x1F1EC;</li><li>&#x1F1F2;&#x1F1ED;</li><li>&#x1F1F2;&#x1F1F0;</li><li>&#x1F1F2;&#x1F1F1;</li><li>&#x1F1F2;&#x1F1F2;</li><li>&#x1F1F2;&#x1F1F3;</li><li>&#x1F1F2;&#x1F1F4;</li><li>&#x1F1F2;&#x1F1F5;</li><li>&#x1F1F2;&#x1F1F6;</li><li>&#x1F1F2;&#x1F1F7;</li><li>&#x1F1F2;&#x1F1F8;</li><li>&#x1F1F2;&#x1F1F9;</li><li>&#x1F1F2;&#x1F1FA;</li><li>&#x1F1F2;&#x1F1FB;</li><li>&#x1F1F2;&#x1F1FC;</li><li>&#x1F1F2;&#x1F1FD;</li><li>&#x1F1F2;&#x1F1FE;</li><li>&#x1F1F2;&#x1F1FF;</li><li>&#x1F1F2;</li><li>&#x1F1F3;&#x1F1E6;</li><li>&#x1F1F3;&#x1F1E8;</li><li>&#x1F1F3;&#x1F1EA;</li><li>&#x1F1F3;&#x1F1EB;</li><li>&#x1F1F3;&#x1F1EC;</li><li>&#x1F1F3;&#x1F1EE;</li><li>&#x1F1F3;&#x1F1F1;</li><li>&#x1F1F3;&#x1F1F4;</li><li>&#x1F1F3;&#x1F1F5;</li><li>&#x1F1F3;&#x1F1F7;</li><li>&#x1F1F3;&#x1F1FA;</li><li>&#x1F1F3;&#x1F1FF;</li><li>&#x1F1F3;</li><li>&#x1F1F4;&#x1F1F2;</li><li>&#x1F1F4;</li><li>&#x1F1F5;&#x1F1E6;</li><li>&#x1F1F5;&#x1F1EA;</li><li>&#x1F1F5;&#x1F1EB;</li><li>&#x1F1F5;&#x1F1EC;</li><li>&#x1F1F5;&#x1F1ED;</li><li>&#x1F1F5;&#x1F1F0;</li><li>&#x1F1F5;&#x1F1F1;</li><li>&#x1F1F5;&#x1F1F2;</li><li>&#x1F1F5;&#x1F1F3;</li><li>&#x1F1F5;&#x1F1F7;</li><li>&#x1F1F5;&#x1F1F8;</li><li>&#x1F1F5;&#x1F1F9;</li><li>&#x1F1F5;&#x1F1FC;</li><li>&#x1F1F5;&#x1F1FE;</li><li>&#x1F1F5;</li><li>&#x1F1F6;&#x1F1E6;</li><li>&#x1F1F6;</li><li>&#x1F1F7;&#x1F1EA;</li><li>&#x1F1F7;&#x1F1F4;</li><li>&#x1F1F7;&#x1F1F8;</li><li>&#x1F1F7;&#x1F1FA;</li><li>&#x1F1F7;&#x1F1FC;</li><li>&#x1F1F7;</li><li>&#x1F1F8;&#x1F1E6;</li><li>&#x1F1F8;&#x1F1E7;</li><li>&#x1F1F8;&#x1F1E8;</li><li>&#x1F1F8;&#x1F1E9;</li><li>&#x1F1F8;&#x1F1EA;</li><li>&#x1F1F8;&#x1F1EC;</li><li>&#x1F1F8;&#x1F1ED;</li><li>&#x1F1F8;&#x1F1EE;</li><li>&#x1F1F8;&#x1F1EF;</li><li>&#x1F1F8;&#x1F1F0;</li><li>&#x1F1F8;&#x1F1F1;</li><li>&#x1F1F8;&#x1F1F2;</li><li>&#x1F1F8;&#x1F1F3;</li><li>&#x1F1F8;&#x1F1F4;</li><li>&#x1F1F8;&#x1F1F7;</li><li>&#x1F1F8;&#x1F1F8;</li><li>&#x1F1F8;&#x1F1F9;</li><li>&#x1F1F8;&#x1F1FB;</li><li>&#x1F1F8;&#x1F1FD;</li><li>&#x1F1F8;&#x1F1FE;</li><li>&#x1F1F8;&#x1F1FF;</li><li>&#x1F1F8;</li><li>&#x1F1F9;&#x1F1E6;</li><li>&#x1F1F9;&#x1F1E8;</li><li>&#x1F1F9;&#x1F1E9;</li><li>&#x1F1F9;&#x1F1EB;</li><li>&#x1F1F9;&#x1F1EC;</li><li>&#x1F1F9;&#x1F1ED;</li><li>&#x1F1F9;&#x1F1EF;</li><li>&#x1F1F9;&#x1F1F0;</li><li>&#x1F1F9;&#x1F1F1;</li><li>&#x1F1F9;&#x1F1F2;</li><li>&#x1F1F9;&#x1F1F3;</li><li>&#x1F1F9;&#x1F1F4;</li><li>&#x1F1F9;&#x1F1F7;</li><li>&#x1F1F9;&#x1F1F9;</li><li>&#x1F1F9;&#x1F1FB;</li><li>&#x1F1F9;&#x1F1FC;</li><li>&#x1F1F9;&#x1F1FF;</li><li>&#x1F1F9;</li><li>&#x1F1FA;&#x1F1E6;</li><li>&#x1F1FA;&#x1F1EC;</li><li>&#x1F1FA;&#x1F1F2;</li><li>&#x1F1FA;&#x1F1F8;</li><li>&#x1F1FA;&#x1F1FE;</li><li>&#x1F1FA;&#x1F1FF;</li><li>&#x1F1FA;</li><li>&#x1F1FB;&#x1F1E6;</li><li>&#x1F1FB;&#x1F1E8;</li><li>&#x1F1FB;&#x1F1EA;</li><li>&#x1F1FB;&#x1F1EC;</li><li>&#x1F1FB;&#x1F1EE;</li><li>&#x1F1FB;&#x1F1F3;</li><li>&#x1F1FB;&#x1F1FA;</li><li>&#x1F1FB;</li><li>&#x1F1FC;&#x1F1EB;</li><li>&#x1F1FC;&#x1F1F8;</li><li>&#x1F1FC;</li><li>&#x1F1FD;&#x1F1F0;</li><li>&#x1F1FD;</li><li>&#x1F1FE;&#x1F1EA;</li><li>&#x1F1FE;&#x1F1F9;</li><li>&#x1F1FE;</li><li>&#x1F1FF;&#x1F1E6;</li><li>&#x1F1FF;&#x1F1F2;</li><li>&#x1F1FF;&#x1F1FC;</li><li>&#x1F1FF;</li><li>&#x1F201;</li><li>&#x1F202;</li><li>&#x1F21A;</li><li>&#x1F22F;</li><li>&#x1F232;</li><li>&#x1F233;</li><li>&#x1F234;</li><li>&#x1F235;</li><li>&#x1F236;</li><li>&#x1F237;</li><li>&#x1F238;</li><li>&#x1F239;</li><li>&#x1F23A;</li><li>&#x1F250;</li><li>&#x1F251;</li><li>&#x1F300;</li><li>&#x1F301;</li><li>&#x1F302;</li><li>&#x1F303;</li><li>&#x1F304;</li><li>&#x1F305;</li><li>&#x1F306;</li><li>&#x1F307;</li><li>&#x1F308;</li><li>&#x1F309;</li><li>&#x1F30A;</li><li>&#x1F30B;</li><li>&#x1F30C;</li><li>&#x1F30D;</li><li>&#x1F30E;</li><li>&#x1F30F;</li><li>&#x1F310;</li><li>&#x1F311;</li><li>&#x1F312;</li><li>&#x1F313;</li><li>&#x1F314;</li><li>&#x1F315;</li><li>&#x1F316;</li><li>&#x1F317;</li><li>&#x1F318;</li><li>&#x1F319;</li><li>&#x1F31A;</li><li>&#x1F31B;</li><li>&#x1F31C;</li><li>&#x1F31D;</li><li>&#x1F31E;</li><li>&#x1F31F;</li><li>&#x1F320;</li><li>&#x1F321;</li><li>&#x1F324;</li><li>&#x1F325;</li><li>&#x1F326;</li><li>&#x1F327;</li><li>&#x1F328;</li><li>&#x1F329;</li><li>&#x1F32A;</li><li>&#x1F32B;</li><li>&#x1F32C;</li><li>&#x1F32D;</li><li>&#x1F32E;</li><li>&#x1F32F;</li><li>&#x1F330;</li><li>&#x1F331;</li><li>&#x1F332;</li><li>&#x1F333;</li><li>&#x1F334;</li><li>&#x1F335;</li><li>&#x1F336;</li><li>&#x1F337;</li><li>&#x1F338;</li><li>&#x1F339;</li><li>&#x1F33A;</li><li>&#x1F33B;</li><li>&#x1F33C;</li><li>&#x1F33D;</li><li>&#x1F33E;</li><li>&#x1F33F;</li><li>&#x1F340;</li><li>&#x1F341;</li><li>&#x1F342;</li><li>&#x1F343;</li><li>&#x1F344;</li><li>&#x1F345;</li><li>&#x1F346;</li><li>&#x1F347;</li><li>&#x1F348;</li><li>&#x1F349;</li><li>&#x1F34A;</li><li>&#x1F34B;</li><li>&#x1F34C;</li><li>&#x1F34D;</li><li>&#x1F34E;</li><li>&#x1F34F;</li><li>&#x1F350;</li><li>&#x1F351;</li><li>&#x1F352;</li><li>&#x1F353;</li><li>&#x1F354;</li><li>&#x1F355;</li><li>&#x1F356;</li><li>&#x1F357;</li><li>&#x1F358;</li><li>&#x1F359;</li><li>&#x1F35A;</li><li>&#x1F35B;</li><li>&#x1F35C;</li><li>&#x1F35D;</li><li>&#x1F35E;</li><li>&#x1F35F;</li><li>&#x1F360;</li><li>&#x1F361;</li><li>&#x1F362;</li><li>&#x1F363;</li><li>&#x1F364;</li><li>&#x1F365;</li><li>&#x1F366;</li><li>&#x1F367;</li><li>&#x1F368;</li><li>&#x1F369;</li><li>&#x1F36A;</li><li>&#x1F36B;</li><li>&#x1F36C;</li><li>&#x1F36D;</li><li>&#x1F36E;</li><li>&#x1F36F;</li><li>&#x1F370;</li><li>&#x1F371;</li><li>&#x1F372;</li><li>&#x1F373;</li><li>&#x1F374;</li><li>&#x1F375;</li><li>&#x1F376;</li><li>&#x1F377;</li><li>&#x1F378;</li><li>&#x1F379;</li><li>&#x1F37A;</li><li>&#x1F37B;</li><li>&#x1F37C;</li><li>&#x1F37D;</li><li>&#x1F37E;</li><li>&#x1F37F;</li><li>&#x1F380;</li><li>&#x1F381;</li><li>&#x1F382;</li><li>&#x1F383;</li><li>&#x1F384;</li><li>&#x1F385;&#x1F3FB;</li><li>&#x1F385;&#x1F3FC;</li><li>&#x1F385;&#x1F3FD;</li><li>&#x1F385;&#x1F3FE;</li><li>&#x1F385;&#x1F3FF;</li><li>&#x1F385;</li><li>&#x1F386;</li><li>&#x1F387;</li><li>&#x1F388;</li><li>&#x1F389;</li><li>&#x1F38A;</li><li>&#x1F38B;</li><li>&#x1F38C;</li><li>&#x1F38D;</li><li>&#x1F38E;</li><li>&#x1F38F;</li><li>&#x1F390;</li><li>&#x1F391;</li><li>&#x1F392;</li><li>&#x1F393;</li><li>&#x1F396;</li><li>&#x1F397;</li><li>&#x1F399;</li><li>&#x1F39A;</li><li>&#x1F39B;</li><li>&#x1F39E;</li><li>&#x1F39F;</li><li>&#x1F3A0;</li><li>&#x1F3A1;</li><li>&#x1F3A2;</li><li>&#x1F3A3;</li><li>&#x1F3A4;</li><li>&#x1F3A5;</li><li>&#x1F3A6;</li><li>&#x1F3A7;</li><li>&#x1F3A8;</li><li>&#x1F3A9;</li><li>&#x1F3AA;</li><li>&#x1F3AB;</li><li>&#x1F3AC;</li><li>&#x1F3AD;</li><li>&#x1F3AE;</li><li>&#x1F3AF;</li><li>&#x1F3B0;</li><li>&#x1F3B1;</li><li>&#x1F3B2;</li><li>&#x1F3B3;</li><li>&#x1F3B4;</li><li>&#x1F3B5;</li><li>&#x1F3B6;</li><li>&#x1F3B7;</li><li>&#x1F3B8;</li><li>&#x1F3B9;</li><li>&#x1F3BA;</li><li>&#x1F3BB;</li><li>&#x1F3BC;</li><li>&#x1F3BD;</li><li>&#x1F3BE;</li><li>&#x1F3BF;</li><li>&#x1F3C0;</li><li>&#x1F3C1;</li><li>&#x1F3C2;&#x1F3FB;</li><li>&#x1F3C2;&#x1F3FC;</li><li>&#x1F3C2;&#x1F3FD;</li><li>&#x1F3C2;&#x1F3FE;</li><li>&#x1F3C2;&#x1F3FF;</li><li>&#x1F3C2;</li><li>&#x1F3C3;&#x1F3FB;</li><li>&#x1F3C3;&#x1F3FC;</li><li>&#x1F3C3;&#x1F3FD;</li><li>&#x1F3C3;&#x1F3FE;</li><li>&#x1F3C3;&#x1F3FF;</li><li>&#x1F3C3;</li><li>&#x1F3C4;&#x1F3FB;</li><li>&#x1F3C4;&#x1F3FC;</li><li>&#x1F3C4;&#x1F3FD;</li><li>&#x1F3C4;&#x1F3FE;</li><li>&#x1F3C4;&#x1F3FF;</li><li>&#x1F3C4;</li><li>&#x1F3C5;</li><li>&#x1F3C6;</li><li>&#x1F3C7;&#x1F3FB;</li><li>&#x1F3C7;&#x1F3FC;</li><li>&#x1F3C7;&#x1F3FD;</li><li>&#x1F3C7;&#x1F3FE;</li><li>&#x1F3C7;&#x1F3FF;</li><li>&#x1F3C7;</li><li>&#x1F3C8;</li><li>&#x1F3C9;</li><li>&#x1F3CA;&#x1F3FB;</li><li>&#x1F3CA;&#x1F3FC;</li><li>&#x1F3CA;&#x1F3FD;</li><li>&#x1F3CA;&#x1F3FE;</li><li>&#x1F3CA;&#x1F3FF;</li><li>&#x1F3CA;</li><li>&#x1F3CB;&#x1F3FB;</li><li>&#x1F3CB;&#x1F3FC;</li><li>&#x1F3CB;&#x1F3FD;</li><li>&#x1F3CB;&#x1F3FE;</li><li>&#x1F3CB;&#x1F3FF;</li><li>&#x1F3CB;</li><li>&#x1F3CC;</li><li>&#x1F3CD;</li><li>&#x1F3CE;</li><li>&#x1F3CF;</li><li>&#x1F3D0;</li><li>&#x1F3D1;</li><li>&#x1F3D2;</li><li>&#x1F3D3;</li><li>&#x1F3D4;</li><li>&#x1F3D5;</li><li>&#x1F3D6;</li><li>&#x1F3D7;</li><li>&#x1F3D8;</li><li>&#x1F3D9;</li><li>&#x1F3DA;</li><li>&#x1F3DB;</li><li>&#x1F3DC;</li><li>&#x1F3DD;</li><li>&#x1F3DE;</li><li>&#x1F3DF;</li><li>&#x1F3E0;</li><li>&#x1F3E1;</li><li>&#x1F3E2;</li><li>&#x1F3E3;</li><li>&#x1F3E4;</li><li>&#x1F3E5;</li><li>&#x1F3E6;</li><li>&#x1F3E7;</li><li>&#x1F3E8;</li><li>&#x1F3E9;</li><li>&#x1F3EA;</li><li>&#x1F3EB;</li><li>&#x1F3EC;</li><li>&#x1F3ED;</li><li>&#x1F3EE;</li><li>&#x1F3EF;</li><li>&#x1F3F0;</li><li>&#x1F3F3;</li><li>&#x1F3F4;</li><li>&#x1F3F5;</li><li>&#x1F3F7;</li><li>&#x1F3F8;</li><li>&#x1F3F9;</li><li>&#x1F3FA;</li><li>&#x1F3FB;</li><li>&#x1F3FC;</li><li>&#x1F3FD;</li><li>&#x1F3FE;</li><li>&#x1F3FF;</li><li>&#x1F400;</li><li>&#x1F401;</li><li>&#x1F402;</li><li>&#x1F403;</li><li>&#x1F404;</li><li>&#x1F405;</li><li>&#x1F406;</li><li>&#x1F407;</li><li>&#x1F408;</li><li>&#x1F409;</li><li>&#x1F40A;</li><li>&#x1F40B;</li><li>&#x1F40C;</li><li>&#x1F40D;</li><li>&#x1F40E;</li><li>&#x1F40F;</li><li>&#x1F410;</li><li>&#x1F411;</li><li>&#x1F412;</li><li>&#x1F413;</li><li>&#x1F414;</li><li>&#x1F415;</li><li>&#x1F416;</li><li>&#x1F417;</li><li>&#x1F418;</li><li>&#x1F419;</li><li>&#x1F41A;</li><li>&#x1F41B;</li><li>&#x1F41C;</li><li>&#x1F41D;</li><li>&#x1F41E;</li><li>&#x1F41F;</li><li>&#x1F420;</li><li>&#x1F421;</li><li>&#x1F422;</li><li>&#x1F423;</li><li>&#x1F424;</li><li>&#x1F425;</li><li>&#x1F426;</li><li>&#x1F427;</li><li>&#x1F428;</li><li>&#x1F429;</li><li>&#x1F42A;</li><li>&#x1F42B;</li><li>&#x1F42C;</li><li>&#x1F42D;</li><li>&#x1F42E;</li><li>&#x1F42F;</li><li>&#x1F430;</li><li>&#x1F431;</li><li>&#x1F432;</li><li>&#x1F433;</li><li>&#x1F434;</li><li>&#x1F435;</li><li>&#x1F436;</li><li>&#x1F437;</li><li>&#x1F438;</li><li>&#x1F439;</li><li>&#x1F43A;</li><li>&#x1F43B;</li><li>&#x1F43C;</li><li>&#x1F43D;</li><li>&#x1F43E;</li><li>&#x1F43F;</li><li>&#x1F440;</li><li>&#x1F441;&#x200D;&#x1F5E8;</li><li>&#x1F441;</li><li>&#x1F442;&#x1F3FB;</li><li>&#x1F442;&#x1F3FC;</li><li>&#x1F442;&#x1F3FD;</li><li>&#x1F442;&#x1F3FE;</li><li>&#x1F442;&#x1F3FF;</li><li>&#x1F442;</li><li>&#x1F443;&#x1F3FB;</li><li>&#x1F443;&#x1F3FC;</li><li>&#x1F443;&#x1F3FD;</li><li>&#x1F443;&#x1F3FE;</li><li>&#x1F443;&#x1F3FF;</li><li>&#x1F443;</li><li>&#x1F444;</li><li>&#x1F445;</li><li>&#x1F446;&#x1F3FB;</li><li>&#x1F446;&#x1F3FC;</li><li>&#x1F446;&#x1F3FD;</li><li>&#x1F446;&#x1F3FE;</li><li>&#x1F446;&#x1F3FF;</li><li>&#x1F446;</li><li>&#x1F447;&#x1F3FB;</li><li>&#x1F447;&#x1F3FC;</li><li>&#x1F447;&#x1F3FD;</li><li>&#x1F447;&#x1F3FE;</li><li>&#x1F447;&#x1F3FF;</li><li>&#x1F447;</li><li>&#x1F448;&#x1F3FB;</li><li>&#x1F448;&#x1F3FC;</li><li>&#x1F448;&#x1F3FD;</li><li>&#x1F448;&#x1F3FE;</li><li>&#x1F448;&#x1F3FF;</li><li>&#x1F448;</li><li>&#x1F449;&#x1F3FB;</li><li>&#x1F449;&#x1F3FC;</li><li>&#x1F449;&#x1F3FD;</li><li>&#x1F449;&#x1F3FE;</li><li>&#x1F449;&#x1F3FF;</li><li>&#x1F449;</li><li>&#x1F44A;&#x1F3FB;</li><li>&#x1F44A;&#x1F3FC;</li><li>&#x1F44A;&#x1F3FD;</li><li>&#x1F44A;&#x1F3FE;</li><li>&#x1F44A;&#x1F3FF;</li><li>&#x1F44A;</li><li>&#x1F44B;&#x1F3FB;</li><li>&#x1F44B;&#x1F3FC;</li><li>&#x1F44B;&#x1F3FD;</li><li>&#x1F44B;&#x1F3FE;</li><li>&#x1F44B;&#x1F3FF;</li><li>&#x1F44B;</li><li>&#x1F44C;&#x1F3FB;</li><li>&#x1F44C;&#x1F3FC;</li><li>&#x1F44C;&#x1F3FD;</li><li>&#x1F44C;&#x1F3FE;</li><li>&#x1F44C;&#x1F3FF;</li><li>&#x1F44C;</li><li>&#x1F44D;&#x1F3FB;</li><li>&#x1F44D;&#x1F3FC;</li><li>&#x1F44D;&#x1F3FD;</li><li>&#x1F44D;&#x1F3FE;</li><li>&#x1F44D;&#x1F3FF;</li><li>&#x1F44D;</li><li>&#x1F44E;&#x1F3FB;</li><li>&#x1F44E;&#x1F3FC;</li><li>&#x1F44E;&#x1F3FD;</li><li>&#x1F44E;&#x1F3FE;</li><li>&#x1F44E;&#x1F3FF;</li><li>&#x1F44E;</li><li>&#x1F44F;&#x1F3FB;</li><li>&#x1F44F;&#x1F3FC;</li><li>&#x1F44F;&#x1F3FD;</li><li>&#x1F44F;&#x1F3FE;</li><li>&#x1F44F;&#x1F3FF;</li><li>&#x1F44F;</li><li>&#x1F450;&#x1F3FB;</li><li>&#x1F450;&#x1F3FC;</li><li>&#x1F450;&#x1F3FD;</li><li>&#x1F450;&#x1F3FE;</li><li>&#x1F450;&#x1F3FF;</li><li>&#x1F450;</li><li>&#x1F451;</li><li>&#x1F452;</li><li>&#x1F453;</li><li>&#x1F454;</li><li>&#x1F455;</li><li>&#x1F456;</li><li>&#x1F457;</li><li>&#x1F458;</li><li>&#x1F459;</li><li>&#x1F45A;</li><li>&#x1F45B;</li><li>&#x1F45C;</li><li>&#x1F45D;</li><li>&#x1F45E;</li><li>&#x1F45F;</li><li>&#x1F460;</li><li>&#x1F461;</li><li>&#x1F462;</li><li>&#x1F463;</li><li>&#x1F464;</li><li>&#x1F465;</li><li>&#x1F466;&#x1F3FB;</li><li>&#x1F466;&#x1F3FC;</li><li>&#x1F466;&#x1F3FD;</li><li>&#x1F466;&#x1F3FE;</li><li>&#x1F466;&#x1F3FF;</li><li>&#x1F466;</li><li>&#x1F467;&#x1F3FB;</li><li>&#x1F467;&#x1F3FC;</li><li>&#x1F467;&#x1F3FD;</li><li>&#x1F467;&#x1F3FE;</li><li>&#x1F467;&#x1F3FF;</li><li>&#x1F467;</li><li>&#x1F468;&#x1F3FB;</li><li>&#x1F468;&#x1F3FC;</li><li>&#x1F468;&#x1F3FD;</li><li>&#x1F468;&#x1F3FE;</li><li>&#x1F468;&#x1F3FF;</li><li>&#x1F468;&#x200D;&#x1F468;&#x200D;&#x1F466;&#x200D;&#x1F466;</li><li>&#x1F468;&#x200D;&#x1F468;&#x200D;&#x1F466;</li><li>&#x1F468;&#x200D;&#x1F468;&#x200D;&#x1F467;&#x200D;&#x1F466;</li><li>&#x1F468;&#x200D;&#x1F468;&#x200D;&#x1F467;&#x200D;&#x1F467;</li><li>&#x1F468;&#x200D;&#x1F468;&#x200D;&#x1F467;</li><li>&#x1F468;&#x200D;&#x1F469;&#x200D;&#x1F466;&#x200D;&#x1F466;</li><li>&#x1F468;&#x200D;&#x1F469;&#x200D;&#x1F466;</li><li>&#x1F468;&#x200D;&#x1F469;&#x200D;&#x1F467;&#x200D;&#x1F466;</li><li>&#x1F468;&#x200D;&#x1F469;&#x200D;&#x1F467;&#x200D;&#x1F467;</li><li>&#x1F468;&#x200D;&#x1F469;&#x200D;&#x1F467;</li><li>&#x1F468;&#x200D;&#x2764;&#xFE0F;&#x200D;&#x1F468;</li><li>&#x1F468;&#x200D;&#x2764;&#xFE0F;&#x200D;&#x1F48B;&#x200D;&#x1F468;</li><li>&#x1F468;</li><li>&#x1F469;&#x1F3FB;</li><li>&#x1F469;&#x1F3FC;</li><li>&#x1F469;&#x1F3FD;</li><li>&#x1F469;&#x1F3FE;</li><li>&#x1F469;&#x1F3FF;</li><li>&#x1F469;&#x200D;&#x1F469;&#x200D;&#x1F466;&#x200D;&#x1F466;</li><li>&#x1F469;&#x200D;&#x1F469;&#x200D;&#x1F466;</li><li>&#x1F469;&#x200D;&#x1F469;&#x200D;&#x1F467;&#x200D;&#x1F466;</li><li>&#x1F469;&#x200D;&#x1F469;&#x200D;&#x1F467;&#x200D;&#x1F467;</li><li>&#x1F469;&#x200D;&#x1F469;&#x200D;&#x1F467;</li><li>&#x1F469;&#x200D;&#x2764;&#xFE0F;&#x200D;&#x1F468;</li><li>&#x1F469;&#x200D;&#x2764;&#xFE0F;&#x200D;&#x1F469;</li><li>&#x1F469;&#x200D;&#x2764;&#xFE0F;&#x200D;&#x1F48B;&#x200D;&#x1F468;</li><li>&#x1F469;&#x200D;&#x2764;&#xFE0F;&#x200D;&#x1F48B;&#x200D;&#x1F469;</li><li>&#x1F469;</li><li>&#x1F46A;</li><li>&#x1F46B;</li><li>&#x1F46C;</li><li>&#x1F46D;</li><li>&#x1F46E;&#x1F3FB;</li><li>&#x1F46E;&#x1F3FC;</li><li>&#x1F46E;&#x1F3FD;</li><li>&#x1F46E;&#x1F3FE;</li><li>&#x1F46E;&#x1F3FF;</li><li>&#x1F46E;</li><li>&#x1F46F;</li><li>&#x1F470;&#x1F3FB;</li><li>&#x1F470;&#x1F3FC;</li><li>&#x1F470;&#x1F3FD;</li><li>&#x1F470;&#x1F3FE;</li><li>&#x1F470;&#x1F3FF;</li><li>&#x1F470;</li><li>&#x1F471;&#x1F3FB;</li><li>&#x1F471;&#x1F3FC;</li><li>&#x1F471;&#x1F3FD;</li><li>&#x1F471;&#x1F3FE;</li><li>&#x1F471;&#x1F3FF;</li><li>&#x1F471;</li><li>&#x1F472;&#x1F3FB;</li><li>&#x1F472;&#x1F3FC;</li><li>&#x1F472;&#x1F3FD;</li><li>&#x1F472;&#x1F3FE;</li><li>&#x1F472;&#x1F3FF;</li><li>&#x1F472;</li><li>&#x1F473;&#x1F3FB;</li><li>&#x1F473;&#x1F3FC;</li><li>&#x1F473;&#x1F3FD;</li><li>&#x1F473;&#x1F3FE;</li><li>&#x1F473;&#x1F3FF;</li><li>&#x1F473;</li><li>&#x1F474;&#x1F3FB;</li><li>&#x1F474;&#x1F3FC;</li><li>&#x1F474;&#x1F3FD;</li><li>&#x1F474;&#x1F3FE;</li><li>&#x1F474;&#x1F3FF;</li><li>&#x1F474;</li><li>&#x1F475;&#x1F3FB;</li><li>&#x1F475;&#x1F3FC;</li><li>&#x1F475;&#x1F3FD;</li><li>&#x1F475;&#x1F3FE;</li><li>&#x1F475;&#x1F3FF;</li><li>&#x1F475;</li><li>&#x1F476;&#x1F3FB;</li><li>&#x1F476;&#x1F3FC;</li><li>&#x1F476;&#x1F3FD;</li><li>&#x1F476;&#x1F3FE;</li><li>&#x1F476;&#x1F3FF;</li><li>&#x1F476;</li><li>&#x1F477;&#x1F3FB;</li><li>&#x1F477;&#x1F3FC;</li><li>&#x1F477;&#x1F3FD;</li><li>&#x1F477;&#x1F3FE;</li><li>&#x1F477;&#x1F3FF;</li><li>&#x1F477;</li><li>&#x1F478;&#x1F3FB;</li><li>&#x1F478;&#x1F3FC;</li><li>&#x1F478;&#x1F3FD;</li><li>&#x1F478;&#x1F3FE;</li><li>&#x1F478;&#x1F3FF;</li><li>&#x1F478;</li><li>&#x1F479;</li><li>&#x1F47A;</li><li>&#x1F47B;</li><li>&#x1F47C;&#x1F3FB;</li><li>&#x1F47C;&#x1F3FC;</li><li>&#x1F47C;&#x1F3FD;</li><li>&#x1F47C;&#x1F3FE;</li><li>&#x1F47C;&#x1F3FF;</li><li>&#x1F47C;</li><li>&#x1F47D;</li><li>&#x1F47E;</li><li>&#x1F47F;</li><li>&#x1F480;</li><li>&#x1F481;&#x1F3FB;</li><li>&#x1F481;&#x1F3FC;</li><li>&#x1F481;&#x1F3FD;</li><li>&#x1F481;&#x1F3FE;</li><li>&#x1F481;&#x1F3FF;</li><li>&#x1F481;</li><li>&#x1F482;&#x1F3FB;</li><li>&#x1F482;&#x1F3FC;</li><li>&#x1F482;&#x1F3FD;</li><li>&#x1F482;&#x1F3FE;</li><li>&#x1F482;&#x1F3FF;</li><li>&#x1F482;</li><li>&#x1F483;&#x1F3FB;</li><li>&#x1F483;&#x1F3FC;</li><li>&#x1F483;&#x1F3FD;</li><li>&#x1F483;&#x1F3FE;</li><li>&#x1F483;&#x1F3FF;</li><li>&#x1F483;</li><li>&#x1F484;</li><li>&#x1F485;&#x1F3FB;</li><li>&#x1F485;&#x1F3FC;</li><li>&#x1F485;&#x1F3FD;</li><li>&#x1F485;&#x1F3FE;</li><li>&#x1F485;&#x1F3FF;</li><li>&#x1F485;</li><li>&#x1F486;&#x1F3FB;</li><li>&#x1F486;&#x1F3FC;</li><li>&#x1F486;&#x1F3FD;</li><li>&#x1F486;&#x1F3FE;</li><li>&#x1F486;&#x1F3FF;</li><li>&#x1F486;</li><li>&#x1F487;&#x1F3FB;</li><li>&#x1F487;&#x1F3FC;</li><li>&#x1F487;&#x1F3FD;</li><li>&#x1F487;&#x1F3FE;</li><li>&#x1F487;&#x1F3FF;</li><li>&#x1F487;</li><li>&#x1F488;</li><li>&#x1F489;</li><li>&#x1F48A;</li><li>&#x1F48B;</li><li>&#x1F48C;</li><li>&#x1F48D;</li><li>&#x1F48E;</li><li>&#x1F48F;</li><li>&#x1F490;</li><li>&#x1F491;</li><li>&#x1F492;</li><li>&#x1F493;</li><li>&#x1F494;</li><li>&#x1F495;</li><li>&#x1F496;</li><li>&#x1F497;</li><li>&#x1F498;</li><li>&#x1F499;</li><li>&#x1F49A;</li><li>&#x1F49B;</li><li>&#x1F49C;</li><li>&#x1F49D;</li><li>&#x1F49E;</li><li>&#x1F49F;</li><li>&#x1F4A0;</li><li>&#x1F4A1;</li><li>&#x1F4A2;</li><li>&#x1F4A3;</li><li>&#x1F4A4;</li><li>&#x1F4A5;</li><li>&#x1F4A6;</li><li>&#x1F4A7;</li><li>&#x1F4A8;</li><li>&#x1F4A9;</li><li>&#x1F4AA;&#x1F3FB;</li><li>&#x1F4AA;&#x1F3FC;</li><li>&#x1F4AA;&#x1F3FD;</li><li>&#x1F4AA;&#x1F3FE;</li><li>&#x1F4AA;&#x1F3FF;</li><li>&#x1F4AA;</li><li>&#x1F4AB;</li><li>&#x1F4AC;</li><li>&#x1F4AD;</li><li>&#x1F4AE;</li><li>&#x1F4AF;</li><li>&#x1F4B0;</li><li>&#x1F4B1;</li><li>&#x1F4B2;</li><li>&#x1F4B3;</li><li>&#x1F4B4;</li><li>&#x1F4B5;</li><li>&#x1F4B6;</li><li>&#x1F4B7;</li><li>&#x1F4B8;</li><li>&#x1F4B9;</li><li>&#x1F4BA;</li><li>&#x1F4BB;</li><li>&#x1F4BC;</li><li>&#x1F4BD;</li><li>&#x1F4BE;</li><li>&#x1F4BF;</li><li>&#x1F4C0;</li><li>&#x1F4C1;</li><li>&#x1F4C2;</li><li>&#x1F4C3;</li><li>&#x1F4C4;</li><li>&#x1F4C5;</li><li>&#x1F4C6;</li><li>&#x1F4C7;</li><li>&#x1F4C8;</li><li>&#x1F4C9;</li><li>&#x1F4CA;</li><li>&#x1F4CB;</li><li>&#x1F4CC;</li><li>&#x1F4CD;</li><li>&#x1F4CE;</li><li>&#x1F4CF;</li><li>&#x1F4D0;</li><li>&#x1F4D1;</li><li>&#x1F4D2;</li><li>&#x1F4D3;</li><li>&#x1F4D4;</li><li>&#x1F4D5;</li><li>&#x1F4D6;</li><li>&#x1F4D7;</li><li>&#x1F4D8;</li><li>&#x1F4D9;</li><li>&#x1F4DA;</li><li>&#x1F4DB;</li><li>&#x1F4DC;</li><li>&#x1F4DD;</li><li>&#x1F4DE;</li><li>&#x1F4DF;</li><li>&#x1F4E0;</li><li>&#x1F4E1;</li><li>&#x1F4E2;</li><li>&#x1F4E3;</li><li>&#x1F4E4;</li><li>&#x1F4E5;</li><li>&#x1F4E6;</li><li>&#x1F4E7;</li><li>&#x1F4E8;</li><li>&#x1F4E9;</li><li>&#x1F4EA;</li><li>&#x1F4EB;</li><li>&#x1F4EC;</li><li>&#x1F4ED;</li><li>&#x1F4EE;</li><li>&#x1F4EF;</li><li>&#x1F4F0;</li><li>&#x1F4F1;</li><li>&#x1F4F2;</li><li>&#x1F4F3;</li><li>&#x1F4F4;</li><li>&#x1F4F5;</li><li>&#x1F4F6;</li><li>&#x1F4F7;</li><li>&#x1F4F8;</li><li>&#x1F4F9;</li><li>&#x1F4FA;</li><li>&#x1F4FB;</li><li>&#x1F4FC;</li><li>&#x1F4FD;</li><li>&#x1F4FF;</li><li>&#x1F500;</li><li>&#x1F501;</li><li>&#x1F502;</li><li>&#x1F503;</li><li>&#x1F504;</li><li>&#x1F505;</li><li>&#x1F506;</li><li>&#x1F507;</li><li>&#x1F508;</li><li>&#x1F509;</li><li>&#x1F50A;</li><li>&#x1F50B;</li><li>&#x1F50C;</li><li>&#x1F50D;</li><li>&#x1F50E;</li><li>&#x1F50F;</li><li>&#x1F510;</li><li>&#x1F511;</li><li>&#x1F512;</li><li>&#x1F513;</li><li>&#x1F514;</li><li>&#x1F515;</li><li>&#x1F516;</li><li>&#x1F517;</li><li>&#x1F518;</li><li>&#x1F519;</li><li>&#x1F51A;</li><li>&#x1F51B;</li><li>&#x1F51C;</li><li>&#x1F51D;</li><li>&#x1F51E;</li><li>&#x1F51F;</li><li>&#x1F520;</li><li>&#x1F521;</li><li>&#x1F522;</li><li>&#x1F523;</li><li>&#x1F524;</li><li>&#x1F525;</li><li>&#x1F526;</li><li>&#x1F527;</li><li>&#x1F528;</li><li>&#x1F529;</li><li>&#x1F52A;</li><li>&#x1F52B;</li><li>&#x1F52C;</li><li>&#x1F52D;</li><li>&#x1F52E;</li><li>&#x1F52F;</li><li>&#x1F530;</li><li>&#x1F531;</li><li>&#x1F532;</li><li>&#x1F533;</li><li>&#x1F534;</li><li>&#x1F535;</li><li>&#x1F536;</li><li>&#x1F537;</li><li>&#x1F538;</li><li>&#x1F539;</li><li>&#x1F53A;</li><li>&#x1F53B;</li><li>&#x1F53C;</li><li>&#x1F53D;</li><li>&#x1F549;</li><li>&#x1F54A;</li><li>&#x1F54B;</li><li>&#x1F54C;</li><li>&#x1F54D;</li><li>&#x1F54E;</li><li>&#x1F550;</li><li>&#x1F551;</li><li>&#x1F552;</li><li>&#x1F553;</li><li>&#x1F554;</li><li>&#x1F555;</li><li>&#x1F556;</li><li>&#x1F557;</li><li>&#x1F558;</li><li>&#x1F559;</li><li>&#x1F55A;</li><li>&#x1F55B;</li><li>&#x1F55C;</li><li>&#x1F55D;</li><li>&#x1F55E;</li><li>&#x1F55F;</li><li>&#x1F560;</li><li>&#x1F561;</li><li>&#x1F562;</li><li>&#x1F563;</li><li>&#x1F564;</li><li>&#x1F565;</li><li>&#x1F566;</li><li>&#x1F567;</li><li>&#x1F56F;</li><li>&#x1F570;</li><li>&#x1F573;</li><li>&#x1F574;</li><li>&#x1F575;&#x1F3FB;</li><li>&#x1F575;&#x1F3FC;</li><li>&#x1F575;&#x1F3FD;</li><li>&#x1F575;&#x1F3FE;</li><li>&#x1F575;&#x1F3FF;</li><li>&#x1F575;</li><li>&#x1F576;</li><li>&#x1F577;</li><li>&#x1F578;</li><li>&#x1F579;</li><li>&#x1F587;</li><li>&#x1F58A;</li><li>&#x1F58B;</li><li>&#x1F58C;</li><li>&#x1F58D;</li><li>&#x1F590;&#x1F3FB;</li><li>&#x1F590;&#x1F3FC;</li><li>&#x1F590;&#x1F3FD;</li><li>&#x1F590;&#x1F3FE;</li><li>&#x1F590;&#x1F3FF;</li><li>&#x1F590;</li><li>&#x1F595;&#x1F3FB;</li><li>&#x1F595;&#x1F3FC;</li><li>&#x1F595;&#x1F3FD;</li><li>&#x1F595;&#x1F3FE;</li><li>&#x1F595;&#x1F3FF;</li><li>&#x1F595;</li><li>&#x1F596;&#x1F3FB;</li><li>&#x1F596;&#x1F3FC;</li><li>&#x1F596;&#x1F3FD;</li><li>&#x1F596;&#x1F3FE;</li><li>&#x1F596;&#x1F3FF;</li><li>&#x1F596;</li><li>&#x1F5A5;</li><li>&#x1F5A8;</li><li>&#x1F5B1;</li><li>&#x1F5B2;</li><li>&#x1F5BC;</li><li>&#x1F5C2;</li><li>&#x1F5C3;</li><li>&#x1F5C4;</li><li>&#x1F5D1;</li><li>&#x1F5D2;</li><li>&#x1F5D3;</li><li>&#x1F5DC;</li><li>&#x1F5DD;</li><li>&#x1F5DE;</li><li>&#x1F5E1;</li><li>&#x1F5E3;</li><li>&#x1F5E8;</li><li>&#x1F5EF;</li><li>&#x1F5F3;</li><li>&#x1F5FA;</li><li>&#x1F5FB;</li><li>&#x1F5FC;</li><li>&#x1F5FD;</li><li>&#x1F5FE;</li><li>&#x1F5FF;</li><li>&#x1F600;</li><li>&#x1F601;</li><li>&#x1F602;</li><li>&#x1F603;</li><li>&#x1F604;</li><li>&#x1F605;</li><li>&#x1F606;</li><li>&#x1F607;</li><li>&#x1F608;</li><li>&#x1F609;</li><li>&#x1F60A;</li><li>&#x1F60B;</li><li>&#x1F60C;</li><li>&#x1F60D;</li><li>&#x1F60E;</li><li>&#x1F60F;</li><li>&#x1F610;</li><li>&#x1F611;</li><li>&#x1F612;</li><li>&#x1F613;</li><li>&#x1F614;</li><li>&#x1F615;</li><li>&#x1F616;</li><li>&#x1F617;</li><li>&#x1F618;</li><li>&#x1F619;</li><li>&#x1F61A;</li><li>&#x1F61B;</li><li>&#x1F61C;</li><li>&#x1F61D;</li><li>&#x1F61E;</li><li>&#x1F61F;</li><li>&#x1F620;</li><li>&#x1F621;</li><li>&#x1F622;</li><li>&#x1F623;</li><li>&#x1F624;</li><li>&#x1F625;</li><li>&#x1F626;</li><li>&#x1F627;</li><li>&#x1F628;</li><li>&#x1F629;</li><li>&#x1F62A;</li><li>&#x1F62B;</li><li>&#x1F62C;</li><li>&#x1F62D;</li><li>&#x1F62E;</li><li>&#x1F62F;</li><li>&#x1F630;</li><li>&#x1F631;</li><li>&#x1F632;</li><li>&#x1F633;</li><li>&#x1F634;</li><li>&#x1F635;</li><li>&#x1F636;</li><li>&#x1F637;</li><li>&#x1F638;</li><li>&#x1F639;</li><li>&#x1F63A;</li><li>&#x1F63B;</li><li>&#x1F63C;</li><li>&#x1F63D;</li><li>&#x1F63E;</li><li>&#x1F63F;</li><li>&#x1F640;</li><li>&#x1F641;</li><li>&#x1F642;</li><li>&#x1F643;</li><li>&#x1F644;</li><li>&#x1F645;&#x1F3FB;</li><li>&#x1F645;&#x1F3FC;</li><li>&#x1F645;&#x1F3FD;</li><li>&#x1F645;&#x1F3FE;</li><li>&#x1F645;&#x1F3FF;</li><li>&#x1F645;</li><li>&#x1F646;&#x1F3FB;</li><li>&#x1F646;&#x1F3FC;</li><li>&#x1F646;&#x1F3FD;</li><li>&#x1F646;&#x1F3FE;</li><li>&#x1F646;&#x1F3FF;</li><li>&#x1F646;</li><li>&#x1F647;&#x1F3FB;</li><li>&#x1F647;&#x1F3FC;</li><li>&#x1F647;&#x1F3FD;</li><li>&#x1F647;&#x1F3FE;</li><li>&#x1F647;&#x1F3FF;</li><li>&#x1F647;</li><li>&#x1F648;</li><li>&#x1F649;</li><li>&#x1F64A;</li><li>&#x1F64B;&#x1F3FB;</li><li>&#x1F64B;&#x1F3FC;</li><li>&#x1F64B;&#x1F3FD;</li><li>&#x1F64B;&#x1F3FE;</li><li>&#x1F64B;&#x1F3FF;</li><li>&#x1F64B;</li><li>&#x1F64C;&#x1F3FB;</li><li>&#x1F64C;&#x1F3FC;</li><li>&#x1F64C;&#x1F3FD;</li><li>&#x1F64C;&#x1F3FE;</li><li>&#x1F64C;&#x1F3FF;</li><li>&#x1F64C;</li><li>&#x1F64D;&#x1F3FB;</li><li>&#x1F64D;&#x1F3FC;</li><li>&#x1F64D;&#x1F3FD;</li><li>&#x1F64D;&#x1F3FE;</li><li>&#x1F64D;&#x1F3FF;</li><li>&#x1F64D;</li><li>&#x1F64E;&#x1F3FB;</li><li>&#x1F64E;&#x1F3FC;</li><li>&#x1F64E;&#x1F3FD;</li><li>&#x1F64E;&#x1F3FE;</li><li>&#x1F64E;&#x1F3FF;</li><li>&#x1F64E;</li><li>&#x1F64F;&#x1F3FB;</li><li>&#x1F64F;&#x1F3FC;</li><li>&#x1F64F;&#x1F3FD;</li><li>&#x1F64F;&#x1F3FE;</li><li>&#x1F64F;&#x1F3FF;</li><li>&#x1F64F;</li><li>&#x1F680;</li><li>&#x1F681;</li><li>&#x1F682;</li><li>&#x1F683;</li><li>&#x1F684;</li><li>&#x1F685;</li><li>&#x1F686;</li><li>&#x1F687;</li><li>&#x1F688;</li><li>&#x1F689;</li><li>&#x1F68A;</li><li>&#x1F68B;</li><li>&#x1F68C;</li><li>&#x1F68D;</li><li>&#x1F68E;</li><li>&#x1F68F;</li><li>&#x1F690;</li><li>&#x1F691;</li><li>&#x1F692;</li><li>&#x1F693;</li><li>&#x1F694;</li><li>&#x1F695;</li><li>&#x1F696;</li><li>&#x1F697;</li><li>&#x1F698;</li><li>&#x1F699;</li><li>&#x1F69A;</li><li>&#x1F69B;</li><li>&#x1F69C;</li><li>&#x1F69D;</li><li>&#x1F69E;</li><li>&#x1F69F;</li><li>&#x1F6A0;</li><li>&#x1F6A1;</li><li>&#x1F6A2;</li><li>&#x1F6A3;&#x1F3FB;</li><li>&#x1F6A3;&#x1F3FC;</li><li>&#x1F6A3;&#x1F3FD;</li><li>&#x1F6A3;&#x1F3FE;</li><li>&#x1F6A3;&#x1F3FF;</li><li>&#x1F6A3;</li><li>&#x1F6A4;</li><li>&#x1F6A5;</li><li>&#x1F6A6;</li><li>&#x1F6A7;</li><li>&#x1F6A8;</li><li>&#x1F6A9;</li><li>&#x1F6AA;</li><li>&#x1F6AB;</li><li>&#x1F6AC;</li><li>&#x1F6AD;</li><li>&#x1F6AE;</li><li>&#x1F6AF;</li><li>&#x1F6B0;</li><li>&#x1F6B1;</li><li>&#x1F6B2;</li><li>&#x1F6B3;</li><li>&#x1F6B4;&#x1F3FB;</li><li>&#x1F6B4;&#x1F3FC;</li><li>&#x1F6B4;&#x1F3FD;</li><li>&#x1F6B4;&#x1F3FE;</li><li>&#x1F6B4;&#x1F3FF;</li><li>&#x1F6B4;</li><li>&#x1F6B5;&#x1F3FB;</li><li>&#x1F6B5;&#x1F3FC;</li><li>&#x1F6B5;&#x1F3FD;</li><li>&#x1F6B5;&#x1F3FE;</li><li>&#x1F6B5;&#x1F3FF;</li><li>&#x1F6B5;</li><li>&#x1F6B6;&#x1F3FB;</li><li>&#x1F6B6;&#x1F3FC;</li><li>&#x1F6B6;&#x1F3FD;</li><li>&#x1F6B6;&#x1F3FE;</li><li>&#x1F6B6;&#x1F3FF;</li><li>&#x1F6B6;</li><li>&#x1F6B7;</li><li>&#x1F6B8;</li><li>&#x1F6B9;</li><li>&#x1F6BA;</li><li>&#x1F6BB;</li><li>&#x1F6BC;</li><li>&#x1F6BD;</li><li>&#x1F6BE;</li><li>&#x1F6BF;</li><li>&#x1F6C0;&#x1F3FB;</li><li>&#x1F6C0;&#x1F3FC;</li><li>&#x1F6C0;&#x1F3FD;</li><li>&#x1F6C0;&#x1F3FE;</li><li>&#x1F6C0;&#x1F3FF;</li><li>&#x1F6C0;</li><li>&#x1F6C1;</li><li>&#x1F6C2;</li><li>&#x1F6C3;</li><li>&#x1F6C4;</li><li>&#x1F6C5;</li><li>&#x1F6CB;</li><li>&#x1F6CC;</li><li>&#x1F6CD;</li><li>&#x1F6CE;</li><li>&#x1F6CF;</li><li>&#x1F6D0;</li><li>&#x1F6E0;</li><li>&#x1F6E1;</li><li>&#x1F6E2;</li><li>&#x1F6E3;</li><li>&#x1F6E4;</li><li>&#x1F6E5;</li><li>&#x1F6E9;</li><li>&#x1F6EB;</li><li>&#x1F6EC;</li><li>&#x1F6F0;</li><li>&#x1F6F3;</li><li>&#x1F910;</li><li>&#x1F911;</li><li>&#x1F912;</li><li>&#x1F913;</li><li>&#x1F914;</li><li>&#x1F915;</li><li>&#x1F916;</li><li>&#x1F917;</li><li>&#x1F918;&#x1F3FB;</li><li>&#x1F918;&#x1F3FC;</li><li>&#x1F918;&#x1F3FD;</li><li>&#x1F918;&#x1F3FE;</li><li>&#x1F918;&#x1F3FF;</li><li>&#x1F918;</li><li>&#x1F980;</li><li>&#x1F981;</li><li>&#x1F982;</li><li>&#x1F983;</li><li>&#x1F984;</li><li>&#x1F9C0;</li><li>&#x203C;</li><li>&#x2049;</li><li>&#x2122;</li><li>&#x2139;</li><li>&#x2194;</li><li>&#x2195;</li><li>&#x2196;</li><li>&#x2197;</li><li>&#x2198;</li><li>&#x2199;</li><li>&#x21A9;</li><li>&#x21AA;</li><li>&#x23;&#x20E3;</li><li>&#x231A;</li><li>&#x231B;</li><li>&#x2328;</li><li>&#x23CF;</li><li>&#x23E9;</li><li>&#x23EA;</li><li>&#x23EB;</li><li>&#x23EC;</li><li>&#x23ED;</li><li>&#x23EE;</li><li>&#x23EF;</li><li>&#x23F0;</li><li>&#x23F1;</li><li>&#x23F2;</li><li>&#x23F3;</li><li>&#x23F8;</li><li>&#x23F9;</li><li>&#x23FA;</li><li>&#x24C2;</li><li>&#x25AA;</li><li>&#x25AB;</li><li>&#x25B6;</li><li>&#x25C0;</li><li>&#x25FB;</li><li>&#x25FC;</li><li>&#x25FD;</li><li>&#x25FE;</li><li>&#x2600;</li><li>&#x2601;</li><li>&#x2602;</li><li>&#x2603;</li><li>&#x2604;</li><li>&#x260E;</li><li>&#x2611;</li><li>&#x2614;</li><li>&#x2615;</li><li>&#x2618;</li><li>&#x261D;&#x1F3FB;</li><li>&#x261D;&#x1F3FC;</li><li>&#x261D;&#x1F3FD;</li><li>&#x261D;&#x1F3FE;</li><li>&#x261D;&#x1F3FF;</li><li>&#x261D;</li><li>&#x2620;</li><li>&#x2622;</li><li>&#x2623;</li><li>&#x2626;</li><li>&#x262A;</li><li>&#x262E;</li><li>&#x262F;</li><li>&#x2638;</li><li>&#x2639;</li><li>&#x263A;</li><li>&#x2648;</li><li>&#x2649;</li><li>&#x264A;</li><li>&#x264B;</li><li>&#x264C;</li><li>&#x264D;</li><li>&#x264E;</li><li>&#x264F;</li><li>&#x2650;</li><li>&#x2651;</li><li>&#x2652;</li><li>&#x2653;</li><li>&#x2660;</li><li>&#x2663;</li><li>&#x2665;</li><li>&#x2666;</li><li>&#x2668;</li><li>&#x267B;</li><li>&#x267F;</li><li>&#x2692;</li><li>&#x2693;</li><li>&#x2694;</li><li>&#x2696;</li><li>&#x2697;</li><li>&#x2699;</li><li>&#x269B;</li><li>&#x269C;</li><li>&#x26A0;</li><li>&#x26A1;</li><li>&#x26AA;</li><li>&#x26AB;</li><li>&#x26B0;</li><li>&#x26B1;</li><li>&#x26BD;</li><li>&#x26BE;</li><li>&#x26C4;</li><li>&#x26C5;</li><li>&#x26C8;</li><li>&#x26CE;</li><li>&#x26CF;</li><li>&#x26D1;</li><li>&#x26D3;</li><li>&#x26D4;</li><li>&#x26E9;</li><li>&#x26EA;</li><li>&#x26F0;</li><li>&#x26F1;</li><li>&#x26F2;</li><li>&#x26F3;</li><li>&#x26F4;</li><li>&#x26F5;</li><li>&#x26F7;</li><li>&#x26F8;</li><li>&#x26F9;&#x1F3FB;</li><li>&#x26F9;&#x1F3FC;</li><li>&#x26F9;&#x1F3FD;</li><li>&#x26F9;&#x1F3FE;</li><li>&#x26F9;&#x1F3FF;</li><li>&#x26F9;</li><li>&#x26FA;</li><li>&#x26FD;</li><li>&#x2702;</li><li>&#x2705;</li><li>&#x2708;</li><li>&#x2709;</li><li>&#x270A;&#x1F3FB;</li><li>&#x270A;&#x1F3FC;</li><li>&#x270A;&#x1F3FD;</li><li>&#x270A;&#x1F3FE;</li><li>&#x270A;&#x1F3FF;</li><li>&#x270A;</li><li>&#x270B;&#x1F3FB;</li><li>&#x270B;&#x1F3FC;</li><li>&#x270B;&#x1F3FD;</li><li>&#x270B;&#x1F3FE;</li><li>&#x270B;&#x1F3FF;</li><li>&#x270B;</li><li>&#x270C;&#x1F3FB;</li><li>&#x270C;&#x1F3FC;</li><li>&#x270C;&#x1F3FD;</li><li>&#x270C;&#x1F3FE;</li><li>&#x270C;&#x1F3FF;</li><li>&#x270C;</li><li>&#x270D;&#x1F3FB;</li><li>&#x270D;&#x1F3FC;</li><li>&#x270D;&#x1F3FD;</li><li>&#x270D;&#x1F3FE;</li><li>&#x270D;&#x1F3FF;</li><li>&#x270D;</li><li>&#x270F;</li><li>&#x2712;</li><li>&#x2714;</li><li>&#x2716;</li><li>&#x271D;</li><li>&#x2721;</li><li>&#x2728;</li><li>&#x2733;</li><li>&#x2734;</li><li>&#x2744;</li><li>&#x2747;</li><li>&#x274C;</li><li>&#x274E;</li><li>&#x2753;</li><li>&#x2754;</li><li>&#x2755;</li><li>&#x2757;</li><li>&#x2763;</li><li>&#x2764;</li><li>&#x2795;</li><li>&#x2796;</li><li>&#x2797;</li><li>&#x27A1;</li><li>&#x27B0;</li><li>&#x27BF;</li><li>&#x2934;</li><li>&#x2935;</li><li>&#x2A;&#x20E3;</li><li>&#x2B05;</li><li>&#x2B06;</li><li>&#x2B07;</li><li>&#x2B1B;</li><li>&#x2B1C;</li><li>&#x2B50;</li><li>&#x2B55;</li><li>&#x30;&#x20E3;</li><li>&#x3030;</li><li>&#x303D;</li><li>&#x31;&#x20E3;</li><li>&#x32;&#x20E3;</li><li>&#x3297;</li><li>&#x3299;</li><li>&#x33;&#x20E3;</li><li>&#x34;&#x20E3;</li><li>&#x35;&#x20E3;</li><li>&#x36;&#x20E3;</li><li>&#x37;&#x20E3;</li><li>&#x38;&#x20E3;</li><li>&#x39;&#x20E3;</li><li>&#xA9;</li><li>&#xAE;</li><li>&#xE50A;</li></ul>
+							</div>
+					</div>
+			</div>
+			
+			<div id="imagepreview">
+				<table style="border:none;width:100%;">
+				<tr id="preview"></tr><a href="#" class="ic_close thumbnail_close_btn" ></a>
+				</table>
+			</div>
+			
+			<details id="status_drafts">
+					<summary class="sub_label" data-i18n-text="drafts">Drafts</summary>
+					<p><ul></ul></p>
+			</details> <!-- #status_drafts -->
+			<div id="status_ctrl">
+					<a id="toggle_mode" class="mochi_button toolbar_button" data-i18n-title="click_to_compose_message" title="Click to compose message"></a>
+					<a id="btn_smiley" class="mochi_button toolbar_button" data-i18n-title="insert_smiley" title="Insert emoji"></a>
+					
+					<!-- 1.1 No more Image Uploader dialog // 4.0 Multiple images support -->
+					<input id="btn_imageuploader_file" style="width:0; height:0;" type="file" multiple accept=".jpg,.jpeg,.png,.gif" />
+					<a id="btn_imageuploader" class="mochi_button toolbar_button" data-i18n-title="image_uploader" title="Image uploader"></a>
+					
+					<!-- 6.0: Video upload support -->
+					<input id="btn_videouploader_file" style="width:0; height:0;" type="file" accept=".mp4" />
+					<a id="btn_videouploader" class="mochi_button toolbar_button" data-i18n-title="video_uploader" title="Video uploader"></a>
+					
+					<a id="btn_save_draft" class="mochi_button toolbar_button" data-i18n-title="save_as_draft" title="Save as drafts"></a>
+				
+					<!-- 2.2 Fix for mic -->
+					<a id="btn_rec" class="mochi_button toolbar_button" data-i18n-title="speech_rec" title="Speech Recognition"></a>
+									
+					<a id="btn_clear" class="mochi_button" data-i18n-text="clear">Clear</a>
+					<a id="btn_update" class="mochi_button blue" data-i18n-text="update">Update</a>
+					<span class="clear"></span>
+					<div id="status_len"></div>
+			</div>
+    </div>
+    <div class="dialog_footer"></div>
+  </div> <!-- END of .dialog_container -->
+</section> <!-- status_box -->
+
+<section id="notification_area">
+<div>
+	<span id="notification_tweet_undo">
+		<span data-i18n-text="sending_tweet"></span>&nbsp;&nbsp;<a id="tweet_undo" href="#" data-i18n-text="cancel" style="text-transform: uppercase;"></a>
+	</span>
+	<span id="notification_tweet_delete">
+		<span data-i18n-text="tweet_sent"></span>&nbsp;&nbsp;<a id="tweet_delete_now" href="#" data-i18n-text="delete" style="text-transform: uppercase;"></a>
+	</span>
+</div>
+<span id="notification"></span>
+</section>
+
+<section id="dialog_mask">
+</section>
+<!--dialogs-->
+<!-- preferences dialog -->
+<div id="prefs_dlg" class="dialog">
+    <div class="dialog_bar">
+	<a id="btn_prefs_back" href="#prefs_main" style="display: none" class="mochi_button blue page_nav" data-i18n-text="back">Back</a>
+        <h2 class="dialog_title" data-i18n-text="preferences">Preferences</h2>
+        <a id="btn_prefs_ok" class="dialog_close_btn" title="Close" href="#" data-i18n-title="close"></a>
+    </div>
+    <div class="dialog_container">
+    <div class="dialog_header"></div>
+    <div id="prefs_dlg_body" class="dialog_body">
+        <div id='prefs_main' class="prefs_dlg_page dialog_page">
+					<ul class="mochi_list">
+						<li class="mochi_list_item with_trigger">
+						<a href="#prefs_aspect" class="trigger page_nav">
+							<span class="widget more"></span>
+							<label for="" class="label" data-i18n-text="aspect">Aspect Settings</label>
+						</a>
+						</li>					
+						<li class="mochi_list_item with_trigger">
+						<a href="#prefs_behavior" class="trigger page_nav">
+							<span class="widget more"></span>
+							<label for="" class="label" data-i18n-text="behavior">Behavior Settings</label>
+						</a>
+						</li>
+						
+						<!-- 4.0: Notifications settings -->
+						<li class="mochi_list_item with_trigger">
+						<a href="#prefs_notification" class="trigger page_nav">
+							<span class="widget more"></span>
+							<label for="" class="label" data-i18n-text="notification">Notification Settings</label>
+						</a>
+						</li>
+						
+						<li class="mochi_list_item with_trigger">
+						<a href="#prefs_system" class="trigger page_nav">
+							<span class="widget more"></span>
+							<label for="" class="label" data-i18n-text="global">Global Settings</label>
+						</a>
+						</li>
+						<li class="mochi_list_item with_trigger">
+						<a href="#prefs_advanced" class="trigger page_nav">
+							<span class="widget more"></span>
+							<label for="" class="label" data-i18n-text="advanced">Advanced Settings</label>
+						</a>
+						</li>				
+					</ul>
+					<!-- 4.0 -->
+					<p>
+						<a id="btn_prefs_restore_defaults" class="mochi_button red" 
+						style="margin: 10px auto; display: block" data-i18n-text="restore_defaults">Restore Defaults Settings</a>
+					</p>						
+        </div><!-- END of prefs_main -->
+	
+	<div id='prefs_aspect' class="prefs_dlg_page dialog_page">
+					<ul class="mochi_list">
+						<li class="mochi_list_item">
+							<select id="sel_prefs_lang"
+								class="mochi_combo widget"
+								title="Select a language"
+								data-i18n-title="select_a_language">
+								<option value="en">English</option>
+								<option value="it">Italiano</option>
+							</select>
+							<label class="label" data-i18n-text="interface_language">Interface language</label>
+						</li>
+						<li class="mochi_list_item">
+							<select id="sel_prefs_theme" class="mochi_combo widget"
+								title="Select a theme" data-i18n-title="select_a_theme">
+								<option value="Classic" data-i18n-text="classic">Classic</option>
+							</select>
+							<label class="label" data-i18n-text="themes">Themes</label>
+						</li>
+						<li class="dialog_block">
+							<table style="width:100%;border:none;">
+							<tr>
+							<td style="width:50%;">
+								<b data-i18n-text="preview">Preview</b>:<br/><img id="prefs_theme_preview" src="" />
+							</td>
+							<td style="width:50%;">
+								<b data-i18n-text="name">Name</b>: <span id="prefs_theme_name"></span><br/>
+								<b data-i18n-text="author">Author</b>: <span id="prefs_theme_author"></span><br/>
+								<b data-i18n-text="website">Website</b>: <a href="" id="prefs_theme_web"></a><br/>
+								<b data-i18n-text="description">Description</b>: <span id="prefs_theme_desc"></span>
+							</td>
+							</tr>
+							</table>
+						</li>
+						
+						<li class="mochi_list_item">
+						<select id="sel_custom_screen_name" class="mochi_combo widget">
+							<option value="user" >UserName</option>  
+							<option value="screen" >ScreenName</option>  
+							<option value="screen@" >@ScreenName</option>    
+							<option value="both1" >UserName (@ScreenName)</option>  
+							<option value="both2" >UserName (ScreenName)</option>  
+							<option value="both3" >@ScreenName (UserName)</option>  
+							<option value="both4" >ScreenName (UserName)</option>   
+						</select>
+						<label data-i18n-text="custom_screen_name" class="label">Stream display name</label>
+						</li>
+						
+						<li class="mochi_list_item">
+							<input id="chk_show_social" type="checkbox" class="mochi_toggle widget" 
+								title="Show under every tweet how many times it has been favorited/liked and retweeted" 
+								data-i18n-title="show_social_title" />
+							<label class="label" for="chk_show_social" 
+								data-i18n-text="show_social_text">Show fav/likes/RT counts for each tweet</label>
+							<br/>
+						</li>
+								
+						<li class="mochi_list_item">
+						<select id="chk_prefs_column_num"
+							class="mochi_combo widget"
+							title="Number of columns to display on each page"
+							data-i18n-title="column_num_title">
+							<option value="default">Default</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+						</select>
+						<label data-i18n-text="column_num"class="label">Max columns number per page</label>
+						</li>	
+
+						<li class="mochi_list_item">
+							<input id="chk_use_header_flap" type="checkbox" class="mochi_toggle widget" 
+								title="Automatically hide the header bar on mouse leave" 
+								data-i18n-title="use_header_flap_title" />
+							<label class="label" for="chk_use_header_flap" 
+								data-i18n-text="use_header_flap_text">Enable dropdown header bar</label>
+							<br/>
+						</li>	
+						
+						<li class="mochi_list_item">
+							<input id="chk_use_new_dm_view" type="checkbox" class="mochi_toggle widget" 
+								title="Use the new ordered-for-user view mode for direct messages" data-i18n-title="use_new_dm_view_title" />
+							<label class="label" for="chk_use_new_dm_view" 
+								data-i18n-text="use_new_dm_view">Use new DM view mode</label>
+							<br/>
+						</li>	
+						<li class="dialog_block li_hint">
+						<span data-i18n-text="dm_restart_hint">
+						WARNING: if you have the DM column currently opened to apply changes to DM view mode you need to close and open it again! 
+						Alternatively just restart Hotot+
+						</span>	
+						</li>									
+					</ul>
+					
+					<h3 data-i18n-text="font">Font</h3>
+					<ul class="mochi_list">
+						<li class="mochi_list_item">
+							<input id="chk_use_custom_font" type="checkbox"
+									class="mochi_toggle widget" name="font" />
+							<label class="label" for="chk_use_custom_font"
+									data-i18n-text="use_custom_font">Use Custom Font</label>
+						</li>
+						<li class="mochi_list_item" style="position:relative">
+							<select id="sel_prefs_sys_font" class="mochi_combo widget"
+									style="padding:0 3px;width:150px;min-width:150px"
+									title="Font Family">
+									<option value="more">...</option>
+							</select>
+							<input id="tbox_prefs_custom_font"
+									style="width:120px;float:right;position: absolute;right: 40px;border: 1px #B2B3B4 solid;"
+									type="text" class="mochi_entry"/>
+							<label class="label" for="sel_prefs_sys_font"
+									data-i18n-text="custom_font">Custom Font</label>
+						</li>
+						<li class="mochi_list_item">
+							<input id="range_prefs_font_size"
+									class="widget"
+									max="28" min="8" value="10" step="0.5"
+									style="width:200px;"
+									type="range"/>
+							<label class="value" id="range_prefs_font_size_st"
+									>10pt</label>
+							<label class="label"
+									data-i18n-text="font_size">Font Size</label>
+						</li>
+						<li class="mochi_list_item">
+							<input id="range_prefs_line_height"
+									class="widget"
+									max="2" min="1" value="1.4" step="0.1"
+									style="width:200px;"
+									type="range"/>
+							<label class="value" id="range_prefs_line_height_st"
+									>1.4</label>
+							<label class="label"
+									data-i18n-text="line_height">Line Height</label>
+						</li>
+					</ul>
+					<div id="prefs_font_preview" class="value"
+						data-i18n-text="font_preview_hint">The quick brown fox jumps over the lazy dog.
+					</div>	
+	</div><!-- END of prefs_aspect-->
+        
+	<div id='prefs_behavior' class="prefs_dlg_page dialog_page">
+					<ul class="mochi_list">
+						<li class="mochi_list_item">
+							<input id="chk_prefs_use_undo_tweet"
+									title="Show for some seconds an option to delete the tweet just sent"
+									data-i18n-title="use_undo_tweet_title"
+									class="mochi_toggle widget"
+									type="checkbox"/>
+							<label for="chk_prefs_undo_tweet"
+									class="label"
+									data-i18n-text="use_undo_tweet"
+									>Quick delete option after sending a tweet.</label>
+						</li><li class="mochi_list_item">
+							<select id="sel_postpone_tweet"
+								class="mochi_combo widget"
+								title="Set how many seconds to wait before sending a tweet allowing you to cancel it"
+								data-i18n-title="postpone_tweet_title">
+								<option value="0" >0</option>   
+								<option value="1" >1</option>   
+								<option value="2" >2</option>    
+								<option value="3" >3</option>   
+								<option value="4" >4</option>   
+								<option value="5" >5</option>
+							</select>
+							<label for="sel_postpone_tweet"
+									class="label"
+									data-i18n-text="postpone_tweet"
+									>Seconds to wait before sending a tweet.</label>
+						</li><li class="mochi_list_item">
+							<input id="chk_prefs_use_alt_retweet"
+									title="Replace default retweet action with quote"
+									data-i18n-title="use_quote_as_default_retweet_action_title"
+									class="mochi_toggle widget"
+									type="checkbox"/>
+							<label for="chk_prefs_use_alt_retweet"
+									class="label"
+									data-i18n-text="use_quote_as_default_retweet_action"
+									>Use quote as default retweet action.</label>
+						</li><li class="mochi_list_item">
+							<input id="chk_prefs_use_alt_reply"
+									title="Replace default reply action with reply all"
+									data-i18n-title="use_reply_all_as_default_reply_action_title"
+									class="mochi_toggle widget"
+									type="checkbox"/>
+							<label for="chk_prefs_use_alt_reply"
+									class="label"
+									data-i18n-text="use_reply_all_as_default_reply_action"
+									>Use reply all as default reply action.</label>
+						</li>
+						<li class="mochi_list_item">
+							<input id="chk_prefs_auto_longer_tweet"
+									title="Compress tweet use Twitlonger service if the tweet contains more than 140 charactors."
+									class="mochi_toggle widget"
+									type="checkbox" data-i18n-title="compress_tweet"/>
+							<label for="chk_prefs_auto_longer_tweet"
+									class="label"
+									data-i18n-text="auto_longer_tweet"
+									>Automated longer tweet.</label>
+						</li>		
+						<li class="mochi_list_item">
+							<input id="chk_prefs_autoload_quoted"
+									title="Automatically load and show quoted tweet in the client deleting its URL from the original tweet too."
+									class="mochi_toggle widget"
+									type="checkbox" data-i18n-title="autoload_quoted_title"/>
+							<label for="chk_prefs_autoload_quoted"
+									class="label"
+									data-i18n-text="autoload_quoted_tweet"
+									>Load and show quoted tweet automatically.</label>
+						</li>														
+						<li class="mochi_list_item">
+							<input id="chk_prefs_use_preload_conversation"
+									title="Preload latest tweet in a conversation if it is cached."
+									data-i18n-title="preload_latest_tweets_in_conversations_if_possible_title"
+									class="mochi_toggle widget"
+									type="checkbox"/>
+							<label for="chk_prefs_use_preload_conversation"
+									class="label"
+									data-i18n-text="preload_latest_tweets_in_conversations_if_possible"
+									>Preload latest tweets in conversations if possible.</label>
+						</li>		
+						<li class="mochi_list_item">
+							<input id="chk_prefs_show_relative_timestamp"
+								title="Show relative timestamp."
+								data-i18n-title="show_relative_timestamp_title"
+								class="mochi_toggle widget"
+								type="checkbox"/>
+							<label for="chk_prefs_show_relative_timestamp" class="label" data-i18n-text="show_relative_timestamp"
+						>Show relative timestamp.</label><br/>
+						</li>
+						<li class="mochi_list_item">
+							<input id="chk_prefs_show_seconds_in_timestamp"
+								title="Show relative timestamp."
+								data-i18n-title="show_seconds_in_timestamp_title"
+								class="mochi_toggle widget"
+								type="checkbox"/>
+							<label for="chk_prefs_show_seconds_in_timestamp" class="label" data-i18n-text="show_seconds_in_timestamp"
+						>Show seconds in timestamp.</label><br/>
+						</li>						
+						<li class="mochi_list_item">
+							<input id="chk_prefs_use_deleted_mark"
+									title="Use a sign to mark deleted tweet instead of deleting it"
+									data-i18n-title="mark_deleted_tweets_title"
+									class="mochi_toggle widget"
+									type="checkbox"/>
+							<label for="chk_prefs_use_deleted_mark"
+									class="label"
+									data-i18n-text="mark_deleted_tweets"
+									>Mark deleted tweets.</label><br/>
+						</li>
+						<li class="mochi_list_item">
+							<select id="sel_dst_lang"
+								class="mochi_combo widget"
+								title="Select the default language in which to translate the tweets using the specific option"
+								data-i18n-title="select_a_default_translation_language">
+								<option value="ar" >Arabic</option>   
+								<option value="bg" >Bulgarian</option>   
+								<option value="ca" >Catalan</option>   
+								<option value="zh-CHS" >Chinese Simplified</option>   
+								<option value="zh-CHT" >Chinese Traditional</option>   
+								<option value="cs" >Czech</option>   
+								<option value="da" >Danish</option>   
+								<option value="nl" >Dutch</option>   
+								<option value="en" >English</option>   
+								<option value="et" >Estonian</option>   
+								<option value="fi" >Finnish</option>   
+								<option value="fr" >French</option>   
+								<option value="de" >German</option>   
+								<option value="el" >Greek</option>   
+								<option value="ht" >Haitian Creole</option>   
+								<option value="he" >Hebrew</option>   
+								<option value="hi" >Hindi</option>   
+								<option value="mww" >Hmong Daw</option>   
+								<option value="hu" >Hungarian</option>   
+								<option value="id" >Indonesian</option>   
+								<option value="it" >Italian</option>   
+								<option value="ja" >Japanese</option>   
+								<option value="ko" >Korean</option>   
+								<option value="lv" >Latvian</option>   
+								<option value="lt" >Lithuanian</option>   
+								<option value="ms" >Malay</option>   
+								<option value="no" >Norwegian</option>   
+								<option value="fa" >Persian</option>   
+								<option value="pl" >Polish</option>   
+								<option value="pt" >Portuguese</option>   
+								<option value="ro" >Romanian</option>   
+								<option value="ru" >Russian</option>   
+								<option value="sk" >Slovak</option>   
+								<option value="sl" >Slovenian</option>   
+								<option value="es" >Spanish</option>   
+								<option value="sv" >Swedish</option>   
+								<option value="th" >Thai</option>   
+								<option value="tr" >Turkish</option>   
+								<option value="uk" >Ukrainian</option>   
+								<option value="ur" >Urdu</option>   
+								<option value="vi" >Vietnamese</option>   
+							</select>
+							<label data-i18n-text="default_translation_language"
+								class="label">Default translation language</label>
+						</li>
+	    
+						<!-- 2.2: Speech Rec options -->
+						<li class="mochi_list_item">
+							<select id="sel_speech_lang"
+								class="mochi_combo widget"
+								title="Select the default speech recognition language"
+								data-i18n-title="select_a_default_speech_language">
+								<option value="af-ZA" >Afrikaans</option>   
+								<option value="id-ID" >Bahasa Indonesia</option>    
+								<option value="ms-MY" >Bahasa Melayu</option>     
+								<option value="ca-ES" >Català</option>      
+								<option value="cs-CZ" >Čeština</option>    
+								<option value="de-DE" >Deutsch</option> 
+								<option value="en-AU" >English (Australia)</option>      
+								<option value="en-CA" >English (Canada)</option>    
+								<option value="en-IN" >English (India)</option>    
+								<option value="en-NZ" >English (New Zealand)</option>    
+								<option value="en-ZA" >English (South Africa)</option>    
+								<option value="en-GB" >English (United Kingdom)</option>    
+								<option value="en-US" >English (United States)</option>   
+								<option value="es-AR" >Español (Argentina)</option>  
+								<option value="es-BO" >Español (Bolivia)</option>  
+								<option value="es-CL" >Español (Chile)</option>  
+								<option value="es-CO" >Español (Colombia)</option>  
+								<option value="es-CR" >Español (Costa Rica)</option>  
+								<option value="es-EC" >Español (Ecuador)</option>  
+								<option value="es-SV" >Español (El Salvador)</option>  
+								<option value="es-ES" >Español (España)</option>  
+								<option value="es-US" >Español (Estados Unidos)</option>  
+								<option value="es-GT" >Español (Guatemala)</option>  
+								<option value="es-HN" >Español (Honduras)</option>  
+								<option value="es-MX" >Español (México)</option>  
+								<option value="es-NI" >Español (Nicaragua)</option>  
+								<option value="es-PA" >Español (Panamá)</option>   
+								<option value="es-PY" >Español (Paraguay)</option>
+								<option value="es-PE" >Español (Perú)</option>
+								<option value="es-PR" >Español (Puerto Rico)</option>
+								<option value="es-DO" >Español (República Dominicana)</option>
+								<option value="es-UY" >Español (Uruguay)</option>
+								<option value="es-VE" >Español (Venezuela)</option>
+								<option value="eu-ES" >Euskara</option>  
+								<option value="fr-FR" >Français</option>     
+								<option value="gl-ES" >Galego</option>      
+								<option value="hr_HR" >Hrvatski</option>      
+								<option value="zu-ZA" >IsiZulu</option>   
+								<option value="is-IS" >Íslenska</option>     
+								<option value="it-IT" >Italiano (Italia)</option>     
+								<option value="it-CH" >Italiano (Svizzera)</option>   
+								<option value="hu-HU" >Magyar</option>        
+								<option value="nl-NL" >Nederlands</option> 
+								<option value="nb-NO" >Norsk bokmål</option> 
+								<option value="pl-PL" >Polski</option>    
+								<option value="pt-BR" >Português (Brasil)</option>    
+								<option value="pt-PT" >Português (Portugal)</option>       
+								<option value="ro-RO" >Română</option>      
+								<option value="sk-SK" >Slovenčina</option>     
+								<option value="fi-FI" >Suomi</option>       
+								<option value="sv-SE" >Svenska</option>     
+								<option value="tr-TR" >Türkçe</option>   
+								<option value="bg-BG" >български</option>    
+								<option value="ru-RU" >Pусский</option>     
+								<option value="sr-RS" >Српски</option>    
+								<option value="ko-KR" >한국어</option>     
+								<option value="cmn-Hans-CN" >中文 [普通话 (中国大陆)]</option>   
+								<option value="cmn-Hans-HK" >中文 [普通话 (香港)]</option>   
+								<option value="cmn-Hant-TW" >中文 [中文 (台灣)]</option>   
+								<option value="yue-Hant-HK" >中文 [粵語 (香港)]</option>   
+								<option value="ja-JP" >日本語</option>     
+								<option value="la" >Lingua latīna</option>    
+							</select>
+							<label data-i18n-text="default_speech_language"
+								class="label">Default speech recognition language</label>
+						</li>
+					</ul>
+					
+					
+					<h3 data-i18n-text="media">Media</h3>  
+					<ul class="mochi_list">
+						<li class="dialog_block li_hint"><span data-i18n-text="restart_hint"></span></li>					
+						<li class="mochi_list_item">
+							<input id="chk_prefs_use_media_preview"
+								title="Preview the media if possible."
+								data-i18n-title="preview_embedded_media_title"
+								class="mochi_toggle widget"
+								type="checkbox"/>
+							<label for="chk_prefs_use_media_preview" class="label" data-i18n-text="preview_embedded_media" >Preview embedded media.</label><br/>
+						</li>
+						<li class="mochi_list_item">
+							<input id="chk_prefs_raw_preview"
+								title="Don't load raw images previews (prevents crashes in case of images too heavy)"
+								data-i18n-title="raw_preview_title"
+								class="mochi_toggle widget"
+								type="checkbox"/>
+							<label for="chk_prefs_raw_preview" class="label" data-i18n-text="raw_preview" >Exclude raw images.</label><br/>
+						</li>						
+						<li class="mochi_list_item">
+							<input id="chk_prefs_hide_media_link"
+								title="Don't display the Twitter media URL in the tweet's text if media preview is enabled."
+								data-i18n-title="hide_media_link_title"
+								class="mochi_toggle widget"
+								type="checkbox"/>
+							<label for="chk_prefs_hide_media_link" class="label" data-i18n-text="hide_media_link_text" >Hide Twitter media URL from the tweet.</label><br/>
+						</li>		
+						<li class="mochi_list_item">
+							<input id="chk_prefs_thumb_preview"
+								title="Use thumbnails for media previews instead of full-size images."
+								data-i18n-title="thumb_preview_title"
+								class="mochi_toggle widget"
+								type="checkbox"/>
+							<label for="chk_prefs_thumb_preview" class="label" data-i18n-text="thumb_preview_text" >Use thumbnails for media preview</label><br/>
+						</li>											
+						<li class="mochi_list_item">
+							<input id="chk_prefs_filter_nsfw_media"
+								title="Don't show previews if there's NSFW in the tweet."
+								data-i18n-title="filter_nsfw_media_title"
+								class="mochi_toggle widget"
+								type="checkbox"/>
+							<label for="chk_prefs_filter_nsfw_media" class="label" data-i18n-text="filter_nsfw_media" >Don't show previews if there is NSFW in the tweet.</label><br/>
+						</li>
+						<li class="mochi_list_item">
+							<input id="chk_prefs_youtube"
+								title="Load and show Youtube videos with an iframe directly in the tweet area."
+								data-i18n-title="show_youtube_title"
+								class="mochi_toggle widget"
+								type="checkbox"/>
+							<label for="chk_prefs_youtube" class="label" data-i18n-text="show_youtube" >Show Youtube videos directly in the tweet.</label><br/>
+						</li>						
+					</ul>
+					
+					<!-- 1.1 -->
+					<h3 data-i18n-text="suggestions">Suggestions</h3>  
+					<ul class="mochi_list">
+						<li class="mochi_list_item">
+							<input id="chk_prefs_user_autocomplete"
+									class="mochi_toggle widget"
+									type="checkbox"/>
+							<label for="chk_prefs_user_autocomplete"
+									class="label"
+									data-i18n-text="use_user_autocomplete"
+									>Suggest screen names while typing</label>
+						</li>
+						<li class="mochi_list_item">
+							<input id="chk_prefs_tag_autocomplete"
+									class="mochi_toggle widget"
+									type="checkbox"/>
+							<label for="chk_prefs_tag_autocomplete"
+									class="label"
+									data-i18n-text="use_tag_autocomplete"
+									>Suggest hashtags while typing</label>
+						</li>
+					</ul>
+
+					<!-- 2.2 Emoji settings -->
+					<h3 data-i18n-text="emoji">Emoji</h3>  
+					<ul class="mochi_list">
+						<li class="dialog_block li_hint"><span data-i18n-text="restart_hint"></span></li>					
+						<li class="mochi_list_item">
+							<input id="chk_prefs_use_emoji"
+								title="If an emoji will be found in a tweet the program will replace it with the corresponding Twitter's image."
+								class="mochi_toggle widget"
+								type="checkbox" data-i18n-title="use_emoji_title"
+							/>
+							<label for="chk_prefs_use_emoji" class="label" data-i18n-text="use_emoji" >Parse and show emoji in tweets.</label>
+						</li>
+						<li class="mochi_list_item">
+						<select id="sel_prefs_emoji_size" class="mochi_combo widget"
+							title="The size of images that will replace emoji in tweets."
+							data-i18n-title="select_emoji_size_title"
+						>
+						<option value="1" >1 em</option>
+						<option value="1.5" >1.5 em</option>
+						<option value="2" >2 em</option>
+						<option value="10" >10 px</option>
+						<option value="12" >12 px</option>
+						<option value="14" >14 px</option>
+						<option value="16" >16 px</option>
+						<option value="18" >18 px</option>
+						<option value="20" >20 px</option>
+						<option value="22" >22 px</option>
+						<option value="24" >24 px</option>
+						<option value="26" >26 px</option>
+						<option value="28" >28 px</option>
+						<option value="30" >30 px</option>
+						<option value="32" >32 px</option>
+						<option value="34" >34 px</option>
+						<option value="36" >36 px</option>
+						<option value="40" >40 px</option>
+						<option value="48" >48 px</option>
+						<option value="64" >64 px</option>
+						<option value="72" >72 px</option>
+						</select>
+						<label for="chk_prefs_emoji_size" class="label" data-i18n-text="select_emoji_size" >Emoji size in pixels:</label>
+						</li>
+					</ul>
+						
+					<h3 data-i18n-text="read_later_service">Read Later Service</h3>  					  
+					<ul class="mochi_list">
+            <li class="mochi_list_item">
+							<input id="chk_prefs_use_readlater_serv"
+									class="mochi_toggle widget"
+									type="checkbox"/>
+							<label for="chk_prefs_use_readlater_serv"
+									class="label"
+									data-i18n-text="use_read_later_service"
+									>Use Read Later Service.</label>
+            </li><li class="mochi_list_item">
+              <select id="sel_prefs_readlater_service"
+								class="mochi_combo widget"
+								title="Select a default picture service"
+								data-i18n-title="select_a_read_later_service">
+								<option value="pocket">Pocket</option>
+								<option value="instapaper">Instapaper</option>
+              </select>
+							<label data-i18n-text="read_later_service"
+								class="label">Read Later Service</label>
+						</li><li class="mochi_list_item">
+							<input id="tbox_prefs_readlater_username"
+									placeholder="Username"
+									data-i18n-placeholder="username"
+									type="text" class="mochi_entry widget"/>
+							<label for="tbox_prefs_readlater_username"
+									class="label" data-i18n-text="username">
+									Username
+							</label>
+						</li><li class="mochi_list_item">
+							<input id="tbox_prefs_readlater_password"
+									placeholder="Password"
+									data-i18n-placeholder="password"
+									type="password" class="mochi_entry widget"/>
+							<label for="tbox_prefs_readlater_password"
+									class="label" data-i18n-text="password">
+									Password
+							</label>
+            </li>
+					</ul>
+					
+					<!-- 4.0: Chrome sync -->
+					<h3 data-i18n-text="chrome_sync">Chrome Sync</h3>  
+					<ul class="mochi_list">
+						<li class="mochi_list_item">
+							<input id="chk_prefs_chrome_sync"
+									title="Synchronize opened columns in Hotot+ using official Google Chrome cloud service"
+									data-i18n-title="chrome_sync_title"
+									class="mochi_toggle widget"
+									type="checkbox"/>
+							<label for="chk_prefs_chrome_sync" class="label" 
+									data-i18n-text="chrome_sync_text"
+									>Auto-sync opened views</label>
+						</li>
+						<li class="mochi_list_item">
+							<a id="btn_prefs_chrome_sync_down" class="mochi_button widget" style="margin: 0 0 0 5px;">DOWNLOAD</a>
+							<a id="btn_prefs_chrome_sync_up" class="mochi_button widget" style="margin: 0 0 0 5px;">UPLOAD</a>
+							<label for="" class="label" data-i18n-text="chrome_sync_all">Manually sync settings and mute filters</label>
+						</li>
+					</ul>
+        </div><!-- END of prefs_behavior-->
+	
+	<!-- 4.0: Notification settings -->
+	<div id='prefs_notification' class="prefs_dlg_page dialog_page">
+		<h3 data-i18n-text="notification_generals">General Settings</h3>  
+		<ul class="mochi_list">
+
+						<li class="mochi_list_item">
+							<input id="chk_prefs_chrome_notifications"
+									title="Use Google Chrome API instead of HTML5 API for desktop notification"
+									data-i18n-title="chrome_notifications_title"
+									class="mochi_toggle widget"
+									type="checkbox"/>
+							<label for="chk_prefs_chrome_notifications"
+									class="label"
+									data-i18n-text="chrome_notifications_text"
+									>Use Chrome API</label>
+						</li>
+						
+						<!-- 2.2: Custom notification -->	
+						<li class="mochi_list_item">
+						<select id="sel_custom_sound" class="mochi_combo widget">
+							<option value="sound/notify.ogg" >Default</option>  
+							<option value="sound/Angry Birds.ogg" >Angry Birds</option>  
+							<option value="sound/Assassins Creed.ogg" >Assassin's Creed Eagle</option>  
+							<option value="sound//Blackberry.ogg" >Blackberry</option>  
+							<option value="sound/Coca Cola.ogg" >Coca Cola</option>  
+							<option value="sound/Doraemon.ogg" >Doraemon</option>  
+							<option value="sound/Fairy Tail.ogg" >Fairy Tail</option>  
+							<option value="sound/Final Fantasy IX Victory.ogg" >FFIX Victory</option>  
+							<option value="sound/Final Fantasy VII Victory.ogg" >FFVII Victory</option>  
+							<option value="sound/Galaxy S5.ogg" >Galaxy S5</option>  
+							<option value="sound/Galaxy S5 SMS.ogg" >Galaxy S5 SMS</option>  
+							<option value="sound/Gameboy.ogg" >Gameboy Intro</option>  
+							<option value="sound/Inception.ogg" >Inception</option>  
+							<option value="sound/iPhone SMS.ogg" >iPhone SMS</option>  
+							<option value="sound/Metal Gear Solid Codec.ogg" >MGS Codec</option>  
+							<option value="sound/Metal Gear Solid.ogg" >MGS Alert</option>  
+							<option value="sound/Moto G.ogg" >MotoG</option>  
+							<option value="sound/MSN Nudge.ogg" >MSN Nudge</option>  
+							<option value="sound/Note III.ogg" >Note III</option>  
+							<option value="sound/Pikachu.ogg" >Pikachu</option>  
+							<option value="sound/Pokemon Recovery.ogg" >Pokémon Center</option>  
+							<option value="sound/Popeye.ogg" >Popeye</option>  
+							<option value="sound/PS3 Trophy.ogg" >PS3 Trophy</option>  
+							<option value="sound/Skype.mp3" >Skype</option>  
+							<option value="sound/Super Mario Bros. Coin.ogg" >Super Mario Bros. Coin</option>  
+							<option value="sound/Super Mario Bros. Death.ogg" >Super Mario Bros. Death</option>  
+							<option value="sound/Super Mario Bros. Main.ogg" >Super Mario Bros. Main</option>  
+							<option value="sound/Super Mario Bros. Pause.ogg" >Super Mario Bros. Pause</option>  
+							<option value="sound/Super Mario Bros. Pipe.ogg" >Super Mario Bros. Pipe</option>  
+							<option value="sound/The Hunger Games.ogg" >The Hunger Games</option>  
+							<option value="sound/Wall-E.ogg" >Wall-E</option>  
+							<option value="sound/Xperia.ogg" >Xperia</option>  
+							<option value="sound/Zelda Secret.ogg" >Zelda Secret</option>  						
+						</select>
+						<label data-i18n-text="notification_sound" class="label">Notification sound:</label>
+						</li>
+							
+						<!-- 3.6: Favorited notify -->
+						<li class="mochi_list_item">
+							<input id="chk_prefs_notify_favorited"
+									title="Notify also when an user favorites one of my tweets"
+									data-i18n-title="notify_favorited_title"
+									class="mochi_toggle widget"
+									type="checkbox"/>
+							<label for="chk_prefs_notify_favorited"
+									class="label"
+									data-i18n-text="notify_favorited_text"
+									>Notify favorited tweets</label>
+						</li>
+						
+						<li class="mochi_list_item">
+							<input id="chk_prefs_notify_new_followers"
+									title="Notify also when an user starts following me on Twitter"
+									data-i18n-title="notify_new_followers_title"
+									class="mochi_toggle widget"
+									type="checkbox"/>
+							<label for="chk_prefs_notify_new_followers"
+									class="label"
+									data-i18n-text="notify_new_followers_text"
+									>Notify new followers</label>
+						</li>
+						<li class="dialog_block li_hint">
+							<span data-i18n-text="notification_note">
+								Note: favorited and new followers notifications use the Twitter's Streaming API. 
+								This means that you will receive them only from after you start Hotot+. 
+								In other words at startup you will NOT receive old notifications for favorited and new 
+								followers got when Hotot+ was not running.
+							</span>	
+						</li>						
+	
+		</ul>
+		<h3 data-i18n-text="notification_aspect">Notification Aspect</h3>  
+		<ul class="mochi_list">
+						<li class="mochi_list_item">
+							<input id="chk_prefs_notification_show_user_pic"
+									title="Show the user's profile pic as notification image instead of a standard one."
+									data-i18n-title="notification_show_user_pic_title"
+									class="mochi_toggle widget"
+									type="checkbox"/>
+							<label for="chk_prefs_notification_show_user_pic"
+									class="label"
+									data-i18n-text="notification_show_user_pic_text"
+									>Show user's profile pic</label>
+						</li>
+						
+						<li class="mochi_list_item">
+							<input id="chk_prefs_notification_show_tweet_msg"
+									title="Show the tweet message inside the notification. If disabled then a standard text will be used."
+									data-i18n-title="notification_show_tweet_msg_title"
+									class="mochi_toggle widget"
+									type="checkbox"/>
+							<label for="chk_prefs_notification_show_tweet_msg"
+									class="label"
+									data-i18n-text="notification_show_tweet_msg_text"
+									>Show tweet message</label>
+						</li>
+
+						<li class="mochi_list_item">
+							<input id="chk_prefs_notification_show_tweet_media"
+									title="Show also the first media (image) attached to the tweet. Requires Chrome API"
+									data-i18n-title="notification_show_tweet_media_title"
+									class="mochi_toggle widget"
+									type="checkbox"/>
+							<label for="chk_prefs_notification_show_tweet_media"
+									class="label"
+									data-i18n-text="notification_show_tweet_media_text"
+									>Show tweet attached media</label>
+						</li>
+						
+		</ul>
+		<h3 data-i18n-text="notification_behavior">Notification Behavior</h3>  
+		<ul class="mochi_list">					
+						<li class="mochi_list_item">
+							<input id="chk_prefs_notification_auto_clear"
+									title="Automatically clear the notification after choisen seconds."
+									data-i18n-title="notification_auto_clear_title"
+									class="mochi_toggle widget"
+									type="checkbox"
+									style="margin-left:5px;"/>
+							<input id="range_prefs_notification_auto_clear_time"
+									class="widget"
+									max="7" min="1" value="3" step="1"
+									style="width:100px;"
+									type="range"/>
+							<label class="value" id="range_prefs_notification_auto_clear_time_st"
+									>3s</label>
+							<label class="label" data-i18n-text="notification_auto_clear_text">Auto-clear in seconds</label>
+						</li>
+						<li class="mochi_list_item">
+							<input id="chk_prefs_notification_clear_onclick"
+									title="Clear the notification when you click on it. Only using Chrome API you can disable this option."
+									data-i18n-title="notification_clear_onclick_title"
+									class="mochi_toggle widget"
+									type="checkbox"/>
+							<label for="chk_prefs_notification_clear_onclick"
+									class="label"
+									data-i18n-text="notification_clear_onclick_text"
+									>Clear on click</label>
+						</li>
+		</ul>
+		<a id="btn_notification_test" class="mochi_button blue" style="margin: 10px auto; display: block" data-i18n-text="notification_test">Notification Test</a>
+        </div><!-- END of prefs_advanced -->
+		
+	<div id='prefs_system' class="prefs_dlg_page dialog_page">
+          <div class="dialog_block hint"
+                data-i18n-text="globals_restart_hint">You MUST restart Hotot+ for some changes below to take effect.
+                And these options will affect ALL accounts
+          </div>
+					
+					<ul class="mochi_list">
+						<li class="mochi_list_item chrome_context_menu">
+							<input id="chk_prefs_context_menu_integration"
+									title="Add Hotot+ commands into Chrome context menu."
+									data-i18n-title="chrome_context_menu_integration_title"
+									class="mochi_toggle widget" type="checkbox"/>
+							<label for="chk_prefs_context_menu_integration"
+									class="label"
+									data-i18n-text="chrome_context_menu_integration"
+									>Chrome context menu integration.</label>
+						</li>
+						<li class="mochi_list_item">
+							<input id="chk_prefs_sign_in_automatically"
+								title="Automatically Sign in after opening"
+								data-i18n-title="automatically_sign_in_after_opening_title"
+								type="checkbox" class="mochi_toggle widget"/>
+							<label for="chk_prefs_sign_in_automatically" class="label"
+								data-i18n-text="automatically_sign_in_after_opening"
+							>Automatically Sign in after opening</label>
+						</li>					
+						<li class="mochi_list_item">
+							<input id="chk_prefs_use_verbose_mode"
+									type="checkbox" class="mochi_toggle widget"/>
+							<label for="chk_prefs_use_verbose_mode"
+									class="label"
+									data-i18n-text="enable_verbose_mode"
+									>Enable verbose mode</label>
+						</li>
+						
+						<!-- v3.5 Custom Background -->
+						</ul><ul class="mochi_list">
+						<li class="mochi_list_item">
+						<select id="sel_prefs_background" class="mochi_combo widget">
+							<option value="default.jpg" >Hotot+ Default</option>
+							<option value="old.jpg" >Old Hotot</option>
+							<option value="acer.gif" >Acer</option>
+							<option value="armored.gif" >Steel</option>
+							<option value="beachy.gif" >Beachy</option>
+							<option value="black.gif" >Black</option>
+							<option value="bouquet.gif" >Bouquet</option>
+							<option value="brick.gif" >Brick</option>
+							<option value="flower.gif" >Pink Flowers</option>
+							<option value="frozen.gif" >Frozen</option>
+							<option value="fruit.gif" >Fruit</option>
+							<option value="fumetti.jpg" >Comic</option>
+							<option value="geometria.gif" >Geometry</option>
+							<option value="intrigue.gif" >Intrigue</option>
+							<option value="lava.gif" >Lava</option>
+							<option value="macchie.gif" >Stains</option>
+							<option value="meduse.gif" >Jellyfish</option>
+							<option value="monsters.gif" >Monsters</option>
+							<option value="posate.gif" >Flatware</option>
+							<option value="rosie.gif" >Rosie</option>
+							<option value="sakura.gif" >Sakura</option>
+							<option value="spilli.gif" >Pins</option>
+							<option value="spongie.gif" >Spongie</option>
+							<option value="straw-flowers.gif" >Straw Flowers</option>
+							<option value="sw.jpg" >Stormtroopers</option>
+							<option value="tessuto.jpg" >Cloth</option>
+							<option value="transmit.gif" >Transmit</option>
+							<option value="uccellini.gif" >Birds</option>
+							<option value="uova.gif" >Eggs</option>
+							<option value="wood.gif" >Wood</option>
+							<option value="xmas.gif" >Xmas Paper</option>
+							<option value="woods.gif" >Woods</option>
+							<option value="autumn.gif" >Autumn</option>
+							<option value="pond.gif" >Pond</option>
+							<option value="mushroom.gif" >Mushrooms</option>
+							<option value="squirrel.gif" >Squirrel</option>
+						</select>
+						<label for="sel_prefs_background" class="label" 
+							data-i18n-text="select_background" >Background image at login screen</label>
+						</li>
+						<div style="height:200px; background-color: #FFFFFF;
+							background:url(image/background/default.jpg) center center repeat;"
+							id="prefs_background_preview">
+						</div>	
+						</ul>
+					
+        </div><!-- END of prefs_system-->
+				<div id='prefs_advanced' class="prefs_dlg_page dialog_page">				
+          <h3 data-i18n-text="animation">Animation</h3>
+					<ul class="mochi_list">
+            <li class="mochi_list_item">
+							<input id="chk_prefs_enable_animation"
+									type="checkbox" class="mochi_toggle widget"/>
+							<label for="chk_prefs_enable_animation"
+									class="label"
+									data-i18n-text="enable_animation"
+									>Enable Animation
+							</label>
+            </li>
+            <li class="mochi_list_item">
+							<input id="chk_prefs_enable_gpu_acceleration"
+									type="checkbox" class="mochi_toggle widget"/>
+							<label for="chk_prefs_enable_gpu_acceleration"
+									class="label"
+									data-i18n-text="enable_gpu_acceleration"
+									>Enable GPU Acceleration
+							</label>
+            </li>
+          </ul>
+
+          <h3 data-i18n-text="api_setting">API Settings</h3>  
+					<ul class="mochi_list">
+						<li class="mochi_list_item">
+							<input id="tbox_prefs_api_base"
+								type="text" class="mochi_entry widget"/>
+							<label class="label"
+									data-i18n-text="api_base">API Base</label>
+						</li><li class="mochi_list_item">
+							<input id="tbox_prefs_oauth_base"
+								type="text" class="mochi_entry widget"/>
+							<label class="label" data-i18n-text="oauth_base"
+									>OAuth Base</label>
+						</li><li class="mochi_list_item">
+							<input id="tbox_prefs_search_api_base2"
+									type="text" class="mochi_entry widget"/>
+							<label class="label"
+									data-i18n-text="search_api_base2"
+									>Search API Base</label>
+						</li><li class="mochi_list_item">
+							<input id="tbox_prefs_upload_api_base"
+									type="text" class="mochi_entry widget"/>
+							<label class="label"
+									data-i18n-text="upload_api_base"
+									>Upload API Base</label>
+						</li>
+					</ul>
+					<ul class="mochi_list">
+						<li class="mochi_list_item">
+							<input id="tbox_prefs_sign_api_base"
+									type="text" class="mochi_entry widget"/>
+							<label for="tbox_prefs_sign_api_base"
+									data-i18n-text="signing_api_base" class="label"
+									>Signing API base:
+							</label>
+						</li><li class="mochi_list_item">
+							<input id="chk_prefs_use_same_sign_api_base"
+									class="mochi_toggle widget"
+									type="checkbox"/>
+							<label for="chk_prefs_use_same_sign_api_base"
+									data-i18n-text="same_signing_api_base" class="label"
+									>Same signing API base:
+							</label>
+						</li><li class="mochi_list_item">
+							<input id="tbox_prefs_sign_oauth_base"
+									type="text" class="mochi_entry widget"/>
+							<label for="chk_prefs_use_same_sign_oauth_base"
+									class="label"
+									data-i18n-text="signing_oauth_base"
+									>Signing OAuth base:
+							</label>
+            </li><li class="mochi_list_item">
+							<input id="chk_prefs_use_same_sign_oauth_base"
+									type="checkbox" class="mochi_toggle widget"/>
+							<label for="chk_prefs_use_same_sign_oauth_base"
+									class="label"
+									data-i18n-text="same_signing_oauth_base"
+									>Same signing OAuth base:
+							</label>
+						</li>
+          </ul>
+					<!-- 4.0: Custom optimization of load/loadmore requests -->
+					<ul class="mochi_list">	
+						<li class="mochi_list_item">
+							<a id="items_for_request_explanation_trigger" href="#"><img src="./image/ic24_info.png" class="info_trigger" /></a>
+							<input id="range_prefs_items_for_request"
+									class="widget"
+									max="200" min="1" value="30" step="1"
+									style="width:200px;"
+									type="range"/>
+							<label class="value" id="range_prefs_items_for_request_st">30</label>
+							<label class="label" 
+							title="Value relative to the requests for new tweets, including also the ones made by Hotot+ automatically"
+							data-i18n-title="items_for_request_title"
+							data-i18n-text="items_for_request_text">Items for request (new tweets)</label>
+						</li><li class="mochi_list_item">
+							<input id="range_prefs_more_items_for_request"
+									class="widget"
+									max="200" min="1" value="100" step="1"
+									style="width:200px;"
+									type="range"/>
+							<label class="value" id="range_prefs_more_items_for_request_st">100</label>
+							<label class="label" 
+							title="Value relative to the requests for old tweets, ie the requests made by the user manually when wants to read tweets prior to those already loaded by Hotot+ automatically"
+							data-i18n-title="items_for_request_more_title"
+							data-i18n-text="items_for_request_more_text">Items for request (old tweets)</label>
+						</li>		
+						<li id="items_for_request_explanation" class="dialog_block li_hint" style="display:none;">
+						<b data-i18n-text="items_for_request_hint_explanation">Explanation:</b> 
+						<span data-i18n-text="items_for_request_hint">
+						the parameters above correspond to the number of tweets that will be returned by every request to the Twitter's API. High values can cause low performance in the program (it has to analyze a bigger number of tweets to display them in the right column and position) but they reduce the risks to exceed the limitations imposed by Twitter's API (having more tweet returned for any request there will be less need to do other requests) and the risk of receiving only a portion of new tweets to display. Conversely low values bring to a faster and quick program (it will analyze fewer tweets every time) but carry a high risk of exceeding the time limits imposed by Twitter's API (you need more requests to get a large number of results) and may lead to the acquisition of only a portion of the actual new tweets to display (in case these were more than the set value). So with these two options you can now try different combinations and find the best optimization for your taste.
+						</span><br />	
+						<b data-i18n-text="items_for_request_hint_default">
+						Anyway if you are not sure what you're doing, you should leave the default values.</b>
+						</li>
+					</ul>	
+					
+					<!-- v4.0: Custom source app name -->
+					<ul class="mochi_list">
+						<li class="mochi_list_item">
+							<a id="custom_source_app_explanation_trigger" href="#"><img src="./image/ic24_info.png" class="info_trigger" /></a>
+							<input id="chk_prefs_use_custom_source_app_name"
+									class="mochi_toggle widget"
+									type="checkbox"/>
+							<label for="chk_prefs_use_custom_source_app_name"
+									data-i18n-text="use_custom_source_app_name" class="label"
+									>Use a custom source app
+							</label>
+						</li>
+						<li id="custom_source_app_explanation" class="dialog_block li_hint" style="display:none;">
+						<span data-i18n-text="custom_source_app_name_hint" >
+						Warning: you can not login to your Twitter account with a wrong consumer key/secret so please be careful to change them only if you really know what you're doing. Note also that enabling/disabling this option will reset your access token and so you'll have to get a new one at next login.
+						</span>
+						</li>
+						<li class="mochi_list_item">
+							<input id="tbox_prefs_custom_source_app_name_key"
+									type="text" class="mochi_entry widget"/>
+							<label for="tbox_prefs_custom_source_app_name_key" class="label"
+									>Consumer Key
+							</label>
+						</li>
+						<li class="mochi_list_item">
+							<input id="tbox_prefs_custom_source_app_name_secret"
+									type="text" class="mochi_entry widget"/>
+							<label for="tbox_prefs_custom_source_app_name_secret" class="label"
+									>Consumer Secret
+							</label>
+						</li>
+					</ul>
+					
+					<ul class="mochi_list">
+						<li class="mochi_list_item">
+							<a id="support_explanation_trigger" href="#"><img src="./image/ic24_info.png" class="info_trigger" /></a>
+							<input id="chk_prefs_free_support"
+									class="mochi_toggle widget"
+									type="checkbox"/>
+							<label for="chk_prefs_free_support"
+									data-i18n-text="free_support" class="label"
+									>Support Hotot+ development for free
+							</label>
+							
+						</li>
+						<li id="support_explanation" class="dialog_block li_hint" style="display:none;" >
+						<span data-i18n-text="support_explanation">Keeping enabled this function will contribute indirectly to the development of Hotot+: simply this function automatically adds Hotot+ referral tag to every Amazon url you send or read, that's all. This means nothing changes for the user, since the Amazon prices will remain the same (they will absolutely not grow!) but Amazon will give a small percentage for every sale that occurred from those referral links to Hotot+.This means that you can contribute for free to Hotot+ as if you were making a donation, except that you will not have to pay a penny (in fact, Amazon will pay, not you) and this without having to undergo invasive advertising, potential dangers for your privacy or the inconvenience of waiting or having to click banners. So this is the best way for you to contribute to the development of Hotot+ without even realizing it.</span>
+						</li>
+					</ul>
+        </div><!-- END of prefs_advanced -->
+    </div>
+
+    <div class="dialog_footer"></div>
+    </div> <!-- END of .dialog_container -->
+</div>
+
+<!-- oauth dialog -->
+<div id="oauth_dlg" class="dialog">
+    <div class="dialog_bar">
+        <h2 class="dialog_title" data-i18n-text="first_time_to_sign_in_with_twitter">First time to Sign in with Twitter</h2>
+        <a class="dialog_close_btn" title="Close" href="#" data-i18n-title="close"></a>
+    </div>
+    <div class="dialog_container">
+    <div class="dialog_header"></div>
+    <div id="oauth_dlg_body" class="dialog_body">
+        <div class="dialog_block">
+        <h3 data-i18n-text="step_one">Step 1</h3>
+        <p data-i18n-text="click_the_button_below">Click the button below </p>
+        <p style="text-align: center">
+        <a id="btn_oauth_user_auth" class="mochi_button" data-i18n-text="click_me_to_continue">
+            Click me to continue
+        </a>
+        </p>
+        <p data-i18n-text="or_copy_the_address_and_open_it_in_your_browser"
+            >Or copy the address and open it in your browser.</p>
+        <p style="text-align: center">
+        <input id="tbox_oauth_auth_url" type="text" class="entry" value=""/>
+        </p>
+        </div>
+        <div class="dialog_block">
+        <h3 data-i18n-text="step_two">Step 2</h3>
+        <p data-i18n-text="copy_the_pin_code_and_paste_it_into_the_box_below"
+        >Copy the PIN Code and paste it into the box below</p>
+        <p style="text-align: center;">
+            <label class="label"
+                data-i18n-text="pin_code">PIN Code:</label>
+            <br/>
+            <input id="tbox_oauth_pin" type="text" class="entry"/><br/>
+        </p>
+        </div>
+    </div>
+    <div class="dialog_footer">
+    <a id="btn_oauth_pin_cancel" class="mochi_button" title="Cancel" href="#" data-i18n-text="cancel">Cancel</a>
+    <a id="btn_oauth_pin_ok" class="mochi_button blue" title="OK" href="#" data-i18n-text="ok">OK</a>
+    </div>
+    </div><!-- END of .dialog_container -->
+</div>
+
+<!-- help & about dialog -->
+<div id="about_dlg" class="dialog">
+    <div class="dialog_bar">
+        <h2 class="dialog_title" data-i18n-text="about_and_help">About &amp; Help</h2>
+        <a class="dialog_close_btn" title="Close" href="#" data-i18n-title="close"></a>
+    </div>
+    <div class="dialog_container">
+    <div class="dialog_header">
+        <ul id="about_dlg_btns" class="radio_group dark">
+            <li><a id="btn_about_about"
+                    href="#about_about"
+                    class="radio_group_btn selected"
+                    data-i18n-text="about">About</a>
+            </li><li><a id="btn_about_keyboard"
+                    href="#about_keyboard"
+                    class="radio_group_btn"
+                    data-i18n-text="keyboard">Keyboard</a>
+            </li><li><a id="btn_about_credits"
+                    href="#about_credits"
+                    class="radio_group_btn"
+                    data-i18n-text="credits">Credits</a>
+            </li><li><a id="btn_about_license"
+                    href="#about_license"
+                    class="radio_group_btn"
+                    data-i18n-text="license">License</a>
+            </li>
+        </ul>
+    </div>
+    <div id="about_dlg_body" class="dialog_body">
+        <div id="about_about" class="about_dlg_page">
+            <div class="dialog_block">
+	    
+	    <h3 style="text-align:center;"><span>Hotot+</span> v<span class="version"></span></h3>
+	    <p style="text-align:center;"><strong>by Red Squirrel 
+	    (<a target="_blank" href="http://twitter.com/redsquirrel87">@redsquirrel87</a>)</strong></p>	    
+            <p><strong>Hotot+</strong> is an unofficial modded, fixed and improved version of <i>Hotot</i>, 
+	    a lightweight client for the <a target="_blank" href="http://twitter.com">twitter</a> microblogging service.
+            </p>
+            <p><strong>Hotot+</strong> Project Site: <a target="_blank" href="http://www.redsquirrel87.com/Hotot+.php">http://www.redsquirrel87.com/Hotot+.php</a></p>
+	    
+	    <p>First version of <strong>Hotot+</strong> was based on:</p>
+            <p style="margin-left:3em;">Hotot version 0.9.8.14 (Ada)<br />
+	    Copyright © 2009-2012 Shellex Wai (5h3ll3x@gmail.com)<br />
+            Hotot Project Host: <a target="_blank" href="https://github.com/shellex/Hotot/">https://github.com/shellex/Hotot/</a><br />
+            Hotot Project Site: <a target="_blank" href="http://hotot.org">http://hotot.org</a><br />
+            </div>
+        </div>
+        <div id="about_keyboard" class="about_dlg_page">
+            <div class="dialog_block">
+            <h3 data-i18n-text="keyboard_shortcuts">Keyboard shortcuts</h3>
+            <p>
+                <table id="shortcuts_table">
+                <tbody>
+                <tr><th data-i18n-text="action">Action</th><th data-i18n-text="shortcuts">Shortcut</th></tr>
+                <tr><th class="sub" colspan="2" data-i18n-text="global">Global</th></tr>
+                <tr><td data-i18n-text="quit_hotot">Quit Hotot</td>
+                    <td>&lt;Ctrl&gt;q</td></tr>
+                <tr><td data-i18n-text="help">Help</td><td>?</td></tr>
+
+                <tr><th class="sub" colspan="2" data-i18n-text="tweet_view">Tweet View</th></tr>
+                <tr><td data-i18n-text="reload">Reload</td><td>r</td></tr>
+                <tr><td data-i18n-text="slide_to_prev_page">Slide to prev page</td><td>h</td></tr>
+                <tr><td data-i18n-text="slide_to_next_page">Slide to next page</td><td>l</td></tr>
+                <tr><td data-i18n-text="move_to_prev_tweet">Move to prev tweet</td><td>k</td></tr>
+                <tr><td data-i18n-text="move_to_next_tweet">Move to next tweet</td><td>j</td></tr>
+                <tr><td data-i18n-text="move_to_top">Move to top</td><td>gg</td></tr>
+                <tr><td data-i18n-text="move_to_bottom">Move to bottom</td><td>G</td></tr>
+                <tr><td data-i18n-text="compose">Compose</td><td>c</td></tr>
+                <tr><td data-i18n-text="close_current_column">Close current column</td><td>tx</td></tr>
+                <tr><td data-i18n-text="reply">Reply</td><td>ar</td></tr>
+                <tr><td data-i18n-text="reply_all">Reply All</td><td>aa</td></tr>
+                <tr><td data-i18n-text="quote">Quote</td><td>aq</td></tr>
+                <tr><td data-i18n-text="fav_or_un_fav">Fav/Un-fav</td><td>as</td></tr>
+                <tr><td data-i18n-text="send_message">Send Message</td><td>am</td></tr>
+                <tr><td data-i18n-text="delete">Delete</td><td>ad</td></tr>
+                <tr><td data-i18n-text="retweet_or_un_retweet">Retweet/Un-retweet</td><td>aR</td></tr>
+                <tr><td data-i18n-text="open_first_link">Open first link</td><td>ao</td></tr>
+                <tr><td data-i18n-text="open_speaker_link">Open speaker link</td><td>au</td></tr>
+                <tr><td data-i18n-text="toggle_conversation">Toggle Conversation</td><td>zc</td></tr>
+                <tr><td data-i18n-text="find">Find</td><td>af</td></tr>
+                </tbody>
+                </table>
+            </p>
+            </div>
+        </div>
+        <div id="about_credits" class="about_dlg_page" style="overflow:auto;">
+            <div class="dialog_block">
+            <h3 data-i18n-text="new_credits">Hotot+ Credits</h3>
+            <p>
+		<label data-i18n-text="mods_by">Mods, fixes and improvements by</label>:<br/>
+                - Red Squirrel &lt;<a target="_blank" href="mailto:redsquirrel87@gmx.com">redsquirrel87@gmx.com</a>&gt;
+                (<a target="_blank" href="http://twitter.com/redsquirrel87">@redsquirrel87</a>)
+	    </p>	
+            <p>
+		<label data-i18n-text="firefox_version">Firefox porting by</label>:<br/>
+                - Red Squirrel &lt;<a target="_blank" href="mailto:redsquirrel87@gmx.com">redsquirrel87@gmx.com</a>&gt;
+                (<a target="_blank" href="http://twitter.com/redsquirrel87">@redsquirrel87</a>)
+	    </p>	
+            <p>
+		<label data-i18n-text="used_libraries">Used libraries</label>:<br/>
+                - jQuery &lt;<a target="_blank" href="https://jquery.com/">https://jquery.com/</a>&gt;
+		(v2.2.4)<br/>		
+                - Transit &lt;<a target="_blank" href="http://ricostacruz.com/jquery.transit/">http://ricostacruz.com/jquery.transit/</a>&gt;
+		(v0.9.12)<br/>	
+                - jQuery UI Layout Plug-in &lt;<a target="_blank" href="http://layout.jquery-dev.com/">http://layout.jquery-dev.com/</a>&gt;
+		(v1.4.4)<br/>	
+                - Moment.js &lt;<a target="_blank" href="http://momentjs.com/">http://momentjs.com/</a>&gt;
+		(v2.12.0)<br/>
+                - sha1.js &lt;<a target="_blank" href="http://pajhome.org.uk/crypt/md5/sha1.html">http://pajhome.org.uk/crypt/md5/sha1.html</a>&gt;
+		(v2.2)<br/>													
+                - Twemoji &lt;<a target="_blank" href="http://twitter.github.io/twemoji/">http://twitter.github.io/twemoji/</a>&gt;
+		(v2.1.0)<br/>
+                - twitter-text &lt;<a target="_blank" href="https://github.com/twitter/twitter-text">https://github.com/twitter/twitter-text</a>&gt;
+		(v1.14.0)<br/>	
+		- HLS.js &lt;<a target="_blank" href="https://github.com/dailymotion/hls.js">https://github.com/dailymotion/hls.js</a>&gt;
+		(v0.6.2-2)<br/>					
+	    </p>	
+	    <br/>	
+	    <h3 data-i18n-text="original_credits">Original Hotot Credits</h3>
+	    <p>               
+		<label data-i18n-text="written_by">Written by</label>:<br/>
+                - Shellex Wai &lt;<a target="_blank" href="mailto:5h3ll3x@gmail.com">5h3ll3x@gmail.com</a>&gt;
+                (<a target="_blank" href="http://twitter.com/shellex">@shellex</a>)<br/>
+
+                - Jiahua Huang &lt;<a target="_blank" href="mailto:jhuangjiahua@gmail.com">jhuangjiahua@gmail.com</a>&gt;
+                (<a target="_blank" href="http://twitter.com/shellexy">@shellexy</a>)<br/>
+                - Jimmy Xu &lt;<a target="_blank" href="mailto:xu.jimmy.wrk@gmail.com">xu.jimmy.wrk@gmail.com</a>&gt;
+                (<a target="_blank" href="http://twitter.com/jimmy_xu_wrk
+">@jimmy_xu_wrk</a>)<br/>
+
+                - Tualatrix Chou &lt;<a target="_blank" href="mailto:tualatrix@gmail.com">tualatrix@gmail.com</a>&gt;
+                (<a target="_blank" href="http://twitter.com/tualatrix">@tualatrix</a>)<br/>
+                - Xu Zhen &lt;<a target="_blank" href="mailto:xnreformer@gmail.com">xnreformer@gmail.com</a>&gt;
+                (<a target="_blank" href="http://twitter.com/xnreformer">@xnreformer</a>)<br/>
+
+            </p>
+            <p>
+                <label data-i18n-text="artwork_by">Artwork by</label>: <br/>
+                - Evan &lt;<a target="_blank" href="http://www.freemagi.com">www.freemagi.com</a>&gt;
+                (<a target="_blank" href="http://twitter.com/OiCKilL">@OiCKilL</a>)<br/>
+                - Shellex Wai <br/>
+            </p>
+            <p>
+                <label data-i18n-text="supervised_by">Pushed by</label>: <br/>
+                - Marguerite Su &lt;<a target="_blank" href="mailto:i@marguerite.su">i@marguerite.su</a>&gt;
+                (<a target="_blank" href="http://twitter.com/doublechou">@doublechou</a>)<br/>
+
+            </p>
+            </div>
+        </div>
+        <div id="about_license" class="about_dlg_page">
+            <div class="dialog_block">
+            <h3 data-i18n-text="license">License</h3>
+            <p>
+Hotot package is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+Licenseas published by the Free Software Foundation; either
+version3 of the License, or (at your option) any later version.
+            </p>
+            <p>
+This package is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+            </p>
+            <p>
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <a target="_blank" href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>.
+            </p>
+            </div>
+        </div>
+    </div>
+    <div class="dialog_footer">
+    <a id="btn_about_ok" class="mochi_button" data-i18n-text="ok">OK</a>
+    </div>
+    </div><!-- END of .dialog_container -->
+</div>
+
+<!-- Profile dialog -->
+<div id="profile_dlg" class="dialog">
+    <div class="dialog_bar">
+        <h2 class="dialog_title" data-i18n-text="profile">Profile</h2>
+        <a class="dialog_close_btn" title="Close" href="#" data-i18n-title="close"></a>
+    </div>
+    <div class="dialog_container">
+    <div class="dialog_header">
+        <div style="position: relative; height: 48px">
+        <div id="profile_avatar" class="profile_img_wrapper" style="position:absolute; top: 0px; left: 0px; width: 48px; height: 48px;-webkit-box-reflect:none;margin:0;"></div>
+        <input id="btn_change_profile_avatar" type="file" style="position:absolute; top: 0px; left: 0px; width: 48px; height: 48px; z-index: 10; cursor: pointer; opacity: 0;"/>
+        <p style="position: absolute; left: 60px; bottom: 0px;" data-i18n-text="change_your_profile_picture_by_clicking_it"> Change your Profile picture by clicking it.</p>
+        </div>
+    </div>
+    <div id="profile_dlg_body" class="dialog_body">
+        <div class="dialog_block">
+        <p>
+            <label class="label" data-i18n-text="name">Name</label><br/>
+            <input id="tbox_profile_name" title="Name" type="text" class="entry"/><br/>
+            <label class="label" data-i18n-text="location">Location</label><br/>
+            <input id="tbox_profile_location" title="Location" type="text" class="entry"/><br/>
+            <label class="label" data-i18n-text="website">Website</label><br/>
+            <input id="tbox_profile_website" title="Website" type="text" class="entry"/><br/>
+            <label class="label" data-i18n-text="bio">Bio</label><br/>
+            <textarea id="tbox_profile_bio" title="Bio" class="entry" style="height: 70px;"></textarea>
+        </p>
+        </div>
+    </div>
+    <div class="dialog_footer">
+    <a id="btn_profile_cancel" class="dialog_close_btn mochi_button" data-i18n-text="cancel">Cancel</a>
+    <a id="btn_profile_update" class="mochi_button blue" data-i18n-text="update">Update</a>
+    </div>
+    </div><!-- END of .dialog_container -->
+</div>
+
+<!-- List Attribute dialog -->
+<div id="list_attr_dlg" class="dialog">
+    <div class="dialog_bar">
+        <h2 class="dialog_title" data-i18n-text="list">List</h2>
+        <a class="dialog_close_btn" title="Close" href="#" data-i18n-title="close"></a>
+    </div>
+    <div class="dialog_container">
+    <div class="dialog_header"></div>
+    <div class="dialog_body">
+			<ul class="mochi_list">
+				<li class="mochi_list_item">
+				<input id="list_attr_slug" type="text"
+						class="mochi_entry widget"
+						placeholder="Your List name here"
+						data-i18n-placeholder="list_name_here"/>
+					<label class="label" data-i18n-text="name">List Name</label>
+				</li>
+				<li class="mochi_list_item">
+					<input id="list_attr_privacy"
+							class="mochi_toggle widget"
+							type="checkbox" name="list_attr_privacy" checked/>
+					<label class="label"
+							for="list_attr_privacy" data-i18n-text="public_to_everybody">Public to everybody</label>
+				</li>
+			</ul>
+			<textarea id="list_attr_desc"
+				class="mochi_textarea"
+				placeholder="Description, under 100 characters, optional."
+				data-i18n-placeholder="list_desc"
+				style="height: 100px; width: 100%;"></textarea>
+    </div>
+    <div class="dialog_footer">
+    <a id="btn_list_attr_cancel" class="mochi_button dialog_close_btn" data-i18n-text="cancel">Cancel</a>
+    <a id="btn_list_attr_update" class="mochi_button" data-i18n-text="update">Update</a>
+    </div>
+    </div><!-- END of .dialog_container -->
+</div>
+
+<!-- Add to List dialog -->
+<div id="add_to_list_dlg" class="dialog">
+    <div class="dialog_bar">
+        <h2 class="dialog_title" data-i18n-text="list">Add to List</h2>
+        <a class="dialog_close_btn" title="Close" href="#" data-i18n-title="close"></a>
+    </div>
+    <div class="dialog_container">
+    <div class="dialog_header"></div>
+    <div class="dialog_body">
+        <ul class="mochi_list">
+            <li class="mochi_list_item with_trigger">
+							<a href="#" class="trigger page_nav">
+								<span class="widget more"></span>
+								<label for="" class="label"></label>
+							</a>
+						</li>
+        </ul>
+    </div>
+    <div class="dialog_footer"></div>
+    </div><!-- END of .dialog_container -->
+</div>
+
+<!-- 5.5 Following Hashtags Dialog -->
+<div id="ftags_dialog" class="dialog">
+    <div class="dialog_bar">
+        <h2 class="dialog_title" data-i18n-text="following_hashtags">Following Hashtags</h2>
+        <a class="dialog_close_btn" title="Close" href="#" data-i18n-title="close"></a>
+    </div>
+    <div class="dialog_container">
+    <div class="dialog_header"></div>
+    <div class="dialog_body">
+            <div id="ftags_list" class="ftags_list">
+                <a href="#" class="ftags">#</a>
+            </div>
+    </div> <!-- .body -->
+    <div class="dialog_footer">
+	<i data-i18n-text="click_to_unfollow_hashtag">Click on a hashtag in the above list to unfollow it.</i>
+    </div>
+    </div>
+</div>
+
+<!-- Filter Dialog -->
+<div id="filter_dialog" class="dialog">
+    <div class="dialog_bar">
+        <h2 class="dialog_title" data-i18n-text="current_mute_filters">Current Mute Filters</h2>
+        <a class="dialog_close_btn" title="Close" href="#" data-i18n-title="close"></a>
+    </div>
+    <div class="dialog_container">
+    <div class="dialog_header">
+                <a id="filter_add_rule_btn" href="#" class="mochi_button dark widget" data-i18n-text="add_rule" style="float:right;">Add new rule</a>
+		<input id="filter_framework_trigger" type="checkbox" href="#" class="mochi_toggle dark widget" data-i18n-title="enable_filter_framework"/>
+    </div>
+    <div class="dialog_body">
+        <div class="rulebased_page">
+            <ul id="filter_rule_list" class="rule_list">
+                <li><a href="#" class="rule">aaa</a>
+                    <div class="item_ctrl">
+		    <a href="#" class="mochi_button verify_btn">Verify</a>
+		    <a href="#" class="mochi_button edit_btn">Edit</a>
+		    <a href="#" class="mochi_button delete_btn">Delete</a>
+		    </div>
+                </li>
+            </ul>
+        </div>
+    </div> <!-- .body -->
+    <div class="dialog_footer">
+    <a class="mochi_button dialog_close_btn" title="Cancel" href="#" data-i18n-text="cancel">Cancel</a>
+    <a id="filter_save_btn" class="mochi_button blue" title="Save changes" href="#" data-i18n-text="save">Save</a>
+    </div>
+    </div>
+</div>
+
+<div id="filter_rule_edit_dialog" class="dialog">
+    <div class="dialog_bar">
+        <h2 class="dialog_title" data-i18n-text="rule_editor">Rule Editor</h2>
+        <a class="dialog_close_btn" title="Close" href="#" data-i18n-title="close"></a>
+    </div>
+    <div class="dialog_container">
+    <div class="dialog_header"></div> <!-- .dialog_header -->
+    <div class="dialog_body">
+        <div class="dialog_block">
+            <h3 data-i18n-text="rule_identification_name">Rule Identification Name:</h3>
+            <p><input id="filter_rule_edit_name" class="entry" 
+	    placeholder="Type a name here." value="" style="width:450px" 
+	    data-i18n-placeholder="type_a_name_here"/></p>
+        </div>
+	<div id="filter_form" class="dialog_block">
+            <h3><span data-i18n-text="actions_to_do">Actions to do:</span></h3>
+	    <p class="filter_action_block">
+		<input id="filter_drop" type="checkbox" class="checkbox" value="DROP" checked/><label data-i18n-text="drop">Drop</label>
+		<input id="filter_mask" type="checkbox" class="checkbox" value="MASK"/><label data-i18n-text="mask">Mask</label>
+		<input id="filter_notify" type="checkbox" class="checkbox" value="NOTIFY"/><label data-i18n-text="notify">Notify</label>
+		<input id="filter_rt" type="checkbox" class="checkbox" value="RT"/><label data-i18n-text="retweet">Retweet</label>
+            </p>
+	    <h3><span data-i18n-text="conditions_to_respect">Conditions to respect:</span></h3>
+	    <p>
+		<label data-i18n-text="tweet_contains_words">Tweet contains words:</label>
+		<input id="filter_contain" class="entry" value="" style="width:450px" 
+		placeholder="abc1,abc2,abc3..."/>
+	    </p>
+	    <p>
+		<label data-i18n-text="tweet_has_been_posted_using_the_client">Tweet has been posted using the client:</label>
+		<input id="filter_come" class="entry" value="" style="width:450px" 
+		placeholder="client1,client2,client3..."/>
+	    </p>
+	    <p>
+		<label data-i18n-text="tweet_contains_hashtags">Tweet contains hashtags:</label>
+		<input id="filter_hashtags" class="entry" value="" style="width:450px" 
+		placeholder="#tag1,#tag2,tag3..."/>
+	    </p>
+	    <p>
+		<label data-i18n-text="tweet_has_been_posted_by">Tweet has been posted by:</label>
+		<input id="filter_authors" class="entry" value="" style="width:450px" 
+		placeholder="@user1,user2,@user3..."/>
+	    </p>
+	    <p>
+		<label data-i18n-text="tweet_has_been_retweeted_by">Tweet has been retweeted by:</label>
+		<input id="filter_retweeters" class="entry" value="" style="width:450px" 
+		placeholder="@user1,@user2,user3..."/>
+	    </p>
+	    <p>
+		<label data-i18n-text="tweet_contains_mentions_to">Tweet contains mentions to:</label>
+		<input id="filter_mentions" class="entry" value="" style="width:450px" 
+		placeholder="@user1,user2,user3..."/>
+	    </p>
+	    <p>
+		<label data-i18n-text="tweet_has_attribute">Tweet has attribute:</label>
+		<input id="filter_urls" type="checkbox" class="checkbox" value="url" checked/><label data-i18n-text="">URL</label>
+		<input id="filter_geo" type="checkbox" class="checkbox" value="geo"/><label data-i18n-text="">Geo</label>
+		<input id="filter_media" type="checkbox" class="checkbox" value="media"/><label data-i18n-text="">Media</label>
+	    </p>
+	</div>
+    </div><!-- .dialog_body -->
+    <div class="dialog_footer">
+    <a id="filter_rule_edit_verify" class="mochi_button" title="Verify" href="#" data-i18n-text="verify">Verify</a>
+    <a class="mochi_button dialog_close_btn" title="Cancel" href="#" data-i18n-text="cancel">Cancel</a>
+    <a id="filter_rule_edit_ok" class="mochi_button blue" title="OK" href="#" data-i18n-text="ok">OK</a>
+    </div>
+    </div> <!-- .dialog_container -->
+</div> <!-- #filter_rule_edit_dialog -->
+
+<div id="color_guide_dialog" class="dialog">
+    <div class="dialog_bar">
+        <h2 class="dialog_title" data-i18n-text="label_with_color">Label with color</h2>
+        <a class="dialog_close_btn" title="Close" href="#" data-i18n-title="close"></a>
+    </div>
+    <div class="dialog_container">
+    <div class="dialog_header"></div> <!-- .dialog_header -->
+    <div class="dialog_body">
+        <ul id="set_color_list">
+            <li><span class="cell"></span><a href="transparent" data-i18n-text="transparent">Transparent</a></li>
+            <li><span class="cell"></span><a href="#" data-i18n-text="cuddly">Cuddly</a></li>
+            <li><span class="cell"></span><a href="#" data-i18n-text="wanna_have_relationship_with">Wanna have relationship with</a></li>
+            <li><span class="cell"></span><a href="#" data-i18n-text="my_journey_is_to_the_sea_of_stars">My journey is to the sea of stars</a></li>
+            <li><span class="cell"></span><a href="#" data-i18n-text="virushou_s_integrity">Virushuo's Integrity</a></li>
+            <li><span class="cell"></span><a href="#" data-i18n-text="shiny_old_times_before_marriage">Shiny old times before marriage</a></li>
+            <li><span class="cell"></span><a href="#" data-i18n-text="panda_acts_cute">Panda acts cute</a></li>
+            <li><span class="cell"></span><a href="#" data-i18n-text="schizophrenia">Schizophrenia</a></li>
+            <li><span class="cell"></span><a href="#" data-i18n-text="bloody_marguerite">Bloody Marguerite</a></li>
+            <li><span class="cell"></span><a href="#" data-i18n-text="hidden_dark_minds">Hidden Dark Minds</a></li>
+            <li><span class="cell"></span><a href="#" data-i18n-text="to_cold_beauty">To Cold Beauty</a></li>
+            <li><span class="cell"></span><a href="#" data-i18n-text="assassin_s_tango">Assassin's Tango</a></li>
+            <li><span class="cell"></span><a href="#" data-i18n-text="titian_s_elegance">Titian's Elegance</a></li>
+            <li><span class="cell"></span><a href="#" data-i18n-text="pretty_wife">Pretty Wife</a></li>
+            <li><span class="cell"></span><a href="#" data-i18n-text="tranquil">Tranquil</a></li>
+            <li><span class="cell"></span><a href="#" data-i18n-text="just_cannot_stop_thinking_of_here">Just can't stop thinking of here</a></li>
+            <li><span class="cell"></span><a href="#" data-i18n-text="struggling_adventurers">Struggling adventurers</a></li>
+        </ul>
+    </div><!-- .dialog_body -->
+    <div class="dialog_footer">
+    </div>
+    </div> <!-- .dialog_container -->
+</div> <!-- #color_guide_dialog -->
+
+<div id="verify_dialog" class="dialog">
+    <div class="dialog_bar">
+        <h2 class="dialog_title" data-i18n-text="rule_meaning">Rule Meaning</h2>
+        <a class="dialog_close_btn" title="Close" href="#" data-i18n-title="close"></a>
+    </div>
+    <div class="dialog_container">
+	<div class="dialog_body"></div><!-- .dialog_body -->
+    </div> <!-- .dialog_container -->
+</div> <!-- #verify_dialog -->
+
+<!-- MultiImageUploader dialog -->
+<div id="imageuploader_dlg" class="dialog">
+    <div class="dialog_bar">
+        <h2 class="dialog_title" data-i18n-text="upload_photo">Upload Photo</h2>
+        <a class="dialog_close_btn" title="Close" href="#" data-i18n-title="close"></a>
+    </div>
+    <div class="dialog_container">
+    <div class="dialog_header"></div>
+    <div class="dialog_body">
+        <div class="dialog_block">
+	    <table style="border:none;width:100%;"><tr id="preview2"></tr></table>
+            <input class="fileselector" type="file" multiple/>
+            <a href="#" class="mochi_button pyfileselector">Choose a file ...</a>
+            <textarea class="message textarea" placeholder="Write down descriptions here" data-i18n-placeholder="write_down_description_here"></textarea>
+        </div>
+    </div>
+    <div class="dialog_footer">
+    <a class="mochi_button dialog_close_btn" data-i18n-text="close">Close</a>
+    <a id="imageuploader_upload_btn" class="mochi_button blue" data-i18n-text="upload">Upload</a>
+    </div>
+    </div><!-- END of .dialog_container -->
+</div>
+
+<!-- Previewer -->
+<div id="previewer">
+	<a class="image_wrapper" target="_blank" href="#"><img class="image" src="" alt="Loading"/></a>
+	<iframe class="ytframe"src="" frameborder="0" allowfullscreen></iframe> <!-- 2.2: Youtube Preview -->
+	
+	<!-- 9.1: Streaming video Preview -->
+	<div style="text-align: right;">
+	<select id="hlsvideoq" class="combo dark" title="Video quality" style="height: 24px; line-height: 24px; width: 70px;" data-i18n-title="video_quality">
+		<option value="-1">Auto</option>
+	</select>
+	</div>
+	<video id="hlsvideo" style="margin-top:5px;" width="0" height="0" controls preload="metadata"><source src="" type="video/mp4"></video> 
+		
+	<a class="close" href="#" data-i18n-text="close">CLOSE</a>
+</div><!-- END of #previewer -->
+
+<!-- Error dialog -->
+<div id="error_dlg" class="dialog">
+    <div class="dialog_bar">
+        <h2 class="dialog_title" data-i18n-text="errors">Errors</h2>
+        <a class="dialog_close_btn" title="Close" href="#" data-i18n-title="close"></a>
+    </div>
+    <div class="dialog_container">
+    <div class="dialog_header">
+        <h2 style="color:#fff;font-size:20px;" data-i18n-text="some_error_occur">Some Errors Occur</h2>
+    </div>
+    <div class="dialog_body">
+        <ul id="error_container" >
+        </ul>
+    </div>
+    <div class="dialog_footer">
+    <a id="btn_error_close" class="mochi_button dialog_close_btn" data-i18n-text="clear_and_close">Clear &amp; Close</a>
+    </div>
+    </div><!-- END of .dialog_container -->
+</div>
+
+<!-- Info dialog -->
+<section id="info_dlg" class="closed dialog">
+  <div class="dialog_bar">
+    <span class="dialog_info_icon" ></span>
+    <h2 id="info_dlg_title" class="dialog_title"></h2>
+  </div>
+   <div class="dialog_container">
+    <div class="dialog_body"  style="text-align: center; max-width: 500px;">
+        <span id="info_dlg_text" style="text-align: center; padding: 5px;"></span>
+    </div> 
+    </div> 
+    <div class="dialog_footer" style="text-align: center;">
+	<a id="btn_info_dlg_close" class="mochi_button blue" data-i18n-text="ok">Ok</a>
+	<span class="clear"></span>
+    </div>
+</section>
+
+<!-- 3.5: New version installed dialog -->
+<section id="new_version" class="closed dialog">
+  <div class="dialog_bar">
+    <h2 class="dialog_title" data-i18n-text="new_version_installed">New version installed</h2>
+  </div>
+  <div style="text-align: center; padding: 10px; font-size: small;">
+	<span data-i18n-text="congratulations">Congratulations</span>, 
+	<span data-i18n-text="new_version_of">a new version of</span> 
+	<b data-i18n-text="hotot">Hotot+</b> 
+	<span data-i18n-text="has_been_installed">has been installed successfully!</span>
+	<br/>
+	<span data-i18n-text="view_changelog">You can view the complete changelog of this new version at</span>
+	<br/>
+	<a href="http://www.redsquirrel87.com/Hotot+LOG.php" target="_blank">http://www.redsquirrel87.com/Hotot+LOG.php</a>
+  </div>
+  <div id="status_ctrl">
+	<a id="btn_new_version_close" class="mochi_button blue" data-i18n-text="close" style="margin-right: 5px;">Close</a>
+	<span class="clear"></span>
+  </div>
+</section>
+
+<section id="context_menu">
+    <ul class="hotot_menu">
+        <li><a id="context_menuitem_web_search" class="select_only" href="#" data-i18n-text="search_in_google">Search in Google</a></li>
+        <li><a id="context_menuitem_twitter_search" class="select_only" href="#" data-i18n-text="search_in_twitter">Search in Twitter</a></li>
+	<li><a id="context_menuitem_translate" class="select_only" href="#" data-i18n-text="translate_this">Translate</a></li>
+    </ul>
+</section>
+
+<span id="user_cache"></span>
+<span id="tweet_cache"></span>
+<audio id="audio_notify" src="sound/notify.ogg"></audio>
+</body>
+</html>

@@ -1,0 +1,215 @@
+#main_page {
+background: #cdeb8e;
+background: -moz-linear-gradient(top,  #cdeb8e 0%, #a5c956 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cdeb8e), color-stop(100%,#a5c956));
+background: -webkit-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
+background: -o-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
+background: -ms-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
+background: linear-gradient(to bottom,  #cdeb8e 0%,#a5c956 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdeb8e', endColorstr='#a5c956',GradientType=0 );
+	border-color: #75A565;
+}
+.scrollbar_track {  
+	width: 10px;
+}
+.scrollbar_track .scrollbar_slot { 
+	width: 3px;
+	margin: 0 3px 0 4px;
+	background: transparent;
+}
+.scrollbar_handle {  
+	background-color: green;  
+	width: 2px;  
+	opacity: 0.8;
+}
+.scrollbar_track.active .scrollbar_slot,
+.scrollbar_track:hover .scrollbar_slot { 
+	width: 10px;
+	margin: 0;
+	background: rgba(0,0,0,0.1);
+}
+.scrollbar_track.active .scrollbar_handle,
+.scrollbar_track:hover .scrollbar_handle { 
+	width: 10px;
+	opacity: 0.8;
+}
+.profile_img_wrapper {
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px green;
+}
+.card.normal {
+background: #cdeb8e;
+background: -moz-linear-gradient(top,  #cdeb8e 0%, #a5c956 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cdeb8e), color-stop(100%,#a5c956));
+background: -webkit-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
+background: -o-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
+background: -ms-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
+background: linear-gradient(to bottom,  #cdeb8e 0%,#a5c956 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdeb8e', endColorstr='#a5c956',GradientType=0 );
+	border-color:#75A565;
+	color: DarkGreen;
+}
+.card.normal a {
+	color: SeaGreen  ; 
+}
+.card.normal .text a {
+	color: SeaGreen   !important; 
+}
+.card.normal > .who > .who_href {
+	color: SeaGreen  ; 
+}
+.card.normal .tweet_thread {
+	border: 1px #75A565 solid;
+	border-bottom: 0;
+}
+.card.me {
+background: #cdeb8e;
+background: -moz-linear-gradient(top,  #cdeb8e 0%, #a5c956 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cdeb8e), color-stop(100%,#a5c956));
+background: -webkit-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
+background: -o-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
+background: -ms-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
+background: linear-gradient(to bottom,  #cdeb8e 0%,#a5c956 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdeb8e', endColorstr='#a5c956',GradientType=0 );
+	border-color: #75A565;
+	color: DarkGreen;
+	background-image: url("./grass.png");
+	background-position: right bottom;
+	background-repeat: no-repeat;	
+}
+.card.me a {
+	color: SeaGreen  ; 
+}
+.card.me .text a {
+	color: SeaGreen   !important; 
+}
+.card.me > .who > .who_href {
+	color: SeaGreen  ; 
+}
+.card.me .tweet_thread {
+	border: 1px #75A565 solid;
+	border-bottom: 0;
+}
+.card.mention {
+background: #d1f4c3;
+background: -moz-linear-gradient(top,  #d1f4c3 0%, #b6dd96 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d1f4c3), color-stop(100%,#b6dd96));
+background: -webkit-linear-gradient(top,  #d1f4c3 0%,#b6dd96 100%);
+background: -o-linear-gradient(top,  #d1f4c3 0%,#b6dd96 100%);
+background: -ms-linear-gradient(top,  #d1f4c3 0%,#b6dd96 100%);
+background: linear-gradient(to bottom,  #d1f4c3 0%,#b6dd96 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1f4c3', endColorstr='#b6dd96',GradientType=0 );
+    border-color:#75A565;
+    color: DarkGreen;
+}
+.card.mention a {
+    color: SeaGreen;
+}
+.card.mention > .who > .who_href {
+    color: SeaGreen;
+}
+.card.mention .tweet_thread {
+	border: 1px #75A565 solid;
+	border-bottom: 0;
+}
+.card.mention .tweet_ctrl {
+    border-color: #75A565;
+}
+.card.message {
+background: #cdeb8e;
+background: -moz-linear-gradient(top,  #cdeb8e 0%, #a5c956 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cdeb8e), color-stop(100%,#a5c956));
+background: -webkit-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
+background: -o-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
+background: -ms-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
+background: linear-gradient(to bottom,  #cdeb8e 0%,#a5c956 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdeb8e', endColorstr='#a5c956',GradientType=0 );
+	border-color:#75A565;
+	color: DarkGreen;
+}
+.card.message a {
+	color: SeaGreen  ; 
+}
+.card.message .text a {
+	color: SeaGreen   !important; 
+}
+.card.message > .who > .who_href {
+	color: SeaGreen  ; 
+}
+.card.message .tweet_thread {
+	border: 1px #75A565 solid;
+	border-bottom: 0;
+}
+.card.deleted a {
+    color: gray;
+}
+.card.deleted .text {
+    color: gray;
+}
+.tweet_meta a {
+    color: SeaGreen !important;
+}
+#indication {
+background: #333333;
+background: -moz-linear-gradient(top,  #333333 0%, #111111 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#333333), color-stop(100%,#111111));
+background: -webkit-linear-gradient(top,  #333333 0%,#111111 100%);
+background: -o-linear-gradient(top,  #333333 0%,#111111 100%);
+background: -ms-linear-gradient(top,  #333333 0%,#111111 100%);
+background: linear-gradient(to bottom,  #333333 0%,#111111 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#111111',GradientType=0 );
+}
+#indication_light {
+    background: green;
+    -webkit-box-shadow: 0 0 10px #FFC677;
+    box-shadow: 0 0 10px #FFC677;
+}
+.tt_title {
+	color: DarkGreen;
+}
+.mochi_list_item .mochi_dm .label {
+	color: DarkGreen;
+}
+.mochi_list_item .mochi_dm:hover {
+background: #cdeb8e;
+background: -moz-linear-gradient(top,  #cdeb8e 0%, #a5c956 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cdeb8e), color-stop(100%,#a5c956));
+background: -webkit-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
+background: -o-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
+background: -ms-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
+background: linear-gradient(to bottom,  #cdeb8e 0%,#a5c956 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdeb8e', endColorstr='#a5c956',GradientType=0 );
+}
+.mochi_list_item .mochi_dm:hover .label {
+	color: white;
+}
+#notification {
+	background: LightGreen;
+	border: 1px solid green;
+	color: DarkGreen;
+}
+.vcard, .header_inner, .dm_view_users {
+background: #d1f4c3;
+background: -moz-linear-gradient(top,  #d1f4c3 0%, #b6dd96 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d1f4c3), color-stop(100%,#b6dd96));
+background: -webkit-linear-gradient(top,  #d1f4c3 0%,#b6dd96 100%);
+background: -o-linear-gradient(top,  #d1f4c3 0%,#b6dd96 100%);
+background: -ms-linear-gradient(top,  #d1f4c3 0%,#b6dd96 100%);
+background: linear-gradient(to bottom,  #d1f4c3 0%,#b6dd96 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1f4c3', endColorstr='#b6dd96',GradientType=0 );
+    border: #75A565 solid 1px;
+}
+.search_box {
+background: #d1f4c3;
+background: -moz-linear-gradient(top,  #d1f4c3 0%, #b6dd96 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d1f4c3), color-stop(100%,#b6dd96));
+background: -webkit-linear-gradient(top,  #d1f4c3 0%,#b6dd96 100%);
+background: -o-linear-gradient(top,  #d1f4c3 0%,#b6dd96 100%);
+background: -ms-linear-gradient(top,  #d1f4c3 0%,#b6dd96 100%);
+background: linear-gradient(to bottom,  #d1f4c3 0%,#b6dd96 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1f4c3', endColorstr='#b6dd96',GradientType=0 );
+    border: #75A565 solid 1px;
+}
+.tt_title {
+	color: #333;
+}

@@ -1,0 +1,2818 @@
+{
+   "a_new_hope": {
+      "description": "data/index.html",
+      "message": ""
+   },
+   "about": {
+      "description": "data/index.html",
+      "message": "Info"
+   },
+   "about_and_help": {
+      "description": "data/index.html",
+      "message": "Info & Aiuto"
+   },
+   "access_token_doesnt_exist": {
+      "description": "data/index.html",
+      "message": "Token d'accesso inesistente!"
+   },
+   "action": {
+      "description": "data/index.html",
+      "message": "Azione"
+   },
+   "actions_to_do": {
+      "description": "data/index.html",
+      "message": "Azioni da fare:"
+   },
+   "add": {
+      "description": "data/index.html",
+      "message": "Aggiungi"
+   },
+   "add_new_views": {
+      "description": "data/index.html",
+      "message": "Aggiungi nuove colonne"
+   },
+   "add_rule": {
+      "description": "data/index.html",
+      "message": "Aggiungi nuova regola"
+   },
+   "add_to_list": {
+      "description": "data/js/ui.template.js",
+      "message": "Aggiungi ad una lista"
+   },
+   "added": {
+      "description": "data/js/ui.add_to_list_dlg.js",
+      "message": "Aggiunto"
+   },
+   "advanced": {
+      "description": "data/index.html",
+      "message": "Impostazioni Avanzate"
+   },
+   "all_conditions_true": {
+      "description": "data/js/filter.js",
+      "message": "il twit se tutte le seguenti condizioni sono VERE"
+   },
+   "already_tweeted": {
+      "description": "data/js/ui.status_box.js",
+      "message": "Oops! Hai già inviato questo tweet..."
+   },
+   "and": {
+      "description": "data/index.html",
+      "message": "e"
+   },
+   "animation": {
+      "description": "data/index.html",
+      "message": "Animazioni"
+   },
+   "any": {
+      "description": "data/js/ui.dm_tbas.js",
+      "message": "Visualizza tutti"
+   },
+   "api_base": {
+      "description": "data/index.html",
+      "message": "API Base"
+   },
+   "api_error_0": {
+      "description": "data/js/lib.twitter.js",
+      "message": "Connessione con il server persa."
+   },
+   "api_error_400": {
+      "description": "data/js/lib.twitter.js",
+      "message": "Richiesta errata: La richiesta non era valida.."
+   },
+   "api_error_401": {
+      "description": "data/js/lib.twitter.js",
+      "message": "Il server non è riuscito ad autenticarti. Controlla i tuoi dati d'accesso e l'API base."
+   },
+   "api_error_403_fav": {
+      "description": "data/js/lib.twitter.js",
+      "message": "Hai già fatto Mi piace o inserito questo tweet nei preferiti."
+   },
+   "api_error_403_retweet": {
+      "description": "data/js/lib.twitter.js",
+      "message": "Hai già retwittato questo tweet, oppure è protetto."
+   },
+   "api_error_403_unknown": {
+      "description": "data/js/lib.twitter.js",
+      "message": "Twitter ha rifiutato la tua richiesta."
+   },
+   "api_error_403_update": {
+      "description": "data/js/lib.twitter.js",
+      "message": "Twitter non permette di inserire duplicati di tweet già postati."
+   },
+   "api_error_404": {
+      "description": "data/js/lib.twitter.js",
+      "message": "L'URL che hai richiesto non esiste. Controlla le tue API Base/OAuth Base/di Ricerca Base."
+   },
+   "api_error_406": {
+      "description": "data/js/lib.twitter.js",
+      "message": "Un formato non valido è stato specificato nella tua richiesta."
+   },
+   "api_error_410": {
+      "description": "data/js/lib.twitter.js",
+      "message": "Questa API è stata disattivata."
+   },
+   "api_error_420": {
+      "description": "data/js/lib.twitter.js",
+      "message": "Sei stato limitato da Twitter."
+   },
+   "api_error_422": {
+      "description": "data/js/lib.twitter.js",
+      "message": "Entità non precessabile."
+   },
+   "api_error_429": {
+      "description": "data/js/lib.twitter.js",
+      "message": "Hai superato il limite orario consentito per questa API. Riprova tra 15 minuti."
+   },
+   "api_error_500": {
+      "description": "data/js/lib.twitter.js",
+      "message": "Errore interno del server. Riprova più tardi."
+   },
+   "api_error_502": {
+      "description": "data/js/lib.twitter.js",
+      "message": "Il server è down o in manutenzione. Riprova più tardi."
+   },
+   "api_error_503": {
+      "description": "data/js/lib.twitter.js",
+      "message": "Il server è sovraccarico. Riprova più tardi."
+   },
+   "api_error_504": {
+      "description": "data/js/lib.twitter.js",
+      "message": "Timeout Gateway. Riprova più tardi."
+   },
+   "api_setting": {
+      "description": "data/index.html",
+      "message": "Impostazioni API"
+   },
+   "archive": {
+      "description": "data/index.html",
+      "message": "Archivio"
+   },
+   "artwork_by": {
+      "description": "data/index.html",
+      "message": "Artwork di"
+   },
+   "aspect": {
+      "description": "data/index.html",
+      "message": "Impostazioni Aspetto"
+   },
+   "assassin_s_tango": {
+      "description": "data/index.html",
+      "message": "Assassin's Tango"
+   },
+   "at_the_same_time": {
+      "description": "data/js/filter.js",
+      "message": "contemporaneamente"
+   },
+   "authentication_ok": {
+      "description": "data/js/ui.welcome.js",
+      "message": "Autenticazione OK!"
+   },
+   "author": {
+      "description": "data/js/ui.exts_dlg.js",
+      "message": "Autore"
+   },
+   "authorizing": {
+      "description": "data/js/ui.pin_dlg.js",
+      "message": "Autorizzazione in corso..."
+   },
+   "auto_longer_tweet": {
+      "description": "data/index.html",
+      "message": "Accorcia automaticamente i tweet troppo lunghi"
+   },
+   "auto_update": {
+      "description": "data/js/ui.template.js",
+      "message": "Aggiornamento Automatico"
+   },
+   "autoload_quoted_title": {
+      "description": "data/index.html",
+      "message": "Carica e mostra automaticamente all'interno del client i tweet quotati andando anche ad eliminare il loro URL dal tweet originale"
+   },
+   "autoload_quoted_tweet": {
+      "description": "data/index.html",
+      "message": "Carica e mostra automaticamente i tweet quotati"
+   },
+   "automatically_sign_in_after_opening": {
+      "description": "data/index.html",
+      "message": "Accesso automatico all'apertura"
+   },
+   "automatically_sign_in_after_opening_title": {
+      "description": "data/index.html",
+      "message": "Accedi automaticamente all'account predefinito all'avvio del programma"
+   },
+   "back": {
+      "description": "data/index.html",
+      "message": "Indietro"
+   },
+   "basic_auth_not_supported": {
+      "description": "data/js/ui.status_box.js",
+      "message": "Auth base non supportata, per favore utilizza OAuth per l'upload delle immagini."
+   },
+   "behavior": {
+      "description": "data/index.html",
+      "message": "Impostazioni Comportamento"
+   },
+   "bio": {
+      "description": "data/index.html",
+      "message": "Bio"
+   },
+   "block": {
+      "description": "data/js/ui.template.js",
+      "message": "Blocca"
+   },
+   "block_confirm": {
+      "description": "data/js/ui.peopleview.js",
+      "message": "Sei proprio sicuro di voler bloccare"
+   },
+   "bloody_marguerite": {
+      "description": "data/index.html",
+      "message": "Bloody Marguerite"
+   },
+   "cancel": {
+      "description": "data/index.html",
+      "message": "Annulla"
+   },
+   "cancelled": {
+      "description": "data/index.html",
+      "message": "Annullato!"
+   },
+   "cannot_authenticate_you_please_check_your_username_or_password_and_api_base": {
+      "description": "data/js/ui.welcome.js",
+      "message": "Impossibile autenticarsi! Controlla la correttezza di username, password e/o API Base."
+   },
+   "cannot_authenticate_you_please_try_later": {
+      "description": "data/js/ui.welcome.js",
+      "message": "Impossibile autenticarsi! Riprova."
+   },
+   "cannot_get_token_from_server": {
+      "description": "data/js/ui.welcome.js",
+      "message": "Impossibile ottenere la token dal server!"
+   },
+   "change_your_profile_picture_by_clicking_it": {
+      "description": "data/index.html",
+      "message": "Cambia la tua immagine di profilo cliccando su di essa."
+   },
+   "charactor_at_is_not_allow_in_profile_prefix": {
+      "description": "data/js/ui.welcome.js",
+      "message": "Il carattere `@` non è consentito nel prefisso del profilo"
+   },
+   "check_or_disable_custom_source_app": {
+      "description": "data/js/ui.welcome.js",
+      "message": "Controlla la correttezza dei valori di consumer key/secret della tua app sorgente personalizzata (oppure semplicemente disattivala) e poi riprova."
+   },
+   "chrome_context_menu_integration": {
+      "description": "data/index.html",
+      "message": "Integrazione col menù contestuale del browser"
+   },
+   "chrome_context_menu_integration_title": {
+      "description": "data/index.html",
+      "message": "Aggiungi comandi di Hotot+ al menù contestuale del browser"
+   },
+   "chrome_notifications_text": {
+      "description": "data/index.html",
+      "message": "Usa le API di Chrome"
+   },
+   "chrome_notifications_title": {
+      "description": "data/index.html",
+      "message": "Usa le API di Chrome invece di quelle HTML5 per le notifiche desktop"
+   },
+   "chrome_sync": {
+      "description": "data/index.html",
+      "message": "Sincronizzazione Chrome"
+   },
+   "chrome_sync_all": {
+      "description": "data/index.html",
+      "message": "Sincronizza manualmente impostazioni e filtri"
+   },
+   "chrome_sync_no_token": {
+      "description": "data/js/conf.js",
+      "message": "Access token assente: devi effettuare il login nel tuo account Twitter prima di poter usare questa funzione."
+   },
+   "chrome_sync_success": {
+      "description": "data/js/conf.js",
+      "message": "Impostazioni e filtri sincronizzati con successo!"
+   },
+   "chrome_sync_text": {
+      "description": "data/index.html",
+      "message": "Sincronizza automaticamente le colonne aperte"
+   },
+   "chrome_sync_title": {
+      "description": "data/index.html",
+      "message": "Sincronizza le colonne aperte in Hotot+ utilizzando il servizio cloud ufficiale di Google Chrome"
+   },
+   "chrome_syncing": {
+      "description": "data/index.html",
+      "message": "Sincronizzazione con il cloud..."
+   },
+   "classic": {
+      "description": "data/index.html",
+      "message": ""
+   },
+   "clear": {
+      "description": "data/index.html",
+      "message": "Pulisci"
+   },
+   "clear_and_close": {
+      "description": "data/index.html",
+      "message": "Pulisci & Chiudi"
+   },
+   "clear_token": {
+      "description": "data/index.html",
+      "message": "Resetta token"
+   },
+   "click_me_to_continue": {
+      "description": "data/index.html",
+      "message": "Premi qui"
+   },
+   "click_the_button_below": {
+      "description": "data/index.html",
+      "message": "Premi il pulsante sotto:"
+   },
+   "click_to_compose_message": {
+      "description": "data/index.html",
+      "message": "Componi un messaggio diretto (DM)"
+   },
+   "click_to_expand_menu": {
+      "description": "data/index.html",
+      "message": "Click per aprire il menù"
+   },
+   "click_to_show": {
+      "description": "data/js/ui.template.js",
+      "message": "Carica elenco"
+   },
+   "click_to_show_retweeters": {
+      "description": "data/js/ui.template.js",
+      "message": "Premi per vedere chi ha retwittato"
+   },
+   "click_to_unfollow_hashtag": {
+      "description": "data/index.html",
+      "message": "Clicca su un hashtag nella lista per smettere di seguirlo."
+   },
+   "client_name1_client_name2": {
+      "description": "data/index.html",
+      "message": "app1, app2, ..."
+   },
+   "close": {
+      "description": "data/index.html",
+      "message": "Chiudi"
+   },
+   "close_all_views": {
+      "description": "data/index.html",
+      "message": "Chiudi tutte le colonne"
+   },
+   "close_all_views_confirm": {
+      "description": "data/js/ui.slider.js",
+      "message": "Tutte le colonne attualmente aperte verranno chiuse. Sicuro di voler continuare?"
+   },
+   "close_current_column": {
+      "description": "data/index.html",
+      "message": "Chiudi la colonna attuale"
+   },
+   "closing": {
+      "description": "data/js/ui.hotot.js",
+      "message": "Chiusura in corso..."
+   },
+   "column_num": {
+      "description": "data/index.html",
+      "message": "Numero massimo di colonne per pagina"
+   },
+   "column_num_title": {
+      "description": "data/index.html",
+      "message": "Imposta il numero massimo di colonne da visualizzare per ogni pagina"
+   },
+   "columns": {
+      "description": "data/index.html",
+      "message": "Colonne"
+   },
+   "comes_from_one_of_these_clients": {
+      "description": "data/js/filter.js",
+      "message": "Proviene da uno di questi client"
+   },
+   "compose": {
+      "description": "data/index.html",
+      "message": "Scrivi"
+   },
+   "compress_tweet": {
+      "description": "data/index.html",
+      "message": "Accorcia i tweet usando il servizio di Twitlonger se più lunghi di 140 caratteri."
+   },
+   "conditions_to_respect": {
+      "description": "data/index.html",
+      "message": "Condizioni da rispettare:"
+   },
+   "congratulations": {
+      "description": "data/index.html",
+      "message": "Complimenti"
+   },
+   "contacting_hotot_in": {
+      "description": "data/js/ui.status_box.js",
+      "message": "Tweet più lungo di 140 caratteri, contatto hotot.in..."
+   },
+   "contacting_twitlonger": {
+      "description": "data/js/ui.status_box.js",
+      "message": "Tweet più lungo di 140 caratteri, contatto Twitlonger..."
+   },
+   "contains_at_least_one_url": {
+      "description": "data/js/filter.js",
+      "message": "Contiene almeno un URL"
+   },
+   "contains_mentions_to": {
+      "description": "data/js/filter.js",
+      "message": "Contiene menzioni a uno di questi utenti"
+   },
+   "contains_one_of_these_hashtags": {
+      "description": "data/js/filter.js",
+      "message": "Contiene uno di questi hashtag"
+   },
+   "contains_one_of_these_words": {
+      "description": "data/js/filter.js",
+      "message": "Contiene una di queste parole"
+   },
+   "copied": {
+      "description": "data/js/ui.context_menu.js",
+      "message": "Copiato!"
+   },
+   "copy_the_pin_code_and_paste_it_into_the_box_below": {
+      "description": "data/index.html",
+      "message": "Copia il PIN ricevuto e incollalo nella casella sotto:"
+   },
+   "copy_to_clipboard": {
+      "description": "date/index.html",
+      "message": "Copia negli appunti"
+   },
+   "create_a_list": {
+      "description": "data/js/ui.template.js",
+      "message": "Crea una lista"
+   },
+   "create_a_new_profile": {
+      "description": "data/index.html",
+      "message": "Crea un nuovo profilo"
+   },
+   "create_list_success": {
+      "description": "data/index.html",
+      "message": "Lista creata con successo!"
+   },
+   "creating_list": {
+      "description": "data/js/ui.list_attr_dlg.js",
+      "message": "Creazione della lista..."
+   },
+   "credits": {
+      "description": "data/index.html",
+      "message": "Crediti"
+   },
+   "cuddly": {
+      "description": "data/index.html",
+      "message": "Cuddly"
+   },
+   "current_mute_filters": {
+      "description": "data/index.html",
+      "message": "Filtri attuali"
+   },
+   "custom_background_text": {
+      "description": "data/index.html",
+      "message": "Sfondo all'avvio personalizzato"
+   },
+   "custom_background_title": {
+      "description": "data/index.html",
+      "message": "Inserisci il percorso assoluto dell'immagine..."
+   },
+   "custom_font": {
+      "description": "data/index.html",
+      "message": "Carattere personalizzato"
+   },
+   "custom_screen_name": {
+      "description": "data/index.html",
+      "message": "Nome da visualizzare sui tweet"
+   },
+   "custom_sound_text": {
+      "description": "data/index.html",
+      "message": "Suono di notifica personalizzato"
+   },
+   "custom_sound_title": {
+      "description": "data/index.html",
+      "message": "Inserisci il percorso assoluto del file audio..."
+   },
+   "custom_source_app_name_hint": {
+      "description": "data/index.html",
+      "message": "Attenzione: non potrai effettuare correttamente il login al tuo account Twitter con un'accoppiata consumer key/secret errata, quindi assicurati di sapere cosa stai facendo se decidi di modificare questi due parametri. Nota inoltre che attivando o disattivando questa opzione la tua access token verrà resettata e dovrai dunque ottenerne una nuova al prossimo login."
+   },
+   "default_speech_language": {
+      "description": "data/index.html",
+      "message": "Linguaggio del riconoscimento vocale"
+   },
+   "default_translation_language": {
+      "description": "data/index.html",
+      "message": "Linguaggio di traduzione predefinito"
+   },
+   "delete": {
+      "description": "data/index.html",
+      "message": "Elimina"
+   },
+   "delete_account": {
+      "description": "data/js/ui.template.js",
+      "message": "Elimina questo account"
+   },
+   "delete_confirm": {
+      "description": "data/ls/ui.main.js",
+      "message": "Sei davvero sicuro di voler eliminare questo tweet?"
+   },
+   "delete_profile_confirm": {
+      "description": "data/js/ui.welcome.js",
+      "message": "Questa operazione cancellerà tutti i dati di questo profilo. Sicuro di voler continuare?"
+   },
+   "delete_saved_search": {
+      "description": "data/js/ui.template.js",
+      "message": "Elimina questa ricerca salvata"
+   },
+   "delete_saved_search_fail": {
+      "description": "data/js/ui.template.js",
+      "message": "Errore nel cancellare la ricerca salvata da Twitter!"
+   },
+   "delete_saved_search_success": {
+      "description": "data/js/ui.template.js",
+      "message": "Ricerca salvata eliminata con successo!"
+   },
+   "delete_this_tweet": {
+      "description": "data/js/ui.template.js",
+      "message": "Cancellazione lista @"
+   },
+   "delete_title": {
+      "description": "data/index.html",
+      "message": "Elimina questo tweet"
+   },
+   "deleting_list_at": {
+      "description": "date/js/ui.listview.js",
+      "message": "Delete List @"
+   },
+   "deleting_list_confirm": {
+      "description": "date/js/ui.listview.js",
+      "message": "Sei sicuro di voler cancellare questa lista?"
+   },
+   "deleting_saved_search": {
+      "description": "data/js/ui.searchview.js",
+      "message": "Eliminazione della ricerca salvata..."
+   },
+   "description": {
+      "description": "data/js/ui.template.js",
+      "message": "Descrizione"
+   },
+   "destroy": {
+      "description": "data/js/ui.main.js",
+      "message": "Eliminazione in corso..."
+   },
+   "destroy_successfully": {
+      "description": "data/js/ui.main.js",
+      "message": "Eliminato con successo!"
+   },
+   "detach": {
+      "description": "data/js/ui.template.js",
+      "message": "Apri in una nuova colonna"
+   },
+   "details": {
+      "description": "data/js/lib.twitter.js",
+      "message": "Dettagli"
+   },
+   "did_not_match_any_result": {
+      "description": "data/js/ui.template.js",
+      "message": "non ha riscontrato alcun risultato."
+   },
+   "dm_restart_hint": {
+      "description": "data/index.html",
+      "message": "ATTENZIONE: se hai la colonna dei DM già aperta affinché il cambio di modalità di visualizzazione dei DM abbia effetto dovrai prima chiuderla e riaprirla! In alternativa basta riavviare Hotot+"
+   },
+   "donate": {
+      "description": "data/index.html",
+      "message": "Dona"
+   },
+   "dots": {
+      "description": "data/js/ui.main.js",
+      "message": "..."
+   },
+   "drafts": {
+      "description": "data/js/ui.status_box.js",
+      "message": "Bozze"
+   },
+   "drag_a_photo_here": {
+      "description": "data/index.html",
+      "message": "Trascina un'immagine qui"
+   },
+   "drop": {
+      "description": "data/index.html",
+      "message": "Nascondi"
+   },
+   "drop_tweets_contain_hash_tag_nowplaying": {
+      "description": "data/index.html",
+      "message": "nascondi tweet che contengono l'hashtag #nowplaying"
+   },
+   "drop_tweets_contain_word_abc": {
+      "description": "data/index.html",
+      "message": "nascondi tweet che contengono la parola \"ABC\""
+   },
+   "drop_tweets_retweeted_by_abc": {
+      "description": "data/index.html",
+      "message": "nascondi i retweet di @ABC"
+   },
+   "drop_tweets_sent_by_abc": {
+      "description": "data/index.html",
+      "message": "nascondi tweet inviati da @ABC"
+   },
+   "drop_tweets_sent_from_foursquare": {
+      "description": "data/index.html",
+      "message": "nascondi tweet inviati tramite l'applicazione foursquare"
+   },
+   "eastern": {
+      "description": "data/index.html",
+      "message": "Orientale"
+   },
+   "edit": {
+      "description": "data/js/ui.template.js",
+      "message": "Modifica"
+   },
+   "edit_title": {
+      "description": "data/index.html",
+      "message": "Modifica questo tweet"
+   },
+   "enable": {
+      "description": "data/js/ui.exts_dlg.js",
+      "message": "Abilita"
+   },
+   "enable_animation": {
+      "description": "data/index.html",
+      "message": "Visualizza animazioni"
+   },
+   "enable_filter_framework": {
+      "description": "data/index.html",
+      "message": "Attiva o disattiva totalmente il framework per i fitri"
+   },
+   "enable_gpu_acceleration": {
+      "description": "data/index.html",
+      "message": "Abilita accelerazione GPU"
+   },
+   "enable_verbose_mode": {
+      "description": "data/index.html",
+      "message": "Abilita la modalità dettagliata (Verbose Mode)"
+   },
+   "err_gif_image": {
+      "description": "data/js/ui.form_checker.js",
+      "message": "Puoi allegare soltanto una immagine GIF per tweet!"
+   },
+   "err_mp4_duration": {
+      "description": "data/js/ui.form_checker.js",
+      "message": "Errore: la durata dei video MP4 deve essere \u003C= 30s"
+   },
+   "err_mp4_size": {
+      "description": "data/js/ui.form_checker.js",
+      "message": "Errore: la dimensione dei video MP4 deve essere \u003C= 15MB"
+   },
+   "err_mp4_video": {
+      "description": "data/js/ui.form_checker.js",
+      "message": "Errore: questo file non è un video MP4!"
+   },
+   "err_no_image": {
+      "description": "data/js/ui.form_checker.js",
+      "message": "Il file selezionato non è una immagine!"
+   },
+   "err_not_all_image": {
+      "description": "data/js/ui.form_checker.js",
+      "message": "Almeno uno dei file selezionati non è una immagine!"
+   },
+   "err_str_not_int": {
+      "description": "data/js/ui.form_checker.js",
+      "message": "Il valore inserito deve essere un numero intero."
+   },
+   "err_str_range": {
+      "description": "data/js/ui.form_checker.js",
+      "message": "Il valore inserito deve essere compreso tra "
+   },
+   "err_str_size_exceed": {
+      "description": "data/js/ui.form_checker.js",
+      "message": "Le dimensioni del file selezionato superano il limite consentito da Twitter!"
+   },
+   "err_str_too_long": {
+      "description": "data/js/ui.form_checker.js",
+      "message": "La stringa di testo inserita è troppo lunga!"
+   },
+   "err_too_many_image": {
+      "description": "data/js/ui.form_checker.js",
+      "message": "Puoi allegare massimo 4 immagini per tweet!"
+   },
+   "error_code": {
+      "description": "data/js/ui.main.js",
+      "message": "Codice Errore:"
+   },
+   "error_occurred": {
+      "description": "data/js/ui.status_box.js",
+      "message": "Si è verificato un errore!"
+   },
+   "error_video_uploading": {
+      "description": "data/js/videouploader.js",
+      "message": "Errore nel caricamento del tuo video"
+   },
+   "errors": {
+      "description": "data/index.html",
+      "message": "Errori"
+   },
+   "errors_found_aborting": {
+      "description": "data/js/ui.list_attr_dlg.js",
+      "message": "errori trovati nei tuoi cambiamenti."
+   },
+   "errors_html5_permissions": {
+      "description": "data/js/ui.prefs_dlg.js",
+      "message": "Devi concedere l'autorizzazione per usare le notifiche HTML5!"
+   },
+   "examples": {
+      "description": "data/index.html",
+      "message": "Esempi"
+   },
+   "expand_url_text": {
+      "description": "data/index.html",
+      "message": "Espandi URL"
+   },
+   "expand_url_title": {
+      "description": "data/index.html",
+      "message": "Espande ogni URL accorciato presente in questo tweet usando longurl.org"
+   },
+   "extensions": {
+      "description": "data/index.html",
+      "message": "Estensioni"
+   },
+   "failed": {
+      "description": "data/js/ui.imageuploader.js",
+      "message": "Errore!"
+   },
+   "failed_to_add": {
+      "description": "data/js/ui.add_to_list_dlg.js",
+      "message": "Errore nell'aggiungere"
+   },
+   "fav_or_un_fav": {
+      "description": "data/index.html",
+      "message": "Aggiungi/Togli dai Preferiti"
+   },
+   "favorite_this_tweet_dots": {
+      "description": "data/js/ui.main.js",
+      "message": "Inserimento del tweet tra i preferiti..."
+   },
+   "favorited": {
+      "description": "data/js/ui.main.js",
+      "message": "Inserito nei Preferiti!"
+   },
+   "favorited_by": {
+      "description": "data/js/ui.template.js",
+      "message": "Messo nei preferiti da"
+   },
+   "favorited_your_tweet": {
+      "description": "data/js/ui.main.js",
+      "message": "ha messo un tuo tweet tra i suoi preferiti su Twitter!"
+   },
+   "favs": {
+      "description": "data/js/ui.template.js",
+      "message": "Preferiti"
+   },
+   "favs_view": {
+      "description": "data/index.html",
+      "message": "Mi piace"
+   },
+   "fellowship": {
+      "description": "data/js/ui.template.js",
+      "message": "Relazioni"
+   },
+   "filter_add_error": {
+      "description": "data/js/ui.main.js",
+      "message": "Errore: impossibile creare o aggiornare questa regola!"
+   },
+   "filter_exist_confirm": {
+      "description": "data/js/ui.main.js",
+      "message": "Una regola con questo nome esiste già: vuoi sovrascriverla?"
+   },
+   "filter_framework_disabled": {
+      "description": "data/js/ui.main.js",
+      "message": "Nota: hai creato una nuova regola di filtraggio ma il framework dei filtri è attualmente disattivato! Ricordati di attivarlo da 'Gestione Filtri' altrimenti la regola appena creata non avrà comunque alcun effetto!"
+   },
+   "filter_masked_text": {
+      "description": "data/js/filter.js",
+      "message": "Testo Mascherato: clicca qui per visualizzare l'originale."
+   },
+   "filter_nsfw_media": {
+      "description": "data/index.html",
+      "message": "Non mostare anteprime se c'è NSFW nel tweet"
+   },
+   "filter_nsfw_media_title": {
+      "description": "data/index.html",
+      "message": "Non mostare le anteprime di immagini quando nel tweet c'è la parola NSFW"
+   },
+   "filter_tweets_like_it": {
+      "description": "data/index.html",
+      "message": "Filtra tweet simili"
+   },
+   "filter_tweets_like_it_title": {
+      "description": "data/index.html",
+      "message": "Crea un nuovo filtro basandoti sul tweet selezionato"
+   },
+   "find": {
+      "description": "data/index.html",
+      "message": "Cerca"
+   },
+   "fine": {
+      "description": "data/js/lib.twitterapi.js",
+      "message": "Buono"
+   },
+   "firefox_version": {
+      "description": "data/index.html",
+      "message": "Porting per Firefox a cura di"
+   },
+   "first_time_to_sign_in_with_twitter": {
+      "description": "data/index.html",
+      "message": "Primo accesso a Twitter"
+   },
+   "follow": {
+      "description": "data/js/ui.template.js",
+      "message": "Segui"
+   },
+   "follow_at": {
+      "description": "data/js/ui.main.js",
+      "message": "Segui @"
+   },
+   "follow_this_hashtag_title": {
+      "description": "data/index.html",
+      "message": "Segui questo hashtag"
+   },
+   "follower_cnt": {
+      "description": "data/js/ui.template.js",
+      "message": "Follower"
+   },
+   "followers": {
+      "description": "data/js/ui.template.js",
+      "message": "Follower"
+   },
+   "following_hashtags": {
+      "description": "data/js/ui.template.js",
+      "message": "Hashtags seguiti"
+   },
+   "font": {
+      "description": "data/index.html",
+      "message": "Carattere"
+   },
+   "font_preview_hint": {
+      "description": "data/index.html",
+      "message": "ma la volpe col suo balzo ha raggiunto il quieto fido"
+   },
+   "font_size": {
+      "description": "data/index.html",
+      "message": "Dimensione carattere"
+   },
+   "free_support": {
+      "description": "data/index.html",
+      "message": "Supporta lo sviluppo di Hotot+ gratuitamente"
+   },
+   "friend_cnt": {
+      "description": "data/js/ui.template.js",
+      "message": "Following"
+   },
+   "friends": {
+      "description": "data/js/ui.template.js",
+      "message": "Following"
+   },
+   "global": {
+      "description": "data/index.html",
+      "message": "Impostazioni Globali"
+   },
+   "globals_restart_hint": {
+      "description": "data/index.html",
+      "message": "ATTENZIONE: è necessario riavviare il programma affinché le modifiche qui sotto abbiano effetto. Queste modifiche influenzeranno tutti gli account."
+   },
+   "google_blocked_you": {
+      "description": "data/js/ui.main.js",
+      "message": "Sembra che Google Translate abbia bloccato il tuo indirizzo IP per troppe richieste. Se puoi prova a cambiare IP oppure compila il captcha che trovi alla seguente pagina (dopo la conferma ti darà una pagina non trovata, non preoccuparti, è normale, basta chiuderla e potrai comunque tornare a usare questa funzione da Hotot+):"
+   },
+   "greeting": {
+      "description": "data/index.html",
+      "message": "Ciao!"
+   },
+   "has_been_installed": {
+      "description": "data/index.html",
+      "message": "è stata installata con successo!"
+   },
+   "has_been_posted_by": {
+      "description": "data/js/filter.js",
+      "message": "È stato postato da uno di questi utenti"
+   },
+   "has_been_retweeted_by": {
+      "description": "data/js/filter.js",
+      "message": "È stato retwittato da uno di questi utenti"
+   },
+   "has_geo": {
+      "description": "data/js/filter.js",
+      "message": "Ha delle coordinate geografiche"
+   },
+   "has_media": {
+      "description": "data/js/filter.js",
+      "message": "Ha qualsiasi media allegato"
+   },
+   "he_she_has_protected_his_her_list": {
+      "description": "data/js/ui.template.js",
+      "message": "L'utente ha protetto le sue liste."
+   },
+   "help": {
+      "description": "data/index.html",
+      "message": "Aiuto"
+   },
+   "hey": {
+      "description": "data/index.html",
+      "message": "Ehi!"
+   },
+   "hey_it_is_you": {
+      "description": "data/js/ui.peopleview.js",
+      "message": "Ehi, ma sei tu!"
+   },
+   "hidden_dark_minds": {
+      "description": "data/index.html",
+      "message": "Hidden Dark Minds"
+   },
+   "hidden_successfully": {
+      "description": "data/js/ui.main.js",
+      "message": "Tweet nascosto con successo!"
+   },
+   "hide": {
+      "description": "data/index.html",
+      "message": "Nascondi"
+   },
+   "hide_media_link_text": {
+      "description": "data/index.html",
+      "message": "Nascondi URL di immagini e video Twitter dal tweet"
+   },
+   "hide_media_link_title": {
+      "description": "data/index.html",
+      "message": "Non mostrare l'URL di video e immagini Twitter nel testo del tweet in caso sia attiva l'anteprima"
+   },
+   "hide_title": {
+      "description": "data/index.html",
+      "message": "Nascondi temporaneamente questo tweet"
+   },
+   "hint": {
+      "description": "data/js/ui.welcome.js",
+      "message": "Lo sai che Hotot+ ha più di 100 fix e miglioramenti rispetto al vecchio Hotot? Lo adorerai!"
+   },
+   "home_exclude_replies": {
+      "description": "data/js/ui.template.js",
+      "message": "Senza risposte"
+   },
+   "home_exclude_replies_title": {
+      "description": "data/js/ui.template.js",
+      "message": "Esclude le risposte (menzioni) dalla Timeline"
+   },
+   "home_filter": {
+      "description": "data/js/ui.template.js",
+      "message": "Filtro Timeline"
+   },
+   "home_full": {
+      "description": "data/js/ui.template.js",
+      "message": "Completa"
+   },
+   "home_full_title": {
+      "description": "data/js/ui.template.js",
+      "message": "Mostra la timeline completa"
+   },
+   "home_media_only": {
+      "description": "data/js/ui.template.js",
+      "message": "Solo Media"
+   },
+   "home_media_only_title": {
+      "description": "data/js/ui.template.js",
+      "message": "Mostra soltanto i tweet che contengono un parametro media"
+   },
+   "home_no_rt": {
+      "description": "data/js/ui.template.js",
+      "message": "Non visualizzare i retweet (d'ora in poi)"
+   },
+   "home_timeline": {
+      "description": "data/js/ui.slider.js",
+      "message": "Timeline"
+   },
+   "home_view": {
+      "description": "data/index.html",
+      "message": "Timeline"
+   },
+   "host": {
+      "description": "data/index.html",
+      "message": "Host"
+   },
+   "hotot": {
+      "description": "data/index.html",
+      "message": "Hotot+"
+   },
+   "hotot_description": {
+      "description": "manifest.json",
+      "message": "Mod non ufficiale by Red Squirrel di Hotot, il famoso e leggero client Twitter, con oltre 1000 bugfix e miglioramenti."
+   },
+   "hotot_goto": {
+      "description": "manifest.json",
+      "message": "Vai a Hotot+"
+   },
+   "http_code": {
+      "description": "data/js/lib.twitter.js",
+      "message": "Codice HTTP"
+   },
+   "image_uploader": {
+      "description": "data/index.html",
+      "message": "Carica un'immagine"
+   },
+   "in_reply_to": {
+      "description": "data/js/ui.template.js",
+      "message": "In risposta a"
+   },
+   "include_status": {
+      "description": "data/index.html",
+      "message": "Quota tweet"
+   },
+   "info": {
+      "description": "data/js/ui.template.js",
+      "message": "Info"
+   },
+   "input_listname": {
+      "description": "data/js/ui.slider.js",
+      "message": "Inserisci il nome di una Lista:"
+   },
+   "input_listname_form": {
+      "description": "data/js/ui.slider.js",
+      "message": "Esempio: @utente/nomelista"
+   },
+   "input_screenname": {
+      "description": "data/js/ui.slider.js",
+      "message": "Inserisci il nome di un profilo:"
+   },
+   "input_screenname_form": {
+      "description": "data/js/ui.slider.js",
+      "message": "Esempio: @utente"
+   },
+   "insert_smiley": {
+      "description": "data/index.html",
+      "message": "Inserisci un emoji"
+   },
+   "intelligent_filter": {
+      "description": "data/index.html",
+      "message": "Filtro Intelligente"
+   },
+   "interface_language": {
+      "description": "data/index.html",
+      "message": "Linguaggio dell'interfaccia"
+   },
+   "items_for_request_hint": {
+      "description": "data/index.html",
+      "message": "i parametri qui sopra corrispondono al numero di tweet che verranno restituiti da ogni richiesta alle API di Twitter. Valori alti possono causare rallentamenti al programma (dovrà analizzare un numero maggiore di tweet per visualizzarli nella giusta colonna e posizione) ma riducono i rischi di superare i limiti delle API imposti da Twitter (avendo più tweet risultanti in ogni richiesta ci sarà meno bisogno di fare altre richieste) e i rischi di ricevere soltanto in parte i nuovi tweet da visualizzare. Al contrario valori bassi comportano un programma più veloce e scattante (dovrà analizzare un numero minore di tweet ogni volta) ma portano un alto rischio di superare i limiti orari delle API imposti da Twitter (serviranno più richieste per ottenere un ampio numero di risultati) e possono portare all'acquisizione di soltanto una parte degli effettivi nuovi tweet da visualizzare (nel caso questi fossero in numero più grande di quello impostato). Grazie a queste due opzioni si può ora quindi provare varie combinazioni e trovare l'ottimizzazione migliore per i propri gusti."
+   },
+   "items_for_request_hint_default": {
+      "description": "data/index.html",
+      "message": "In caso però non si è certi di cosa si stia facendo è consigliabile lasciare i valori di default."
+   },
+   "items_for_request_hint_explanation": {
+      "description": "data/index.html",
+      "message": "Spiegazione:"
+   },
+   "items_for_request_more_text": {
+      "description": "data/index.html",
+      "message": "Risultati per ogni richiesta (vecchi tweet)"
+   },
+   "items_for_request_more_title": {
+      "description": "data/index.html",
+      "message": "Valore relativo alle richieste di vecchi tweet, ossia alle richieste che farà manualmente l'utente quando desidera leggere i tweet precedenti a quelli già caricati automaticamente da Hotot+"
+   },
+   "items_for_request_text": {
+      "description": "data/index.html",
+      "message": "Risultati per ogni richiesta (nuovi tweet)"
+   },
+   "items_for_request_title": {
+      "description": "data/index.html",
+      "message": "Valore relativo alle richieste di nuovi tweet, comprese quindi anche quelle automatiche che farà Hotot+"
+   },
+   "join": {
+      "description": "data/js/ui.template.js",
+      "message": "Iscritto dal"
+   },
+   "just_cannot_stop_thinking_of_here": {
+      "description": "data/index.html",
+      "message": "Just can't stop thinking of here"
+   },
+   "keyboard": {
+      "description": "data/index.html",
+      "message": "Tastiera"
+   },
+   "keyboard_shortcuts": {
+      "description": "data/index.html",
+      "message": "Scorciatoie tastiera"
+   },
+   "label_with_color": {
+      "description": "data/index.html",
+      "message": "Evidenzia"
+   },
+   "label_with_color_title": {
+      "description": "data/index.html",
+      "message": "Inserisci un'etichetta colorata su tutti i tweet dell'utente"
+   },
+   "language": {
+      "description": "data/index.html",
+      "message": "Linguaggio"
+   },
+   "license": {
+      "description": "data/index.html",
+      "message": "Licenza"
+   },
+   "like_or_un_like": {
+      "description": "data/index.html",
+      "message": "Mi piace/Non mi piace più"
+   },
+   "like_this_tweet_dots": {
+      "description": "data/js/ui.main.js",
+      "message": "Mi piace su questo tweet..."
+   },
+   "liked": {
+      "description": "data/js/ui.main.js",
+      "message": "Mi piace!"
+   },
+   "liked_by": {
+      "description": "data/js/ui.template.js",
+      "message": "Piaciuto a"
+   },
+   "liked_your_tweet": {
+      "description": "data/js/ui.main.js",
+      "message": "ha fatto Mi piace su uno dei tuoi tweet!"
+   },
+   "likes": {
+      "description": "data/js/ui.template.js",
+      "message": "Mi piace"
+   },
+   "line_height": {
+      "description": "data/index.html",
+      "message": "Altezza riga (interlinea)"
+   },
+   "list": {
+      "description": "data/index.html",
+      "message": "Lista"
+   },
+   "list_desc": {
+      "description": "data/index.html",
+      "message": "Descrizione facoltativa (deve comunque essere più corta di 100 caratteri)."
+   },
+   "list_name_here": {
+      "description": "data/index.html",
+      "message": "Your List name here"
+   },
+   "listed_cnt": {
+      "description": "data/js/ui.template.js",
+      "message": "In liste"
+   },
+   "lists": {
+      "description": "data/js/ui.template.js",
+      "message": "Liste"
+   },
+   "lists_following_them": {
+      "description": "data/js/ui.template.js",
+      "message": "Liste a cui appartiene"
+   },
+   "lists_of_them": {
+      "description": "data/js/ui.template.js",
+      "message": "Liste che segue"
+   },
+   "load_more": {
+      "description": "data/js/ui.dm_tabs.js",
+      "message": "Carica più vecchi"
+   },
+   "loading_dots": {
+      "description": "data/js/ui.template.js",
+      "message": "Caricamento in corso... "
+   },
+   "loading_messages": {
+      "description": "data/js/hotot.js",
+      "message": "Caricamento altri messaggi (DM) in corso..."
+   },
+   "loading_resources_hint": {
+      "description": "data/index.html",
+      "message": "Caricamento risorse in corso..."
+   },
+   "loading_tweets": {
+      "description": "data/js/hotot.js",
+      "message": "Caricamento nuovi tweet in corso..."
+   },
+   "location": {
+      "description": "data/index.html",
+      "message": "Località"
+   },
+   "lookup": {
+      "description": "data/js/hohot.js",
+      "message": "Apertura di"
+   },
+   "lost_connection": {
+      "description": "data/js/lib.twitter.js",
+      "message": "Connessione Persa"
+   },
+   "make_sure_all_words_are_spelled_correctly": {
+      "description": "data/js/ui.template.js",
+      "message": "Assicurati che tutte le parole siano scritte correttamente."
+   },
+   "many_notifications_on_page": {
+      "description": "data/ui.main.js",
+      "message": "Ci sono più di 3 nuove notifiche sulla colonna"
+   },
+   "mark_deleted_tweets": {
+      "description": "data/index.html",
+      "message": "Marca i tweet eliminati"
+   },
+   "mark_deleted_tweets_title": {
+      "description": "data/index.html",
+      "message": "Inserisci un marchio sui tweet eliminati invece di toglierli dall'elenco"
+   },
+   "mask": {
+      "description": "data/index.html",
+      "message": "Maschera"
+   },
+   "mask_tweets_contain_hash_tag_callmemaybe": {
+      "description": "data/index.html",
+      "message": "maschera i tweet contenenti l'hashtag #GossipGirl"
+   },
+   "mention_them": {
+      "description": "data/js/ui.template.js",
+      "message": "Menziona"
+   },
+   "mentions": {
+      "description": "data/js/ui.slider.js",
+      "message": "Menzioni"
+   },
+   "mentions_view": {
+      "description": "data/index.html",
+      "message": "Menzioni"
+   },
+   "messages": {
+      "description": "data/js/ui.slider.js",
+      "message": "Messaggi Diretti"
+   },
+   "messages_view": {
+      "description": "data/index.html",
+      "message": "Messaggi Diretti"
+   },
+   "mods_by": {
+      "description": "data/index.html",
+      "message": "Modifiche, aggiustamenti e miglioramenti"
+   },
+   "more_actions": {
+      "description": "data/js/ui.template.js",
+      "message": "Altre azioni"
+   },
+   "move_to_bottom": {
+      "description": "data/index.html",
+      "message": "Spostati in basso"
+   },
+   "move_to_next_tweet": {
+      "description": "data/index.html",
+      "message": "Vai al tweet successivo"
+   },
+   "move_to_prev_tweet": {
+      "description": "data/index.html",
+      "message": "Vai al tweet precedente"
+   },
+   "move_to_top": {
+      "description": "data/index.html",
+      "message": "Spostati in alto"
+   },
+   "mute": {
+      "description": "data/js/ui.template.js",
+      "message": "Togli la voce"
+   },
+   "mute_added": {
+      "description": "data/js/ui.filter_dlg.js",
+      "message": "Filtro creato o aggiornato con successo!"
+   },
+   "mute_by_containing_words": {
+      "description": "data/index.html",
+      "message": "Nascondi tweet contenenti parole"
+   },
+   "mute_by_source": {
+      "description": "data/index.html",
+      "message": "Nascondi tweet inviati da client/applicazione"
+   },
+   "mute_by_user_name": {
+      "description": "data/index.html",
+      "message": "Nascondi tweet dell'utente"
+   },
+   "mute_confirm": {
+      "description": "data/js/ui.main.js",
+      "message": "Sei sicuro di voler nascondere tutti i tweet che contengono"
+   },
+   "mute_filter": {
+      "description": "data/index.html",
+      "message": "Filtro semplice"
+   },
+   "mute_filters": {
+      "description": "data/index.html",
+      "message": "Gestione Filtri"
+   },
+   "mute_this_hashtag_text": {
+      "description": "data/index.html",
+      "message": "Filtra"
+   },
+   "mute_this_hashtag_title": {
+      "description": "data/index.html",
+      "message": "Filtra questo hashtag"
+   },
+   "mute_this_source": {
+      "description": "data/index.html",
+      "message": "Nascondi tweet da questo client"
+   },
+   "mute_this_user": {
+      "description": "data/index.html",
+      "message": "Nascondi tweet di questo utente"
+   },
+   "mute_this_word": {
+      "description": "data/index.html",
+      "message": "Nascondi tweet contenenti questa parola"
+   },
+   "mute_twitter_confirm": {
+      "description": "data/js/ui.template.js",
+      "message": "Attenzione: NON vedrai più i tweet e retweet di questo utente nella tua timeline ma potrà comunque ancora inviarti menzioni e messaggi diretti. Sei sicuro di voler procedere a togliere la voce a"
+   },
+   "my_favs": {
+      "description": "data/js/ui.slider.js",
+      "message": "Preferiti"
+   },
+   "my_journey_is_to_the_sea_of_stars": {
+      "description": "data/index.html",
+      "message": "My journey is to the sea of stars"
+   },
+   "my_likes": {
+      "description": "data/js/ui.slider.js",
+      "message": "Mi piace"
+   },
+   "my_power": {
+      "description": "data/js/lib.twitterapi.js",
+      "message": "Richieste API"
+   },
+   "name": {
+      "description": "data/index.html",
+      "message": "Nome"
+   },
+   "nearly_dead": {
+      "description": "data/js/lib.twitterapi.js",
+      "message": "In Esaurimento"
+   },
+   "network_error_please_try_later": {
+      "description": "data/js/ui.welcome.js",
+      "message": "Errore di rete! Riprova più tardi."
+   },
+   "new_credits": {
+      "description": "data/index.html",
+      "message": "Crediti Hotot+"
+   },
+   "new_follower": {
+      "description": "data/js/daemon.js",
+      "message": "Hai un nuovo follower!"
+   },
+   "new_messages": {
+      "description": "data/js/ui.dm_tabs.js",
+      "message": "Nuovi messaggi non letti"
+   },
+   "new_notifications": {
+      "description": "data/ui.main.js",
+      "message": "nuove notifiche!"
+   },
+   "new_profile": {
+      "description": "data/js/ui.welcome.js",
+      "message": "Nuovo Profilo"
+   },
+   "new_profile_has_been_created": {
+      "description": "data/js/ui.welcome.js",
+      "message": "Il nuovo profilo è stato creato!"
+   },
+   "new_version_installed": {
+      "description": "data/index.html",
+      "message": "Nuova versione installata"
+   },
+   "new_version_of": {
+      "description": "data/index.html",
+      "message": "una nuova versione di"
+   },
+   "next": {
+      "description": "data/index.html",
+      "message": "Successivo"
+   },
+   "no_extension": {
+      "description": "data/index.html",
+      "message": "Nessuna estensione"
+   },
+   "no_hashtag": {
+      "description": "data/js/ui.template.js",
+      "message": "Ignora hashtag"
+   },
+   "no_rt": {
+      "description": "data/js/ui.template.js",
+      "message": "Disabilita i Retweet"
+   },
+   "no_rt_twitter_confirm": {
+      "description": "data/js/ui.template.js",
+      "message": "I retweet di questo utente non appariranno più nella tua timeline. Sei sicuro di voler disabilitare i retweet di"
+   },
+   "none": {
+      "description": "data/index.html",
+      "message": "Nessuno"
+   },
+   "not_avaiable_yet": {
+      "description": "data/index.html",
+      "message": "Non ancora disponibile :)"
+   },
+   "notification": {
+      "description": "data/index.html",
+      "message": "Impostazioni Notifiche"
+   },
+   "notification_aspect": {
+      "description": "data/index.html",
+      "message": "Opzioni sull'Aspetto"
+   },
+   "notification_auto_clear_text": {
+      "description": "data/index.html",
+      "message": "Chiudi automaticamente in tot secondi"
+   },
+   "notification_auto_clear_title": {
+      "description": "data/index.html",
+      "message": "Chiude la notifica automaticamente dopo il numero di secondi prescelto"
+   },
+   "notification_behavior": {
+      "description": "data/index.html",
+      "message": "Opzioni sul Comportamento"
+   },
+   "notification_clear_onclick_text": {
+      "description": "data/index.html",
+      "message": "Rimuovi al click"
+   },
+   "notification_clear_onclick_title": {
+      "description": "data/index.html",
+      "message": "Rimuove del tutto la notifica se ci si clicca sopra. Per disabilitare questa opzione devi usare le API di Chrome"
+   },
+   "notification_generals": {
+      "description": "data/index.html",
+      "message": "Opzioni Generali"
+   },
+   "notification_message": {
+      "description": "data/notification.js",
+      "message": "Hai una notifica da questo utente!"
+   },
+   "notification_note": {
+      "description": "data/index.html",
+      "message": "Nota: le notifiche per i tweet favoriti da altri e i nuovi followers ottenuti utilizzano le API Streaming di Twitter! Questo essenzialmente significa che otterrai tali notifiche soltanto a partire dal momento in cui avvii Hotot+. In altre parole NON riceverai all'avvio le vecchie notifiche dei favoriti o nuovi followers ottenuti mentre Hotot+ non era avviato."
+   },
+   "notification_show_tweet_media_text": {
+      "description": "data/index.html",
+      "message": "Mostra media allegato al tweet"
+   },
+   "notification_show_tweet_media_title": {
+      "description": "data/index.html",
+      "message": "Mostra anche il primo media (immagine) allegato al tweet. Richiede le API di Chrome"
+   },
+   "notification_show_tweet_msg_text": {
+      "description": "data/index.html",
+      "message": "Mostra il testo del tweet"
+   },
+   "notification_show_tweet_msg_title": {
+      "description": "data/index.html",
+      "message": "Mostra il testo del tweet nella notifica. Se disabilitato allora verrà utilizzato un messaggio standard"
+   },
+   "notification_show_user_pic_text": {
+      "description": "data/index.html",
+      "message": "Mostra l'immagine di profilo dell'utente"
+   },
+   "notification_show_user_pic_title": {
+      "description": "data/index.html",
+      "message": "Usa l'immagine di profilo dell'utente che ha inviato il tweet come logo per la notifica invece di una standard"
+   },
+   "notification_sound": {
+      "description": "data/index.html",
+      "message": "Suono di notifica"
+   },
+   "notification_test": {
+      "description": "data/index.html",
+      "message": "Test di Notifica"
+   },
+   "notify": {
+      "description": "data/index.html",
+      "message": "Notifica"
+   },
+   "notify_desktop": {
+      "description": "data/js/ui.template.js",
+      "message": "Notifica desktop"
+   },
+   "notify_favorited_text": {
+      "description": "data/index.html",
+      "message": "Notifica anche i Mi piace"
+   },
+   "notify_favorited_title": {
+      "description": "data/index.html",
+      "message": "Crea una notifica anche quando un utente mette tra i suoi preferiti o fa Mi piace su uno dei tuoi tweet"
+   },
+   "notify_me_if_incoming_tweets_mention_hotot": {
+      "description": "data/index.html",
+      "message": "notificami se un tweet menziona @hotot"
+   },
+   "notify_new_followers_text": {
+      "description": "data/index.html",
+      "message": "Notifica anche nuovi followers"
+   },
+   "notify_new_followers_title": {
+      "description": "data/index.html",
+      "message": "Crea una notifica Desktop anche quando un nuovo utente comincia a seguirti su Twitter"
+   },
+   "oauth_base": {
+      "description": "data/index.html",
+      "message": "OAuth Base"
+   },
+   "official_retweet_this_tweet": {
+      "description": "data/js/ui.template.js",
+      "message": "Retwitta questo tweet ufficialmente"
+   },
+   "ok": {
+      "description": "data/index.html",
+      "message": "Ok"
+   },
+   "old_fav_text": {
+      "description": "data/index.html",
+      "message": "Usa Preferiti al posto dei Mi Piace"
+   },
+   "old_fav_title": {
+      "description": "data/index.html",
+      "message": "Utilizza le vecchie stringhe di testo ed icone dei 'Preferiti' piuttosto che quelli attuali dei 'Mi Piace'"
+   },
+   "one_user_matched": {
+      "description": "data/js/ui.template.js",
+      "message": "Un utente corrispondente:"
+   },
+   "only_the_owner_can_access_this_list": {
+      "description": "data/js/ui.template.js",
+      "message": "Soltanto il proprietario può accedere a questa lista."
+   },
+   "oops_a_network_error_occurs": {
+      "description": "data/js/ui.welcome.js",
+      "message": "Oops, si è verificato un problema di rete!"
+   },
+   "oops_an_api_error_occurs": {
+      "description": "data/js/ui.welcome.js",
+      "message": "Oops, si è verificato un problema con le API!"
+   },
+   "oops_an_authentication_error_occurs": {
+      "description": "data/js/ui.welcome.js",
+      "message": "Oops, si è verificato un errore nell'autenticazione!"
+   },
+   "oops_an_error_occurs": {
+      "description": "data/js/lib.twitter.js",
+      "message": "Oops, si è verificato un errore!"
+   },
+   "oops_hotot_not_running": {
+      "description": "data/js/background.js",
+      "message": "Oops, Hotot+ non è avviato!"
+   },
+   "oops_not_signed": {
+      "description": "data/js/background.js",
+      "message": "Oops, login non effettuato!"
+   },
+   "open_a_list_dots": {
+      "description": "data/index.html",
+      "message": "Apri una lista..."
+   },
+   "open_a_profile_dots": {
+      "description": "data/index.html",
+      "message": "Apri un profilo..."
+   },
+   "open_all_list_dots": {
+      "description": "data/index.html",
+      "message": "Apri tutte le mie liste..."
+   },
+   "open_first_link": {
+      "description": "data/index.html",
+      "message": "Apri il primo link"
+   },
+   "open_profile_in_hotot": {
+      "description": "data/js/daemon.js",
+      "message": "Apri il suo profilo in Hotot+"
+   },
+   "open_speaker_link": {
+      "description": "data/index.html",
+      "message": "Apri il link dell'interlocutore"
+   },
+   "opening_all_lists": {
+      "description": "data/js/ui.slider.js",
+      "message": "Apertura di tutte le tue liste in corso..."
+   },
+   "options": {
+      "description": "data/js/ui.exts_dlg.js",
+      "message": "Opzioni"
+   },
+   "or_copy_the_address_and_open_it_in_your_browser": {
+      "description": "data/index.html",
+      "message": "O copia il seguente link e aprilo nel tuo browser:"
+   },
+   "original_background": {
+      "description": "data/index.html",
+      "message": "Immagine Sfondo Iniziale"
+   },
+   "original_credits": {
+      "description": "data/index.html",
+      "message": "Crediti Hotot Originale"
+   },
+   "own_tweets": {
+      "description": "data/js/ui.template.js",
+      "message": "Propri Tweet"
+   },
+   "own_tweets_tip": {
+      "description": "data/js/ui.template.js",
+      "message": "Include soltanto i tweet pubblici diretti inviati dall'utente, sono dunque esclusi retweet e risposte."
+   },
+   "owner": {
+      "description": "data/js/ui.template.js",
+      "message": "Proprietario"
+   },
+   "page_on_schedule": {
+      "description": "data/js/daemon.js",
+      "message": "pagina/e"
+   },
+   "panda_acts_cute": {
+      "description": "data/index.html",
+      "message": "Panda acts cute"
+   },
+   "password": {
+      "description": "data/index.html",
+      "message": "Password"
+   },
+   "password_add": {
+      "description": "data/index.html",
+      "message": "Aggiungi password"
+   },
+   "password_alert": {
+      "description": "data/js/ui.welcome.js",
+      "message": "Devi inserire la password (quella del tuo profilo attuale se ce l'ha, oppure quella che vuoi aggiungere ad esso) nell'apposita casella di testo prima di poter procedere con qualsiasi operazione!"
+   },
+   "password_chosen": {
+      "description": "data/js/ui.welcome.js",
+      "message": "Password scelta:"
+   },
+   "password_confirm_add": {
+      "description": "data/js/ui.welcome.js",
+      "message": "Sei sicuro di voler aggiungere la seguente password al tuo profilo attuale? Se te la dimentichi non c'è alcun modo per recuperarla."
+   },
+   "password_confirm_remove": {
+      "description": "data/js/ui.welcome.js",
+      "message": "Sei sicuro di voler procedere con la rimozione della password per il tuo attuale profilo?"
+   },
+   "password_manage": {
+      "description": "data/index.html",
+      "message": "Gestisci password"
+   },
+   "paste_from_clipboard": {
+      "description": "date/index.html",
+      "message": "Incolla dagli appunti"
+   },
+   "people": {
+      "description": "data/js/ui.template.js",
+      "message": "Utenti"
+   },
+   "person": {
+      "description": "data/js/ui.main.js",
+      "message": "Utente"
+   },
+   "person_not_exist": {
+      "description": "date/js/ui.listview.js",
+      "message": "Questo utente non esiste!"
+   },
+   "person_not_exist_extra": {
+      "description": "date/js/ui.listview.js",
+      "message": "non esiste. L'utente potrebbe aver cancellato il suo account o potrebbe aver cambiato nome."
+   },
+   "pin_code": {
+      "description": "data/index.html",
+      "message": "Codice PIN"
+   },
+   "please_enter_the_recipient": {
+      "description": "data/js/ui.status_box.js",
+      "message": "Devi inserire il destinatario!"
+   },
+   "please_entry_a_profile_prefix": {
+      "description": "data/js/ui.welcome.js",
+      "message": "Devi inserire un nome per il profilo!"
+   },
+   "please_fill_all_fields": {
+      "description": "data/js/ui.kismet_dlg.js",
+      "message": "Devi riempire tutti i campi."
+   },
+   "please_select_field": {
+      "description": "data/js/ui.kismet_dlg.js",
+      "message": "Devi selezionare almeno un campo!"
+   },
+   "please_select_photo": {
+      "description": "data/js/ui.imageuploader.js",
+      "message": "Devi selezionare un'immagine."
+   },
+   "port": {
+      "description": "data/index.html",
+      "message": "Porta"
+   },
+   "post_successfully": {
+      "description": "data/js/ui.status_box.js",
+      "message": "Inviato con successo!"
+   },
+   "posting_dots": {
+      "description": "data/js/ui.status_box.js",
+      "message": "Invio in corso..."
+   },
+   "postpone_tweet": {
+      "description": "data/index.html",
+      "message": "Secondi da attendere prima dell'invio dei tweet"
+   },
+   "postpone_tweet_title": {
+      "description": "data/index.html",
+      "message": "Imposta quanti secondi attendere prima di inviare i tweet permettendoti dunque di annullarli"
+   },
+   "powerfull": {
+      "description": "data/js/lib.twitterapi.js",
+      "message": "Ottimo"
+   },
+   "preferences": {
+      "description": "data/index.html",
+      "message": "Preferenze"
+   },
+   "preload_latest_tweets_in_conversations_if_possible": {
+      "description": "data/index.html",
+      "message": "Se possibile precarica gli ultimi tweet della conversazione"
+   },
+   "preload_latest_tweets_in_conversations_if_possible_title": {
+      "description": "data/index.html",
+      "message": "Carica automaticamente gli ultimi tweet della conversazione nel caso siano presenti nella cache"
+   },
+   "pretty_wife": {
+      "description": "data/index.html",
+      "message": "Pretty wife"
+   },
+   "preview_embedded_media": {
+      "description": "data/index.html",
+      "message": "Visualizza anteprima di immagini e video nel tweet"
+   },
+   "preview_embedded_media_title": {
+      "description": "data/index.html",
+      "message": "Visualizza le anteprime di immagini e video direttamente nel tweet"
+   },
+   "preview_here": {
+      "description": "data/index.html",
+      "message": "Anteprima"
+   },
+   "previous": {
+      "description": "data/index.html",
+      "message": "Precedente"
+   },
+   "profile": {
+      "description": "data/index.html",
+      "message": "Profilo"
+   },
+   "profile_name": {
+      "description": "data/index.html",
+      "message": "Nome del profilo"
+   },
+   "profile_of": {
+      "description": "data/js/hotot.js",
+      "message": "Profilo di"
+   },
+   "profile_password_title": {
+      "description": "data/index.html",
+      "message": "Se hai protetto questo profilo con una password inseriscila qui"
+   },
+   "profile_password_title_hint": {
+      "description": "data/index.html",
+      "message": "Proteggi il profilo con una password (facoltativo, lascia vuoto se non vuoi farlo)"
+   },
+   "profile_size": {
+      "description": "data/js/ui.profile_dlg.js",
+      "message": "La tua immagine di profilo deve avere dimensioni minori di 700 KB."
+   },
+   "public_to_everybody": {
+      "description": "data/index.html",
+      "message": "Pubblica per tutti"
+   },
+   "quick_references": {
+      "description": "data/index.html",
+      "message": "Riferimenti veloci"
+   },
+   "quit_hotot": {
+      "description": "data/index.html",
+      "message": "Esci dal programma"
+   },
+   "quote": {
+      "description": "data/index.html",
+      "message": "Quota tweet (RT)"
+   },
+   "quote_link": {
+      "description": "data/index.html",
+      "message": "Quota link tweet"
+   },
+   "quote_link_title": {
+      "description": "data/index.html",
+      "message": "Quota il link di questo tweet"
+   },
+   "quote_title": {
+      "description": "data/index.html",
+      "message": "Quota il testo di questo tweet"
+   },
+   "raw_preview": {
+      "description": "data/index.html",
+      "message": "Escludi immagini RAW"
+   },
+   "raw_preview_title": {
+      "description": "data/index.html",
+      "message": "Non carica le anteprime di immagini RAW (previene crash dovuti a immagini troppo pesanti)"
+   },
+   "read_later": {
+      "description": "data/index.html",
+      "message": "Leggi dopo"
+   },
+   "read_later_service": {
+      "description": "data/index.html",
+      "message": "Servizio di lettura posticipata"
+   },
+   "read_later_title": {
+      "description": "data/index.html",
+      "message": "Salva il tweet per leggerlo più tardi"
+   },
+   "reason": {
+      "description": "data/js/lib.twitter.js",
+      "message": "Motivo"
+   },
+   "regex_hint1": {
+      "description": "data/index.html",
+      "message": "più veloce ma a volte può fare errori di sostituzione degli URL."
+   },
+   "regex_hint2": {
+      "description": "data/index.html",
+      "message": "più lento (richiede più cicli) ma dovrebbe evitare qualsiasi errore di sostituzione degli URL."
+   },
+   "relation": {
+      "description": "data/js/ui.template.js",
+      "message": "Relazione"
+   },
+   "reload": {
+      "description": "data/index.html",
+      "message": "Ricarica"
+   },
+   "remove_all": {
+      "description": "data/js/ui.template.js",
+      "message": "Rimuovi tutto"
+   },
+   "replies_to_a_tweet": {
+      "description": "data/js/hotot.js",
+      "message": "Risposte ad un tweet"
+   },
+   "reply": {
+      "description": "data/index.html",
+      "message": "Rispondi"
+   },
+   "reply_all": {
+      "description": "data/index.html",
+      "message": "Rispondi a tutti"
+   },
+   "reply_all_title": {
+      "description": "data/index.html",
+      "message": "Rispondi a tutti gli utenti menzionati nel tweet"
+   },
+   "reply_this_tweet": {
+      "description": "data/js/ui.template.js",
+      "message": "Rispondi a questo tweet"
+   },
+   "reply_title": {
+      "description": "data/index.html",
+      "message": "Rispondi all'utente"
+   },
+   "reply_to": {
+      "description": "data/js/ui.template.js",
+      "message": "Risposta a"
+   },
+   "report_bug": {
+      "description": "data/index.html",
+      "message": "Segnala un bug"
+   },
+   "report_spam": {
+      "description": "data/js/ui.template.js",
+      "message": "Segnala come spam"
+   },
+   "report_spam_confirm": {
+      "description": "data/js/ui.peopleview.js",
+      "message": "Sei proprio sicuro di voler BLOCCARE e SEGNALARE per SPAM questo utente?"
+   },
+   "reset_time": {
+      "description": "data/js/lib.twitterapi.js",
+      "message": "Orario del prossimo reset"
+   },
+   "restart_hint": {
+      "description": "data/index.html",
+      "message": "Nota: i cambiamenti alle opzioni seguenti avranno effetto soltanto sui prossimi tweet! Se invece vuoi applicarli immediatamente, basta riavviare Hotot+."
+   },
+   "restart_streams_fail": {
+      "description": "data/index.html",
+      "message": "ERRORE: API streaming per l'utente attualmente non in esecuzione!"
+   },
+   "restart_streams_success": {
+      "description": "data/index.html",
+      "message": "API streaming per l'utente correttamente riavviate!"
+   },
+   "restart_streams_text": {
+      "description": "data/index.html",
+      "message": "Riavvia Stream"
+   },
+   "restart_streams_title": {
+      "description": "data/index.html",
+      "message": "Riavvia la connessione alle API streaming per l'utente"
+   },
+   "restore_defaults": {
+      "description": "data/index.html",
+      "message": "Ripristina impostazioni predefinite"
+   },
+   "restore_defaults_confirm": {
+      "description": "data/js/ui.prefs_dlg.js",
+      "message": "Ripristinare le impostazioni predefinite cancellerà tutti i cambiamenti che hai fatto. Sicuro di voler continuare?"
+   },
+   "retweet": {
+      "description": "data/index.html",
+      "message": "Retweet"
+   },
+   "retweet_or_un_retweet": {
+      "description": "data/index.html",
+      "message": "Retwitta/Annulla retweet"
+   },
+   "retweet_successfully": {
+      "description": "data/js/ui.main.js",
+      "message": "Retwittato con successo!"
+   },
+   "retweet_title": {
+      "description": "data/index.html",
+      "message": "Retwitta questo tweet ai tuoi follower"
+   },
+   "retweeted_by": {
+      "description": "data/js/ui.template.js",
+      "message": "Retwittato da"
+   },
+   "retweeting_dots": {
+      "description": "data/js/ui.main.js",
+      "message": "Retwittando..."
+   },
+   "retweets": {
+      "description": "data/js/ui.slider.js",
+      "message": "Retweets"
+   },
+   "retweets_view": {
+      "description": "data/index.html",
+      "message": "Retweets"
+   },
+   "rt_this_tweet": {
+      "description": "data/js/ui.template.js",
+      "message": "Retwitta questo tweet"
+   },
+   "rule": {
+      "description": "data/index.html",
+      "message": "Sintassi della regola:"
+   },
+   "rule_based_filter": {
+      "description": "data/index.html",
+      "message": "Filtro avanzato"
+   },
+   "rule_editor": {
+      "description": "data/index.html",
+      "message": "Modifica regola"
+   },
+   "rule_error_action": {
+      "description": "data/js/ui.filter_dlg.js",
+      "message": "Errore: devi selezionare almeno un'azione da fare!"
+   },
+   "rule_error_conditions": {
+      "description": "data/js/ui.filter_dlg.js",
+      "message": "Errore: devi impostare almeno una condizione!"
+   },
+   "rule_error_name": {
+      "description": "data/js/ui.filter_dlg.js",
+      "message": "Errore: devi inserire un nome di identificazione univoco!"
+   },
+   "rule_identification_name": {
+      "description": "data/index.html",
+      "message": "Nome identificativo per la regola:"
+   },
+   "rule_meaning": {
+      "description": "data/index.html",
+      "message": "Significato della regola"
+   },
+   "rule_name": {
+      "description": "data/index.html",
+      "message": "Nome per la regola:"
+   },
+   "same_signing_api_base": {
+      "description": "data/index.html",
+      "message": "Uguale all'API Base"
+   },
+   "same_signing_oauth_base": {
+      "description": "data/index.html",
+      "message": "Uguale all'OAuth Base"
+   },
+   "save": {
+      "description": "data/index.html",
+      "message": "Salva"
+   },
+   "save_as_draft": {
+      "description": "data/index.html",
+      "message": "Salva come bozza"
+   },
+   "saved": {
+      "description": "data/js/ui.main.js",
+      "message": "Salvato!"
+   },
+   "saved_search": {
+      "description": "data/js/ui.template.js",
+      "message": "Carica ricerche salvate su Twitter"
+   },
+   "saving": {
+      "description": "data/js/ui.main.js",
+      "message": "Salvataggio in corso..."
+   },
+   "schizophrenia": {
+      "description": "data/index.html",
+      "message": "Schizophrenia"
+   },
+   "screen_name1_screen_name2": {
+      "description": "data/index.html",
+      "message": "nome_profilo1, nome_profilo2, ..."
+   },
+   "search": {
+      "description": "data/js/ui.slider.js",
+      "message": "Cerca"
+   },
+   "search_api_base2": {
+      "description": "data/index.html",
+      "message": "API Base per la ricerca"
+   },
+   "search_in_google": {
+      "description": "data/index.html",
+      "message": "Cerca @ su Google"
+   },
+   "search_in_twitter": {
+      "description": "data/index.html",
+      "message": "Cerca @ su Twitter"
+   },
+   "search_result_of": {
+      "description": "data/js/hotot.js",
+      "message": "Risultati della ricerca di"
+   },
+   "search_this_hashtag_text": {
+      "description": "data/index.html",
+      "message": "Cerca..."
+   },
+   "search_this_hashtag_title": {
+      "description": "data/index.html",
+      "message": "Cerca tweet contenenti questo hashtag"
+   },
+   "search_view": {
+      "description": "data/index.html",
+      "message": "Cerca"
+   },
+   "select_a_default_speech_language": {
+      "description": "data/index.html",
+      "message": "Seleziona il linguaggio predefinito per il riconoscimento vocale"
+   },
+   "select_a_default_translation_language": {
+      "description": "data/index.html",
+      "message": "Seleziona il linguaggio predefinito in cui tradurre i tweet con l'apposita opzione"
+   },
+   "select_a_language": {
+      "description": "data/index.html",
+      "message": "Seleziona un linguaggio"
+   },
+   "select_a_read_later_service": {
+      "description": "data/index.html",
+      "message": "Seleziona un servizio per la lettura posticipata"
+   },
+   "select_a_theme": {
+      "description": "data/index.html",
+      "message": "Seleziona un tema"
+   },
+   "select_actions": {
+      "description": "data/index.html",
+      "message": "Seleziona azioni"
+   },
+   "select_background": {
+      "description": "data/index.html",
+      "message": "Sfondo della schermata iniziale"
+   },
+   "select_emoji_size": {
+      "description": "data/index.html",
+      "message": "Dimensione emoji in pixel"
+   },
+   "select_emoji_size_title": {
+      "description": "data/index.html",
+      "message": "La dimensione delle immagini che rimpiazzeranno gli emoji nei tweet"
+   },
+   "select_fields": {
+      "description": "data/index.html",
+      "message": "Seleziona campi"
+   },
+   "send_message": {
+      "description": "data/index.html",
+      "message": "Scrivi un DM"
+   },
+   "send_message_title": {
+      "description": "data/index.html",
+      "message": "Invia un messaggio diretto (DM) all'utente"
+   },
+   "send_message_to_them": {
+      "description": "data/js/ui.template.js",
+      "message": "Scrivi un DM all'utente"
+   },
+   "sending_tweet": {
+      "description": "data/js/ui.status_box.js",
+      "message": "Il tweet sta per essere inviato..."
+   },
+   "share_image": {
+      "description": "data/js/background.js",
+      "message": "Condividi questa immagine con Hotot+"
+   },
+   "share_link": {
+      "description": "data/js/background.js",
+      "message": "Condividi questo link con Hotot+"
+   },
+   "share_page": {
+      "description": "data/js/background.js",
+      "message": "Condividi questa pagina con Hotot+"
+   },
+   "share_selection": {
+      "description": "data/js/background.js",
+      "message": "Condividi il testo selezionato con Hotot+"
+   },
+   "shiny_old_times_before_marriage": {
+      "description": "data/index.html",
+      "message": "Shiny old times before marriage"
+   },
+   "shortcuts": {
+      "description": "data/index.html",
+      "message": "Tasti di scelta rapida"
+   },
+   "show_relative_timestamp": {
+      "description": "data/index.html",
+      "message": "Mostra date ed orari relativi"
+   },
+   "show_relative_timestamp_title": {
+      "description": "data/index.html",
+      "message": "Mostra le date e gli orari relativi invece di quelli assoluti"
+   },
+   "show_seconds_in_timestamp": {
+      "description": "data/index.html",
+      "message": "Mostra i secondi nelle date"
+   },
+   "show_seconds_in_timestamp_title": {
+      "description": "data/index.html",
+      "message": "Mostra anche i secondi all'interno delle date"
+   },
+   "show_social_text": {
+      "description": "data/index.html",
+      "message": "Mostra il numero di Mi Piace/RT sotto ogni tweet"
+   },
+   "show_social_title": {
+      "description": "data/index.html",
+      "message": "Mostra sotto ogni tweet quante volte è stato messo nei preferito/piaciuto e retwittato"
+   },
+   "show_volume": {
+      "description": "data/js/ui.template.js",
+      "message": "Mostra volume ultime 24h"
+   },
+   "show_youtube": {
+      "description": "data/index.html",
+      "message": "Carica i video di Youtube direttamente nel tweet"
+   },
+   "show_youtube_title": {
+      "description": "data/index.html",
+      "message": "Carica e mostra i video di Youtube con un iframe direttamente all'interno del tweet"
+   },
+   "sign_in_dots": {
+      "description": "data/js/ui.welcome.js",
+      "message": "Accesso in corso..."
+   },
+   "sign_in_to_share": {
+      "description": "data/js/background.js",
+      "message": "Devi prima accedere al tuo account per poter condividere dei contenuti."
+   },
+   "sign_out": {
+      "description": "data/index.html",
+      "message": "Esci"
+   },
+   "signing_api_base": {
+      "description": "data/index.html",
+      "message": "API d'accesso base"
+   },
+   "signing_oauth_base": {
+      "description": "data/index.html",
+      "message": "OAuth d'accesso base"
+   },
+   "slide_to_next_page": {
+      "description": "data/index.html",
+      "message": "Scorri alla pagina successiva"
+   },
+   "slide_to_prev_page": {
+      "description": "data/index.html",
+      "message": "Scorri alla pagina precedente"
+   },
+   "some_error_occur": {
+      "description": "data/index.html",
+      "message": "Si sono verificati degli errori"
+   },
+   "sound": {
+      "description": "data/js/ui.template.js",
+      "message": "Notifica sonora"
+   },
+   "speech_error": {
+      "description": "data/index.html",
+      "message": "Spiacente, le API Web Speech non sono supportate da questo browser. Per favore aggiorna a Google Chrome versione 25 o superiore per utilizzare questa funzione."
+   },
+   "speech_rec": {
+      "description": "data/index.html",
+      "message": "Riconoscimento vocale"
+   },
+   "start_hotot": {
+      "description": "data/js/background.js",
+      "message": "Avvia Hotot+ ed accedi ad un account per condividere dei contenuti."
+   },
+   "starts_following_you": {
+      "description": "data/js/daemon.js",
+      "message": "ha iniziato a seguirti su Twitter!"
+   },
+   "stat": {
+      "description": "data/index.html",
+      "message": "Statistiche"
+   },
+   "status_is_over_140_characters": {
+      "description": "data/js/ui.status_box.js",
+      "message": "Il tweet è più lungo dei 140 caratteri consentiti!"
+   },
+   "status_is_over_maximum": {
+      "description": "data/js/ui.status_box.js",
+      "message": "Il tweet è più lungo del massimo consentito:"
+   },
+   "step_one": {
+      "description": "data/index.html",
+      "message": "Primo passo"
+   },
+   "step_two": {
+      "description": "data/index.html",
+      "message": "Secondo passo"
+   },
+   "struggling_adventurers": {
+      "description": "data/index.html",
+      "message": "Struggling Adventurers"
+   },
+   "successfully": {
+      "description": "data/js/ui.main.js",
+      "message": "Successo!"
+   },
+   "suggestions": {
+      "description": "data/js/ui.template.js",
+      "message": "Suggerimenti"
+   },
+   "supervised_by": {
+      "description": "data/index.html",
+      "message": "Supervisionato da"
+   },
+   "support_explanation": {
+      "description": "data/index.html",
+      "message": "Mantenendo attiva questa funzione contribuirai indirettamente allo sviluppo di Hotot+: ad ogni link di Amazon che invierai o leggerai, Hotot+ aggiungerà automaticamente il suo tag referral, tutto qui. Questo significa che all'utente non cambierà assolutamente nulla, visto che i prezzi finali rimarranno identici (non verranno assolutamente aumentati!), ma Amazon darà una piccola percentuale per ogni vendita avvenuta dai quei link in premio al referral. Questo significa che gratuitamente potrai contribuire al suo sviluppo proprio come se stessi facendo una donazione, con la differenza che non dovrai però cacciare un centesimo (sarà infatti Amazon a pagare, non tu) e il tutto senza doverti subire pubblicità invasive, potenziali pericoli per la tua privacy o la scomodità di attese o click da dover fare. Insomma il metodo migliore per te utente di partecipare allo sviluppo di Hotot+ senza nemmeno accorgertene."
+   },
+   "sure_to_protect": {
+      "description": "data/js/ui.welcome.js",
+      "message": "Sei sicuro di proteggere il tuo profilo con una password? Se la dimentichi non avrai modo di recuperarla."
+   },
+   "themes": {
+      "description": "data/index.html",
+      "message": "Tema"
+   },
+   "this_profile_may_has_already_exists": {
+      "description": "data/js/ui.welcome.js",
+      "message": "Questo profilo potrebbe esistere già!"
+   },
+   "thumb_preview_text": {
+      "description": "data/index.html",
+      "message": "Usa miniature per l'anteprima di immagini e video"
+   },
+   "thumb_preview_title": {
+      "description": "data/index.html",
+      "message": "Usa le miniature per l'anteprima di immagini e video invece delle immagini a dimensione reale"
+   },
+   "timeline": {
+      "description": "data/js/ui.template.js",
+      "message": "Timeline"
+   },
+   "timeline_tip": {
+      "description": "data/js/ui.template.js",
+      "message": "L'intera timeline dell'utente, include i suoi tweet, i retweet e le risposte."
+   },
+   "titian_s_elegance": {
+      "description": "data/index.html",
+      "message": "Titian's Elegance"
+   },
+   "to": {
+      "description": "data/index.html",
+      "message": "A"
+   },
+   "to_cold_beauty": {
+      "description": "data/index.html",
+      "message": "To Cold Beauty"
+   },
+   "to_list": {
+      "description": "data/js/ui.add_to_list_dlg.js",
+      "message": "alla Lista"
+   },
+   "toggle_conversation": {
+      "description": "data/index.html",
+      "message": "Carica conversazione"
+   },
+   "token_confirm": {
+      "description": "data/js/ui.welcome.js",
+      "message": "Questa operazione cancellerà la Token d'accesso di questo profilo. Sicuro di voler continuare?!"
+   },
+   "tranquil": {
+      "description": "data/index.html",
+      "message": "Tranquil"
+   },
+   "translate": {
+      "description": "data/index.html",
+      "message": "Traduci"
+   },
+   "translate_access_token_error": {
+      "description": "data/js/ui.main.js",
+      "message": "Error getting Bing Translator access token!"
+   },
+   "translate_this": {
+      "description": "data/index.html",
+      "message": "Traduci @"
+   },
+   "translate_title": {
+      "description": "data/index.html",
+      "message": "Traduci il tweet nella tua lingua"
+   },
+   "translating": {
+      "description": "data/js/ui.main.js",
+      "message": "Traduco..."
+   },
+   "transparent": {
+      "description": "data/index.html",
+      "message": "Trasparente"
+   },
+   "trending_for": {
+      "description": "data/js/ui.template.js",
+      "message": "Località"
+   },
+   "trends_view": {
+      "description": "data/index.html",
+      "message": "Trending Topics"
+   },
+   "try_different_keywords": {
+      "description": "data/js/ui.template.js",
+      "message": "Prova ad inserire termini di ricerca diversi."
+   },
+   "try_more_general_keywords": {
+      "description": "data/js/ui.template.js",
+      "message": "Prova ad inserire termini di ricerca più generici."
+   },
+   "tt_number": {
+      "description": "data/js/ui.template.js",
+      "message": "Quantità"
+   },
+   "tweet_cnt": {
+      "description": "data/js/ui.template.js",
+      "message": "Tweet inviati"
+   },
+   "tweet_contains_hashtags": {
+      "description": "data/index.html",
+      "message": "Il twit contiene gli hashtag:"
+   },
+   "tweet_contains_mentions_to": {
+      "description": "data/index.html",
+      "message": "Il twit contiene menzioni a:"
+   },
+   "tweet_contains_words": {
+      "description": "data/index.html",
+      "message": "Il twit contiene le parole:"
+   },
+   "tweet_has_attribute": {
+      "description": "data/index.html",
+      "message": "Il twit ha un attributo:"
+   },
+   "tweet_has_been_posted_by": {
+      "description": "data/index.html",
+      "message": "Il twit è stato postato da:"
+   },
+   "tweet_has_been_posted_using_the_client": {
+      "description": "data/index.html",
+      "message": "Il twit è stato inviato dal client:"
+   },
+   "tweet_has_been_retweeted_by": {
+      "description": "data/index.html",
+      "message": "Il twit è stato retwittato da:"
+   },
+   "tweet_sent": {
+      "description": "data/js/ui.status_box.js",
+      "message": "Tweet inviato con successo!"
+   },
+   "tweet_view": {
+      "description": "data/index.html",
+      "message": "Nei tweet"
+   },
+   "tweeting": {
+      "description": "data/index.html",
+      "message": "Invio del tweet"
+   },
+   "tweets": {
+      "description": "data/index.html",
+      "message": "Tweets"
+   },
+   "twitlonger_fail": {
+      "description": "data/js/ui.main.js",
+      "message": "Errore nell'acquisizione del testo completo."
+   },
+   "twitter_error_description": {
+      "description": "data/js/videouploader.js",
+      "message": "Twitter ha fornito la seguente descrizione per l'errore:"
+   },
+   "twitter_official_service": {
+      "description": "data/index.html",
+      "message": "Twitter"
+   },
+   "type_a_name_here": {
+      "description": "data/index.html",
+      "message": "Digita un nome qui dentro..."
+   },
+   "type_and_press_enter_to_search": {
+      "description": "data/js/ui.template.js",
+      "message": "Digita qualcosa e premi INVIO per cercarlo."
+   },
+   "type_or_drag_a_photo_here": {
+      "description": "data/index.html",
+      "message": "Scrivi qualcosa o trascina un'immagine qui dentro..."
+   },
+   "un_favorite_this_tweet_dots": {
+      "description": "data/js/ui.main.js",
+      "message": "Rimozione del tweet dai preferiti..."
+   },
+   "un_like_this_tweet_dots": {
+      "description": "data/js/ui.main.js",
+      "message": "Rimozione del Mi piace da questo tweet..."
+   },
+   "unable_get_image": {
+      "description": "data/js/background.js",
+      "message": "Impossibile acquisire l'immagine scelta!"
+   },
+   "unblock": {
+      "description": "data/js/ui.template.js",
+      "message": "Sblocca"
+   },
+   "undo_retweeting_dots": {
+      "description": "data/js/ui.main.js",
+      "message": "Annullamento del retweet..."
+   },
+   "undo_successfully": {
+      "description": "data/js/ui.main.js",
+      "message": "Annullato con successo!"
+   },
+   "unfollow": {
+      "description": "data/js/ui.listview.js",
+      "message": "Smetti di seguire"
+   },
+   "unfollow_at": {
+      "description": "data/js/ui.main.js",
+      "message": "Smetti di seguire @"
+   },
+   "unfollow_this_hashtag_title": {
+      "description": "data/index.html",
+      "message": "Smetti di seguire questo hashtag"
+   },
+   "unknown_error": {
+      "description": "data/js/lib.twitter.js",
+      "message": "Errore Sconosciuto"
+   },
+   "unmute": {
+      "description": "data/js/ui.template.js",
+      "message": "Ridai voce"
+   },
+   "update": {
+      "description": "data/index.html",
+      "message": "Invia"
+   },
+   "update_failed": {
+      "description": "data/js/ui.status_box.js",
+      "message": "Invio fallito! Tweet salvato come bozza."
+   },
+   "update_list_success": {
+      "description": "data/js/ui.list_attr_dlg.js",
+      "message": "Lista aggiornata con successo!"
+   },
+   "update_profile": {
+      "description": "data/js/ui.profile_dlg.js",
+      "message": "Aggiornamento profilo..."
+   },
+   "update_profile_success": {
+      "description": "data/js/ui.profile_dlg.js",
+      "message": "Profilo aggiornato con successo!"
+   },
+   "update_successfully": {
+      "description": "data/js/ui.status_box.js",
+      "message": "Inviato con successo!"
+   },
+   "updated": {
+      "description": "data/js/daemon.js",
+      "message": "Aggiornate correttamente"
+   },
+   "updating_dots": {
+      "description": "data/js/ui.status_box.js",
+      "message": "Invio del tweet..."
+   },
+   "updating_list": {
+      "description": "data/js/ui.list_attr_dlg.js",
+      "message": "Aggiornamento della lista..."
+   },
+   "upload": {
+      "description": "data/index.html",
+      "message": "Carica"
+   },
+   "upload_api_base": {
+      "description": "data/index.html",
+      "message": "API Base per l'upload"
+   },
+   "upload_photo": {
+      "description": "data/index.html",
+      "message": "Carica un'immagine"
+   },
+   "upload_success": {
+      "description": "data/js/ui.imageuploader.js",
+      "message": "Caricamento completato con successo!"
+   },
+   "upload_to_dots": {
+      "description": "data/index.html",
+      "message": "Carica su..."
+   },
+   "uploading": {
+      "description": "data/js/ui.imageuploader.js",
+      "message": "Caricamento in corso..."
+   },
+   "uploading_avatar": {
+      "description": "data/js/ui.profile_dlg.js",
+      "message": "Caricamento nuovo avatar in corso..."
+   },
+   "uploading_avatar_success": {
+      "description": "data/js/ui.profile_dlg.js",
+      "message": "Nuovo avatar caricato!"
+   },
+   "uploading_chunk": {
+      "description": "data/index.html",
+      "message": "Caricamento video, parte"
+   },
+   "uploading_chunk_finalize": {
+      "description": "data/index.html",
+      "message": "Finalizzando upload video"
+   },
+   "uploading_chunk_init": {
+      "description": "data/index.html",
+      "message": "Inizializzando upload video"
+   },
+   "uploading_image": {
+      "description": "data/index.html",
+      "message": "Caricamento immagine"
+   },
+   "uploading_note": {
+      "description": "data/index.html",
+      "message": "Nota: chiudendo in qualsiasi modo questa finestra annullerai l'invio del tweet!"
+   },
+   "uploading_please_wait": {
+      "description": "data/index.html",
+      "message": "Elaborazione della tua richiesta in corso, attendi..."
+   },
+   "url_shortener": {
+      "description": "data/index.html",
+      "message": "Accorcia gli URL nel messaggio"
+   },
+   "use_custom_font": {
+      "description": "data/index.html",
+      "message": "Usa un carattere personalizzato"
+   },
+   "use_custom_source_app_name": {
+      "description": "data/index.html",
+      "message": "Usa app sorgente personalizzata"
+   },
+   "use_emoji": {
+      "description": "data/index.html",
+      "message": "Analizza e mostra emoji nei tweet"
+   },
+   "use_emoji_title": {
+      "description": "data/index.html",
+      "message": "Se un emoji viene trovato in un tweet, il programma lo rimpiazzerà con la corrispondente immagine usata da Twitter"
+   },
+   "use_header_flap_text": {
+      "description": "data/index.html",
+      "message": "Barra di intestazione principale a scomparsa"
+   },
+   "use_header_flap_title": {
+      "description": "data/index.html",
+      "message": "Mostra e nasconde automaticamente la barra di intestazione al passaggio del mouse"
+   },
+   "use_new_dm_view": {
+      "description": "data/index.html",
+      "message": "Usa la nuova modalità di visualizzazione DM"
+   },
+   "use_new_dm_view_title": {
+      "description": "data/index.html",
+      "message": "Utilizza la nuova modalità di visualizzazione raggruppati-per-utente per i messaggi diretti"
+   },
+   "use_quote_as_default_retweet_action": {
+      "description": "data/index.html",
+      "message": "Quota invece di retwittare"
+   },
+   "use_quote_as_default_retweet_action_title": {
+      "description": "data/index.html",
+      "message": "Alla pressione del tasto di retweet quota il tweet invece di retwittarlo direttamente"
+   },
+   "use_read_later_service": {
+      "description": "data/index.html",
+      "message": "Utilizza un servizio di lettura posticipata"
+   },
+   "use_regex_text": {
+      "description": "data/index.html",
+      "message": "Usa regex per analizzare gli URL"
+   },
+   "use_regex_title": {
+      "description": "data/index.html",
+      "message": "Usa regex per analizzare gli URL invece delle Entities ufficiali di Twitter."
+   },
+   "use_reply_all_as_default_reply_action": {
+      "description": "data/index.html",
+      "message": "Usa \"Rispondi a tutti\" come azione di risposta predefinita"
+   },
+   "use_reply_all_as_default_reply_action_title": {
+      "description": "data/index.html",
+      "message": "Alla pressione del tasto di risposta menziona tutti gli utenti citati nel tweet invece che soltanto l'autore"
+   },
+   "use_tag_autocomplete": {
+      "description": "data/index.html",
+      "message": "Suggerisci hashtag durante la scrittura"
+   },
+   "use_twitlonger": {
+      "description": "data/index.html",
+      "message": "Utilizza Twitlonger"
+   },
+   "use_twitlonger_title": {
+      "description": "data/index.html",
+      "message": "Utilizza il servizio di Twitlonger invece di hotot.in per accorciare i tweet più lunghi di 140 caratteri"
+   },
+   "use_undo_tweet": {
+      "description": "data/index.html",
+      "message": "Opzione veloce per cancellazione tweet dopo l'invio"
+   },
+   "use_undo_tweet_title": {
+      "description": "data/index.html",
+      "message": "Mostra per alcuni secondi un'opzione per eliminare il tweet appena inviato"
+   },
+   "use_user_autocomplete": {
+      "description": "data/index.html",
+      "message": "Suggerisci nomi utenti durante la scrittura"
+   },
+   "used_libraries": {
+      "description": "data/index.html",
+      "message": "Librerie utilizzate"
+   },
+   "username": {
+      "description": "data/index.html",
+      "message": "Nome Utente"
+   },
+   "verify": {
+      "description": "data/index.html",
+      "message": "Verifica"
+   },
+   "verify_failed": {
+      "description": "data/js/ui.kismet_dlg.js",
+      "message": "Verifica fallita, ricontrolla la sintassi della regola."
+   },
+   "verify_result": {
+      "description": "data/js/ui.kismet_dlg.js",
+      "message": "Risultato della verifica"
+   },
+   "version": {
+      "description": "data/js/ui.exts_dlg.js",
+      "message": "Versione"
+   },
+   "via": {
+      "description": "data/js/ui.template.js",
+      "message": "via"
+   },
+   "video_quality": {
+      "description": "data/index.html",
+      "message": "Qualità del video"
+   },
+   "video_uploader": {
+      "description": "data/index.html",
+      "message": "Carica un video"
+   },
+   "view_changelog": {
+      "description": "data/index.html",
+      "message": "Per l'elenco completo delle novità introdotte in questa versione visita"
+   },
+   "view_hide_conversation": {
+      "description": "data/js/ui.template.js",
+      "message": "Mostra/nascondi conversazione"
+   },
+   "view_more_conversation": {
+      "description": "data/js/ui.template.js",
+      "message": "Carica conversazione completa"
+   },
+   "view_replies_text": {
+      "description": "data/index.html",
+      "message": "Visualizza risposte"
+   },
+   "view_replies_title": {
+      "description": "data/index.html",
+      "message": "Cerca tutte le risposte a questo tweet"
+   },
+   "virushou_s_integrity": {
+      "description": "data/index.html",
+      "message": "Virushou's Integrity"
+   },
+   "wanna_have_relationship_with": {
+      "description": "data/index.html",
+      "message": "Wanna have a relationship with"
+   },
+   "weakness": {
+      "description": "data/js/lib.twitterapi.js",
+      "message": "Debole"
+   },
+   "web": {
+      "description": "data/js/ui.template.js",
+      "message": "Web"
+   },
+   "website": {
+      "description": "data/js/ui.exts_dlg.js",
+      "message": "Sito web"
+   },
+   "western": {
+      "description": "data/index.html",
+      "message": "Occidentale"
+   },
+   "whisper": {
+      "description": "data/js/ui.welcome.js",
+      "message": "Psss"
+   },
+   "word1_word2": {
+      "description": "data/index.html",
+      "message": "parola1, parola2, ..."
+   },
+   "write_down_description_here": {
+      "description": "data/index.html",
+      "message": "Scrivi qui una descrizione per l'immagine..."
+   },
+   "written_by": {
+      "description": "data/index.html",
+      "message": "Creato da"
+   },
+   "wrong_password": {
+      "description": "data/js/ui.welcome.js",
+      "message": "Password sbagliata!"
+   },
+   "yes_rt": {
+      "description": "data/js/ui.template.js",
+      "message": "Abilita i Retweets"
+   },
+   "you_are_followed_by_them": {
+      "description": "data/js/ui.peopleview.js",
+      "message": "L'utente ti sta seguendo, ma tu non segui lui."
+   },
+   "you_are_following": {
+      "description": "data/js/ui.peopleview.js",
+      "message": "Stai seguendo quest'utente, ma lui non segue te."
+   },
+   "you_are_friends": {
+      "description": "data/js/ui.peopleview.js",
+      "message": "Vi state seguendo a vicenda."
+   },
+   "you_are_not_following_each_other": {
+      "description": "data/js/ui.peopleview.js",
+      "message": "Non vi state seguendo a vicenda."
+   },
+   "you_dont_have_a_view": {
+      "description": "data/index.html",
+      "message": "Non hai alcuna colonna."
+   },
+   "you_have_muted": {
+      "description": "data/js/ui.kismet_dlg.js",
+      "message": "Hai scelto di nascondere"
+   },
+   "you_have_muted_tweets_containing": {
+      "description": "data/js/ui.kismet_dlg.js",
+      "message": "Hai scelto di nascondere i tweet contenenti"
+   },
+   "you_have_muted_tweets_from": {
+      "description": "data/js/ui.kismet_dlg.js",
+      "message": "Hai scelto di nascondere i tweet provenienti da"
+   },
+   "you_should_surely_add_one_or_more_views_by_clicking_the_add_button_above": {
+      "description": "data/index.html",
+      "message": "Dovresti proprio aggiungerne una (o più) premendo sul pulsante \"Aggiungi nuove colonne\" qui sopra."
+   },
+   "your_search": {
+      "description": "data/js/ui.template.js",
+      "message": "La tua ricerca"
+   }
+}
