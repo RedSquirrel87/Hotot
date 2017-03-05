@@ -3,7 +3,7 @@ conf = {
 
 vars: {
       'platform': 'Chrome'
-    , 'version': '9.6'
+    , 'version': '10'
     , 'consumer_key': 'Vc5nXsSN4K5vJoWr8JrnbpjlB'
     , 'consumer_secret': '7HflXSzdU16JAa9CR2zhXWE1NQdDwQqMEX41Ak6k35hTCAtOnw'
     , 'column_max_width': 400
@@ -50,6 +50,7 @@ default_prefs: {
         , 'auto_longer_tweet': true
 	, 'use_emoji': true
 	, 'emoji_size': 1
+	, 'emoji_backcolor': false
 	, 'use_new_dm_view_mode': true
         , 'use_preload_conversation': true
         , 'use_alt_retweet': false

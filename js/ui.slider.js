@@ -881,7 +881,7 @@ function addDefaultView(name, opts) {
             , 'header_html': ui.Template.tt_column_header_t()
 	    , 'header_html_ex': ui.Template.tt_vcard_t
             , 'method': 'poll'
-            , 'interval': 360
+            , 'interval': 300
             , 'item_type': 'page'
             , 'use_auto_update': true
         }, opts));
@@ -902,7 +902,7 @@ function addDefaultView(name, opts) {
             , 'header_html': ui.Template.common_column_header_t()
             , 'header_html_ex': ui.Template.search_header_t()
             , 'method': 'poll'
-            , 'interval': 360
+            , 'interval': 300
             , 'item_type': 'phoenix_search'
             , 'is_trim': false
             , 'use_auto_update': true
@@ -983,7 +983,7 @@ function addDefaultView(name, opts) {
             , 'header_html': ui.Template.common_column_header_t()
             , 'former': ui.Template.form_retweeted_by
             , 'method': 'poll'
-            , 'interval': 360
+            , 'interval': 300
             , 'item_type': 'id'
         }, opts));
     break;
@@ -1008,7 +1008,7 @@ function addDefaultView(name, opts) {
             , 'header_html': ui.Template.common_column_header_t()
             , 'former': ui.Template.form_tweet
             , 'method': 'poll'
-            , 'interval': 360
+            , 'interval': 300
             , 'item_type': 'page'
             , 'is_trim': false
         }, opts));

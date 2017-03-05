@@ -1588,6 +1588,7 @@ function parse_emoji(text) {
 				return {
 					style: 'height: ' + conf.get_current_profile().preferences.emoji_size + 
 					((conf.get_current_profile().preferences.emoji_size > 3) ? 'px; ' : 'em; ') + 
+					'background-color: ' + (conf.get_current_profile().preferences.emoji_backcolor ? 'white; ' : 'transparent;') +
 					'margin: 0 .05em 0 .1em; vertical-align: -0.1em;'
 				};
 			},

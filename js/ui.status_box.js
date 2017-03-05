@@ -133,14 +133,12 @@ function init () {
     $('#btn_smiley').click(function () {
 	if (emoji_visible) {
 		$('#status_smiley').hide();
-		$('#tbox_status').show();
 		emoji_visible = false;
 	} else {
 		if (emoji_parsed === false) {
 			twemoji.parse(document.getElementById("status_smiley_inner"), {base: '../image/',folder: 'emoji'});			
 			emoji_parsed = true;
 		}
-		$('#tbox_status').hide();
 		$('#status_smiley').show();
 		emoji_visible = true;		
 	}
@@ -152,6 +150,21 @@ function init () {
 	emoji_visible = false;
 	ui.StatusBox.insert_status_text($('img', this).attr('alt'), null);
         return false;
+    });
+    
+    $('.emoji-cat').click(function () {
+	var selected = $(this);
+	$('.emoji-cat').removeClass('selected');
+	selected.addClass('selected');
+	$('.emoji-cat-smiley').hide();
+	$('.emoji-cat-animals').hide();
+	$('.emoji-cat-food').hide();
+	$('.emoji-cat-places').hide();
+	$('.emoji-cat-activities').hide();
+	$('.emoji-cat-objects').hide();
+	$('.emoji-cat-symbols').hide();
+	$('.emoji-cat-flags').hide();
+	$('.' + selected.attr('category')).show();
     });
     
     //2.2: Mic fix
@@ -308,12 +321,29 @@ load_video:
 function load_video(video) {
 	if (ui.FormChecker.test_mp4_video(video) === false) {
 		toast.set(ui.FormChecker.ERR_STR_MP4_VIDEO).show(3);
+		$('#btn_videouploader_file').val(''); 
 		return false;
 	}
-	if (ui.FormChecker.test_file_size_bound(video, 15*1024*1024) === false) {
+	if (ui.FormChecker.test_file_size_bound(video, 512*1024*1024) === false) {
 		toast.set(ui.FormChecker.ERR_STR_MP4_SIZE).show(3);
+		$('#btn_videouploader_file').val(''); 
 		return false;
 	}
+	
+	ui.StatusBox.change_mode(ui.StatusBox.MODE_IMG);
+	var div = $('#imagepreview').find('#preview');
+	div.append('<td class="thumbnail"><b>' + _('attached_video_file') + ':</b><br>' + video.name + '</td>');
+	var btn = $('#imagepreview').find('.ic_close');
+	btn.click(function () {
+		div.empty();
+		btn.hide();				
+		ui.StatusBox.change_mode(ui.StatusBox.MODE_TWEET);
+		return false;
+	});
+	btn.show();
+	ui.StatusBox.MODE_VIDEO = true;
+	
+	/*
 	// Check duration
 	var reader = new FileReader();
         reader.onload = function(e) {
@@ -329,6 +359,7 @@ function load_video(video) {
 		});
 		btn.show();
 		$('#videobj').on('loadedmetadata', function() {
+			console.log(this);
 			if (this.duration.toFixed(0) > 30) {
 				div.empty();
 				btn.hide();				
@@ -341,6 +372,8 @@ function load_video(video) {
 		});
         };		
         reader.readAsDataURL(video);
+	*/
+	
 	ui.VideoUploader.file = video;
 },
 

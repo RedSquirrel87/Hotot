@@ -132,7 +132,7 @@ function test_file_image(file) {
     if (typeof (file) != 'string') {
         filename = file.name;
     }
-    if (/.*(jpg|jpeg|png|gif)$/i.test(filename)) {
+    if (/.*(jpg|jpeg|png|gif|webp)$/i.test(filename)) {
         ret = true;
     }
     return ret;

@@ -411,7 +411,7 @@ function load_messages_success(self, json, sender) {
 	for (var obj in json) {
 		user = (sender ? json[obj].sender : json[obj].recipient);
 		if (ui.DMTabs.views[user.screen_name] == undefined) {
-			ui.DMTabs.addTo_DM_header(self, user.screen_name, user.profile_image_url);
+			ui.DMTabs.addTo_DM_header(self, user.screen_name, user.profile_image_url, true);
 			ui.DMTabs.views[user.screen_name] = [];
 		}
 		ui.DMTabs.views[user.screen_name].push(json[obj]);
@@ -440,14 +440,12 @@ function load_messages_success(self, json, sender) {
 		            prefs.views_lastest_id[self.name + '_latest_id'] = last_id;
 		        }
 		        self.incoming_num = 0;
-		        for (var i = json.length - 1; json.length - 3 <= i && 0 <= i; i -= 1, self.incoming_num += 1) {
-		            if (util.compare_id(json[i].id_str, latest_id) <= 0) {
-		                break;
-		            }
-		        }
-		    } else {
+			for (var i = 0; i < json.length; i++) {
+				if (util.compare_id(json[i].id_str, latest_id) > 0) self.incoming_num += 1;
+			}
+		} else {
 		        self.incoming_num = 0;
-		    }	
+		}	
 	}
 	
 	if ((ret == 0) || (self.incoming_num <= 0)) {
@@ -461,19 +459,17 @@ function load_messages_success(self, json, sender) {
 		var index = 0;
 		if (self.incoming_num > 3) {
 			for (var i = 0; i < self.incoming_num; i += 1) {
-				index = (json.length - 1 - i);
-				if (json[index].sender.screen_name != globals.myself.screen_name) {
-					ui.DMTabs.show_button_notify(self,json[index].sender.screen_name); // 2.2: New notification icon
+				index = i;
+				if (json[i].sender.screen_name != globals.myself.screen_name) {
+					ui.DMTabs.show_button_notify(self,json[i].sender.screen_name); // 2.2: New notification icon
 				}
 			}
 			notification.notify_text(self.incoming_num + " " + _('new_notifications'), _('many_notifications_on_page') + " " + self.name, null);
 		} else {
 			for (var i = 0; i < self.incoming_num; i += 1) {
-				index = (json.length - 1 - i);
-				// Check if it's a sent message
 				if (json[index].sender.screen_name != globals.myself.screen_name) {
-					notification.notify_tweet(json[index]);
-					ui.DMTabs.show_button_notify(self,json[index].sender.screen_name); // 2.2: New notification icon
+					notification.notify_tweet(json[i]);
+					ui.DMTabs.show_button_notify(self,json[i].sender.screen_name); // 2.2: New notification icon
 				}
 			}
 		}

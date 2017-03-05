@@ -49,7 +49,7 @@
    },
    "all_conditions_true": {
       "description": "data/js/filter.js",
-      "message": "the tweet if all the following conditions are TRUE"
+      "message": "the tweet if all the following conditions are TRUE"	
    },
    "already_tweeted": {
       "description": "data/js/ui.status_box.js",
@@ -66,7 +66,7 @@
    "any": {
       "description": "data/js/ui.dm_tbas.js",
       "message": "Show all"
-   },
+   },      
    "api_base": {
       "description": "data/index.html",
       "message": "API Base"
@@ -74,15 +74,15 @@
    "api_error_0": {
       "description": "data/js/lib.twitter.js",
       "message": "Lost connection with server."
-   },
+   },    
    "api_error_400": {
       "description": "data/js/lib.twitter.js",
       "message": "Bad Request: The request was invalid."
-   },
+   },   
    "api_error_401": {
       "description": "data/js/lib.twitter.js",
       "message": "Server cannot authenticate you. Please check your username/password and API base."
-   },
+   },   
    "api_error_403_fav": {
       "description": "data/js/lib.twitter.js",
       "message": "You have already liked or marked this tweet as favorite."
@@ -90,55 +90,55 @@
    "api_error_403_retweet": {
       "description": "data/js/lib.twitter.js",
       "message": "You have already retweeted this tweet, or it is protected."
-   },
+   },     
    "api_error_403_unknown": {
       "description": "data/js/lib.twitter.js",
       "message": "Twitter refuse your request."
-   },
+   },     
    "api_error_403_update": {
       "description": "data/js/lib.twitter.js",
       "message": "Twitter does not allow to update duplicate status :("
-   },
+   },     
    "api_error_404": {
       "description": "data/js/lib.twitter.js",
       "message": "The URL you request does not exist. Please check your API Base/OAuth Base/Search Base."
-   },
+   },   
    "api_error_406": {
       "description": "data/js/lib.twitter.js",
       "message": "An invalid format is specified in the Search API request."
-   },
+   },   
    "api_error_410": {
       "description": "data/js/lib.twitter.js",
       "message": "This API endpoint has been turned off."
-   },
+   },   
    "api_error_420": {
       "description": "data/js/lib.twitter.js",
       "message": "You are being rate limited."
-   },
+   },   
    "api_error_422": {
       "description": "data/js/lib.twitter.js",
       "message": "Unprocessable entity."
-   },
+   },   
    "api_error_429": {
       "description": "data/js/lib.twitter.js",
       "message": "Rate limit exceeded."
-   },
+   },   
    "api_error_500": {
       "description": "data/js/lib.twitter.js",
       "message": "Server is broken. Please try again later."
-   },
+   },   
    "api_error_502": {
       "description": "data/js/lib.twitter.js",
       "message": "Server is down or being upgraded. Please try again later."
-   },
+   },   
    "api_error_503": {
       "description": "data/js/lib.twitter.js",
       "message": "Server is in overcapacity. Please try again later."
-   },
+   },   
    "api_error_504": {
       "description": "data/js/lib.twitter.js",
       "message": "Gateway timeout. Please try again later."
-   },
+   },   
    "api_setting": {
       "description": "data/index.html",
       "message": "API Setting"
@@ -154,15 +154,19 @@
    "aspect": {
       "description": "data/index.html",
       "message": "Aspect Settings"
-   },
+   },   
    "assassin_s_tango": {
       "description": "data/index.html",
       "message": "Assassin's Tango"
    },
    "at_the_same_time": {
       "description": "data/js/filter.js",
-      "message": "at the same time"
+      "message": "at the same time"	
    },
+   "attached_video_file": {
+      "description": "data/index.html",
+      "message": "Attached video file"
+   },   
    "authentication_ok": {
       "description": "data/js/ui.welcome.js",
       "message": "Authentication OK!"
@@ -190,7 +194,7 @@
    "autoload_quoted_tweet": {
       "description": "data/index.html",
       "message": "Load and show quoted tweet automatically."
-   },
+   },   
    "automatically_sign_in_after_opening": {
       "description": "data/index.html",
       "message": "Automatically sign in after opening"
@@ -202,7 +206,7 @@
    "back": {
       "description": "data/index.html",
       "message": "Back"
-   },
+   },   
    "basic_auth_not_supported": {
       "description": "data/js/ui.status_box.js",
       "message": "Basic Auth is not supported, please use OAuth to upload images."
@@ -255,7 +259,7 @@
       "description": "data/js/ui.welcome.js",
       "message": "Character `@` is not allowed in profile prefix"
    },
-   "check_or_disable_custom_source_app": {
+   "check_or_disable_custom_source_app" : {
       "description": "data/js/ui.welcome.js",
       "message": "Please check your custom source app consumer key/secret values or just disable it and try again."
    },
@@ -282,15 +286,15 @@
    "chrome_sync_all": {
       "description": "data/index.html",
       "message": "Manually sync settings and mute filters"
-   },
+   },   
    "chrome_sync_no_token": {
       "description": "data/js/conf.js",
       "message": "No access token: you need to login in your Twitter account before to use this feature."
-   },
+   },     
    "chrome_sync_success": {
       "description": "data/js/conf.js",
       "message": "Settings and mute filters synchronized successfully!"
-   },
+   },    
    "chrome_sync_text": {
       "description": "data/index.html",
       "message": "Auto-sync opened views"
@@ -350,7 +354,7 @@
    "close": {
       "description": "data/index.html",
       "message": "Close"
-   },
+   },  
    "close_all_views": {
       "description": "data/index.html",
       "message": "Close all views"
@@ -358,7 +362,7 @@
    "close_all_views_confirm": {
       "description": "data/js/ui.slider.js",
       "message": "All currently opened views will be closed. Are you sure to continue?"
-   },
+   },  
    "close_current_column": {
       "description": "data/index.html",
       "message": "Close current column"
@@ -381,7 +385,7 @@
    },
    "comes_from_one_of_these_clients": {
       "description": "data/js/filter.js",
-      "message": "Comes from one of these clients"
+      "message": "Comes from one of these clients"	
    },
    "compose": {
       "description": "data/index.html",
@@ -398,7 +402,7 @@
    "congratulations": {
       "description": "data/index.html",
       "message": "Congratulations"
-   },
+   },   
    "contacting_hotot_in": {
       "description": "data/js/ui.status_box.js",
       "message": "Status length over 140 chars, contacting hotot.in..."
@@ -409,19 +413,19 @@
    },
    "contains_at_least_one_url": {
       "description": "data/js/filter.js",
-      "message": "Contains at least one URL"
+      "message": "Contains at least one URL"	
    },
    "contains_mentions_to": {
       "description": "data/js/filter.js",
-      "message": "Contains mentions to one of these users"
+      "message": "Contains mentions to one of these users"	
    },
    "contains_one_of_these_hashtags": {
       "description": "data/js/filter.js",
-      "message": "Contains one of these hashtags"
+      "message": "Contains one of these hashtags"	
    },
    "contains_one_of_these_words": {
       "description": "data/js/filter.js",
-      "message": "Contains one of these words"
+      "message": "Contains one of these words"	
    },
    "copied": {
       "description": "data/js/ui.context_menu.js",
@@ -450,7 +454,7 @@
    "creating_list": {
       "description": "data/js/ui.list_attr_dlg.js",
       "message": "Creating list..."
-   },
+   }, 
    "credits": {
       "description": "data/index.html",
       "message": "Credits"
@@ -475,13 +479,13 @@
       "description": "data/index.html",
       "message": "Custom Font"
    },
-   "custom_screen_name": {
-      "description": "data/index.html",
-      "message": "Display name on tweets"
-   },
    "custom_sound_text": {
       "description": "data/index.html",
       "message": "Use a custom notify sound"
+   },
+   "custom_screen_name": {
+      "description": "data/index.html",
+      "message": "Display name on tweets"
    },
    "custom_sound_title": {
       "description": "data/index.html",
@@ -494,7 +498,7 @@
    "default_speech_language": {
       "description": "data/index.html",
       "message": "Default speech recognition language"
-   },
+   },   
    "default_translation_language": {
       "description": "data/index.html",
       "message": "Default translation language"
@@ -550,7 +554,7 @@
    "description": {
       "description": "data/js/ui.template.js",
       "message": "Description"
-   },
+   },  
    "destroy": {
       "description": "data/js/ui.main.js",
       "message": "Destroy..."
@@ -566,7 +570,7 @@
    "details": {
       "description": "data/js/lib.twitter.js",
       "message": "Details"
-   },
+   },  
    "did_not_match_any_result": {
       "description": "data/js/ui.template.js",
       "message": "did not match any result."
@@ -574,7 +578,7 @@
    "dm_restart_hint": {
       "description": "data/index.html",
       "message": "WARNING: if you have the DM column currently opened to apply changes to DM view mode you need to close and open it again! Alternatively just restart Hotot+"
-   },
+   },   
    "donate": {
       "description": "data/index.html",
       "message": "Donate"
@@ -618,7 +622,7 @@
    "eastern": {
       "description": "data/index.html",
       "message": "Eastern"
-   },
+   },     
    "edit": {
       "description": "data/js/ui.template.js",
       "message": "Edit"
@@ -626,7 +630,47 @@
    "edit_title": {
       "description": "data/index.html",
       "message": "Edit this tweet"
-   },
+   },  
+   "emoji_activities": {
+      "description": "data/index.html",
+      "message": "Activities"
+   },   
+   "emoji_animals": {
+      "description": "data/index.html",
+      "message": "Animals & Nature"
+   },   
+   "emoji_backcolor": {
+      "description": "data/index.html",
+      "message": "Use a white background for emoji"
+   },   
+   "emoji_backcolor_title": {
+      "description": "data/index.html",
+      "message": "Show a white background for emoji (useful to avoid conflicts with some themes)"
+   }, 
+   "emoji_flags": {
+      "description": "data/index.html",
+      "message": "Flags"
+   },  
+   "emoji_food": {
+      "description": "data/index.html",
+      "message": "Food & Drink"
+   },  
+   "emoji_objects": {
+      "description": "data/index.html",
+      "message": "Objects"
+   },  
+   "emoji_places": {
+      "description": "data/index.html",
+      "message": "Travel & Places"
+   },    
+   "emoji_smiley": {
+      "description": "data/index.html",
+      "message": "Smileys & People"
+   },   
+   "emoji_symbols": {
+      "description": "data/index.html",
+      "message": "Symbols"
+   },     
    "enable": {
       "description": "data/js/ui.exts_dlg.js",
       "message": "Enable"
@@ -653,11 +697,11 @@
    },
    "err_mp4_duration": {
       "description": "data/js/ui.form_checker.js",
-      "message": "Error: MP4 video duration must be \u003C= 30s"
+      "message": "Error: MP4 video duration must be <= 30s"
    },
    "err_mp4_size": {
       "description": "data/js/ui.form_checker.js",
-      "message": "Error: MP4 video filesize must be \u003C= 15MB"
+      "message": "Error: MP4 video filesize must be <= 512MB"
    },
    "err_mp4_video": {
       "description": "data/js/ui.form_checker.js",
@@ -686,11 +730,11 @@
    "err_str_too_long": {
       "description": "data/js/ui.form_checker.js",
       "message": "Too many characters in this widget"
-   },
+   }, 
    "err_too_many_image": {
       "description": "data/js/ui.form_checker.js",
       "message": "You can attach up to 4 images per tweet"
-   },
+   },   
    "error_code": {
       "description": "data/js/ui.main.js",
       "message": "Error Code:"
@@ -698,11 +742,11 @@
    "error_occurred": {
       "description": "data/js/ui.status_box.js",
       "message": "An error occurred!"
-   },
+   },      
    "error_video_uploading": {
       "description": "data/js/videouploader.js",
       "message": "Error uploading your video"
-   },
+   },  
    "errors": {
       "description": "data/index.html",
       "message": "Errors"
@@ -710,11 +754,11 @@
    "errors_found_aborting": {
       "description": "data/js/ui.list_attr_dlg.js",
       "message": "errors found in your changes. Aborting..."
-   },
+   }, 
    "errors_html5_permissions": {
       "description": "data/js/ui.prefs_dlg.js",
       "message": "You must grant permissions to use HTML5 notifications!"
-   },
+   }, 
    "examples": {
       "description": "data/index.html",
       "message": "Examples"
@@ -734,7 +778,7 @@
    "failed": {
       "description": "data/js/ui.imageuploader.js",
       "message": "Failed!"
-   },
+   },   
    "failed_to_add": {
       "description": "data/js/ui.add_to_list_dlg.js",
       "message": "Failed to add"
@@ -750,15 +794,15 @@
    "favorited": {
       "description": "data/js/ui.main.js",
       "message": "Favorited!"
-   },
+   },   
    "favorited_by": {
       "description": "data/js/ui.template.js",
       "message": "Favorited by"
-   },
+   },   
    "favorited_your_tweet": {
       "description": "data/js/ui.main.js",
       "message": "has favorited one of your tweets!"
-   },
+   },   
    "favs": {
       "description": "data/js/ui.template.js",
       "message": "Favs"
@@ -814,7 +858,7 @@
    "firefox_version": {
       "description": "data/index.html",
       "message": "Firefox porting by"
-   },
+   },   
    "first_time_to_sign_in_with_twitter": {
       "description": "data/index.html",
       "message": "First time to sign in with Twitter"
@@ -878,7 +922,7 @@
    "google_blocked_you": {
       "description": "data/js/ui.main.js",
       "message": "Seems that Google Translate has blocked your IP address because of too requests. Please try to change your IP address or just compile the captcha you can find at the following page (after the submit you'll get a not found error, don't worry it's normal, just close the page and you'll can return to use this Hotot+ function again anyway):"
-   },
+   },   
    "greeting": {
       "description": "data/index.html",
       "message": "Greetings!"
@@ -886,27 +930,27 @@
    "has_been_installed": {
       "description": "data/index.html",
       "message": "has been installed successfully!"
-   },
+   },      
    "has_been_posted_by": {
       "description": "data/js/filter.js",
-      "message": "Has been posted by one of these users"
+      "message": "Has been posted by one of these users"	
    },
    "has_been_retweeted_by": {
       "description": "data/js/filter.js",
-      "message": "Has been retweeted by one of these users"
+      "message": "Has been retweeted by one of these users"	
    },
    "has_geo": {
       "description": "data/js/filter.js",
-      "message": "Has geo coordinates"
+      "message": "Has geo coordinates"	
    },
    "has_media": {
       "description": "data/js/filter.js",
-      "message": "Has any attached media"
+      "message": "Has any attached media"	
    },
    "he_she_has_protected_his_her_list": {
       "description": "data/js/ui.template.js",
       "message": "He/She has protected his/her list."
-   },
+   },  
    "help": {
       "description": "data/index.html",
       "message": "Help"
@@ -934,15 +978,15 @@
    "hide_media_link_text": {
       "description": "data/index.html",
       "message": "Hide Twitter media URL from the tweet."
-   },
+   },      
    "hide_media_link_title": {
       "description": "data/index.html",
       "message": "Don't display the Twitter media URL in the tweet's text if media preview is enabled."
-   },
+   },   
    "hide_title": {
       "description": "data/index.html",
       "message": "Temporarily hide this tweet"
-   },
+   },  
    "hint": {
       "description": "data/js/ui.welcome.js",
       "message": "Do you know that Hotot+ has more than 100 fixes and improvements than the old Hotot? You'll love it!"
@@ -950,39 +994,39 @@
    "home_exclude_replies": {
       "description": "data/js/ui.template.js",
       "message": "Without Replies"
-   },
+   },    
    "home_exclude_replies_title": {
       "description": "data/js/ui.template.js",
       "message": "Exclude replies from the Timeline"
-   },
+   },  
    "home_filter": {
       "description": "data/js/ui.template.js",
       "message": "Timeline filter"
-   },
+   }, 
    "home_full": {
       "description": "data/js/ui.template.js",
       "message": "Full"
-   },
+   },  
    "home_full_title": {
       "description": "data/js/ui.template.js",
       "message": "Show the whole home timeline"
-   },
+   },  
    "home_media_only": {
       "description": "data/js/ui.template.js",
       "message": "Media Only"
-   },
+   },  
    "home_media_only_title": {
       "description": "data/js/ui.template.js",
       "message": "Show only tweets that contains media entities"
-   },
+   },            
    "home_no_rt": {
       "description": "data/js/ui.template.js",
       "message": "Hide Retweets (from now on)"
-   },
+   },   
    "home_timeline": {
       "description": "data/js/ui.slider.js",
       "message": "Home Timeline"
-   },
+   },  
    "home_view": {
       "description": "data/index.html",
       "message": "Home View"
@@ -998,15 +1042,15 @@
    "hotot_description": {
       "description": "manifest.json",
       "message": "Fixed and improved unofficial mod by Red Squirrel of Hotot, the famous and lightweight Twitter client."
-   },
+   },    
    "hotot_goto": {
       "description": "manifest.json",
       "message": "Go to Hotot+"
-   },
+   },      
    "http_code": {
       "description": "data/js/lib.twitter.js",
       "message": "HTTP Code"
-   },
+   },   
    "image_uploader": {
       "description": "data/index.html",
       "message": "Image uploader"
@@ -1014,11 +1058,11 @@
    "in_reply_to": {
       "description": "data/js/ui.template.js",
       "message": "In reply to"
-   },
+   },   
    "include_status": {
       "description": "data/index.html",
       "message": "Quote tweet"
-   },
+   },    
    "info": {
       "description": "data/js/ui.template.js",
       "message": "Info"
@@ -1054,7 +1098,7 @@
    "items_for_request_hint": {
       "description": "data/index.html",
       "message": "the parameters above correspond to the number of tweets that will be returned by every request to the Twitter's API. High values can cause low performance in the program (it has to analyze a bigger number of tweets to display them in the right column and position) but they reduce the risks to exceed the limitations imposed by Twitter's API (having more tweet returned for any request there will be less need to do other requests) and the risk of receiving only a portion of new tweets to display. Conversely low values bring to a faster and quick program (it will analyze fewer tweets every time) but carry a high risk of exceeding the time limits imposed by Twitter's API (you need more requests to get a large number of results) and may lead to the acquisition of only a portion of the actual new tweets to display (in case these were more than the set value). So with these two options you can now try different combinations and find the best optimization for your taste."
-   },
+   },   
    "items_for_request_hint_default": {
       "description": "data/index.html",
       "message": "Anyway if you are not sure what you're doing, you should leave the default values."
@@ -1066,19 +1110,19 @@
    "items_for_request_more_text": {
       "description": "data/index.html",
       "message": "Items for request (old tweets)"
-   },
+   },   
    "items_for_request_more_title": {
       "description": "data/index.html",
       "message": "Value relative to the requests for old tweets, ie the requests made by the user manually when wants to read tweets prior to those already loaded by Hotot+ automatically"
-   },
+   },   
    "items_for_request_text": {
       "description": "data/index.html",
       "message": "Items for request (new tweets)"
-   },
+   },   
    "items_for_request_title": {
       "description": "data/index.html",
       "message": "Value relative to the requests for new tweets, including also the ones made by Hotot+ automatically"
-   },
+   },   
    "join": {
       "description": "data/js/ui.template.js",
       "message": "Join"
@@ -1122,15 +1166,15 @@
    "liked": {
       "description": "data/js/ui.main.js",
       "message": "Liked!"
-   },
+   },   
    "liked_by": {
       "description": "data/js/ui.template.js",
       "message": "Liked by"
-   },
+   },   
    "liked_your_tweet": {
       "description": "data/js/ui.main.js",
       "message": "liked one of your tweets!"
-   },
+   },   
    "likes": {
       "description": "data/js/ui.template.js",
       "message": "Likes"
@@ -1170,7 +1214,7 @@
    "load_more": {
       "description": "data/js/ui.dm_tabs.js",
       "message": "Load Older"
-   },
+   },     
    "loading_dots": {
       "description": "data/js/ui.template.js",
       "message": "Loading... "
@@ -1178,11 +1222,11 @@
    "loading_messages": {
       "description": "data/js/hotot.js",
       "message": "Loading more messages (DM)..."
-   },
+   },   
    "loading_resources_hint": {
       "description": "data/index.html",
       "message": "Loading Resources..."
-   },
+   },   
    "loading_tweets": {
       "description": "data/js/hotot.js",
       "message": "Loading Tweets..."
@@ -1194,11 +1238,11 @@
    "lookup": {
       "description": "data/js/hohot.js",
       "message": "Lookup"
-   },
+   },   
    "lost_connection": {
       "description": "data/js/lib.twitter.js",
       "message": "Lost Connection"
-   },
+   },     
    "make_sure_all_words_are_spelled_correctly": {
       "description": "data/js/ui.template.js",
       "message": "Make sure all words are spelled correctly."
@@ -1246,7 +1290,7 @@
    "mods_by": {
       "description": "data/index.html",
       "message": "Mods, fixes and improvements by"
-   },
+   },   
    "more_actions": {
       "description": "data/js/ui.template.js",
       "message": "More"
@@ -1270,7 +1314,7 @@
    "mute": {
       "description": "data/js/ui.template.js",
       "message": "Mute"
-   },
+   },     
    "mute_added": {
       "description": "data/js/ui.filter_dlg.js",
       "message": "Mute filter created or updated successfully!"
@@ -1322,7 +1366,7 @@
    "mute_twitter_confirm": {
       "description": "data/js/ui.template.js",
       "message": "Warning: you will NOT view tweets and retweets of this user in your home timeline anymore but he will still can send you mentions and direct messages. Are you sure to continue and mute"
-   },
+   },   
    "my_favs": {
       "description": "data/js/ui.slider.js",
       "message": "My Favorites"
@@ -1362,7 +1406,7 @@
    "new_messages": {
       "description": "data/js/ui.dm_tabs.js",
       "message": "New unread message(s)"
-   },
+   },     
    "new_notifications": {
       "description": "data/ui.main.js",
       "message": "new notifications!"
@@ -1378,11 +1422,11 @@
    "new_version_installed": {
       "description": "data/index.html",
       "message": "New version installed"
-   },
+   },         
    "new_version_of": {
       "description": "data/index.html",
       "message": "a new version of"
-   },
+   },         
    "next": {
       "description": "data/index.html",
       "message": "Next"
@@ -1394,19 +1438,19 @@
    "no_hashtag": {
       "description": "data/js/ui.template.js",
       "message": "Ignore hashtags"
-   },
+   },     
    "no_rt": {
       "description": "data/js/ui.template.js",
       "message": "Turn off Retweets"
-   },
+   },     
    "no_rt_twitter_confirm": {
       "description": "data/js/ui.template.js",
       "message": "Retweets of this user will not appear in your home timeline anymore. Are you sure to turn off retweets of"
-   },
+   },    
    "none": {
       "description": "data/index.html",
       "message": "None"
-   },
+   },   
    "not_avaiable_yet": {
       "description": "data/index.html",
       "message": "Not available yet :)"
@@ -1490,11 +1534,11 @@
    "notify_desktop": {
       "description": "data/js/ui.template.js",
       "message": "Desktop notification"
-   },
+   },         
    "notify_favorited_text": {
       "description": "data/index.html",
       "message": "Notify liked tweets"
-   },
+   },   
    "notify_favorited_title": {
       "description": "data/index.html",
       "message": "Notify also when an user likes one of your tweets"
@@ -1538,7 +1582,7 @@
    "only_the_owner_can_access_this_list": {
       "description": "data/js/ui.template.js",
       "message": "Only the owner can access this list."
-   },
+   },  
    "oops_a_network_error_occurs": {
       "description": "data/js/ui.welcome.js",
       "message": "Oops, a network error occured"
@@ -1554,26 +1598,26 @@
    "oops_an_error_occurs": {
       "description": "data/js/lib.twitter.js",
       "message": "Oops, an error occured!"
-   },
+   },   
    "oops_hotot_not_running": {
       "description": "data/js/background.js",
       "message": "Oops, Hotot+ is not running!"
-   },
+   },     
    "oops_not_signed": {
       "description": "data/js/background.js",
       "message": "Oops, you are not signed in!"
-   },
+   }, 
    "open_a_list_dots": {
       "description": "data/index.html",
       "message": "Open a List..."
    },
-   "open_a_profile_dots": {
-      "description": "data/index.html",
-      "message": "Open a Profile..."
-   },
    "open_all_list_dots": {
       "description": "data/index.html",
       "message": "Open all my Lists..."
+   },
+   "open_a_profile_dots": {
+      "description": "data/index.html",
+      "message": "Open a Profile..."
    },
    "open_first_link": {
       "description": "data/index.html",
@@ -1582,7 +1626,7 @@
    "open_profile_in_hotot": {
       "description": "data/js/daemon.js",
       "message": "Open his profile in Hotot+"
-   },
+   },   
    "open_speaker_link": {
       "description": "data/index.html",
       "message": "Open speaker link"
@@ -1606,19 +1650,19 @@
    "original_credits": {
       "description": "data/index.html",
       "message": "Original Hotot Credits"
-   },
+   },   
    "own_tweets": {
       "description": "data/js/ui.template.js",
       "message": "Own Tweets"
-   },
+   }, 
    "own_tweets_tip": {
       "description": "data/js/ui.template.js",
       "message": "Include only user's public direct tweets, excluding retweets and replies."
-   },
+   }, 
    "owner": {
       "description": "data/js/ui.template.js",
       "message": "Owner"
-   },
+   },  
    "page_on_schedule": {
       "description": "data/js/daemon.js",
       "message": "page(s) on schedule"
@@ -1638,23 +1682,23 @@
    "password_alert": {
       "description": "data/js/ui.welcome.js",
       "message": "You must insert the password (that one of your current profile if any or the password you want to add it) in the textbox before you can proceed with any operation!"
-   },
+   },   
    "password_chosen": {
       "description": "data/js/ui.welcome.js",
       "message": "Chosen Password:"
-   },
+   },     
    "password_confirm_add": {
       "description": "data/js/ui.welcome.js",
       "message": "Are you sure to add the following password to your current profile? If you forget the password you'll have no way to recover it."
-   },
+   },      
    "password_confirm_remove": {
       "description": "data/js/ui.welcome.js",
       "message": "Are you sure to proceed to remove the password for your current profile?"
-   },
+   },        
    "password_manage": {
       "description": "data/index.html",
       "message": "Manage password"
-   },
+   },      
    "paste_from_clipboard": {
       "description": "date/index.html",
       "message": "Paste from clipboard"
@@ -1802,7 +1846,7 @@
    "quote_link_title": {
       "description": "data/index.html",
       "message": "Quote this tweet link"
-   },
+   },   
    "quote_title": {
       "description": "data/index.html",
       "message": "Quote this tweet text"
@@ -1814,7 +1858,7 @@
    "raw_preview_title": {
       "description": "data/index.html",
       "message": "Don't load raw images previews (prevents crashes in case of images too heavy)"
-   },
+   },      
    "read_later": {
       "description": "data/index.html",
       "message": "Read Later"
@@ -1830,7 +1874,7 @@
    "reason": {
       "description": "data/js/lib.twitter.js",
       "message": "Reason"
-   },
+   },  
    "regex_hint1": {
       "description": "data/index.html",
       "message": "faster but can make replacing errors with URLs sometimes."
@@ -1838,7 +1882,7 @@
    "regex_hint2": {
       "description": "data/index.html",
       "message": "slower (requires more loops) but should avoid any replacing error with URLs."
-   },
+   },   
    "relation": {
       "description": "data/js/ui.template.js",
       "message": "Relation"
@@ -1882,7 +1926,7 @@
    "report_bug": {
       "description": "data/index.html",
       "message": "Report a bug"
-   },
+   },   
    "report_spam": {
       "description": "data/js/ui.template.js",
       "message": "Report Spam"
@@ -1898,23 +1942,23 @@
    "restart_hint": {
       "description": "data/index.html",
       "message": "Note: changes to the following options will take effect only on the next tweets! If you want to apply them immediately, just restart Hotot+."
-   },
+   }, 
    "restart_streams_fail": {
       "description": "data/index.html",
       "message": "ERROR: user streaming API currently not running!"
-   },
+   }, 
    "restart_streams_success": {
       "description": "data/index.html",
       "message": "User streaming API restarted successfully!"
-   },
+   },  
    "restart_streams_text": {
       "description": "data/index.html",
       "message": "Restart Streams"
-   },
+   }, 
    "restart_streams_title": {
       "description": "data/index.html",
       "message": "Restart the user streaming API connection"
-   },
+   },    
    "restore_defaults": {
       "description": "data/index.html",
       "message": "Restore Defaults Settings"
@@ -1927,6 +1971,10 @@
       "description": "data/index.html",
       "message": "Retweet"
    },
+   "retweet_title": {
+      "description": "data/index.html",
+      "message": "Retweet this tweet"
+   },
    "retweet_or_un_retweet": {
       "description": "data/index.html",
       "message": "Retweet/Unretweet"
@@ -1934,10 +1982,6 @@
    "retweet_successfully": {
       "description": "data/js/ui.main.js",
       "message": "Retweet successful!"
-   },
-   "retweet_title": {
-      "description": "data/index.html",
-      "message": "Retweet this tweet"
    },
    "retweeted_by": {
       "description": "data/js/ui.template.js",
@@ -2051,6 +2095,10 @@
       "description": "data/js/hotot.js",
       "message": "Search Result of"
    },
+   "search_view": {
+      "description": "data/index.html",
+      "message": "Search View"
+   },
    "search_this_hashtag_text": {
       "description": "data/index.html",
       "message": "Search for..."
@@ -2059,14 +2107,10 @@
       "description": "data/index.html",
       "message": "Search for this hashtag"
    },
-   "search_view": {
-      "description": "data/index.html",
-      "message": "Search View"
-   },
    "select_a_default_speech_language": {
       "description": "data/index.html",
       "message": "Select the default speech recognition language"
-   },
+   },   
    "select_a_default_translation_language": {
       "description": "data/index.html",
       "message": "Select the default language in which to translate the tweets using the specific option"
@@ -2090,15 +2134,15 @@
    "select_background": {
       "description": "data/index.html",
       "message": "Background image at login screen"
-   },
+   },   
    "select_emoji_size": {
       "description": "data/index.html",
       "message": "Emoji size in pixels"
-   },
+   },   
    "select_emoji_size_title": {
       "description": "data/index.html",
       "message": "The size of images that will replace emoji in tweets."
-   },
+   },      
    "select_fields": {
       "description": "data/index.html",
       "message": "Select fields"
@@ -2122,19 +2166,19 @@
    "share_image": {
       "description": "data/js/background.js",
       "message": "Share this image with Hotot+"
-   },
+   },       
    "share_link": {
       "description": "data/js/background.js",
       "message": "Share this link with Hotot+"
-   },
+   },     
    "share_page": {
       "description": "data/js/background.js",
       "message": "Share this page with Hotot+"
-   },
+   },   
    "share_selection": {
       "description": "data/js/background.js",
       "message": "Share selected text with Hotot+"
-   },
+   },          
    "shiny_old_times_before_marriage": {
       "description": "data/index.html",
       "message": "Shiny old times before marriage"
@@ -2154,11 +2198,11 @@
    "show_seconds_in_timestamp": {
       "description": "data/index.html",
       "message": "Show seconds in timestamp."
-   },
+   },   
    "show_seconds_in_timestamp_title": {
       "description": "data/index.html",
       "message": "Show also the seconds in the timestamp"
-   },
+   },    
    "show_social_text": {
       "description": "data/index.html",
       "message": "Show likes/RT counts for each tweet"
@@ -2166,11 +2210,11 @@
    "show_social_title": {
       "description": "data/index.html",
       "message": "Show under every tweet how many times it has been liked and retweeted"
-   },
+   },   
    "show_volume": {
       "description": "data/js/ui.template.js",
       "message": "Show last 24h volume"
-   },
+   },     
    "show_youtube": {
       "description": "data/index.html",
       "message": "Show Youtube videos directly in the tweet."
@@ -2186,7 +2230,7 @@
    "sign_in_to_share": {
       "description": "data/js/background.js",
       "message": "Please sign in to share contents."
-   },
+   }, 
    "sign_out": {
       "description": "data/index.html",
       "message": "Sign Out"
@@ -2218,19 +2262,19 @@
    "speech_error": {
       "description": "data/index.html",
       "message": "Sorry, Web Speech API is not supported by this browser. Please upgrade to Google Chrome version 25 or later to use this function."
-   },
+   },   
    "speech_rec": {
       "description": "data/index.html",
       "message": "Speech Recognition"
-   },
+   },   
    "start_hotot": {
       "description": "data/js/background.js",
       "message": "Please start Hotot+ and sign in to share contents."
-   },
+   },   
    "starts_following_you": {
       "description": "data/js/daemon.js",
       "message": "starts following you on Twitter!"
-   },
+   },   
    "stat": {
       "description": "data/index.html",
       "message": "STAT"
@@ -2330,15 +2374,15 @@
    "translate": {
       "description": "data/index.html",
       "message": "Translate"
-   },
+   },   
    "translate_access_token_error": {
       "description": "data/js/ui.main.js",
       "message": "Error getting Bing Translator access token!"
-   },
+   },  
    "translate_this": {
       "description": "data/index.html",
       "message": "Translate @"
-   },
+   },      
    "translate_title": {
       "description": "data/index.html",
       "message": "Translate the tweet into your language"
@@ -2346,7 +2390,7 @@
    "translating": {
       "description": "data/js/ui.main.js",
       "message": "Translating..."
-   },
+   },      
    "transparent": {
       "description": "data/index.html",
       "message": "Transparent"
@@ -2358,7 +2402,7 @@
    "trends_view": {
       "description": "data/index.html",
       "message": "Trending Topics view"
-   },
+   },   
    "try_different_keywords": {
       "description": "data/js/ui.template.js",
       "message": "Try different keywords."
@@ -2370,11 +2414,7 @@
    "tt_number": {
       "description": "data/js/ui.template.js",
       "message": "Amount"
-   },
-   "tweet_cnt": {
-      "description": "data/js/ui.template.js",
-      "message": "Tweet"
-   },
+   },      
    "tweet_contains_hashtags": {
       "description": "data/index.html",
       "message": "Tweet contains hashtags:"
@@ -2386,6 +2426,10 @@
    "tweet_contains_words": {
       "description": "data/index.html",
       "message": "Tweet contains words:"
+   },
+   "tweet_cnt": {
+      "description": "data/js/ui.template.js",
+      "message": "Tweet"
    },
    "tweet_has_attribute": {
       "description": "data/index.html",
@@ -2438,7 +2482,7 @@
    "type_and_press_enter_to_search": {
       "description": "data/js/ui.template.js",
       "message": "Type and press enter to search."
-   },
+   },  
    "type_or_drag_a_photo_here": {
       "description": "data/index.html",
       "message": "Type or drag a photo here"
@@ -2454,7 +2498,7 @@
    "unable_get_image": {
       "description": "data/js/background.js",
       "message": "Unable to get the chosen image!"
-   },
+   },     
    "unblock": {
       "description": "data/js/ui.template.js",
       "message": "Unblock"
@@ -2482,11 +2526,11 @@
    "unknown_error": {
       "description": "data/js/lib.twitter.js",
       "message": "Unknown Error"
-   },
+   },   
    "unmute": {
       "description": "data/js/ui.template.js",
       "message": "Unmute"
-   },
+   },   
    "update": {
       "description": "data/index.html",
       "message": "Update"
@@ -2522,7 +2566,7 @@
    "updating_list": {
       "description": "data/js/ui.list_attr_dlg.js",
       "message": "Updating List..."
-   },
+   }, 
    "upload": {
       "description": "data/index.html",
       "message": "Upload"
@@ -2538,7 +2582,7 @@
    "upload_success": {
       "description": "data/js/ui.imageuploader.js",
       "message": "Uploaded Successfully!"
-   },
+   },   
    "upload_to_dots": {
       "description": "data/index.html",
       "message": "Upload to..."
@@ -2579,6 +2623,10 @@
       "description": "data/index.html",
       "message": "Processing your request, please wait..."
    },
+   "uploading_video": {
+      "description": "data/index.html",
+      "message": "Uploading video"
+   },
    "url_shortener": {
       "description": "data/index.html",
       "message": "URL shortener"
@@ -2586,15 +2634,15 @@
    "use_custom_font": {
       "description": "data/index.html",
       "message": "Use Custom Font"
-   },
-   "use_custom_source_app_name": {
+   },        
+   "use_custom_source_app_name" : {
       "description": "data/index.html",
       "message": "Use a custom source app"
-   },
+   }, 
    "use_emoji": {
       "description": "data/index.html",
       "message": "Parse and show emoji in tweets"
-   },
+   },      
    "use_emoji_title": {
       "description": "data/index.html",
       "message": "If an emoji will be found in a tweet the program will replace it with the corresponding Twitter's image."
@@ -2602,11 +2650,11 @@
    "use_header_flap_text": {
       "description": "data/index.html",
       "message": "Enable dropdown header bar"
-   },
+   }, 
    "use_header_flap_title": {
       "description": "data/index.html",
       "message": "Automatically hide the header bar on mouse leave"
-   },
+   }, 
    "use_new_dm_view": {
       "description": "data/index.html",
       "message": "Use new DM view mode"
@@ -2614,7 +2662,7 @@
    "use_new_dm_view_title": {
       "description": "data/index.html",
       "message": "Use the new ordered-for-user view mode for direct messages"
-   },
+   },   
    "use_quote_as_default_retweet_action": {
       "description": "data/index.html",
       "message": "Use QUOTE as default retweet action"
@@ -2634,7 +2682,7 @@
    "use_regex_title": {
       "description": "data/index.html",
       "message": "Use regex to parse media URL instead of Twitter entities."
-   },
+   },      
    "use_reply_all_as_default_reply_action": {
       "description": "data/index.html",
       "message": "Use REPLY ALL as default reply action"
@@ -2670,7 +2718,7 @@
    "used_libraries": {
       "description": "data/index.html",
       "message": "Used libraries"
-   },
+   },      
    "username": {
       "description": "data/index.html",
       "message": "Username"
@@ -2698,7 +2746,7 @@
    "video_quality": {
       "description": "data/index.html",
       "message": "Video quality"
-   },
+   },   
    "video_uploader": {
       "description": "data/index.html",
       "message": "Video uploader"
@@ -2706,11 +2754,11 @@
    "view_changelog": {
       "description": "data/index.html",
       "message": "You can view the complete changelog of this new version at"
-   },
+   },   
    "view_hide_conversation": {
       "description": "data/js/ui.template.js",
       "message": "Show/hide conversation"
-   },
+   },          
    "view_more_conversation": {
       "description": "data/js/ui.template.js",
       "message": "View more conversation"
@@ -2718,11 +2766,11 @@
    "view_replies_text": {
       "description": "data/index.html",
       "message": "View replies"
-   },
+   },  
    "view_replies_title": {
       "description": "data/index.html",
       "message": "Search for all replies to this tweet"
-   },
+   },     
    "virushou_s_integrity": {
       "description": "data/index.html",
       "message": "Virushou's Integrity"
@@ -2746,7 +2794,7 @@
    "western": {
       "description": "data/index.html",
       "message": "Western"
-   },
+   },     
    "whisper": {
       "description": "data/js/ui.welcome.js",
       "message": "Whisper"
@@ -2770,7 +2818,7 @@
    "yes_rt": {
       "description": "data/js/ui.template.js",
       "message": "Turn on Retweets"
-   },
+   },      
    "you_are_followed_by_them": {
       "description": "data/js/ui.peopleview.js",
       "message": "You are followed by them."

@@ -75,6 +75,10 @@ function init () {
 	var esize = $(this).val();
 	$('.emoji').css('height', esize + ((esize > 3) ? 'px' : 'em'));
     });
+    $('#chk_prefs_emoji_backcolor').change(
+    function (event) {
+	$('.emoji').css('background-color', $(this).prop('checked') ? 'white' : 'transparent');
+    });    
     
     $('#range_prefs_items_for_request').change(
     function (event) {
@@ -336,7 +340,10 @@ function load_prefs() {
     $('#chk_prefs_use_emoji')
         .attr('checked', prefs.use_emoji)
         .prop('checked', prefs.use_emoji);
-    $('#sel_prefs_emoji_size').val(prefs.emoji_size);	
+    $('#sel_prefs_emoji_size').val(prefs.emoji_size);
+    $('#chk_prefs_emoji_backcolor')
+        .attr('checked', prefs.emoji_backcolor)
+        .prop('checked', prefs.emoji_backcolor);	
     
     $('#sel_custom_screen_name').val(prefs.screen_name);
 
@@ -550,6 +557,7 @@ function save_prefs() {
     if (prefs.emoji_size === '') {
         prefs.emoji_size = 14;
     }
+    prefs.emoji_backcolor = $('#chk_prefs_emoji_backcolor').prop('checked');
     
     prefs.screen_name = $('#sel_custom_screen_name').val();
     

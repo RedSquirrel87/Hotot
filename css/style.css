@@ -304,7 +304,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', end
 	padding: 5px 8px;
 	box-sizing: border-box;
 	overflow: auto;
-	height: 100%;
+	height: 180px;
+	max-height: 100%;
+	text-align: center;
+}
+
+#status_smiley_header {
+	display: block;
 }
 
 #status_smiley_inner {
@@ -2395,19 +2401,30 @@ ul.emoji-list * {
       user-select: none;
 }
 ul.emoji-list li {
-      font-size: 32px;
+      font-size: 34px;
       float: left;
       display: inline-block;
-      padding: 2px;
-      margin: 4px;
+      padding: 1px;
+      margin: 1px;
 }
 ul.emoji-list li img.emoji {
       cursor: pointer;
       height: 1em;
       width: 1em;
-      margin: 0 .05em 0 .1em;
+      margin: 0 .05em;
       vertical-align: -0.1em;
 }
+.emoji-cat { 
+	height: 22px; 
+	cursor: pointer; 
+	padding: 3px; 
+}
+.emoji-cat.selected {
+	background-color: rgba(0,0,0,0.2); 
+	box-shadow: 0 0 3px rgba(0,0,0,0.2); 
+	opacity: 1; 
+}
+.emoji-cat-smiley, .emoji-cat-animals, .emoji-cat-food, .emoji-cat-places, .emoji-cat-activities, .emoji-cat-objects, .emoji-cat-symbols, .emoji-cat-flags { display: none; }
 
 /*=====*/
 .hint {

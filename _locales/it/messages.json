@@ -49,7 +49,7 @@
    },
    "all_conditions_true": {
       "description": "data/js/filter.js",
-      "message": "il twit se tutte le seguenti condizioni sono VERE"
+      "message": "il twit se tutte le seguenti condizioni sono VERE"	
    },
    "already_tweeted": {
       "description": "data/js/ui.status_box.js",
@@ -66,7 +66,7 @@
    "any": {
       "description": "data/js/ui.dm_tbas.js",
       "message": "Visualizza tutti"
-   },
+   },      
    "api_base": {
       "description": "data/index.html",
       "message": "API Base"
@@ -74,15 +74,15 @@
    "api_error_0": {
       "description": "data/js/lib.twitter.js",
       "message": "Connessione con il server persa."
-   },
+   },    
    "api_error_400": {
       "description": "data/js/lib.twitter.js",
       "message": "Richiesta errata: La richiesta non era valida.."
-   },
+   },   
    "api_error_401": {
       "description": "data/js/lib.twitter.js",
       "message": "Il server non è riuscito ad autenticarti. Controlla i tuoi dati d'accesso e l'API base."
-   },
+   },   
    "api_error_403_fav": {
       "description": "data/js/lib.twitter.js",
       "message": "Hai già fatto Mi piace o inserito questo tweet nei preferiti."
@@ -90,55 +90,55 @@
    "api_error_403_retweet": {
       "description": "data/js/lib.twitter.js",
       "message": "Hai già retwittato questo tweet, oppure è protetto."
-   },
+   },     
    "api_error_403_unknown": {
       "description": "data/js/lib.twitter.js",
       "message": "Twitter ha rifiutato la tua richiesta."
-   },
+   },     
    "api_error_403_update": {
       "description": "data/js/lib.twitter.js",
       "message": "Twitter non permette di inserire duplicati di tweet già postati."
-   },
+   },     
    "api_error_404": {
       "description": "data/js/lib.twitter.js",
       "message": "L'URL che hai richiesto non esiste. Controlla le tue API Base/OAuth Base/di Ricerca Base."
-   },
+   },   
    "api_error_406": {
       "description": "data/js/lib.twitter.js",
       "message": "Un formato non valido è stato specificato nella tua richiesta."
-   },
+   },   
    "api_error_410": {
       "description": "data/js/lib.twitter.js",
       "message": "Questa API è stata disattivata."
-   },
+   },   
    "api_error_420": {
       "description": "data/js/lib.twitter.js",
       "message": "Sei stato limitato da Twitter."
-   },
+   },   
    "api_error_422": {
       "description": "data/js/lib.twitter.js",
       "message": "Entità non precessabile."
-   },
+   },   
    "api_error_429": {
       "description": "data/js/lib.twitter.js",
       "message": "Hai superato il limite orario consentito per questa API. Riprova tra 15 minuti."
-   },
+   },   
    "api_error_500": {
       "description": "data/js/lib.twitter.js",
       "message": "Errore interno del server. Riprova più tardi."
-   },
+   },   
    "api_error_502": {
       "description": "data/js/lib.twitter.js",
       "message": "Il server è down o in manutenzione. Riprova più tardi."
-   },
+   },   
    "api_error_503": {
       "description": "data/js/lib.twitter.js",
       "message": "Il server è sovraccarico. Riprova più tardi."
-   },
+   },   
    "api_error_504": {
       "description": "data/js/lib.twitter.js",
       "message": "Timeout Gateway. Riprova più tardi."
-   },
+   },     
    "api_setting": {
       "description": "data/index.html",
       "message": "Impostazioni API"
@@ -154,15 +154,19 @@
    "aspect": {
       "description": "data/index.html",
       "message": "Impostazioni Aspetto"
-   },
+   },      
    "assassin_s_tango": {
       "description": "data/index.html",
       "message": "Assassin's Tango"
    },
    "at_the_same_time": {
       "description": "data/js/filter.js",
-      "message": "contemporaneamente"
+      "message": "contemporaneamente"	
    },
+   "attached_video_file": {
+      "description": "data/index.html",
+      "message": "File video allegato"
+   },   
    "authentication_ok": {
       "description": "data/js/ui.welcome.js",
       "message": "Autenticazione OK!"
@@ -174,7 +178,7 @@
    "authorizing": {
       "description": "data/js/ui.pin_dlg.js",
       "message": "Autorizzazione in corso..."
-   },
+   }, 
    "auto_longer_tweet": {
       "description": "data/index.html",
       "message": "Accorcia automaticamente i tweet troppo lunghi"
@@ -202,7 +206,7 @@
    "back": {
       "description": "data/index.html",
       "message": "Indietro"
-   },
+   },     
    "basic_auth_not_supported": {
       "description": "data/js/ui.status_box.js",
       "message": "Auth base non supportata, per favore utilizza OAuth per l'upload delle immagini."
@@ -255,7 +259,7 @@
       "description": "data/js/ui.welcome.js",
       "message": "Il carattere `@` non è consentito nel prefisso del profilo"
    },
-   "check_or_disable_custom_source_app": {
+   "check_or_disable_custom_source_app" : {
       "description": "data/js/ui.welcome.js",
       "message": "Controlla la correttezza dei valori di consumer key/secret della tua app sorgente personalizzata (oppure semplicemente disattivala) e poi riprova."
    },
@@ -282,14 +286,18 @@
    "chrome_sync_all": {
       "description": "data/index.html",
       "message": "Sincronizza manualmente impostazioni e filtri"
-   },
+   },    
    "chrome_sync_no_token": {
       "description": "data/js/conf.js",
       "message": "Access token assente: devi effettuare il login nel tuo account Twitter prima di poter usare questa funzione."
-   },
+   },     
    "chrome_sync_success": {
       "description": "data/js/conf.js",
       "message": "Impostazioni e filtri sincronizzati con successo!"
+   },    
+   "chrome_syncing": {
+      "description": "data/index.html",
+      "message": "Sincronizzazione con il cloud..."
    },
    "chrome_sync_text": {
       "description": "data/index.html",
@@ -298,10 +306,6 @@
    "chrome_sync_title": {
       "description": "data/index.html",
       "message": "Sincronizza le colonne aperte in Hotot+ utilizzando il servizio cloud ufficiale di Google Chrome"
-   },
-   "chrome_syncing": {
-      "description": "data/index.html",
-      "message": "Sincronizzazione con il cloud..."
    },
    "classic": {
       "description": "data/index.html",
@@ -358,11 +362,11 @@
    "close_all_views": {
       "description": "data/index.html",
       "message": "Chiudi tutte le colonne"
-   },
+   },      
    "close_all_views_confirm": {
       "description": "data/js/ui.slider.js",
       "message": "Tutte le colonne attualmente aperte verranno chiuse. Sicuro di voler continuare?"
-   },
+   },     
    "close_current_column": {
       "description": "data/index.html",
       "message": "Chiudi la colonna attuale"
@@ -385,7 +389,7 @@
    },
    "comes_from_one_of_these_clients": {
       "description": "data/js/filter.js",
-      "message": "Proviene da uno di questi client"
+      "message": "Proviene da uno di questi client"	
    },
    "compose": {
       "description": "data/index.html",
@@ -402,7 +406,7 @@
    "congratulations": {
       "description": "data/index.html",
       "message": "Complimenti"
-   },
+   },      
    "contacting_hotot_in": {
       "description": "data/js/ui.status_box.js",
       "message": "Tweet più lungo di 140 caratteri, contatto hotot.in..."
@@ -413,19 +417,19 @@
    },
    "contains_at_least_one_url": {
       "description": "data/js/filter.js",
-      "message": "Contiene almeno un URL"
+      "message": "Contiene almeno un URL"	
    },
    "contains_mentions_to": {
       "description": "data/js/filter.js",
-      "message": "Contiene menzioni a uno di questi utenti"
+      "message": "Contiene menzioni a uno di questi utenti"	
    },
    "contains_one_of_these_hashtags": {
       "description": "data/js/filter.js",
-      "message": "Contiene uno di questi hashtag"
+      "message": "Contiene uno di questi hashtag"	
    },
    "contains_one_of_these_words": {
       "description": "data/js/filter.js",
-      "message": "Contiene una di queste parole"
+      "message": "Contiene una di queste parole"	
    },
    "copied": {
       "description": "data/js/ui.context_menu.js",
@@ -454,7 +458,7 @@
    "creating_list": {
       "description": "data/js/ui.list_attr_dlg.js",
       "message": "Creazione della lista..."
-   },
+   }, 
    "credits": {
       "description": "data/index.html",
       "message": "Crediti"
@@ -482,7 +486,7 @@
    "custom_screen_name": {
       "description": "data/index.html",
       "message": "Nome da visualizzare sui tweet"
-   },
+   },   
    "custom_sound_text": {
       "description": "data/index.html",
       "message": "Suono di notifica personalizzato"
@@ -498,7 +502,7 @@
    "default_speech_language": {
       "description": "data/index.html",
       "message": "Linguaggio del riconoscimento vocale"
-   },
+   },     
    "default_translation_language": {
       "description": "data/index.html",
       "message": "Linguaggio di traduzione predefinito"
@@ -554,7 +558,7 @@
    "description": {
       "description": "data/js/ui.template.js",
       "message": "Descrizione"
-   },
+   },  
    "destroy": {
       "description": "data/js/ui.main.js",
       "message": "Eliminazione in corso..."
@@ -570,7 +574,7 @@
    "details": {
       "description": "data/js/lib.twitter.js",
       "message": "Dettagli"
-   },
+   },  
    "did_not_match_any_result": {
       "description": "data/js/ui.template.js",
       "message": "non ha riscontrato alcun risultato."
@@ -578,7 +582,7 @@
    "dm_restart_hint": {
       "description": "data/index.html",
       "message": "ATTENZIONE: se hai la colonna dei DM già aperta affinché il cambio di modalità di visualizzazione dei DM abbia effetto dovrai prima chiuderla e riaprirla! In alternativa basta riavviare Hotot+"
-   },
+   },      
    "donate": {
       "description": "data/index.html",
       "message": "Dona"
@@ -622,7 +626,8 @@
    "eastern": {
       "description": "data/index.html",
       "message": "Orientale"
-   },
+   },     
+
    "edit": {
       "description": "data/js/ui.template.js",
       "message": "Modifica"
@@ -630,7 +635,47 @@
    "edit_title": {
       "description": "data/index.html",
       "message": "Modifica questo tweet"
-   },
+   }, 
+   "emoji_activities": {
+      "description": "data/index.html",
+      "message": "Attività"
+   },   
+   "emoji_animals": {
+      "description": "data/index.html",
+      "message": "Animali & Natura"
+   },  
+   "emoji_backcolor": {
+      "description": "data/index.html",
+      "message": "Usa uno sfondo bianco per le emoji"
+   },   
+   "emoji_backcolor_title": {
+      "description": "data/index.html",
+      "message": "Mostra uno sfondo bianco per le emoji (utile per evitare conflitti con alcuni temi)"
+   },  
+   "emoji_flags": {
+      "description": "data/index.html",
+      "message": "Bandiere"
+   },  
+   "emoji_food": {
+      "description": "data/index.html",
+      "message": "Cibi & Bevande"
+   },  
+   "emoji_objects": {
+      "description": "data/index.html",
+      "message": "Oggetti"
+   },  
+   "emoji_places": {
+      "description": "data/index.html",
+      "message": "Viaggi & Località"
+   },    
+   "emoji_smiley": {
+      "description": "data/index.html",
+      "message": "Faccine & Persone"
+   },   
+   "emoji_symbols": {
+      "description": "data/index.html",
+      "message": "Simboli"
+   },   
    "enable": {
       "description": "data/js/ui.exts_dlg.js",
       "message": "Abilita"
@@ -657,11 +702,11 @@
    },
    "err_mp4_duration": {
       "description": "data/js/ui.form_checker.js",
-      "message": "Errore: la durata dei video MP4 deve essere \u003C= 30s"
+      "message": "Errore: la durata dei video MP4 deve essere <= 30s"
    },
    "err_mp4_size": {
       "description": "data/js/ui.form_checker.js",
-      "message": "Errore: la dimensione dei video MP4 deve essere \u003C= 15MB"
+      "message": "Errore: la dimensione dei video MP4 deve essere <= 15MB"
    },
    "err_mp4_video": {
       "description": "data/js/ui.form_checker.js",
@@ -690,11 +735,11 @@
    "err_str_too_long": {
       "description": "data/js/ui.form_checker.js",
       "message": "La stringa di testo inserita è troppo lunga!"
-   },
+   }, 
    "err_too_many_image": {
       "description": "data/js/ui.form_checker.js",
       "message": "Puoi allegare massimo 4 immagini per tweet!"
-   },
+   },   
    "error_code": {
       "description": "data/js/ui.main.js",
       "message": "Codice Errore:"
@@ -702,11 +747,11 @@
    "error_occurred": {
       "description": "data/js/ui.status_box.js",
       "message": "Si è verificato un errore!"
-   },
+   },     
    "error_video_uploading": {
       "description": "data/js/videouploader.js",
       "message": "Errore nel caricamento del tuo video"
-   },
+   },  
    "errors": {
       "description": "data/index.html",
       "message": "Errori"
@@ -714,11 +759,11 @@
    "errors_found_aborting": {
       "description": "data/js/ui.list_attr_dlg.js",
       "message": "errori trovati nei tuoi cambiamenti."
-   },
+   }, 
    "errors_html5_permissions": {
       "description": "data/js/ui.prefs_dlg.js",
       "message": "Devi concedere l'autorizzazione per usare le notifiche HTML5!"
-   },
+   }, 
    "examples": {
       "description": "data/index.html",
       "message": "Esempi"
@@ -738,7 +783,7 @@
    "failed": {
       "description": "data/js/ui.imageuploader.js",
       "message": "Errore!"
-   },
+   },  
    "failed_to_add": {
       "description": "data/js/ui.add_to_list_dlg.js",
       "message": "Errore nell'aggiungere"
@@ -754,15 +799,15 @@
    "favorited": {
       "description": "data/js/ui.main.js",
       "message": "Inserito nei Preferiti!"
-   },
+   },    
    "favorited_by": {
       "description": "data/js/ui.template.js",
       "message": "Messo nei preferiti da"
-   },
+   }, 
    "favorited_your_tweet": {
       "description": "data/js/ui.main.js",
       "message": "ha messo un tuo tweet tra i suoi preferiti su Twitter!"
-   },
+   },   
    "favs": {
       "description": "data/js/ui.template.js",
       "message": "Preferiti"
@@ -770,7 +815,7 @@
    "favs_view": {
       "description": "data/index.html",
       "message": "Mi piace"
-   },
+   }, 
    "fellowship": {
       "description": "data/js/ui.template.js",
       "message": "Relazioni"
@@ -818,7 +863,7 @@
    "firefox_version": {
       "description": "data/index.html",
       "message": "Porting per Firefox a cura di"
-   },
+   },   
    "first_time_to_sign_in_with_twitter": {
       "description": "data/index.html",
       "message": "Primo accesso a Twitter"
@@ -890,27 +935,27 @@
    "has_been_installed": {
       "description": "data/index.html",
       "message": "è stata installata con successo!"
-   },
+   },    
    "has_been_posted_by": {
       "description": "data/js/filter.js",
-      "message": "È stato postato da uno di questi utenti"
+      "message": "È stato postato da uno di questi utenti"	
    },
    "has_been_retweeted_by": {
       "description": "data/js/filter.js",
-      "message": "È stato retwittato da uno di questi utenti"
+      "message": "È stato retwittato da uno di questi utenti"	
    },
    "has_geo": {
       "description": "data/js/filter.js",
-      "message": "Ha delle coordinate geografiche"
+      "message": "Ha delle coordinate geografiche"	
    },
    "has_media": {
       "description": "data/js/filter.js",
-      "message": "Ha qualsiasi media allegato"
+      "message": "Ha qualsiasi media allegato"	
    },
    "he_she_has_protected_his_her_list": {
       "description": "data/js/ui.template.js",
       "message": "L'utente ha protetto le sue liste."
-   },
+   }, 
    "help": {
       "description": "data/index.html",
       "message": "Aiuto"
@@ -938,15 +983,15 @@
    "hide_media_link_text": {
       "description": "data/index.html",
       "message": "Nascondi URL di immagini e video Twitter dal tweet"
-   },
+   },      
    "hide_media_link_title": {
       "description": "data/index.html",
       "message": "Non mostrare l'URL di video e immagini Twitter nel testo del tweet in caso sia attiva l'anteprima"
-   },
+   },      
    "hide_title": {
       "description": "data/index.html",
       "message": "Nascondi temporaneamente questo tweet"
-   },
+   },  
    "hint": {
       "description": "data/js/ui.welcome.js",
       "message": "Lo sai che Hotot+ ha più di 100 fix e miglioramenti rispetto al vecchio Hotot? Lo adorerai!"
@@ -954,35 +999,35 @@
    "home_exclude_replies": {
       "description": "data/js/ui.template.js",
       "message": "Senza risposte"
-   },
+   },    
    "home_exclude_replies_title": {
       "description": "data/js/ui.template.js",
       "message": "Esclude le risposte (menzioni) dalla Timeline"
-   },
+   },  
    "home_filter": {
       "description": "data/js/ui.template.js",
       "message": "Filtro Timeline"
-   },
+   },    
    "home_full": {
       "description": "data/js/ui.template.js",
       "message": "Completa"
-   },
+   },      
    "home_full_title": {
       "description": "data/js/ui.template.js",
       "message": "Mostra la timeline completa"
-   },
+   },    
    "home_media_only": {
       "description": "data/js/ui.template.js",
       "message": "Solo Media"
-   },
+   },  
    "home_media_only_title": {
       "description": "data/js/ui.template.js",
       "message": "Mostra soltanto i tweet che contengono un parametro media"
-   },
+   },      
    "home_no_rt": {
       "description": "data/js/ui.template.js",
       "message": "Non visualizzare i retweet (d'ora in poi)"
-   },
+   },      
    "home_timeline": {
       "description": "data/js/ui.slider.js",
       "message": "Timeline"
@@ -1002,15 +1047,15 @@
    "hotot_description": {
       "description": "manifest.json",
       "message": "Mod non ufficiale by Red Squirrel di Hotot, il famoso e leggero client Twitter, con oltre 1000 bugfix e miglioramenti."
-   },
+   },   
    "hotot_goto": {
       "description": "manifest.json",
       "message": "Vai a Hotot+"
-   },
+   },   
    "http_code": {
       "description": "data/js/lib.twitter.js",
       "message": "Codice HTTP"
-   },
+   },  
    "image_uploader": {
       "description": "data/index.html",
       "message": "Carica un'immagine"
@@ -1018,11 +1063,11 @@
    "in_reply_to": {
       "description": "data/js/ui.template.js",
       "message": "In risposta a"
-   },
+   },   
    "include_status": {
       "description": "data/index.html",
       "message": "Quota tweet"
-   },
+   },      
    "info": {
       "description": "data/js/ui.template.js",
       "message": "Info"
@@ -1058,7 +1103,7 @@
    "items_for_request_hint": {
       "description": "data/index.html",
       "message": "i parametri qui sopra corrispondono al numero di tweet che verranno restituiti da ogni richiesta alle API di Twitter. Valori alti possono causare rallentamenti al programma (dovrà analizzare un numero maggiore di tweet per visualizzarli nella giusta colonna e posizione) ma riducono i rischi di superare i limiti delle API imposti da Twitter (avendo più tweet risultanti in ogni richiesta ci sarà meno bisogno di fare altre richieste) e i rischi di ricevere soltanto in parte i nuovi tweet da visualizzare. Al contrario valori bassi comportano un programma più veloce e scattante (dovrà analizzare un numero minore di tweet ogni volta) ma portano un alto rischio di superare i limiti orari delle API imposti da Twitter (serviranno più richieste per ottenere un ampio numero di risultati) e possono portare all'acquisizione di soltanto una parte degli effettivi nuovi tweet da visualizzare (nel caso questi fossero in numero più grande di quello impostato). Grazie a queste due opzioni si può ora quindi provare varie combinazioni e trovare l'ottimizzazione migliore per i propri gusti."
-   },
+   },  
    "items_for_request_hint_default": {
       "description": "data/index.html",
       "message": "In caso però non si è certi di cosa si stia facendo è consigliabile lasciare i valori di default."
@@ -1070,19 +1115,19 @@
    "items_for_request_more_text": {
       "description": "data/index.html",
       "message": "Risultati per ogni richiesta (vecchi tweet)"
-   },
+   },   
    "items_for_request_more_title": {
       "description": "data/index.html",
       "message": "Valore relativo alle richieste di vecchi tweet, ossia alle richieste che farà manualmente l'utente quando desidera leggere i tweet precedenti a quelli già caricati automaticamente da Hotot+"
-   },
+   },   
    "items_for_request_text": {
       "description": "data/index.html",
       "message": "Risultati per ogni richiesta (nuovi tweet)"
-   },
+   },   
    "items_for_request_title": {
       "description": "data/index.html",
       "message": "Valore relativo alle richieste di nuovi tweet, comprese quindi anche quelle automatiche che farà Hotot+"
-   },
+   },   
    "join": {
       "description": "data/js/ui.template.js",
       "message": "Iscritto dal"
@@ -1126,15 +1171,15 @@
    "liked": {
       "description": "data/js/ui.main.js",
       "message": "Mi piace!"
-   },
+   },   
    "liked_by": {
       "description": "data/js/ui.template.js",
       "message": "Piaciuto a"
-   },
+   },   
    "liked_your_tweet": {
       "description": "data/js/ui.main.js",
       "message": "ha fatto Mi piace su uno dei tuoi tweet!"
-   },
+   },   
    "likes": {
       "description": "data/js/ui.template.js",
       "message": "Mi piace"
@@ -1170,11 +1215,11 @@
    "lists_of_them": {
       "description": "data/js/ui.template.js",
       "message": "Liste che segue"
-   },
+   },   
    "load_more": {
       "description": "data/js/ui.dm_tabs.js",
       "message": "Carica più vecchi"
-   },
+   },        
    "loading_dots": {
       "description": "data/js/ui.template.js",
       "message": "Caricamento in corso... "
@@ -1182,7 +1227,7 @@
    "loading_messages": {
       "description": "data/js/hotot.js",
       "message": "Caricamento altri messaggi (DM) in corso..."
-   },
+   },      
    "loading_resources_hint": {
       "description": "data/index.html",
       "message": "Caricamento risorse in corso..."
@@ -1198,11 +1243,11 @@
    "lookup": {
       "description": "data/js/hohot.js",
       "message": "Apertura di"
-   },
+   },   
    "lost_connection": {
       "description": "data/js/lib.twitter.js",
       "message": "Connessione Persa"
-   },
+   },        
    "make_sure_all_words_are_spelled_correctly": {
       "description": "data/js/ui.template.js",
       "message": "Assicurati che tutte le parole siano scritte correttamente."
@@ -1250,7 +1295,7 @@
    "mods_by": {
       "description": "data/index.html",
       "message": "Modifiche, aggiustamenti e miglioramenti"
-   },
+   },   
    "more_actions": {
       "description": "data/js/ui.template.js",
       "message": "Altre azioni"
@@ -1274,7 +1319,7 @@
    "mute": {
       "description": "data/js/ui.template.js",
       "message": "Togli la voce"
-   },
+   },   
    "mute_added": {
       "description": "data/js/ui.filter_dlg.js",
       "message": "Filtro creato o aggiornato con successo!"
@@ -1326,7 +1371,7 @@
    "mute_twitter_confirm": {
       "description": "data/js/ui.template.js",
       "message": "Attenzione: NON vedrai più i tweet e retweet di questo utente nella tua timeline ma potrà comunque ancora inviarti menzioni e messaggi diretti. Sei sicuro di voler procedere a togliere la voce a"
-   },
+   },      
    "my_favs": {
       "description": "data/js/ui.slider.js",
       "message": "Preferiti"
@@ -1354,7 +1399,7 @@
    "network_error_please_try_later": {
       "description": "data/js/ui.welcome.js",
       "message": "Errore di rete! Riprova più tardi."
-   },
+   }, 
    "new_credits": {
       "description": "data/index.html",
       "message": "Crediti Hotot+"
@@ -1366,7 +1411,7 @@
    "new_messages": {
       "description": "data/js/ui.dm_tabs.js",
       "message": "Nuovi messaggi non letti"
-   },
+   },  
    "new_notifications": {
       "description": "data/ui.main.js",
       "message": "nuove notifiche!"
@@ -1378,15 +1423,15 @@
    "new_profile_has_been_created": {
       "description": "data/js/ui.welcome.js",
       "message": "Il nuovo profilo è stato creato!"
-   },
+   },   
    "new_version_installed": {
       "description": "data/index.html",
       "message": "Nuova versione installata"
-   },
+   },      
    "new_version_of": {
       "description": "data/index.html",
       "message": "una nuova versione di"
-   },
+   },            
    "next": {
       "description": "data/index.html",
       "message": "Successivo"
@@ -1398,19 +1443,19 @@
    "no_hashtag": {
       "description": "data/js/ui.template.js",
       "message": "Ignora hashtag"
-   },
+   },    
    "no_rt": {
       "description": "data/js/ui.template.js",
       "message": "Disabilita i Retweet"
-   },
+   },     
    "no_rt_twitter_confirm": {
       "description": "data/js/ui.template.js",
       "message": "I retweet di questo utente non appariranno più nella tua timeline. Sei sicuro di voler disabilitare i retweet di"
-   },
+   },       
    "none": {
       "description": "data/index.html",
       "message": "Nessuno"
-   },
+   },     
    "not_avaiable_yet": {
       "description": "data/index.html",
       "message": "Non ancora disponibile :)"
@@ -1482,7 +1527,7 @@
    "notification_sound": {
       "description": "data/index.html",
       "message": "Suono di notifica"
-   },
+   },   
    "notification_test": {
       "description": "data/index.html",
       "message": "Test di Notifica"
@@ -1494,15 +1539,15 @@
    "notify_desktop": {
       "description": "data/js/ui.template.js",
       "message": "Notifica desktop"
-   },
+   },      
    "notify_favorited_text": {
       "description": "data/index.html",
       "message": "Notifica anche i Mi piace"
-   },
+   },   
    "notify_favorited_title": {
       "description": "data/index.html",
       "message": "Crea una notifica anche quando un utente mette tra i suoi preferiti o fa Mi piace su uno dei tuoi tweet"
-   },
+   },   
    "notify_me_if_incoming_tweets_mention_hotot": {
       "description": "data/index.html",
       "message": "notificami se un tweet menziona @hotot"
@@ -1542,7 +1587,7 @@
    "only_the_owner_can_access_this_list": {
       "description": "data/js/ui.template.js",
       "message": "Soltanto il proprietario può accedere a questa lista."
-   },
+   },  
    "oops_a_network_error_occurs": {
       "description": "data/js/ui.welcome.js",
       "message": "Oops, si è verificato un problema di rete!"
@@ -1558,26 +1603,26 @@
    "oops_an_error_occurs": {
       "description": "data/js/lib.twitter.js",
       "message": "Oops, si è verificato un errore!"
-   },
+   },  
    "oops_hotot_not_running": {
       "description": "data/js/background.js",
       "message": "Oops, Hotot+ non è avviato!"
-   },
+   },     
    "oops_not_signed": {
       "description": "data/js/background.js",
       "message": "Oops, login non effettuato!"
-   },
+   },          
    "open_a_list_dots": {
       "description": "data/index.html",
       "message": "Apri una lista..."
    },
-   "open_a_profile_dots": {
-      "description": "data/index.html",
-      "message": "Apri un profilo..."
-   },
    "open_all_list_dots": {
       "description": "data/index.html",
       "message": "Apri tutte le mie liste..."
+   },
+   "open_a_profile_dots": {
+      "description": "data/index.html",
+      "message": "Apri un profilo..."
    },
    "open_first_link": {
       "description": "data/index.html",
@@ -1586,7 +1631,7 @@
    "open_profile_in_hotot": {
       "description": "data/js/daemon.js",
       "message": "Apri il suo profilo in Hotot+"
-   },
+   },   
    "open_speaker_link": {
       "description": "data/index.html",
       "message": "Apri il link dell'interlocutore"
@@ -1610,19 +1655,19 @@
    "original_credits": {
       "description": "data/index.html",
       "message": "Crediti Hotot Originale"
-   },
+   },  
    "own_tweets": {
       "description": "data/js/ui.template.js",
       "message": "Propri Tweet"
-   },
+   }, 
    "own_tweets_tip": {
       "description": "data/js/ui.template.js",
       "message": "Include soltanto i tweet pubblici diretti inviati dall'utente, sono dunque esclusi retweet e risposte."
-   },
+   }, 
    "owner": {
       "description": "data/js/ui.template.js",
       "message": "Proprietario"
-   },
+   },   
    "page_on_schedule": {
       "description": "data/js/daemon.js",
       "message": "pagina/e"
@@ -1642,23 +1687,23 @@
    "password_alert": {
       "description": "data/js/ui.welcome.js",
       "message": "Devi inserire la password (quella del tuo profilo attuale se ce l'ha, oppure quella che vuoi aggiungere ad esso) nell'apposita casella di testo prima di poter procedere con qualsiasi operazione!"
-   },
+   },     
    "password_chosen": {
       "description": "data/js/ui.welcome.js",
       "message": "Password scelta:"
-   },
+   },       
    "password_confirm_add": {
       "description": "data/js/ui.welcome.js",
       "message": "Sei sicuro di voler aggiungere la seguente password al tuo profilo attuale? Se te la dimentichi non c'è alcun modo per recuperarla."
-   },
+   },      
    "password_confirm_remove": {
       "description": "data/js/ui.welcome.js",
       "message": "Sei sicuro di voler procedere con la rimozione della password per il tuo attuale profilo?"
-   },
+   },   
    "password_manage": {
       "description": "data/index.html",
       "message": "Gestisci password"
-   },
+   },        
    "paste_from_clipboard": {
       "description": "date/index.html",
       "message": "Incolla dagli appunti"
@@ -1722,7 +1767,7 @@
    "postpone_tweet_title": {
       "description": "data/index.html",
       "message": "Imposta quanti secondi attendere prima di inviare i tweet permettendoti dunque di annullarli"
-   },
+   },   
    "powerfull": {
       "description": "data/js/lib.twitterapi.js",
       "message": "Ottimo"
@@ -1806,7 +1851,7 @@
    "quote_link_title": {
       "description": "data/index.html",
       "message": "Quota il link di questo tweet"
-   },
+   },     
    "quote_title": {
       "description": "data/index.html",
       "message": "Quota il testo di questo tweet"
@@ -1818,7 +1863,7 @@
    "raw_preview_title": {
       "description": "data/index.html",
       "message": "Non carica le anteprime di immagini RAW (previene crash dovuti a immagini troppo pesanti)"
-   },
+   },    
    "read_later": {
       "description": "data/index.html",
       "message": "Leggi dopo"
@@ -1834,7 +1879,7 @@
    "reason": {
       "description": "data/js/lib.twitter.js",
       "message": "Motivo"
-   },
+   }, 
    "regex_hint1": {
       "description": "data/index.html",
       "message": "più veloce ma a volte può fare errori di sostituzione degli URL."
@@ -1842,7 +1887,7 @@
    "regex_hint2": {
       "description": "data/index.html",
       "message": "più lento (richiede più cicli) ma dovrebbe evitare qualsiasi errore di sostituzione degli URL."
-   },
+   },   
    "relation": {
       "description": "data/js/ui.template.js",
       "message": "Relazione"
@@ -1858,7 +1903,7 @@
    "replies_to_a_tweet": {
       "description": "data/js/hotot.js",
       "message": "Risposte ad un tweet"
-   },
+   },   
    "reply": {
       "description": "data/index.html",
       "message": "Rispondi"
@@ -1886,7 +1931,7 @@
    "report_bug": {
       "description": "data/index.html",
       "message": "Segnala un bug"
-   },
+   },   
    "report_spam": {
       "description": "data/js/ui.template.js",
       "message": "Segnala come spam"
@@ -1906,19 +1951,19 @@
    "restart_streams_fail": {
       "description": "data/index.html",
       "message": "ERRORE: API streaming per l'utente attualmente non in esecuzione!"
-   },
+   }, 
    "restart_streams_success": {
       "description": "data/index.html",
       "message": "API streaming per l'utente correttamente riavviate!"
-   },
+   },     
    "restart_streams_text": {
       "description": "data/index.html",
       "message": "Riavvia Stream"
-   },
+   }, 
    "restart_streams_title": {
       "description": "data/index.html",
       "message": "Riavvia la connessione alle API streaming per l'utente"
-   },
+   },     
    "restore_defaults": {
       "description": "data/index.html",
       "message": "Ripristina impostazioni predefinite"
@@ -1931,6 +1976,10 @@
       "description": "data/index.html",
       "message": "Retweet"
    },
+   "retweet_title": {
+      "description": "data/index.html",
+      "message": "Retwitta questo tweet ai tuoi follower"
+   },
    "retweet_or_un_retweet": {
       "description": "data/index.html",
       "message": "Retwitta/Annulla retweet"
@@ -1938,10 +1987,6 @@
    "retweet_successfully": {
       "description": "data/js/ui.main.js",
       "message": "Retwittato con successo!"
-   },
-   "retweet_title": {
-      "description": "data/index.html",
-      "message": "Retwitta questo tweet ai tuoi follower"
    },
    "retweeted_by": {
       "description": "data/js/ui.template.js",
@@ -2070,7 +2115,7 @@
    "select_a_default_speech_language": {
       "description": "data/index.html",
       "message": "Seleziona il linguaggio predefinito per il riconoscimento vocale"
-   },
+   },      
    "select_a_default_translation_language": {
       "description": "data/index.html",
       "message": "Seleziona il linguaggio predefinito in cui tradurre i tweet con l'apposita opzione"
@@ -2094,15 +2139,15 @@
    "select_background": {
       "description": "data/index.html",
       "message": "Sfondo della schermata iniziale"
-   },
+   },      
    "select_emoji_size": {
       "description": "data/index.html",
       "message": "Dimensione emoji in pixel"
-   },
+   },   
    "select_emoji_size_title": {
       "description": "data/index.html",
       "message": "La dimensione delle immagini che rimpiazzeranno gli emoji nei tweet"
-   },
+   },         
    "select_fields": {
       "description": "data/index.html",
       "message": "Seleziona campi"
@@ -2126,19 +2171,19 @@
    "share_image": {
       "description": "data/js/background.js",
       "message": "Condividi questa immagine con Hotot+"
-   },
+   },    
    "share_link": {
       "description": "data/js/background.js",
       "message": "Condividi questo link con Hotot+"
-   },
+   },     
    "share_page": {
       "description": "data/js/background.js",
       "message": "Condividi questa pagina con Hotot+"
-   },
+   },   
    "share_selection": {
       "description": "data/js/background.js",
       "message": "Condividi il testo selezionato con Hotot+"
-   },
+   },        
    "shiny_old_times_before_marriage": {
       "description": "data/index.html",
       "message": "Shiny old times before marriage"
@@ -2158,11 +2203,11 @@
    "show_seconds_in_timestamp": {
       "description": "data/index.html",
       "message": "Mostra i secondi nelle date"
-   },
+   },   
    "show_seconds_in_timestamp_title": {
       "description": "data/index.html",
       "message": "Mostra anche i secondi all'interno delle date"
-   },
+   },       
    "show_social_text": {
       "description": "data/index.html",
       "message": "Mostra il numero di Mi Piace/RT sotto ogni tweet"
@@ -2170,11 +2215,11 @@
    "show_social_title": {
       "description": "data/index.html",
       "message": "Mostra sotto ogni tweet quante volte è stato messo nei preferito/piaciuto e retwittato"
-   },
+   },   
    "show_volume": {
       "description": "data/js/ui.template.js",
       "message": "Mostra volume ultime 24h"
-   },
+   },        
    "show_youtube": {
       "description": "data/index.html",
       "message": "Carica i video di Youtube direttamente nel tweet"
@@ -2190,7 +2235,7 @@
    "sign_in_to_share": {
       "description": "data/js/background.js",
       "message": "Devi prima accedere al tuo account per poter condividere dei contenuti."
-   },
+   }, 
    "sign_out": {
       "description": "data/index.html",
       "message": "Esci"
@@ -2222,19 +2267,19 @@
    "speech_error": {
       "description": "data/index.html",
       "message": "Spiacente, le API Web Speech non sono supportate da questo browser. Per favore aggiorna a Google Chrome versione 25 o superiore per utilizzare questa funzione."
-   },
+   },      
    "speech_rec": {
       "description": "data/index.html",
       "message": "Riconoscimento vocale"
-   },
+   },    
    "start_hotot": {
       "description": "data/js/background.js",
       "message": "Avvia Hotot+ ed accedi ad un account per condividere dei contenuti."
-   },
+   },   
    "starts_following_you": {
       "description": "data/js/daemon.js",
       "message": "ha iniziato a seguirti su Twitter!"
-   },
+   },   
    "stat": {
       "description": "data/index.html",
       "message": "Statistiche"
@@ -2334,23 +2379,23 @@
    "translate": {
       "description": "data/index.html",
       "message": "Traduci"
-   },
+   },   
    "translate_access_token_error": {
       "description": "data/js/ui.main.js",
       "message": "Error getting Bing Translator access token!"
-   },
+   },  
    "translate_this": {
       "description": "data/index.html",
       "message": "Traduci @"
-   },
+   },         
    "translate_title": {
       "description": "data/index.html",
       "message": "Traduci il tweet nella tua lingua"
-   },
+   },   
    "translating": {
       "description": "data/js/ui.main.js",
       "message": "Traduco..."
-   },
+   },     
    "transparent": {
       "description": "data/index.html",
       "message": "Trasparente"
@@ -2358,11 +2403,11 @@
    "trending_for": {
       "description": "data/js/ui.template.js",
       "message": "Località"
-   },
+   },    
    "trends_view": {
       "description": "data/index.html",
       "message": "Trending Topics"
-   },
+   },   
    "try_different_keywords": {
       "description": "data/js/ui.template.js",
       "message": "Prova ad inserire termini di ricerca diversi."
@@ -2374,11 +2419,7 @@
    "tt_number": {
       "description": "data/js/ui.template.js",
       "message": "Quantità"
-   },
-   "tweet_cnt": {
-      "description": "data/js/ui.template.js",
-      "message": "Tweet inviati"
-   },
+   },    
    "tweet_contains_hashtags": {
       "description": "data/index.html",
       "message": "Il twit contiene gli hashtag:"
@@ -2390,6 +2431,10 @@
    "tweet_contains_words": {
       "description": "data/index.html",
       "message": "Il twit contiene le parole:"
+   },
+   "tweet_cnt": {
+      "description": "data/js/ui.template.js",
+      "message": "Tweet inviati"
    },
    "tweet_has_attribute": {
       "description": "data/index.html",
@@ -2458,7 +2503,7 @@
    "unable_get_image": {
       "description": "data/js/background.js",
       "message": "Impossibile acquisire l'immagine scelta!"
-   },
+   },      
    "unblock": {
       "description": "data/js/ui.template.js",
       "message": "Sblocca"
@@ -2486,11 +2531,11 @@
    "unknown_error": {
       "description": "data/js/lib.twitter.js",
       "message": "Errore Sconosciuto"
-   },
+   },    
    "unmute": {
       "description": "data/js/ui.template.js",
       "message": "Ridai voce"
-   },
+   },   
    "update": {
       "description": "data/index.html",
       "message": "Invia"
@@ -2526,7 +2571,7 @@
    "updating_list": {
       "description": "data/js/ui.list_attr_dlg.js",
       "message": "Aggiornamento della lista..."
-   },
+   }, 
    "upload": {
       "description": "data/index.html",
       "message": "Carica"
@@ -2542,7 +2587,7 @@
    "upload_success": {
       "description": "data/js/ui.imageuploader.js",
       "message": "Caricamento completato con successo!"
-   },
+   },   
    "upload_to_dots": {
       "description": "data/index.html",
       "message": "Carica su..."
@@ -2583,6 +2628,10 @@
       "description": "data/index.html",
       "message": "Elaborazione della tua richiesta in corso, attendi..."
    },
+   "uploading_video": {
+      "description": "data/index.html",
+      "message": "Caricamento video"
+   },
    "url_shortener": {
       "description": "data/index.html",
       "message": "Accorcia gli URL nel messaggio"
@@ -2591,14 +2640,14 @@
       "description": "data/index.html",
       "message": "Usa un carattere personalizzato"
    },
-   "use_custom_source_app_name": {
+   "use_custom_source_app_name" : {
       "description": "data/index.html",
       "message": "Usa app sorgente personalizzata"
-   },
+   }, 
    "use_emoji": {
       "description": "data/index.html",
       "message": "Analizza e mostra emoji nei tweet"
-   },
+   },      
    "use_emoji_title": {
       "description": "data/index.html",
       "message": "Se un emoji viene trovato in un tweet, il programma lo rimpiazzerà con la corrispondente immagine usata da Twitter"
@@ -2606,11 +2655,11 @@
    "use_header_flap_text": {
       "description": "data/index.html",
       "message": "Barra di intestazione principale a scomparsa"
-   },
+   }, 
    "use_header_flap_title": {
       "description": "data/index.html",
       "message": "Mostra e nasconde automaticamente la barra di intestazione al passaggio del mouse"
-   },
+   }, 
    "use_new_dm_view": {
       "description": "data/index.html",
       "message": "Usa la nuova modalità di visualizzazione DM"
@@ -2618,7 +2667,7 @@
    "use_new_dm_view_title": {
       "description": "data/index.html",
       "message": "Utilizza la nuova modalità di visualizzazione raggruppati-per-utente per i messaggi diretti"
-   },
+   },   
    "use_quote_as_default_retweet_action": {
       "description": "data/index.html",
       "message": "Quota invece di retwittare"
@@ -2638,7 +2687,7 @@
    "use_regex_title": {
       "description": "data/index.html",
       "message": "Usa regex per analizzare gli URL invece delle Entities ufficiali di Twitter."
-   },
+   },     
    "use_reply_all_as_default_reply_action": {
       "description": "data/index.html",
       "message": "Usa \"Rispondi a tutti\" come azione di risposta predefinita"
@@ -2674,7 +2723,7 @@
    "used_libraries": {
       "description": "data/index.html",
       "message": "Librerie utilizzate"
-   },
+   },       
    "username": {
       "description": "data/index.html",
       "message": "Nome Utente"
@@ -2702,7 +2751,7 @@
    "video_quality": {
       "description": "data/index.html",
       "message": "Qualità del video"
-   },
+   },    
    "video_uploader": {
       "description": "data/index.html",
       "message": "Carica un video"
@@ -2710,11 +2759,11 @@
    "view_changelog": {
       "description": "data/index.html",
       "message": "Per l'elenco completo delle novità introdotte in questa versione visita"
-   },
+   },         
    "view_hide_conversation": {
       "description": "data/js/ui.template.js",
       "message": "Mostra/nascondi conversazione"
-   },
+   },         
    "view_more_conversation": {
       "description": "data/js/ui.template.js",
       "message": "Carica conversazione completa"
@@ -2722,11 +2771,11 @@
    "view_replies_text": {
       "description": "data/index.html",
       "message": "Visualizza risposte"
-   },
+   },  
    "view_replies_title": {
       "description": "data/index.html",
       "message": "Cerca tutte le risposte a questo tweet"
-   },
+   },       
    "virushou_s_integrity": {
       "description": "data/index.html",
       "message": "Virushou's Integrity"
@@ -2750,7 +2799,7 @@
    "western": {
       "description": "data/index.html",
       "message": "Occidentale"
-   },
+   },        
    "whisper": {
       "description": "data/js/ui.welcome.js",
       "message": "Psss"
@@ -2774,7 +2823,7 @@
    "yes_rt": {
       "description": "data/js/ui.template.js",
       "message": "Abilita i Retweets"
-   },
+   },  
    "you_are_followed_by_them": {
       "description": "data/js/ui.peopleview.js",
       "message": "L'utente ti sta seguendo, ma tu non segui lui."

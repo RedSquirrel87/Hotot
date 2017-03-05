@@ -178,7 +178,7 @@ function TwitterClient() {
         var params = {
             'status': text,
             'include_entities': '1',
-	    'tweet_mode': 'extended'     
+	    'tweet_mode': 'extended'
         };
         if (reply_to_id) {
             params['in_reply_to_status_id'] = reply_to_id;
@@ -222,6 +222,7 @@ function TwitterClient() {
             'command': 'INIT',
 	    'total_bytes': filesize,
             'media_type': 'video/mp4',
+	    'media_category': 'tweet_video',
 	    'tweet_mode': 'extended'  
         };
 	self.post(url, params, on_success, on_error);
@@ -254,6 +255,16 @@ function TwitterClient() {
 	    'tweet_mode': 'extended'  
         };
 	self.post(url, params, on_success, on_error);
+    };
+    
+    self.upload_chunked_status = function upload_chunked_status(media_id, on_success, on_error) {
+	var url = self.upload_api_media + 'media/upload.json';
+	var params = {
+            'command': 'STATUS',
+            'media_id': media_id,
+	    'tweet_mode': 'extended'  
+        };
+	self.get(url, params, on_success, on_error);
     };
         
     self.retweet_status = function retweet_status(retweet_id, on_success) {

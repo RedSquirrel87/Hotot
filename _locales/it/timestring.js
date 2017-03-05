@@ -20,7 +20,7 @@
                 nextDay: '[Domani alle] LT',
                 nextWeek: 'dddd [alle] LT',
                 lastDay: '[Ieri alle] LT',
-                lastWeek: '[lo scorso] dddd [alle] LT',
+                lastWeek: '[Lo scorso] dddd [alle] LT',
                 sameElse: 'L'
             },
             relativeTime : {
