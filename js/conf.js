@@ -3,7 +3,7 @@ conf = {
 
 vars: {
       'platform': 'Chrome'
-    , 'version': '10'
+    , 'version': '10.1'
     , 'consumer_key': 'Vc5nXsSN4K5vJoWr8JrnbpjlB'
     , 'consumer_secret': '7HflXSzdU16JAa9CR2zhXWE1NQdDwQqMEX41Ak6k35hTCAtOnw'
     , 'column_max_width': 400

@@ -331,8 +331,15 @@ function load_video(video) {
 	}
 	
 	ui.StatusBox.change_mode(ui.StatusBox.MODE_IMG);
-	var div = $('#imagepreview').find('#preview');
-	div.append('<td class="thumbnail"><b>' + _('attached_video_file') + ':</b><br>' + video.name + '</td>');
+	var div = $('#imagepreview').find('#preview',0);
+
+	/* jQuery Templating (required by Mozilla) */
+	div.append(
+		$("<td>", { class: "thumbnail" })
+		.append($("<b>").text(_('attached_video_file') + ":"))
+		.append($("<p>").text(video.name))
+	);
+	
 	var btn = $('#imagepreview').find('.ic_close');
 	btn.click(function () {
 		div.empty();

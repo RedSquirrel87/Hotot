@@ -23,5 +23,5 @@
    "name": "Hotot+",
    "permissions": [ "contextMenus", "tabs", "unlimitedStorage", "notifications", "storage", "*://*/*" ],
    "short_name": "Hotot+",
-   "version": "10"
+   "version": "10.1"
 }
