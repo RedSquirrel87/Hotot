@@ -577,7 +577,7 @@ var _fpsController = _dereq_(10);
 
 var _fpsController2 = _interopRequireDefault(_fpsController);
 
-var _xhrLoader = _dereq_(55);
+var _xhrLoader = _dereq_(58);
 
 var _xhrLoader2 = _interopRequireDefault(_xhrLoader);
 
@@ -589,19 +589,19 @@ var _audioStreamController = _dereq_(6);
 
 var _audioStreamController2 = _interopRequireDefault(_audioStreamController);
 
-var _cues = _dereq_(47);
+var _cues = _dereq_(50);
 
 var _cues2 = _interopRequireDefault(_cues);
 
-var _timelineController = _dereq_(15);
+var _timelineController = _dereq_(16);
 
 var _timelineController2 = _interopRequireDefault(_timelineController);
 
-var _subtitleTrackController = _dereq_(14);
+var _subtitleTrackController = _dereq_(15);
 
 var _subtitleTrackController2 = _interopRequireDefault(_subtitleTrackController);
 
-var _subtitleStreamController = _dereq_(13);
+var _subtitleStreamController = _dereq_(14);
 
 var _subtitleStreamController2 = _interopRequireDefault(_subtitleStreamController);
 
@@ -698,7 +698,7 @@ var hlsDefaultConfig = exports.hlsDefaultConfig = {
       minAutoBitrate: 0 // used by hls
 };
 
-},{"10":10,"13":13,"14":14,"15":15,"47":47,"5":5,"55":55,"6":6,"7":7,"8":8,"9":9}],5:[function(_dereq_,module,exports){
+},{"10":10,"14":14,"15":15,"16":16,"5":5,"50":50,"58":58,"6":6,"7":7,"8":8,"9":9}],5:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -707,23 +707,23 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _events = _dereq_(32);
+var _events = _dereq_(35);
 
 var _events2 = _interopRequireDefault(_events);
 
-var _eventHandler = _dereq_(31);
+var _eventHandler = _dereq_(34);
 
 var _eventHandler2 = _interopRequireDefault(_eventHandler);
 
-var _bufferHelper = _dereq_(34);
+var _bufferHelper = _dereq_(37);
 
 var _bufferHelper2 = _interopRequireDefault(_bufferHelper);
 
-var _errors = _dereq_(30);
+var _errors = _dereq_(33);
 
-var _logger = _dereq_(50);
+var _logger = _dereq_(53);
 
-var _ewmaBandwidthEstimator = _dereq_(48);
+var _ewmaBandwidthEstimator = _dereq_(51);
 
 var _ewmaBandwidthEstimator2 = _interopRequireDefault(_ewmaBandwidthEstimator);
 
@@ -909,6 +909,7 @@ var AbrController = function (_EventHandler) {
         var fragLoadingProcessingMs = stats.tparsed - stats.trequest;
         _logger.logger.log('latency/loading/parsing/append/kbps:' + Math.round(stats.tfirst - stats.trequest) + '/' + Math.round(stats.tload - stats.tfirst) + '/' + Math.round(stats.tparsed - stats.tload) + '/' + Math.round(stats.tbuffered - stats.tparsed) + '/' + Math.round(8 * stats.loaded / (stats.tbuffered - stats.trequest)));
         this._bwEstimator.sample(fragLoadingProcessingMs, stats.loaded);
+        stats.bwEstimate = this._bwEstimator.getEstimate();
         // if fragment has been loaded to perform a bitrate test, (hls.startLevel = -1), store bitrate test delay duration
         if (frag.bitrateTest) {
           this.bitrateTestDelay = fragLoadingProcessingMs / 1000;
@@ -1057,48 +1058,46 @@ var AbrController = function (_EventHandler) {
 
 exports.default = AbrController;
 
-},{"30":30,"31":31,"32":32,"34":34,"48":48,"50":50}],6:[function(_dereq_,module,exports){
+},{"33":33,"34":34,"35":35,"37":37,"51":51,"53":53}],6:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _binarySearch = _dereq_(45);
+var _binarySearch = _dereq_(48);
 
 var _binarySearch2 = _interopRequireDefault(_binarySearch);
 
-var _bufferHelper = _dereq_(34);
+var _bufferHelper = _dereq_(37);
 
 var _bufferHelper2 = _interopRequireDefault(_bufferHelper);
 
-var _demuxer = _dereq_(24);
+var _demuxer = _dereq_(25);
 
 var _demuxer2 = _interopRequireDefault(_demuxer);
 
-var _events = _dereq_(32);
+var _events = _dereq_(35);
 
 var _events2 = _interopRequireDefault(_events);
 
-var _eventHandler = _dereq_(31);
+var _eventHandler = _dereq_(34);
 
 var _eventHandler2 = _interopRequireDefault(_eventHandler);
 
-var _levelHelper = _dereq_(35);
+var _levelHelper = _dereq_(38);
 
 var _levelHelper2 = _interopRequireDefault(_levelHelper);
 
-var _timeRanges = _dereq_(51);
+var _timeRanges = _dereq_(54);
 
 var _timeRanges2 = _interopRequireDefault(_timeRanges);
 
-var _errors = _dereq_(30);
+var _errors = _dereq_(33);
 
-var _logger = _dereq_(50);
+var _logger = _dereq_(53);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1240,257 +1239,237 @@ var AudioStreamController = function (_EventHandler) {
   }, {
     key: 'doTick',
     value: function doTick() {
-      var _this2 = this;
-
       var pos,
           track,
           trackDetails,
           hls = this.hls,
           config = hls.config;
       //logger.log('audioStream:' + this.state);
-      var now;
-      var retryDate;
-      var isSeeking;
+      switch (this.state) {
+        case State.ERROR:
+        //don't do anything in error state to avoid breaking further ...
+        case State.PAUSED:
+        //don't do anything in paused state either ...
+        case State.BUFFER_FLUSHING:
+          break;
+        case State.STARTING:
+          this.state = State.WAITING_TRACK;
+          this.loadedmetadata = false;
+          break;
+        case State.IDLE:
+          var tracks = this.tracks;
+          // audio tracks not received => exit loop
+          if (!tracks) {
+            break;
+          }
+          // if video not attached AND
+          // start fragment already requested OR start frag prefetch disable
+          // exit loop
+          // => if media not attached but start frag prefetch is enabled and start frag not requested yet, we will not exit loop
+          if (!this.media && (this.startFragRequested || !config.startFragPrefetch)) {
+            break;
+          }
+          // determine next candidate fragment to be loaded, based on current position and
+          //  end of buffer position
+          // if we have not yet loaded any fragment, start loading from start position
+          if (this.loadedmetadata) {
+            pos = this.media.currentTime;
+          } else {
+            pos = this.nextLoadPosition;
+          }
+          var media = this.mediaBuffer ? this.mediaBuffer : this.media,
+              bufferInfo = _bufferHelper2.default.bufferInfo(media, pos, config.maxBufferHole),
+              bufferLen = bufferInfo.len,
+              bufferEnd = bufferInfo.end,
+              fragPrevious = this.fragPrevious,
+              maxBufLen = config.maxMaxBufferLength,
+              audioSwitch = this.audioSwitch,
+              trackId = this.trackId;
 
-      var _ret = function () {
-        switch (_this2.state) {
-          case State.ERROR:
-          //don't do anything in error state to avoid breaking further ...
-          case State.PAUSED:
-          //don't do anything in paused state either ...
-          case State.BUFFER_FLUSHING:
-            break;
-          case State.STARTING:
-            _this2.state = State.WAITING_TRACK;
-            _this2.loadedmetadata = false;
-            break;
-          case State.IDLE:
-            var tracks = _this2.tracks;
-            // audio tracks not received => exit loop
-            if (!tracks) {
+          // if buffer length is less than maxBufLen try to load a new fragment
+          if ((bufferLen < maxBufLen || audioSwitch) && trackId < tracks.length) {
+            trackDetails = tracks[trackId].details;
+            // if track info not retrieved yet, switch state and wait for track retrieval
+            if (typeof trackDetails === 'undefined') {
+              this.state = State.WAITING_TRACK;
               break;
             }
-            // if video not attached AND
-            // start fragment already requested OR start frag prefetch disable
-            // exit loop
-            // => if media not attached but start frag prefetch is enabled and start frag not requested yet, we will not exit loop
-            if (!_this2.media && (_this2.startFragRequested || !config.startFragPrefetch)) {
-              break;
-            }
-            // determine next candidate fragment to be loaded, based on current position and
-            //  end of buffer position
-            // if we have not yet loaded any fragment, start loading from start position
-            if (_this2.loadedmetadata) {
-              pos = _this2.media.currentTime;
-            } else {
-              pos = _this2.nextLoadPosition;
-            }
-            var media = _this2.mediaBuffer ? _this2.mediaBuffer : _this2.media,
-                bufferInfo = _bufferHelper2.default.bufferInfo(media, pos, config.maxBufferHole),
-                bufferLen = bufferInfo.len,
-                bufferEnd = bufferInfo.end,
-                fragPrevious = _this2.fragPrevious,
-                maxBufLen = config.maxMaxBufferLength,
-                audioSwitch = _this2.audioSwitch,
-                trackId = _this2.trackId;
 
-            // if buffer length is less than maxBufLen try to load a new fragment
-            if (bufferLen < maxBufLen && trackId < tracks.length) {
-              trackDetails = tracks[trackId].details;
-              // if track info not retrieved yet, switch state and wait for track retrieval
-              if (typeof trackDetails === 'undefined') {
-                _this2.state = State.WAITING_TRACK;
+            // we just got done loading the final fragment, check if we need to finalize media stream
+            if (!audioSwitch && !trackDetails.live && fragPrevious && fragPrevious.sn === trackDetails.endSN) {
+              // if we are not seeking or if we are seeking but everything (almost) til the end is buffered, let's signal eos
+              // we don't compare exactly media.duration === bufferInfo.end as there could be some subtle media duration difference when switching
+              // between different renditions. using half frag duration should help cope with these cases.
+              if (!this.media.seeking || this.media.duration - bufferEnd < fragPrevious.duration / 2) {
+                // Finalize the media stream
+                this.hls.trigger(_events2.default.BUFFER_EOS, { type: 'audio' });
+                this.state = State.ENDED;
                 break;
               }
+            }
 
-              // we just got done loading the final fragment, check if we need to finalize media stream
-              if (!audioSwitch && !trackDetails.live && fragPrevious && fragPrevious.sn === trackDetails.endSN) {
-                // if we are not seeking or if we are seeking but everything (almost) til the end is buffered, let's signal eos
-                // we don't compare exactly media.duration === bufferInfo.end as there could be some subtle media duration difference when switching
-                // between different renditions. using half frag duration should help cope with these cases.
-                if (!_this2.media.seeking || _this2.media.duration - bufferEnd < fragPrevious.duration / 2) {
-                  // Finalize the media stream
-                  _this2.hls.trigger(_events2.default.BUFFER_EOS, { type: 'audio' });
-                  _this2.state = State.ENDED;
-                  break;
-                }
-              }
+            // find fragment index, contiguous with end of buffer position
+            var fragments = trackDetails.fragments,
+                fragLen = fragments.length,
+                start = fragments[0].start,
+                end = fragments[fragLen - 1].start + fragments[fragLen - 1].duration,
+                frag = void 0;
 
-              // find fragment index, contiguous with end of buffer position
-              var fragments = trackDetails.fragments,
-                  fragLen = fragments.length,
-                  start = fragments[0].start,
-                  end = fragments[fragLen - 1].start + fragments[fragLen - 1].duration,
-                  frag = void 0;
-
-              // When switching audio track, reload audio as close as possible to currentTime
-              if (audioSwitch) {
-                if (trackDetails.live && !trackDetails.PTSKnown) {
-                  _logger.logger.log('switching audiotrack, live stream, unknown PTS,load first fragment');
-                  bufferEnd = 0;
-                } else {
-                  bufferEnd = pos;
-                  // if currentTime (pos) is less than alt audio playlist start time, it means that alt audio is ahead of currentTime
-                  if (trackDetails.PTSKnown && pos < start) {
-                    // if everything is buffered from pos to start or if audio buffer upfront, let's seek to start
-                    if (bufferInfo.end > start || bufferInfo.nextStart) {
-                      _logger.logger.log('alt audio track ahead of main track, seek to start of alt audio track');
-                      _this2.media.currentTime = start + 0.05;
-                    } else {
-                      return {
-                        v: void 0
-                      };
-                    }
-                  }
-                }
-              }
-              if (trackDetails.initSegment && !trackDetails.initSegment.data) {
-                frag = trackDetails.initSegment;
-              }
-              // if bufferEnd before start of playlist, load first fragment
-              else if (bufferEnd <= start) {
-                  frag = fragments[0];
-                  if (trackDetails.live && frag.loadIdx && frag.loadIdx === _this2.fragLoadIdx) {
-                    // we just loaded this first fragment, and we are still lagging behind the start of the live playlist
-                    // let's force seek to start
-                    var nextBuffered = bufferInfo.nextStart ? bufferInfo.nextStart : start;
-                    _logger.logger.log('no alt audio available @currentTime:' + _this2.media.currentTime + ', seeking @' + (nextBuffered + 0.05));
-                    _this2.media.currentTime = nextBuffered + 0.05;
-                    return {
-                      v: void 0
-                    };
-                  }
-                } else {
-                  (function () {
-                    var foundFrag = void 0;
-                    var maxFragLookUpTolerance = config.maxFragLookUpTolerance;
-                    var fragNext = fragPrevious ? fragments[fragPrevious.sn - fragments[0].sn + 1] : undefined;
-                    var fragmentWithinToleranceTest = function fragmentWithinToleranceTest(candidate) {
-                      // offset should be within fragment boundary - config.maxFragLookUpTolerance
-                      // this is to cope with situations like
-                      // bufferEnd = 9.991
-                      // frag[Ø] : [0,10]
-                      // frag[1] : [10,20]
-                      // bufferEnd is within frag[0] range ... although what we are expecting is to return frag[1] here
-                      //              frag start               frag start+duration
-                      //                  |-----------------------------|
-                      //              <--->                         <--->
-                      //  ...--------><-----------------------------><---------....
-                      // previous frag         matching fragment         next frag
-                      //  return -1             return 0                 return 1
-                      //logger.log(`level/sn/start/end/bufEnd:${level}/${candidate.sn}/${candidate.start}/${(candidate.start+candidate.duration)}/${bufferEnd}`);
-                      // Set the lookup tolerance to be small enough to detect the current segment - ensures we don't skip over very small segments
-                      var candidateLookupTolerance = Math.min(maxFragLookUpTolerance, candidate.duration);
-                      if (candidate.start + candidate.duration - candidateLookupTolerance <= bufferEnd) {
-                        return 1;
-                      } // if maxFragLookUpTolerance will have negative value then don't return -1 for first element
-                      else if (candidate.start - candidateLookupTolerance > bufferEnd && candidate.start) {
-                          return -1;
-                        }
-                      return 0;
-                    };
-
-                    if (bufferEnd < end) {
-                      if (bufferEnd > end - maxFragLookUpTolerance) {
-                        maxFragLookUpTolerance = 0;
-                      }
-                      // Prefer the next fragment if it's within tolerance
-                      if (fragNext && !fragmentWithinToleranceTest(fragNext)) {
-                        foundFrag = fragNext;
-                      } else {
-                        foundFrag = _binarySearch2.default.search(fragments, fragmentWithinToleranceTest);
-                      }
-                    } else {
-                      // reach end of playlist
-                      foundFrag = fragments[fragLen - 1];
-                    }
-                    if (foundFrag) {
-                      frag = foundFrag;
-                      start = foundFrag.start;
-                      //logger.log('find SN matching with pos:' +  bufferEnd + ':' + frag.sn);
-                      if (fragPrevious && frag.level === fragPrevious.level && frag.sn === fragPrevious.sn) {
-                        if (frag.sn < trackDetails.endSN) {
-                          frag = fragments[frag.sn + 1 - trackDetails.startSN];
-                          _logger.logger.log('SN just loaded, load next one: ' + frag.sn);
-                        } else {
-                          frag = null;
-                        }
-                      }
-                    }
-                  })();
-                }
-              if (frag) {
-                //logger.log('      loading frag ' + i +',pos/bufEnd:' + pos.toFixed(3) + '/' + bufferEnd.toFixed(3));
-                if (frag.decryptdata && frag.decryptdata.uri != null && frag.decryptdata.key == null) {
-                  _logger.logger.log('Loading key for ' + frag.sn + ' of [' + trackDetails.startSN + ' ,' + trackDetails.endSN + '],track ' + trackId);
-                  _this2.state = State.KEY_LOADING;
-                  hls.trigger(_events2.default.KEY_LOADING, { frag: frag });
-                } else {
-                  _logger.logger.log('Loading ' + frag.sn + ' of [' + trackDetails.startSN + ' ,' + trackDetails.endSN + '],track ' + trackId + ', currentTime:' + pos + ',bufferEnd:' + bufferEnd.toFixed(3));
-                  // ensure that we are not reloading the same fragments in loop ...
-                  if (_this2.fragLoadIdx !== undefined) {
-                    _this2.fragLoadIdx++;
+            // When switching audio track, reload audio as close as possible to currentTime
+            if (audioSwitch) {
+              if (trackDetails.live && !trackDetails.PTSKnown) {
+                _logger.logger.log('switching audiotrack, live stream, unknown PTS,load first fragment');
+                bufferEnd = 0;
+              } else {
+                bufferEnd = pos;
+                // if currentTime (pos) is less than alt audio playlist start time, it means that alt audio is ahead of currentTime
+                if (trackDetails.PTSKnown && pos < start) {
+                  // if everything is buffered from pos to start or if audio buffer upfront, let's seek to start
+                  if (bufferInfo.end > start || bufferInfo.nextStart) {
+                    _logger.logger.log('alt audio track ahead of main track, seek to start of alt audio track');
+                    this.media.currentTime = start + 0.05;
                   } else {
-                    _this2.fragLoadIdx = 0;
+                    return;
                   }
-                  if (frag.loadCounter) {
-                    frag.loadCounter++;
-                    var maxThreshold = config.fragLoadingLoopThreshold;
-                    // if this frag has already been loaded 3 times, and if it has been reloaded recently
-                    if (frag.loadCounter > maxThreshold && Math.abs(_this2.fragLoadIdx - frag.loadIdx) < maxThreshold) {
-                      hls.trigger(_events2.default.ERROR, { type: _errors.ErrorTypes.MEDIA_ERROR, details: _errors.ErrorDetails.FRAG_LOOP_LOADING_ERROR, fatal: false, frag: frag });
-                      return {
-                        v: void 0
-                      };
-                    }
-                  } else {
-                    frag.loadCounter = 1;
-                  }
-                  frag.loadIdx = _this2.fragLoadIdx;
-                  _this2.fragCurrent = frag;
-                  _this2.startFragRequested = true;
-                  if (!isNaN(frag.sn)) {
-                    _this2.nextLoadPosition = frag.start + frag.duration;
-                  }
-                  hls.trigger(_events2.default.FRAG_LOADING, { frag: frag });
-                  _this2.state = State.FRAG_LOADING;
                 }
               }
             }
-            break;
-          case State.WAITING_TRACK:
-            track = _this2.tracks[_this2.trackId];
-            // check if playlist is already loaded
-            if (track && track.details) {
-              _this2.state = State.IDLE;
+            if (trackDetails.initSegment && !trackDetails.initSegment.data) {
+              frag = trackDetails.initSegment;
             }
-            break;
-          case State.FRAG_LOADING_WAITING_RETRY:
-            now = performance.now();
-            retryDate = _this2.retryDate;
+            // if bufferEnd before start of playlist, load first fragment
+            else if (bufferEnd <= start) {
+                frag = fragments[0];
+                if (trackDetails.live && frag.loadIdx && frag.loadIdx === this.fragLoadIdx) {
+                  // we just loaded this first fragment, and we are still lagging behind the start of the live playlist
+                  // let's force seek to start
+                  var nextBuffered = bufferInfo.nextStart ? bufferInfo.nextStart : start;
+                  _logger.logger.log('no alt audio available @currentTime:' + this.media.currentTime + ', seeking @' + (nextBuffered + 0.05));
+                  this.media.currentTime = nextBuffered + 0.05;
+                  return;
+                }
+              } else {
+                var foundFrag = void 0;
+                var maxFragLookUpTolerance = config.maxFragLookUpTolerance;
+                var fragNext = fragPrevious ? fragments[fragPrevious.sn - fragments[0].sn + 1] : undefined;
+                var fragmentWithinToleranceTest = function fragmentWithinToleranceTest(candidate) {
+                  // offset should be within fragment boundary - config.maxFragLookUpTolerance
+                  // this is to cope with situations like
+                  // bufferEnd = 9.991
+                  // frag[Ø] : [0,10]
+                  // frag[1] : [10,20]
+                  // bufferEnd is within frag[0] range ... although what we are expecting is to return frag[1] here
+                  //              frag start               frag start+duration
+                  //                  |-----------------------------|
+                  //              <--->                         <--->
+                  //  ...--------><-----------------------------><---------....
+                  // previous frag         matching fragment         next frag
+                  //  return -1             return 0                 return 1
+                  //logger.log(`level/sn/start/end/bufEnd:${level}/${candidate.sn}/${candidate.start}/${(candidate.start+candidate.duration)}/${bufferEnd}`);
+                  // Set the lookup tolerance to be small enough to detect the current segment - ensures we don't skip over very small segments
+                  var candidateLookupTolerance = Math.min(maxFragLookUpTolerance, candidate.duration);
+                  if (candidate.start + candidate.duration - candidateLookupTolerance <= bufferEnd) {
+                    return 1;
+                  } // if maxFragLookUpTolerance will have negative value then don't return -1 for first element
+                  else if (candidate.start - candidateLookupTolerance > bufferEnd && candidate.start) {
+                      return -1;
+                    }
+                  return 0;
+                };
 
-            media = _this2.media;
-            isSeeking = media && media.seeking;
-            // if current time is gt than retryDate, or if media seeking let's switch to IDLE state to retry loading
-
-            if (!retryDate || now >= retryDate || isSeeking) {
-              _logger.logger.log('audioStreamController: retryDate reached, switch back to IDLE state');
-              _this2.state = State.IDLE;
+                if (bufferEnd < end) {
+                  if (bufferEnd > end - maxFragLookUpTolerance) {
+                    maxFragLookUpTolerance = 0;
+                  }
+                  // Prefer the next fragment if it's within tolerance
+                  if (fragNext && !fragmentWithinToleranceTest(fragNext)) {
+                    foundFrag = fragNext;
+                  } else {
+                    foundFrag = _binarySearch2.default.search(fragments, fragmentWithinToleranceTest);
+                  }
+                } else {
+                  // reach end of playlist
+                  foundFrag = fragments[fragLen - 1];
+                }
+                if (foundFrag) {
+                  frag = foundFrag;
+                  start = foundFrag.start;
+                  //logger.log('find SN matching with pos:' +  bufferEnd + ':' + frag.sn);
+                  if (fragPrevious && frag.level === fragPrevious.level && frag.sn === fragPrevious.sn) {
+                    if (frag.sn < trackDetails.endSN) {
+                      frag = fragments[frag.sn + 1 - trackDetails.startSN];
+                      _logger.logger.log('SN just loaded, load next one: ' + frag.sn);
+                    } else {
+                      frag = null;
+                    }
+                  }
+                }
+              }
+            if (frag) {
+              //logger.log('      loading frag ' + i +',pos/bufEnd:' + pos.toFixed(3) + '/' + bufferEnd.toFixed(3));
+              if (frag.decryptdata && frag.decryptdata.uri != null && frag.decryptdata.key == null) {
+                _logger.logger.log('Loading key for ' + frag.sn + ' of [' + trackDetails.startSN + ' ,' + trackDetails.endSN + '],track ' + trackId);
+                this.state = State.KEY_LOADING;
+                hls.trigger(_events2.default.KEY_LOADING, { frag: frag });
+              } else {
+                _logger.logger.log('Loading ' + frag.sn + ' of [' + trackDetails.startSN + ' ,' + trackDetails.endSN + '],track ' + trackId + ', currentTime:' + pos + ',bufferEnd:' + bufferEnd.toFixed(3));
+                // ensure that we are not reloading the same fragments in loop ...
+                if (this.fragLoadIdx !== undefined) {
+                  this.fragLoadIdx++;
+                } else {
+                  this.fragLoadIdx = 0;
+                }
+                if (frag.loadCounter) {
+                  frag.loadCounter++;
+                  var maxThreshold = config.fragLoadingLoopThreshold;
+                  // if this frag has already been loaded 3 times, and if it has been reloaded recently
+                  if (frag.loadCounter > maxThreshold && Math.abs(this.fragLoadIdx - frag.loadIdx) < maxThreshold) {
+                    hls.trigger(_events2.default.ERROR, { type: _errors.ErrorTypes.MEDIA_ERROR, details: _errors.ErrorDetails.FRAG_LOOP_LOADING_ERROR, fatal: false, frag: frag });
+                    return;
+                  }
+                } else {
+                  frag.loadCounter = 1;
+                }
+                frag.loadIdx = this.fragLoadIdx;
+                this.fragCurrent = frag;
+                this.startFragRequested = true;
+                if (!isNaN(frag.sn)) {
+                  this.nextLoadPosition = frag.start + frag.duration;
+                }
+                hls.trigger(_events2.default.FRAG_LOADING, { frag: frag });
+                this.state = State.FRAG_LOADING;
+              }
             }
-            break;
-          case State.WAITING_INIT_PTS:
-          case State.STOPPED:
-          case State.FRAG_LOADING:
-          case State.PARSING:
-          case State.PARSED:
-          case State.ENDED:
-            break;
-          default:
-            break;
-        }
-      }();
-
-      if ((typeof _ret === 'undefined' ? 'undefined' : _typeof(_ret)) === "object") return _ret.v;
+          }
+          break;
+        case State.WAITING_TRACK:
+          track = this.tracks[this.trackId];
+          // check if playlist is already loaded
+          if (track && track.details) {
+            this.state = State.IDLE;
+          }
+          break;
+        case State.FRAG_LOADING_WAITING_RETRY:
+          var now = performance.now();
+          var retryDate = this.retryDate;
+          media = this.media;
+          var isSeeking = media && media.seeking;
+          // if current time is gt than retryDate, or if media seeking let's switch to IDLE state to retry loading
+          if (!retryDate || now >= retryDate || isSeeking) {
+            _logger.logger.log('audioStreamController: retryDate reached, switch back to IDLE state');
+            this.state = State.IDLE;
+          }
+          break;
+        case State.WAITING_INIT_PTS:
+        case State.STOPPED:
+        case State.FRAG_LOADING:
+        case State.PARSING:
+        case State.PARSED:
+        case State.ENDED:
+          break;
+        default:
+          break;
+      }
     }
   }, {
     key: 'onMediaAttached',
@@ -1696,7 +1675,7 @@ var AudioStreamController = function (_EventHandler) {
           // If not we need to wait for it
           var initPTS = this.initPTS[cc];
           var initSegmentData = details.initSegment ? details.initSegment.data : [];
-          if (initSegmentData || initPTS !== undefined) {
+          if (details.initSegment || initPTS !== undefined) {
             this.pendingBuffering = true;
             _logger.logger.log('Demuxing ' + sn + ' of [' + details.startSN + ' ,' + details.endSN + '],track ' + trackId);
             // time Offset is accurate if level PTS is known, or if playlist is not sliding (not live)
@@ -1752,72 +1731,70 @@ var AudioStreamController = function (_EventHandler) {
   }, {
     key: 'onFragParsingData',
     value: function onFragParsingData(data) {
-      var _this3 = this;
+      var _this2 = this;
 
       var fragCurrent = this.fragCurrent;
       var fragNew = data.frag;
       if (fragCurrent && data.id === 'audio' && data.type === 'audio' && fragNew.sn === fragCurrent.sn && fragNew.level === fragCurrent.level && this.state === State.PARSING) {
-        (function () {
-          var trackId = _this3.trackId,
-              track = _this3.tracks[trackId],
-              hls = _this3.hls;
+        var trackId = this.trackId,
+            track = this.tracks[trackId],
+            hls = this.hls;
 
-          if (isNaN(data.endPTS)) {
-            data.endPTS = data.startPTS + fragCurrent.duration;
-            data.endDTS = data.startDTS + fragCurrent.duration;
-          }
+        if (isNaN(data.endPTS)) {
+          data.endPTS = data.startPTS + fragCurrent.duration;
+          data.endDTS = data.startDTS + fragCurrent.duration;
+        }
 
-          _logger.logger.log('parsed ' + data.type + ',PTS:[' + data.startPTS.toFixed(3) + ',' + data.endPTS.toFixed(3) + '],DTS:[' + data.startDTS.toFixed(3) + '/' + data.endDTS.toFixed(3) + '],nb:' + data.nb);
-          _levelHelper2.default.updateFragPTSDTS(track.details, fragCurrent.sn, data.startPTS, data.endPTS);
+        _logger.logger.log('parsed ' + data.type + ',PTS:[' + data.startPTS.toFixed(3) + ',' + data.endPTS.toFixed(3) + '],DTS:[' + data.startDTS.toFixed(3) + '/' + data.endDTS.toFixed(3) + '],nb:' + data.nb);
+        _levelHelper2.default.updateFragPTSDTS(track.details, fragCurrent, data.startPTS, data.endPTS);
 
-          var audioSwitch = _this3.audioSwitch,
-              media = _this3.media,
-              appendOnBufferFlush = false;
-          //Only flush audio from old audio tracks when PTS is known on new audio track
-          if (audioSwitch && media) {
-            if (media.readyState) {
-              var currentTime = media.currentTime;
-              _logger.logger.log('switching audio track : currentTime:' + currentTime);
-              if (currentTime >= data.startPTS) {
-                _logger.logger.log('switching audio track : flushing all audio');
-                _this3.state = State.BUFFER_FLUSHING;
-                hls.trigger(_events2.default.BUFFER_FLUSHING, { startOffset: 0, endOffset: Number.POSITIVE_INFINITY, type: 'audio' });
-                appendOnBufferFlush = true;
-                //Lets announce that the initial audio track switch flush occur
-                _this3.audioSwitch = false;
-                hls.trigger(_events2.default.AUDIO_TRACK_SWITCHED, { id: trackId });
-              }
-            } else {
+        var audioSwitch = this.audioSwitch,
+            media = this.media,
+            appendOnBufferFlush = false;
+        //Only flush audio from old audio tracks when PTS is known on new audio track
+        if (audioSwitch && media) {
+          if (media.readyState) {
+            var currentTime = media.currentTime;
+            _logger.logger.log('switching audio track : currentTime:' + currentTime);
+            if (currentTime >= data.startPTS) {
+              _logger.logger.log('switching audio track : flushing all audio');
+              this.state = State.BUFFER_FLUSHING;
+              hls.trigger(_events2.default.BUFFER_FLUSHING, { startOffset: 0, endOffset: Number.POSITIVE_INFINITY, type: 'audio' });
+              appendOnBufferFlush = true;
               //Lets announce that the initial audio track switch flush occur
-              _this3.audioSwitch = false;
+              this.audioSwitch = false;
               hls.trigger(_events2.default.AUDIO_TRACK_SWITCHED, { id: trackId });
             }
+          } else {
+            //Lets announce that the initial audio track switch flush occur
+            this.audioSwitch = false;
+            hls.trigger(_events2.default.AUDIO_TRACK_SWITCHED, { id: trackId });
           }
+        }
 
-          var pendingData = _this3.pendingData;
-          if (!_this3.audioSwitch) {
-            [data.data1, data.data2].forEach(function (buffer) {
-              if (buffer && buffer.length) {
-                pendingData.push({ type: data.type, data: buffer, parent: 'audio', content: 'data' });
+        var pendingData = this.pendingData;
+        if (!this.audioSwitch) {
+          [data.data1, data.data2].forEach(function (buffer) {
+            if (buffer && buffer.length) {
+              pendingData.push({ type: data.type, data: buffer, parent: 'audio', content: 'data' });
+            }
+          });
+          if (!appendOnBufferFlush && pendingData.length) {
+            pendingData.forEach(function (appendObj) {
+              // only append in PARSING state (rationale is that an appending error could happen synchronously on first segment appending)
+              // in that case it is useless to append following segments
+              if (_this2.state === State.PARSING) {
+                // arm pending Buffering flag before appending a segment
+                _this2.pendingBuffering = true;
+                _this2.hls.trigger(_events2.default.BUFFER_APPENDING, appendObj);
               }
             });
-            if (!appendOnBufferFlush && pendingData.length) {
-              pendingData.forEach(function (appendObj) {
-                // only append in PARSING state (rationale is that an appending error could happen synchronously on first segment appending)
-                // in that case it is useless to append following segments
-                if (_this3.state === State.PARSING) {
-                  // arm pending Buffering flag before appending a segment
-                  _this3.pendingBuffering = true;
-                  _this3.hls.trigger(_events2.default.BUFFER_APPENDING, appendObj);
-                }
-              });
-              _this3.pendingData = [];
-              _this3.appended = true;
-            }
+            this.pendingData = [];
+            this.appended = true;
           }
-          //trigger handler right now
-          _this3.tick();
-        })();
+        }
+        //trigger handler right now
+        this.tick();
       }
     }
   }, {
@@ -1960,13 +1937,13 @@ var AudioStreamController = function (_EventHandler) {
   }, {
     key: 'onBufferFlushed',
     value: function onBufferFlushed() {
-      var _this4 = this;
+      var _this3 = this;
 
       var pendingData = this.pendingData;
       if (pendingData && pendingData.length) {
         _logger.logger.log('appending pending audio data on Buffer Flushed');
         pendingData.forEach(function (appendObj) {
-          _this4.hls.trigger(_events2.default.BUFFER_APPENDING, appendObj);
+          _this3.hls.trigger(_events2.default.BUFFER_APPENDING, appendObj);
         });
         this.appended = true;
         this.pendingData = [];
@@ -1998,7 +1975,7 @@ var AudioStreamController = function (_EventHandler) {
 
 exports.default = AudioStreamController;
 
-},{"24":24,"30":30,"31":31,"32":32,"34":34,"35":35,"45":45,"50":50,"51":51}],7:[function(_dereq_,module,exports){
+},{"25":25,"33":33,"34":34,"35":35,"37":37,"38":38,"48":48,"53":53,"54":54}],7:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2007,15 +1984,15 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _events = _dereq_(32);
+var _events = _dereq_(35);
 
 var _events2 = _interopRequireDefault(_events);
 
-var _eventHandler = _dereq_(31);
+var _eventHandler = _dereq_(34);
 
 var _eventHandler2 = _interopRequireDefault(_eventHandler);
 
-var _logger = _dereq_(50);
+var _logger = _dereq_(53);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2195,7 +2172,7 @@ var AudioTrackController = function (_EventHandler) {
 
 exports.default = AudioTrackController;
 
-},{"31":31,"32":32,"50":50}],8:[function(_dereq_,module,exports){
+},{"34":34,"35":35,"53":53}],8:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2204,17 +2181,17 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _events = _dereq_(32);
+var _events = _dereq_(35);
 
 var _events2 = _interopRequireDefault(_events);
 
-var _eventHandler = _dereq_(31);
+var _eventHandler = _dereq_(34);
 
 var _eventHandler2 = _interopRequireDefault(_eventHandler);
 
-var _logger = _dereq_(50);
+var _logger = _dereq_(53);
 
-var _errors = _dereq_(30);
+var _errors = _dereq_(33);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2823,7 +2800,7 @@ var BufferController = function (_EventHandler) {
 
 exports.default = BufferController;
 
-},{"30":30,"31":31,"32":32,"50":50}],9:[function(_dereq_,module,exports){
+},{"33":33,"34":34,"35":35,"53":53}],9:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2832,11 +2809,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _events = _dereq_(32);
+var _events = _dereq_(35);
 
 var _events2 = _interopRequireDefault(_events);
 
-var _eventHandler = _dereq_(31);
+var _eventHandler = _dereq_(34);
 
 var _eventHandler2 = _interopRequireDefault(_eventHandler);
 
@@ -2988,7 +2965,7 @@ var CapLevelController = function (_EventHandler) {
 
 exports.default = CapLevelController;
 
-},{"31":31,"32":32}],10:[function(_dereq_,module,exports){
+},{"34":34,"35":35}],10:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2997,15 +2974,15 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _events = _dereq_(32);
+var _events = _dereq_(35);
 
 var _events2 = _interopRequireDefault(_events);
 
-var _eventHandler = _dereq_(31);
+var _eventHandler = _dereq_(34);
 
 var _eventHandler2 = _interopRequireDefault(_eventHandler);
 
-var _logger = _dereq_(50);
+var _logger = _dereq_(53);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3098,7 +3075,7 @@ var FPSController = function (_EventHandler) {
 
 exports.default = FPSController;
 
-},{"31":31,"32":32,"50":50}],11:[function(_dereq_,module,exports){
+},{"34":34,"35":35,"53":53}],11:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3107,19 +3084,267 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _events = _dereq_(32);
+var _events = _dereq_(35);
 
 var _events2 = _interopRequireDefault(_events);
 
-var _eventHandler = _dereq_(31);
+var _eventHandler = _dereq_(34);
 
 var _eventHandler2 = _interopRequireDefault(_eventHandler);
 
-var _logger = _dereq_(50);
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _errors = _dereq_(30);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var _bufferHelper = _dereq_(34);
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * id3 metadata track controller
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */
+
+var ID3TrackController = function (_EventHandler) {
+  _inherits(ID3TrackController, _EventHandler);
+
+  function ID3TrackController(hls) {
+    _classCallCheck(this, ID3TrackController);
+
+    var _this = _possibleConstructorReturn(this, (ID3TrackController.__proto__ || Object.getPrototypeOf(ID3TrackController)).call(this, hls, _events2.default.MEDIA_ATTACHED, _events2.default.MEDIA_DETACHING, _events2.default.FRAG_PARSING_METADATA));
+
+    _this.id3Track = undefined;
+    _this.media = undefined;
+    return _this;
+  }
+
+  _createClass(ID3TrackController, [{
+    key: 'destroy',
+    value: function destroy() {
+      _eventHandler2.default.prototype.destroy.call(this);
+    }
+
+    // Add ID3 metatadata text track.
+
+  }, {
+    key: 'onMediaAttached',
+    value: function onMediaAttached(data) {
+      this.media = data.media;
+      if (!this.media) {
+        return;
+      }
+
+      this.id3Track = this.media.addTextTrack('metadata', 'id3');
+      this.id3Track.mode = 'hidden';
+    }
+  }, {
+    key: 'onMediaDetaching',
+    value: function onMediaDetaching() {
+      this.media = undefined;
+    }
+  }, {
+    key: 'onFragParsingMetadata',
+    value: function onFragParsingMetadata(data) {
+      var fragment = data.frag;
+      var samples = data.samples;
+      var startTime = fragment.start;
+      var endTime = fragment.start + fragment.duration;
+      // Give a slight bump to the endTime if it's equal to startTime to avoid a SyntaxError in IE
+      if (startTime === endTime) {
+        endTime += 0.0001;
+      }
+
+      // Attempt to recreate Safari functionality by creating
+      // WebKitDataCue objects when available and store the decoded
+      // ID3 data in the value property of the cue
+      var Cue = window.WebKitDataCue || window.VTTCue || window.TextTrackCue;
+
+      for (var i = 0; i < samples.length; i++) {
+        var id3Frame = this.parseID3Frame(samples[i].data);
+        var frame = this.decodeID3Frame(id3Frame);
+        if (frame) {
+          var cue = new Cue(startTime, endTime, '');
+          cue.value = frame;
+          this.id3Track.addCue(cue);
+        }
+      }
+    }
+  }, {
+    key: 'parseID3Frame',
+    value: function parseID3Frame(data) {
+      if (data.length < 21) {
+        return undefined;
+      }
+
+      /* http://id3.org/id3v2.3.0
+      [0]     = 'I'
+      [1]     = 'D'
+      [2]     = '3'
+      [3,4]   = {Version}
+      [5]     = {Flags}
+      [6-9]   = {ID3 Size}
+      [10-13] = {Frame ID}
+      [14-17] = {Frame Size}
+      [18,19] = {Frame Flags}
+      */
+      if (data[0] === 73 && // I
+      data[1] === 68 && // D
+      data[2] === 51) {
+        // 3
+
+        var type = String.fromCharCode(data[10], data[11], data[12], data[13]);
+        data = data.subarray(20);
+        return { type: type, data: data };
+      }
+    }
+  }, {
+    key: 'decodeID3Frame',
+    value: function decodeID3Frame(frame) {
+      if (frame.type === 'TXXX') {
+        return this.decodeTxxxFrame(frame);
+      } else if (frame.type === 'PRIV') {
+        return this.decodePrivFrame(frame);
+      } else if (frame.type[0] === 'T') {
+        return this.decodeTextFrame(frame);
+      } else {
+        return undefined;
+      }
+    }
+  }, {
+    key: 'decodeTxxxFrame',
+    value: function decodeTxxxFrame(frame) {
+      /*
+      Format:
+      [0]   = {Text Encoding}
+      [1-?] = {Description}\0{Value}
+      */
+
+      if (frame.size < 2) {
+        return undefined;
+      }
+
+      if (frame.data[0] !== 3) {
+        //only support UTF-8
+        return undefined;
+      }
+
+      var index = 1;
+      var description = this.utf8ArrayToStr(frame.data.subarray(index));
+
+      index += description.length + 1;
+      var value = this.utf8ArrayToStr(frame.data.subarray(index));
+
+      return { key: 'TXXX', description: description, data: value };
+    }
+  }, {
+    key: 'decodeTextFrame',
+    value: function decodeTextFrame(frame) {
+      /*
+      Format:
+      [0]   = {Text Encoding}
+      [1-?] = {Value}
+      */
+
+      if (frame.size < 2) {
+        return undefined;
+      }
+
+      if (frame.data[0] !== 3) {
+        //only support UTF-8
+        return undefined;
+      }
+
+      var data = frame.data.subarray(1);
+      return { key: frame.type, data: this.utf8ArrayToStr(data) };
+    }
+  }, {
+    key: 'decodePrivFrame',
+    value: function decodePrivFrame(frame) {
+      /*
+      Format: <text string>\0<binary data>
+      */
+
+      if (frame.size < 2) {
+        return undefined;
+      }
+
+      var owner = this.utf8ArrayToStr(frame.data);
+      var privateData = frame.data.subarray(owner.length + 1);
+
+      return { key: 'PRIV', info: owner, data: privateData.buffer };
+    }
+
+    // http://stackoverflow.com/questions/8936984/uint8array-to-string-in-javascript/22373197
+    // http://www.onicos.com/staff/iz/amuse/javascript/expert/utf.txt
+    /* utf.js - UTF-8 <=> UTF-16 convertion
+     *
+     * Copyright (C) 1999 Masanao Izumo <iz@onicos.co.jp>
+     * Version: 1.0
+     * LastModified: Dec 25 1999
+     * This library is free.  You can redistribute it and/or modify it.
+     */
+
+  }, {
+    key: 'utf8ArrayToStr',
+    value: function utf8ArrayToStr(array) {
+
+      var char2 = void 0;
+      var char3 = void 0;
+      var out = '';
+      var i = 0;
+      var length = array.length;
+
+      while (i < length) {
+        var c = array[i++];
+        switch (c >> 4) {
+          case 0:
+            return out;
+          case 1:case 2:case 3:case 4:case 5:case 6:case 7:
+            // 0xxxxxxx
+            out += String.fromCharCode(c);
+            break;
+          case 12:case 13:
+            // 110x xxxx   10xx xxxx
+            char2 = array[i++];
+            out += String.fromCharCode((c & 0x1F) << 6 | char2 & 0x3F);
+            break;
+          case 14:
+            // 1110 xxxx  10xx xxxx  10xx xxxx
+            char2 = array[i++];
+            char3 = array[i++];
+            out += String.fromCharCode((c & 0x0F) << 12 | (char2 & 0x3F) << 6 | (char3 & 0x3F) << 0);
+            break;
+        }
+      }
+
+      return out;
+    }
+  }]);
+
+  return ID3TrackController;
+}(_eventHandler2.default);
+
+exports.default = ID3TrackController;
+
+},{"34":34,"35":35}],12:[function(_dereq_,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _events = _dereq_(35);
+
+var _events2 = _interopRequireDefault(_events);
+
+var _eventHandler = _dereq_(34);
+
+var _eventHandler2 = _interopRequireDefault(_eventHandler);
+
+var _logger = _dereq_(53);
+
+var _errors = _dereq_(33);
+
+var _bufferHelper = _dereq_(37);
 
 var _bufferHelper2 = _interopRequireDefault(_bufferHelper);
 
@@ -3363,6 +3588,8 @@ var LevelController = function (_EventHandler) {
               var retryDelay = hls.config.levelLoadingRetryDelay;
               _logger.logger.warn('level controller,' + details + ', but media buffered, retry in ' + retryDelay + 'ms');
               this.timer = setTimeout(this.ontick, retryDelay);
+              // boolean used to inform stream controller not to switch back to IDLE on non fatal error
+              data.levelRetry = true;
             } else {
               _logger.logger.error('cannot recover ' + details + ' error');
               this._level = undefined;
@@ -3429,9 +3656,11 @@ var LevelController = function (_EventHandler) {
     value: function tick() {
       var levelId = this._level;
       if (levelId !== undefined && this.canload) {
-        var level = this._levels[levelId],
-            urlId = level.urlId;
-        this.hls.trigger(_events2.default.LEVEL_LOADING, { url: level.url[urlId], level: levelId, id: urlId });
+        var level = this._levels[levelId];
+        if (level && level.url) {
+          var urlId = level.urlId;
+          this.hls.trigger(_events2.default.LEVEL_LOADING, { url: level.url[urlId], level: levelId, id: urlId });
+        }
       }
     }
   }, {
@@ -3515,7 +3744,7 @@ var LevelController = function (_EventHandler) {
 
 exports.default = LevelController;
 
-},{"30":30,"31":31,"32":32,"34":34,"50":50}],12:[function(_dereq_,module,exports){
+},{"33":33,"34":34,"35":35,"37":37,"53":53}],13:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3524,37 +3753,37 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _binarySearch = _dereq_(45);
+var _binarySearch = _dereq_(48);
 
 var _binarySearch2 = _interopRequireDefault(_binarySearch);
 
-var _bufferHelper = _dereq_(34);
+var _bufferHelper = _dereq_(37);
 
 var _bufferHelper2 = _interopRequireDefault(_bufferHelper);
 
-var _demuxer = _dereq_(24);
+var _demuxer = _dereq_(25);
 
 var _demuxer2 = _interopRequireDefault(_demuxer);
 
-var _events = _dereq_(32);
+var _events = _dereq_(35);
 
 var _events2 = _interopRequireDefault(_events);
 
-var _eventHandler = _dereq_(31);
+var _eventHandler = _dereq_(34);
 
 var _eventHandler2 = _interopRequireDefault(_eventHandler);
 
-var _levelHelper = _dereq_(35);
+var _levelHelper = _dereq_(38);
 
 var _levelHelper2 = _interopRequireDefault(_levelHelper);
 
-var _timeRanges = _dereq_(51);
+var _timeRanges = _dereq_(54);
 
 var _timeRanges2 = _interopRequireDefault(_timeRanges);
 
-var _errors = _dereq_(30);
+var _errors = _dereq_(33);
 
-var _logger = _dereq_(50);
+var _logger = _dereq_(53);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3641,7 +3870,7 @@ var StreamController = function (_EventHandler) {
         this.nextLoadPosition = this.startPosition = this.lastCurrentTime = startPosition;
         this.tick();
       } else {
-        _logger.logger.warn('cannot start loading as manifest not parsed yet');
+        this.forceStartLoad = true;
         this.state = State.STOPPED;
       }
     }
@@ -3661,6 +3890,7 @@ var StreamController = function (_EventHandler) {
         this.demuxer = null;
       }
       this.state = State.STOPPED;
+      this.forceStartLoad = false;
     }
   }, {
     key: 'tick',
@@ -3686,11 +3916,7 @@ var StreamController = function (_EventHandler) {
           this.fragLoadError = 0;
           break;
         case State.IDLE:
-          // when this returns false there was an error and we shall return immediatly
-          // from current tick
-          if (!this._doTickIdle()) {
-            return;
-          }
+          this._doTickIdle();
           break;
         case State.WAITING_LEVEL:
           var level = this.levels[this.level];
@@ -3740,7 +3966,7 @@ var StreamController = function (_EventHandler) {
       // exit loop
       // => if start level loaded and media not attached but start frag prefetch is enabled and start frag not requested yet, we will not exit loop
       if (this.levelLastLoaded !== undefined && !media && (this.startFragRequested || !config.startFragPrefetch)) {
-        return true;
+        return;
       }
 
       // if we have not yet loaded any fragment, start loading from start position
@@ -3752,8 +3978,13 @@ var StreamController = function (_EventHandler) {
       }
       // determine next load level
       var level = hls.nextLoadLevel,
-          levelInfo = this.levels[level],
-          levelBitrate = levelInfo.bitrate,
+          levelInfo = this.levels[level];
+
+      if (!levelInfo) {
+        return;
+      }
+
+      var levelBitrate = levelInfo.bitrate,
           maxBufLen = void 0;
 
       // compute max Buffer Length that we could get from this load level, based on level bitrate. don't buffer more than 60 MB and more than 30s
@@ -3771,7 +4002,7 @@ var StreamController = function (_EventHandler) {
           bufferLen = bufferInfo.len;
       // Stay idle if we are still with buffer margins
       if (bufferLen >= maxBufLen) {
-        return true;
+        return;
       }
 
       // if buffer length is less than maxBufLen try to load a new fragment ...
@@ -3786,17 +4017,20 @@ var StreamController = function (_EventHandler) {
       // a useless and outdated fragment (that might even introduce load error if it is already out of the live playlist)
       if (typeof levelDetails === 'undefined' || levelDetails.live && this.levelLastLoaded !== level) {
         this.state = State.WAITING_LEVEL;
-        return true;
+        return;
       }
 
       // we just got done loading the final fragment, check if we need to finalize media stream
       var fragPrevious = this.fragPrevious;
       if (!levelDetails.live && fragPrevious && fragPrevious.sn === levelDetails.endSN) {
+        // fragPrevious is last fragment. retrieve level duration using last frag start offset + duration
+        // real duration might be lower than initial duration if there are drifts between real frag duration and playlist signaling
+        var duration = Math.min(media.duration, fragPrevious.start + fragPrevious.duration);
         // if everything (almost) til the end is buffered, let's signal eos
-        // we don't compare exactly media.duration === bufferInfo.end as there could be some subtle media duration difference
-        // using half frag duration should help cope with these cases.
+        // we don't compare exactly media.duration === bufferInfo.end as there could be some subtle media duration difference (audio/video offsets...)
+        // tolerate up to one frag duration to cope with these cases.
         // also cope with almost zero last frag duration (max last frag duration with 200ms) refer to https://github.com/video-dev/hls.js/pull/657
-        if (media.duration - Math.max(bufferInfo.end, fragPrevious.start) <= Math.max(0.2, fragPrevious.duration / 2)) {
+        if (duration - Math.max(bufferInfo.end, fragPrevious.start) <= Math.max(0.2, fragPrevious.duration)) {
           // Finalize the media stream
           var data = {};
           if (this.altAudio) {
@@ -3804,12 +4038,12 @@ var StreamController = function (_EventHandler) {
           }
           this.hls.trigger(_events2.default.BUFFER_EOS, data);
           this.state = State.ENDED;
-          return true;
+          return;
         }
       }
 
       // if we have the levelDetails for the selected variant, lets continue enrichen our stream (load keys/fragments or trigger EOS, etc..)
-      return this._fetchPayloadOrEos(pos, bufferInfo, levelDetails);
+      this._fetchPayloadOrEos(pos, bufferInfo, levelDetails);
     }
   }, {
     key: '_fetchPayloadOrEos',
@@ -3821,7 +4055,7 @@ var StreamController = function (_EventHandler) {
 
       // empty playlist
       if (fragLen === 0) {
-        return false;
+        return;
       }
 
       // find fragment index, contiguous with end of buffer position
@@ -3838,13 +4072,13 @@ var StreamController = function (_EventHandler) {
           var initialLiveManifestSize = this.config.initialLiveManifestSize;
           if (fragLen < initialLiveManifestSize) {
             _logger.logger.warn('Can not start playback of a level, reason: not enough fragments ' + fragLen + ' < ' + initialLiveManifestSize);
-            return false;
+            return;
           }
 
           frag = this._ensureFragmentAtLivePoint(levelDetails, bufferEnd, start, end, fragPrevious, fragments, fragLen);
           // if it explicitely returns null don't load any fragment and exit function now
           if (frag === null) {
-            return false;
+            return;
           }
         } else {
           // VoD playlist: if bufferEnd before start of playlist, load first fragment
@@ -3857,9 +4091,9 @@ var StreamController = function (_EventHandler) {
         frag = this._findFragment(start, fragPrevious, fragLen, fragments, bufferEnd, end, levelDetails);
       }
       if (frag) {
-        return this._loadFragmentOrKey(frag, level, levelDetails, pos, bufferEnd);
+        this._loadFragmentOrKey(frag, level, levelDetails, pos, bufferEnd);
       }
-      return true;
+      return;
     }
   }, {
     key: '_ensureFragmentAtLivePoint',
@@ -4039,7 +4273,7 @@ var StreamController = function (_EventHandler) {
           // if this frag has already been loaded 3 times, and if it has been reloaded recently
           if (frag.loadCounter > maxThreshold && Math.abs(this.fragLoadIdx - frag.loadIdx) < maxThreshold) {
             hls.trigger(_events2.default.ERROR, { type: _errors.ErrorTypes.MEDIA_ERROR, details: _errors.ErrorDetails.FRAG_LOOP_LOADING_ERROR, fatal: false, frag: frag });
-            return false;
+            return;
           }
         } else {
           frag.loadCounter = 1;
@@ -4058,7 +4292,7 @@ var StreamController = function (_EventHandler) {
           this.demuxer = new _demuxer2.default(hls, 'main');
         }
         this.state = State.FRAG_LOADING;
-        return true;
+        return;
       }
     }
   }, {
@@ -4298,11 +4532,13 @@ var StreamController = function (_EventHandler) {
       var media = this.media,
           currentTime = media ? media.currentTime : undefined,
           config = this.config;
-      _logger.logger.log('media seeking to ' + currentTime.toFixed(3));
+      if (!isNaN(currentTime)) {
+        _logger.logger.log('media seeking to ' + currentTime.toFixed(3));
+      }
+      var mediaBuffer = this.mediaBuffer ? this.mediaBuffer : media;
+      var bufferInfo = _bufferHelper2.default.bufferInfo(mediaBuffer, currentTime, this.config.maxBufferHole);
       if (this.state === State.FRAG_LOADING) {
-        var mediaBuffer = this.mediaBuffer ? this.mediaBuffer : media;
-        var bufferInfo = _bufferHelper2.default.bufferInfo(mediaBuffer, currentTime, this.config.maxBufferHole),
-            fragCurrent = this.fragCurrent;
+        var fragCurrent = this.fragCurrent;
         // check if we are seeking to a unbuffered area AND if frag loading is in progress
         if (bufferInfo.len === 0 && fragCurrent) {
           var tolerance = config.maxFragLookUpTolerance,
@@ -4323,6 +4559,10 @@ var StreamController = function (_EventHandler) {
           }
         }
       } else if (this.state === State.ENDED) {
+        // if seeking to unbuffered area, clean up fragPrevious
+        if (bufferInfo.len === 0) {
+          this.fragPrevious = 0;
+        }
         // switch to IDLE state to check for potential new fragment
         this.state = State.IDLE;
       }
@@ -4343,7 +4583,11 @@ var StreamController = function (_EventHandler) {
   }, {
     key: 'onMediaSeeked',
     value: function onMediaSeeked() {
-      _logger.logger.log('media seeked to ' + this.media.currentTime.toFixed(3));
+      var media = this.media,
+          currentTime = media ? media.currentTime : undefined;
+      if (!isNaN(currentTime)) {
+        _logger.logger.log('media seeked to ' + currentTime.toFixed(3));
+      }
       // tick to speed up FRAGMENT_PLAYING triggering
       this.tick();
     }
@@ -4390,7 +4634,7 @@ var StreamController = function (_EventHandler) {
       this.startLevelLoaded = false;
       this.startFragRequested = false;
       var config = this.config;
-      if (config.autoStartLoad) {
+      if (config.autoStartLoad || this.forceStartLoad) {
         this.hls.startLoad(config.startPosition);
       }
     }
@@ -4644,7 +4888,7 @@ var StreamController = function (_EventHandler) {
           }
         }
 
-        var drift = _levelHelper2.default.updateFragPTSDTS(level.details, frag.sn, data.startPTS, data.endPTS, data.startDTS, data.endDTS),
+        var drift = _levelHelper2.default.updateFragPTSDTS(level.details, frag, data.startPTS, data.endPTS, data.startDTS, data.endDTS),
             hls = this.hls;
         hls.trigger(_events2.default.LEVEL_PTS_UPDATED, { details: level.details, level: this.level, drift: drift, type: data.type, start: data.startPTS, end: data.endPTS });
 
@@ -4768,33 +5012,29 @@ var StreamController = function (_EventHandler) {
   }, {
     key: '_checkAppendedParsed',
     value: function _checkAppendedParsed() {
-      var _this3 = this;
-
       //trigger handler right now
       if (this.state === State.PARSED && (!this.appended || !this.pendingBuffering)) {
         var frag = this.fragCurrent;
         if (frag) {
-          (function () {
-            var media = _this3.mediaBuffer ? _this3.mediaBuffer : _this3.media;
-            _logger.logger.log('main buffered : ' + _timeRanges2.default.toString(media.buffered));
-            // filter fragments potentially evicted from buffer. this is to avoid memleak on live streams
-            var bufferedFrags = _this3._bufferedFrags.filter(function (frag) {
-              return _bufferHelper2.default.isBuffered(media, (frag.startPTS + frag.endPTS) / 2);
-            });
-            // push new range
-            bufferedFrags.push(frag);
-            // sort frags, as we use BinarySearch for lookup in getBufferedFrag ...
-            _this3._bufferedFrags = bufferedFrags.sort(function (a, b) {
-              return a.startPTS - b.startPTS;
-            });
-            _this3.fragPrevious = frag;
-            var stats = _this3.stats;
-            stats.tbuffered = performance.now();
-            // we should get rid of this.fragLastKbps
-            _this3.fragLastKbps = Math.round(8 * stats.total / (stats.tbuffered - stats.tfirst));
-            _this3.hls.trigger(_events2.default.FRAG_BUFFERED, { stats: stats, frag: frag, id: 'main' });
-            _this3.state = State.IDLE;
-          })();
+          var media = this.mediaBuffer ? this.mediaBuffer : this.media;
+          _logger.logger.log('main buffered : ' + _timeRanges2.default.toString(media.buffered));
+          // filter fragments potentially evicted from buffer. this is to avoid memleak on live streams
+          var bufferedFrags = this._bufferedFrags.filter(function (frag) {
+            return _bufferHelper2.default.isBuffered(media, (frag.startPTS + frag.endPTS) / 2);
+          });
+          // push new range
+          bufferedFrags.push(frag);
+          // sort frags, as we use BinarySearch for lookup in getBufferedFrag ...
+          this._bufferedFrags = bufferedFrags.sort(function (a, b) {
+            return a.startPTS - b.startPTS;
+          });
+          this.fragPrevious = frag;
+          var stats = this.stats;
+          stats.tbuffered = performance.now();
+          // we should get rid of this.fragLastKbps
+          this.fragLastKbps = Math.round(8 * stats.total / (stats.tbuffered - stats.tfirst));
+          this.hls.trigger(_events2.default.FRAG_BUFFERED, { stats: stats, frag: frag, id: 'main' });
+          this.state = State.IDLE;
         }
         this.tick();
       }
@@ -4876,8 +5116,8 @@ var StreamController = function (_EventHandler) {
               this.state = State.ERROR;
               _logger.logger.warn('streamController: ' + data.details + ',switch to ' + this.state + ' state ...');
             } else {
-              // in cas of non fatal error while waiting level load to be completed, switch back to IDLE
-              if (this.state === State.WAITING_LEVEL) {
+              // in case of non fatal error while loading level, if level controller is not retrying to load level , switch back to IDLE
+              if (!data.levelRetry && this.state === State.WAITING_LEVEL) {
                 this.state = State.IDLE;
               }
             }
@@ -5134,7 +5374,7 @@ var StreamController = function (_EventHandler) {
 
 exports.default = StreamController;
 
-},{"24":24,"30":30,"31":31,"32":32,"34":34,"35":35,"45":45,"50":50,"51":51}],13:[function(_dereq_,module,exports){
+},{"25":25,"33":33,"34":34,"35":35,"37":37,"38":38,"48":48,"53":53,"54":54}],14:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5143,15 +5383,15 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _events = _dereq_(32);
+var _events = _dereq_(35);
 
 var _events2 = _interopRequireDefault(_events);
 
-var _eventHandler = _dereq_(31);
+var _eventHandler = _dereq_(34);
 
 var _eventHandler2 = _interopRequireDefault(_eventHandler);
 
-var _logger = _dereq_(50);
+var _logger = _dereq_(53);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -5296,7 +5536,7 @@ var SubtitleStreamController = function (_EventHandler) {
 
 exports.default = SubtitleStreamController;
 
-},{"31":31,"32":32,"50":50}],14:[function(_dereq_,module,exports){
+},{"34":34,"35":35,"53":53}],15:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5305,15 +5545,15 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _events = _dereq_(32);
+var _events = _dereq_(35);
 
 var _events2 = _interopRequireDefault(_events);
 
-var _eventHandler = _dereq_(31);
+var _eventHandler = _dereq_(34);
 
 var _eventHandler2 = _interopRequireDefault(_eventHandler);
 
-var _logger = _dereq_(50);
+var _logger = _dereq_(53);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -5324,6 +5564,16 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 * audio track controller
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+function filterSubtitleTracks(textTrackList) {
+  var tracks = [];
+  for (var i = 0; i < textTrackList.length; i++) {
+    if (textTrackList[i].kind === 'subtitles') {
+      tracks.push(textTrackList[i]);
+    }
+  }
+  return tracks;
+}
 
 var SubtitleTrackController = function (_EventHandler) {
   _inherits(SubtitleTrackController, _EventHandler);
@@ -5364,7 +5614,7 @@ var SubtitleTrackController = function (_EventHandler) {
         }
 
         var trackId = -1;
-        var tracks = _this2.media.textTracks;
+        var tracks = filterSubtitleTracks(_this2.media.textTracks);
         for (var id = 0; id < tracks.length; id++) {
           if (tracks[id].mode === 'showing') {
             trackId = id;
@@ -5510,34 +5760,32 @@ var SubtitleTrackController = function (_EventHandler) {
 
 exports.default = SubtitleTrackController;
 
-},{"31":31,"32":32,"50":50}],15:[function(_dereq_,module,exports){
+},{"34":34,"35":35,"53":53}],16:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _events = _dereq_(32);
+var _events = _dereq_(35);
 
 var _events2 = _interopRequireDefault(_events);
 
-var _eventHandler = _dereq_(31);
+var _eventHandler = _dereq_(34);
 
 var _eventHandler2 = _interopRequireDefault(_eventHandler);
 
-var _cea608Parser = _dereq_(46);
+var _cea608Parser = _dereq_(49);
 
 var _cea608Parser2 = _interopRequireDefault(_cea608Parser);
 
-var _webvttParser = _dereq_(54);
+var _webvttParser = _dereq_(57);
 
 var _webvttParser2 = _interopRequireDefault(_webvttParser);
 
-var _logger = _dereq_(50);
+var _logger = _dereq_(53);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -5759,23 +6007,24 @@ var TimelineController = function (_EventHandler) {
       this.cueRanges = [];
 
       if (this.config.enableWebVTT) {
-        (function () {
-          _this3.tracks = data.subtitles || [];
-          var inUseTracks = _this3.media ? _this3.media.textTracks : [];
+        this.tracks = data.subtitles || [];
+        var inUseTracks = this.media ? this.media.textTracks : [];
 
-          _this3.tracks.forEach(function (track, index) {
-            var textTrack = void 0;
+        this.tracks.forEach(function (track, index) {
+          var textTrack = void 0;
+          if (index < inUseTracks.length) {
             var inUseTrack = inUseTracks[index];
             // Reuse tracks with the same label, but do not reuse 608/708 tracks
             if (reuseVttTextTrack(inUseTrack, track)) {
               textTrack = inUseTrack;
-            } else {
-              textTrack = _this3.createTextTrack('subtitles', track.name, track.lang);
             }
-            textTrack.mode = track.default ? 'showing' : 'hidden';
-            _this3.textTracks.push(textTrack);
-          });
-        })();
+          }
+          if (!textTrack) {
+            textTrack = _this3.createTextTrack('subtitles', track.name, track.lang);
+          }
+          textTrack.mode = track.default ? 'showing' : 'hidden';
+          _this3.textTracks.push(textTrack);
+        });
       }
     }
   }, {
@@ -5786,52 +6035,53 @@ var TimelineController = function (_EventHandler) {
   }, {
     key: 'onFragLoaded',
     value: function onFragLoaded(data) {
-      var _this4 = this;
-
       var frag = data.frag,
           payload = data.payload;
       if (frag.type === 'main') {
         var sn = frag.sn;
         // if this frag isn't contiguous, clear the parser so cues with bad start/end times aren't added to the textTrack
         if (sn !== this.lastSn + 1) {
-          this.cea608Parser.reset();
+          var cea608Parser = this.cea608Parser;
+          if (cea608Parser) {
+            cea608Parser.reset();
+          }
         }
         this.lastSn = sn;
       }
       // If fragment is subtitle type, parse as WebVTT.
       else if (frag.type === 'subtitle') {
           if (payload.byteLength) {
-            var _ret2 = function () {
-              // We need an initial synchronisation PTS. Store fragments as long as none has arrived.
-              if (typeof _this4.initPTS === 'undefined') {
-                _this4.unparsedVttFrags.push(data);
-                return {
-                  v: void 0
-                };
-              }
-              var vttCCs = _this4.vttCCs;
-              if (!vttCCs[frag.cc]) {
-                vttCCs[frag.cc] = { start: frag.start, prevCC: _this4.prevCC, new: true };
-                _this4.prevCC = frag.cc;
-              }
-              var textTracks = _this4.textTracks,
-                  hls = _this4.hls;
+            // We need an initial synchronisation PTS. Store fragments as long as none has arrived.
+            if (typeof this.initPTS === 'undefined') {
+              this.unparsedVttFrags.push(data);
+              return;
+            }
+            var vttCCs = this.vttCCs;
+            if (!vttCCs[frag.cc]) {
+              vttCCs[frag.cc] = { start: frag.start, prevCC: this.prevCC, new: true };
+              this.prevCC = frag.cc;
+            }
+            var textTracks = this.textTracks,
+                hls = this.hls;
 
-              // Parse the WebVTT file contents.
-              _webvttParser2.default.parse(payload, _this4.initPTS, vttCCs, frag.cc, function (cues) {
-                // Add cues and trigger event with success true.
-                cues.forEach(function (cue) {
-                  textTracks[frag.trackId].addCue(cue);
-                });
-                hls.trigger(_events2.default.SUBTITLE_FRAG_PROCESSED, { success: true, frag: frag });
-              }, function (e) {
-                // Something went wrong while parsing. Trigger event with success false.
-                _logger.logger.log('Failed to parse VTT cue: ' + e);
-                hls.trigger(_events2.default.SUBTITLE_FRAG_PROCESSED, { success: false, frag: frag });
+            // Parse the WebVTT file contents.
+            _webvttParser2.default.parse(payload, this.initPTS, vttCCs, frag.cc, function (cues) {
+              var currentTrack = textTracks[frag.trackId];
+              // Add cues and trigger event with success true.
+              cues.forEach(function (cue) {
+                // Sometimes there are cue overlaps on segmented vtts so the same
+                // cue can appear more than once in different vtt files.
+                // This avoid showing duplicated cues with same timecode and text.
+                if (!currentTrack.cues.getCueById(cue.id)) {
+                  currentTrack.addCue(cue);
+                }
               });
-            }();
-
-            if ((typeof _ret2 === 'undefined' ? 'undefined' : _typeof(_ret2)) === "object") return _ret2.v;
+              hls.trigger(_events2.default.SUBTITLE_FRAG_PROCESSED, { success: true, frag: frag });
+            }, function (e) {
+              // Something went wrong while parsing. Trigger event with success false.
+              _logger.logger.log('Failed to parse VTT cue: ' + e);
+              hls.trigger(_events2.default.SUBTITLE_FRAG_PROCESSED, { success: false, frag: frag });
+            });
           } else {
             // In case there is no payload, finish unsuccessfully.
             this.hls.trigger(_events2.default.SUBTITLE_FRAG_PROCESSED, { success: false, frag: frag });
@@ -5886,7 +6136,7 @@ var TimelineController = function (_EventHandler) {
 
 exports.default = TimelineController;
 
-},{"31":31,"32":32,"46":46,"50":50,"54":54}],16:[function(_dereq_,module,exports){
+},{"34":34,"35":35,"49":49,"53":53,"57":57}],17:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5917,7 +6167,7 @@ var AESCrypto = function () {
 
 exports.default = AESCrypto;
 
-},{}],17:[function(_dereq_,module,exports){
+},{}],18:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6224,7 +6474,7 @@ var AESDecryptor = function () {
 
 exports.default = AESDecryptor;
 
-},{}],18:[function(_dereq_,module,exports){
+},{}],19:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6233,21 +6483,21 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _aesCrypto = _dereq_(16);
+var _aesCrypto = _dereq_(17);
 
 var _aesCrypto2 = _interopRequireDefault(_aesCrypto);
 
-var _fastAesKey = _dereq_(19);
+var _fastAesKey = _dereq_(20);
 
 var _fastAesKey2 = _interopRequireDefault(_fastAesKey);
 
-var _aesDecryptor = _dereq_(17);
+var _aesDecryptor = _dereq_(18);
 
 var _aesDecryptor2 = _interopRequireDefault(_aesDecryptor);
 
-var _errors = _dereq_(30);
+var _errors = _dereq_(33);
 
-var _logger = _dereq_(50);
+var _logger = _dereq_(53);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -6291,29 +6541,27 @@ var Decrypter = function () {
         decryptor.expandKey(key);
         callback(decryptor.decrypt(data, 0, iv));
       } else {
-        (function () {
-          if (_this.logEnabled) {
-            _logger.logger.log('WebCrypto AES decrypt');
-            _this.logEnabled = false;
-          }
-          var subtle = _this.subtle;
-          if (_this.key !== key) {
-            _this.key = key;
-            _this.fastAesKey = new _fastAesKey2.default(subtle, key);
-          }
+        if (this.logEnabled) {
+          _logger.logger.log('WebCrypto AES decrypt');
+          this.logEnabled = false;
+        }
+        var subtle = this.subtle;
+        if (this.key !== key) {
+          this.key = key;
+          this.fastAesKey = new _fastAesKey2.default(subtle, key);
+        }
 
-          _this.fastAesKey.expandKey().then(function (aesKey) {
-            // decrypt using web crypto
-            var crypto = new _aesCrypto2.default(subtle, iv);
-            crypto.decrypt(data, aesKey).catch(function (err) {
-              _this.onWebCryptoError(err, data, key, iv, callback);
-            }).then(function (result) {
-              callback(result);
-            });
-          }).catch(function (err) {
+        this.fastAesKey.expandKey().then(function (aesKey) {
+          // decrypt using web crypto
+          var crypto = new _aesCrypto2.default(subtle, iv);
+          crypto.decrypt(data, aesKey).catch(function (err) {
             _this.onWebCryptoError(err, data, key, iv, callback);
+          }).then(function (result) {
+            callback(result);
           });
-        })();
+        }).catch(function (err) {
+          _this.onWebCryptoError(err, data, key, iv, callback);
+        });
       }
     }
   }, {
@@ -6345,7 +6593,7 @@ var Decrypter = function () {
 
 exports.default = Decrypter;
 
-},{"16":16,"17":17,"19":19,"30":30,"50":50}],19:[function(_dereq_,module,exports){
+},{"17":17,"18":18,"20":20,"33":33,"53":53}],20:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6376,7 +6624,7 @@ var FastAESKey = function () {
 
 exports.default = FastAESKey;
 
-},{}],20:[function(_dereq_,module,exports){
+},{}],21:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6388,13 +6636,13 @@ var _createClass = function () { function defineProperties(target, props) { for 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       */
 
 
-var _adts = _dereq_(21);
+var _adts = _dereq_(22);
 
 var _adts2 = _interopRequireDefault(_adts);
 
-var _logger = _dereq_(50);
+var _logger = _dereq_(53);
 
-var _id = _dereq_(26);
+var _id = _dereq_(27);
 
 var _id2 = _interopRequireDefault(_id);
 
@@ -6414,7 +6662,7 @@ var AACDemuxer = function () {
   _createClass(AACDemuxer, [{
     key: 'resetInitSegment',
     value: function resetInitSegment(initSegment, audioCodec, videoCodec, duration) {
-      this._aacTrack = { container: 'audio/adts', type: 'audio', id: -1, sequenceNumber: 0, isAAC: true, samples: [], len: 0, manifestCodec: audioCodec, duration: duration, inputTimeScale: 90000 };
+      this._audioTrack = { container: 'audio/adts', type: 'audio', id: -1, sequenceNumber: 0, isAAC: true, samples: [], len: 0, manifestCodec: audioCodec, duration: duration, inputTimeScale: 90000 };
     }
   }, {
     key: 'resetTimeStamp',
@@ -6435,14 +6683,14 @@ var AACDemuxer = function () {
           offset,
           headerLength,
           stamp,
-          len,
+          length,
           aacSample;
 
-      track = this._aacTrack;
+      track = this._audioTrack;
 
-      // look for ADTS header (0xFFFx)
-      for (offset = id3.length, len = data.length; offset < len - 1; offset++) {
-        if (data[offset] === 0xff && (data[offset + 1] & 0xf0) === 0xf0) {
+      // Look for ADTS header
+      for (offset = id3.length, length = data.length; offset < length - 1; offset++) {
+        if (data[offset] === 0xff && (data[offset + 1] & 0xf6) === 0xf0) {
           break;
         }
       }
@@ -6457,7 +6705,7 @@ var AACDemuxer = function () {
       }
       frameIndex = 0;
       frameDuration = 1024 * 90000 / track.samplerate;
-      while (offset + 5 < len) {
+      while (offset + 5 < length) {
         // The protection skip bit tells us if we have 2 bytes of CRC data at the end of the ADTS header
         headerLength = !!(data[offset + 1] & 0x01) ? 7 : 9;
         // retrieve frame size
@@ -6465,7 +6713,7 @@ var AACDemuxer = function () {
         frameLength -= headerLength;
         //stamp = pes.pts;
 
-        if (frameLength > 0 && offset + headerLength + frameLength <= len) {
+        if (frameLength > 0 && offset + headerLength + frameLength <= length) {
           stamp = pts + frameIndex * frameDuration;
           //logger.log(`AAC frame, offset/length/total/pts:${offset+headerLength}/${frameLength}/${data.byteLength}/${(stamp/90).toFixed(0)}`);
           aacSample = { unit: data.subarray(offset + headerLength, offset + headerLength + frameLength), pts: stamp, dts: stamp };
@@ -6474,8 +6722,8 @@ var AACDemuxer = function () {
           offset += frameLength + headerLength;
           frameIndex++;
           // look for ADTS header (0xFFFx)
-          for (; offset < len - 1; offset++) {
-            if (data[offset] === 0xff && (data[offset + 1] & 0xf0) === 0xf0) {
+          for (; offset < length - 1; offset++) {
+            if (data[offset] === 0xff && (data[offset + 1] & 0xf6) === 0xf0) {
               break;
             }
           }
@@ -6483,7 +6731,7 @@ var AACDemuxer = function () {
           break;
         }
       }
-      this.remuxer.remux(track, { samples: [] }, { samples: [{ pts: pts, dts: pts, unit: id3.payload }] }, { samples: [] }, timeOffset, contiguous, accurateTimeOffset);
+      this.remuxer.remux(track, { samples: [] }, { samples: [{ pts: pts, dts: pts, data: id3.payload }], inputTimeScale: 90000 }, { samples: [] }, timeOffset, contiguous, accurateTimeOffset);
     }
   }, {
     key: 'destroy',
@@ -6491,14 +6739,16 @@ var AACDemuxer = function () {
   }], [{
     key: 'probe',
     value: function probe(data) {
-      // check if data contains ID3 timestamp and ADTS sync worc
+      // check if data contains ID3 timestamp and ADTS sync word
       var id3 = new _id2.default(data),
           offset,
-          len;
+          length;
       if (id3.hasTimeStamp) {
-        // look for ADTS header (0xFFFx)
-        for (offset = id3.length, len = data.length; offset < len - 1; offset++) {
-          if (data[offset] === 0xff && (data[offset + 1] & 0xf0) === 0xf0) {
+        // Look for ADTS header | 1111 1111 | 1111 X00X | where X can be either 0 or 1
+        // Layer bits (position 14 and 15) in header should be always 0 for ADTS
+        // More info https://wiki.multimedia.cx/index.php?title=ADTS
+        for (offset = id3.length, length = Math.min(data.length - 1, offset + 100); offset < length; offset++) {
+          if (data[offset] === 0xff && (data[offset + 1] & 0xf6) === 0xf0) {
             //logger.log('ADTS sync word found !');
             return true;
           }
@@ -6513,12 +6763,12 @@ var AACDemuxer = function () {
 
 exports.default = AACDemuxer;
 
-},{"21":21,"26":26,"50":50}],21:[function(_dereq_,module,exports){
+},{"22":22,"27":27,"53":53}],22:[function(_dereq_,module,exports){
 'use strict';
 
-var _logger = _dereq_(50);
+var _logger = _dereq_(53);
 
-var _errors = _dereq_(30);
+var _errors = _dereq_(33);
 
 /**
  *  ADTS parser helper
@@ -6644,7 +6894,7 @@ var ADTS = {
 
 module.exports = ADTS;
 
-},{"30":30,"50":50}],22:[function(_dereq_,module,exports){
+},{"33":33,"53":53}],23:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6655,33 +6905,37 @@ var _createClass = function () { function defineProperties(target, props) { for 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       *   probe fragments and instantiate appropriate demuxer depending on content type (TSDemuxer, AACDemuxer, ...)
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       */
 
-var _events = _dereq_(32);
+var _events = _dereq_(35);
 
 var _events2 = _interopRequireDefault(_events);
 
-var _errors = _dereq_(30);
+var _errors = _dereq_(33);
 
-var _decrypter = _dereq_(18);
+var _decrypter = _dereq_(19);
 
 var _decrypter2 = _interopRequireDefault(_decrypter);
 
-var _aacdemuxer = _dereq_(20);
+var _aacdemuxer = _dereq_(21);
 
 var _aacdemuxer2 = _interopRequireDefault(_aacdemuxer);
 
-var _mp4demuxer = _dereq_(27);
+var _mp4demuxer = _dereq_(29);
 
 var _mp4demuxer2 = _interopRequireDefault(_mp4demuxer);
 
-var _tsdemuxer = _dereq_(29);
+var _tsdemuxer = _dereq_(32);
 
 var _tsdemuxer2 = _interopRequireDefault(_tsdemuxer);
 
-var _mp4Remuxer = _dereq_(42);
+var _mp3demuxer = _dereq_(28);
+
+var _mp3demuxer2 = _interopRequireDefault(_mp3demuxer);
+
+var _mp4Remuxer = _dereq_(45);
 
 var _mp4Remuxer2 = _interopRequireDefault(_mp4Remuxer);
 
-var _passthroughRemuxer = _dereq_(43);
+var _passthroughRemuxer = _dereq_(46);
 
 var _passthroughRemuxer2 = _interopRequireDefault(_passthroughRemuxer);
 
@@ -6748,7 +7002,7 @@ var DemuxerInline = function () {
         var observer = this.observer;
         var typeSupported = this.typeSupported;
         var config = this.config;
-        var muxConfig = [{ demux: _tsdemuxer2.default, remux: _mp4Remuxer2.default }, { demux: _aacdemuxer2.default, remux: _mp4Remuxer2.default }, { demux: _mp4demuxer2.default, remux: _passthroughRemuxer2.default }];
+        var muxConfig = [{ demux: _tsdemuxer2.default, remux: _mp4Remuxer2.default }, { demux: _mp3demuxer2.default, remux: _mp4Remuxer2.default }, { demux: _aacdemuxer2.default, remux: _mp4Remuxer2.default }, { demux: _mp4demuxer2.default, remux: _passthroughRemuxer2.default }];
 
         // probe for content type
         for (var i in muxConfig) {
@@ -6789,22 +7043,22 @@ var DemuxerInline = function () {
 
 exports.default = DemuxerInline;
 
-},{"18":18,"20":20,"27":27,"29":29,"30":30,"32":32,"42":42,"43":43}],23:[function(_dereq_,module,exports){
+},{"19":19,"21":21,"28":28,"29":29,"32":32,"33":33,"35":35,"45":45,"46":46}],24:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _demuxerInline = _dereq_(22);
+var _demuxerInline = _dereq_(23);
 
 var _demuxerInline2 = _interopRequireDefault(_demuxerInline);
 
-var _events = _dereq_(32);
+var _events = _dereq_(35);
 
 var _events2 = _interopRequireDefault(_events);
 
-var _logger = _dereq_(50);
+var _logger = _dereq_(53);
 
 var _events3 = _dereq_(1);
 
@@ -6892,7 +7146,7 @@ var DemuxerWorker = function DemuxerWorker(self) {
 
 exports.default = DemuxerWorker;
 
-},{"1":1,"22":22,"32":32,"50":50}],24:[function(_dereq_,module,exports){
+},{"1":1,"23":23,"35":35,"53":53}],25:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6901,21 +7155,21 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _events = _dereq_(32);
+var _events = _dereq_(35);
 
 var _events2 = _interopRequireDefault(_events);
 
-var _demuxerInline = _dereq_(22);
+var _demuxerInline = _dereq_(23);
 
 var _demuxerInline2 = _interopRequireDefault(_demuxerInline);
 
-var _demuxerWorker = _dereq_(23);
+var _demuxerWorker = _dereq_(24);
 
 var _demuxerWorker2 = _interopRequireDefault(_demuxerWorker);
 
-var _logger = _dereq_(50);
+var _logger = _dereq_(53);
 
-var _errors = _dereq_(30);
+var _errors = _dereq_(33);
 
 var _events3 = _dereq_(1);
 
@@ -7032,7 +7286,7 @@ var Demuxer = function () {
       var discontinuity = !(lastFrag && frag.cc === lastFrag.cc);
       var trackSwitch = !(lastFrag && frag.level === lastFrag.level);
       var nextSN = lastFrag && frag.sn === lastFrag.sn + 1;
-      var contiguous = !discontinuity && !trackSwitch && nextSN;
+      var contiguous = !trackSwitch && nextSN;
       if (discontinuity) {
         _logger.logger.log(this.id + ':discontinuity detected');
       }
@@ -7083,7 +7337,7 @@ var Demuxer = function () {
 
 exports.default = Demuxer;
 
-},{"1":1,"22":22,"23":23,"3":3,"30":30,"32":32,"50":50}],25:[function(_dereq_,module,exports){
+},{"1":1,"23":23,"24":24,"3":3,"33":33,"35":35,"53":53}],26:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7094,7 +7348,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       * Parser for exponential Golomb codes, a variable-bitwidth number encoding scheme used by h264.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      */
 
-var _logger = _dereq_(50);
+var _logger = _dereq_(53);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -7455,7 +7709,7 @@ var ExpGolomb = function () {
 
 exports.default = ExpGolomb;
 
-},{"50":50}],26:[function(_dereq_,module,exports){
+},{"53":53}],27:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7467,7 +7721,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       */
 
 
-var _logger = _dereq_(50);
+var _logger = _dereq_(53);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -7478,6 +7732,7 @@ var ID3 = function () {
     _classCallCheck(this, ID3);
 
     this._hasTimeStamp = false;
+    this._length = 0;
     var offset = 0,
         byte1,
         byte2,
@@ -7608,7 +7863,100 @@ var ID3 = function () {
 
 exports.default = ID3;
 
-},{"50":50}],27:[function(_dereq_,module,exports){
+},{"53":53}],28:[function(_dereq_,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * MP3 demuxer
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      */
+
+
+var _id = _dereq_(27);
+
+var _id2 = _interopRequireDefault(_id);
+
+var _mpegaudio = _dereq_(30);
+
+var _mpegaudio2 = _interopRequireDefault(_mpegaudio);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var MP3Demuxer = function () {
+  function MP3Demuxer(observer, remuxer, config) {
+    _classCallCheck(this, MP3Demuxer);
+
+    this.observer = observer;
+    this.config = config;
+    this.remuxer = remuxer;
+  }
+
+  _createClass(MP3Demuxer, [{
+    key: 'resetInitSegment',
+    value: function resetInitSegment(initSegment, audioCodec, videoCodec, duration) {
+      this._audioTrack = { container: 'audio/mpeg', type: 'audio', id: -1, sequenceNumber: 0, isAAC: false, samples: [], len: 0, manifestCodec: audioCodec, duration: duration, inputTimeScale: 90000 };
+    }
+  }, {
+    key: 'resetTimeStamp',
+    value: function resetTimeStamp() {}
+  }, {
+    key: 'append',
+
+
+    // feed incoming data to the front of the parsing pipeline
+    value: function append(data, timeOffset, contiguous, accurateTimeOffset) {
+      var id3 = new _id2.default(data);
+      var pts = 90 * id3.timeStamp;
+      var afterID3 = id3.length;
+      var offset, length;
+
+      // Look for MPEG header
+      for (offset = afterID3, length = data.length; offset < length - 1; offset++) {
+        if (data[offset] === 0xff && (data[offset + 1] & 0xe0) === 0xe0 && (data[offset + 1] & 0x06) !== 0x00) {
+          break;
+        }
+      }
+
+      _mpegaudio2.default.parse(this._audioTrack, data, id3.length, pts);
+
+      this.remuxer.remux(this._audioTrack, { samples: [] }, { samples: [{ pts: pts, dts: pts, data: id3.payload }], inputTimeScale: 90000 }, { samples: [] }, timeOffset, contiguous, accurateTimeOffset);
+    }
+  }, {
+    key: 'destroy',
+    value: function destroy() {}
+  }], [{
+    key: 'probe',
+    value: function probe(data) {
+      // check if data contains ID3 timestamp and MPEG sync word
+      var id3 = new _id2.default(data),
+          offset,
+          length;
+      if (id3.hasTimeStamp) {
+        // Look for MPEG header | 1111 1111 | 111X XYZX | where X can be either 0 or 1 and Y or Z should be 1
+        // Layer bits (position 14 and 15) in header should be always different from 0 (Layer I or Layer II or Layer III)
+        // More info http://www.mp3-tech.org/programmer/frame_header.html
+        for (offset = id3.length, length = Math.min(data.length - 1, offset + 100); offset < length; offset++) {
+          if (data[offset] === 0xff && (data[offset + 1] & 0xe0) === 0xe0 && (data[offset + 1] & 0x06) !== 0x00) {
+            //logger.log('MPEG sync word found !');
+            return true;
+          }
+        }
+      }
+      return false;
+    }
+  }]);
+
+  return MP3Demuxer;
+}();
+
+exports.default = MP3Demuxer;
+
+},{"27":27,"30":30}],29:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7621,7 +7969,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 //import {logger} from '../utils/logger';
 
 
-var _events = _dereq_(32);
+var _events = _dereq_(35);
 
 var _events2 = _interopRequireDefault(_events);
 
@@ -7850,7 +8198,93 @@ var MP4Demuxer = function () {
 
 exports.default = MP4Demuxer;
 
-},{"32":32}],28:[function(_dereq_,module,exports){
+},{"35":35}],30:[function(_dereq_,module,exports){
+'use strict';
+
+var _logger = _dereq_(53);
+
+var MpegAudio = {
+
+    onFrame: function onFrame(track, data, bitRate, sampleRate, channelCount, frameIndex, pts) {
+        var frameDuration = 1152 * 90000 / sampleRate;
+        var stamp = pts + frameIndex * frameDuration;
+
+        track.config = [];
+        track.channelCount = channelCount;
+        track.samplerate = sampleRate;
+        track.samples.push({ unit: data, pts: stamp, dts: stamp });
+        track.len += data.length;
+    },
+
+    onNoise: function onNoise(data) {
+        _logger.logger.warn('mpeg audio has noise: ' + data.length + ' bytes');
+    },
+
+    parseFrames: function parseFrames(track, data, start, end, frameIndex, pts) {
+        var BitratesMap = [32, 64, 96, 128, 160, 192, 224, 256, 288, 320, 352, 384, 416, 448, 32, 48, 56, 64, 80, 96, 112, 128, 160, 192, 224, 256, 320, 384, 32, 40, 48, 56, 64, 80, 96, 112, 128, 160, 192, 224, 256, 320, 32, 48, 56, 64, 80, 96, 112, 128, 144, 160, 176, 192, 224, 256, 8, 16, 24, 32, 40, 48, 56, 64, 80, 96, 112, 128, 144, 160];
+        var SamplingRateMap = [44100, 48000, 32000, 22050, 24000, 16000, 11025, 12000, 8000];
+
+        if (start + 2 > end) {
+            return -1; // we need at least 2 bytes to detect sync pattern
+        }
+        if (data[start] === 0xFF || (data[start + 1] & 0xE0) === 0xE0) {
+            // Using http://www.datavoyage.com/mpgscript/mpeghdr.htm as a reference
+            if (start + 24 > end) {
+                return -1;
+            }
+            var headerB = data[start + 1] >> 3 & 3;
+            var headerC = data[start + 1] >> 1 & 3;
+            var headerE = data[start + 2] >> 4 & 15;
+            var headerF = data[start + 2] >> 2 & 3;
+            var headerG = !!(data[start + 2] & 2);
+            if (headerB !== 1 && headerE !== 0 && headerE !== 15 && headerF !== 3) {
+                var columnInBitrates = headerB === 3 ? 3 - headerC : headerC === 3 ? 3 : 4;
+                var bitRate = BitratesMap[columnInBitrates * 14 + headerE - 1] * 1000;
+                var columnInSampleRates = headerB === 3 ? 0 : headerB === 2 ? 1 : 2;
+                var sampleRate = SamplingRateMap[columnInSampleRates * 3 + headerF];
+                var padding = headerG ? 1 : 0;
+                var channelCount = data[start + 3] >> 6 === 3 ? 1 : 2; // If bits of channel mode are `11` then it is a single channel (Mono)
+                var frameLength = headerC === 3 ? (headerB === 3 ? 12 : 6) * bitRate / sampleRate + padding << 2 : (headerB === 3 ? 144 : 72) * bitRate / sampleRate + padding | 0;
+                if (start + frameLength > end) {
+                    return -1;
+                }
+
+                this.onFrame(track, data.subarray(start, start + frameLength), bitRate, sampleRate, channelCount, frameIndex, pts);
+
+                return frameLength;
+            }
+        }
+        // noise or ID3, trying to skip
+        var offset = start + 2;
+        while (offset < end) {
+            if (data[offset - 1] === 0xFF && (data[offset] & 0xE0) === 0xE0) {
+                // sync pattern is found
+                this.onNoise(data.subarray(start, offset - 1));
+
+                return offset - start - 1;
+            }
+            offset++;
+        }
+        return -1;
+    },
+
+    parse: function parse(track, data, offset, pts) {
+        var length = data.length;
+        var frameIndex = 0;
+        var parsed;
+
+        while (offset < length && (parsed = this.parseFrames(track, data, offset, length, frameIndex++, pts)) > 0) {
+            offset += parsed;
+        }
+    }
+}; /**
+    *  MPEG parser helper
+    */
+
+
+module.exports = MpegAudio;
+
+},{"53":53}],31:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7861,7 +8295,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       * SAMPLE-AES decrypter
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      */
 
-var _decrypter = _dereq_(18);
+var _decrypter = _dereq_(19);
 
 var _decrypter2 = _interopRequireDefault(_decrypter);
 
@@ -8001,7 +8435,7 @@ var SampleAesDecrypter = function () {
 
 exports.default = SampleAesDecrypter;
 
-},{"18":18}],29:[function(_dereq_,module,exports){
+},{"19":19}],32:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -8022,25 +8456,29 @@ var _createClass = function () { function defineProperties(target, props) { for 
 // import Hex from '../utils/hex';
 
 
-var _adts = _dereq_(21);
+var _adts = _dereq_(22);
 
 var _adts2 = _interopRequireDefault(_adts);
 
-var _events = _dereq_(32);
+var _mpegaudio = _dereq_(30);
+
+var _mpegaudio2 = _interopRequireDefault(_mpegaudio);
+
+var _events = _dereq_(35);
 
 var _events2 = _interopRequireDefault(_events);
 
-var _expGolomb = _dereq_(25);
+var _expGolomb = _dereq_(26);
 
 var _expGolomb2 = _interopRequireDefault(_expGolomb);
 
-var _sampleAes = _dereq_(28);
+var _sampleAes = _dereq_(31);
 
 var _sampleAes2 = _interopRequireDefault(_sampleAes);
 
-var _logger = _dereq_(50);
+var _logger = _dereq_(53);
 
-var _errors = _dereq_(30);
+var _errors = _dereq_(33);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -8072,7 +8510,7 @@ var TSDemuxer = function () {
       this.pmtParsed = false;
       this._pmtId = -1;
       this._avcTrack = { container: 'video/mp2t', type: 'video', id: -1, inputTimeScale: 90000, sequenceNumber: 0, samples: [], len: 0, dropped: 0 };
-      this._audioTrack = { container: 'video/mp2t', type: 'audio', id: -1, inputTimeScale: 90000, sequenceNumber: 0, samples: [], len: 0, isAAC: true };
+      this._audioTrack = { container: 'video/mp2t', type: 'audio', id: -1, inputTimeScale: 90000, duration: duration, sequenceNumber: 0, samples: [], len: 0, isAAC: true };
       this._id3Track = { type: 'id3', id: -1, inputTimeScale: 90000, sequenceNumber: 0, samples: [], len: 0 };
       this._txtTrack = { type: 'text', id: -1, inputTimeScale: 90000, sequenceNumber: 0, samples: [], len: 0 };
       // flush any partial content
@@ -8269,15 +8707,11 @@ var TSDemuxer = function () {
   }, {
     key: 'decryptAndRemux',
     value: function decryptAndRemux(audioTrack, videoTrack, id3Track, textTrack, timeOffset, contiguous, accurateTimeOffset) {
-      var _this = this;
-
       if (audioTrack.samples && audioTrack.isAAC) {
-        (function () {
-          var localthis = _this;
-          _this.sampleAes.decryptAacSamples(audioTrack.samples, 0, function () {
-            localthis.decryptAndRemuxAvc(audioTrack, videoTrack, id3Track, textTrack, timeOffset, contiguous, accurateTimeOffset);
-          });
-        })();
+        var localthis = this;
+        this.sampleAes.decryptAacSamples(audioTrack.samples, 0, function () {
+          localthis.decryptAndRemuxAvc(audioTrack, videoTrack, id3Track, textTrack, timeOffset, contiguous, accurateTimeOffset);
+        });
       } else {
         this.decryptAndRemuxAvc(audioTrack, videoTrack, id3Track, textTrack, timeOffset, contiguous, accurateTimeOffset);
       }
@@ -8285,15 +8719,11 @@ var TSDemuxer = function () {
   }, {
     key: 'decryptAndRemuxAvc',
     value: function decryptAndRemuxAvc(audioTrack, videoTrack, id3Track, textTrack, timeOffset, contiguous, accurateTimeOffset) {
-      var _this2 = this;
-
       if (videoTrack.samples) {
-        (function () {
-          var localthis = _this2;
-          _this2.sampleAes.decryptAvcSamples(videoTrack.samples, 0, 0, function () {
-            localthis.remuxer.remux(audioTrack, videoTrack, id3Track, textTrack, timeOffset, contiguous, accurateTimeOffset);
-          });
-        })();
+        var localthis = this;
+        this.sampleAes.decryptAvcSamples(videoTrack.samples, 0, 0, function () {
+          localthis.remuxer.remux(audioTrack, videoTrack, id3Track, textTrack, timeOffset, contiguous, accurateTimeOffset);
+        });
       } else {
         this.remuxer.remux(audioTrack, videoTrack, id3Track, textTrack, timeOffset, contiguous, accurateTimeOffset);
       }
@@ -8528,7 +8958,7 @@ var TSDemuxer = function () {
   }, {
     key: '_parseAVCPES',
     value: function _parseAVCPES(pes, last) {
-      var _this3 = this;
+      var _this = this;
 
       //logger.log('parse new PES');
       var track = this._avcTrack,
@@ -8569,7 +8999,7 @@ var TSDemuxer = function () {
             push = true;
             // handle PES not starting with AUD
             if (!avcSample) {
-              avcSample = _this3.avcSample = _this3._createAVCSample(true, pes.pts, pes.dts, '');
+              avcSample = _this.avcSample = _this._createAVCSample(true, pes.pts, pes.dts, '');
             }
             if (debug) {
               avcSample.debug += 'IDR ';
@@ -8583,7 +9013,7 @@ var TSDemuxer = function () {
             if (debug && avcSample) {
               avcSample.debug += 'SEI ';
             }
-            expGolombDecoder = new _expGolomb2.default(_this3.discardEPB(unit.data));
+            expGolombDecoder = new _expGolomb2.default(_this.discardEPB(unit.data));
 
             // skip frameType
             expGolombDecoder.readUByte();
@@ -8639,7 +9069,7 @@ var TSDemuxer = function () {
                           byteArray.push(expGolombDecoder.readUByte());
                         }
 
-                        _this3._insertSampleInOrder(_this3._txtTrack.samples, { type: 3, pts: pes.pts, bytes: byteArray });
+                        _this._insertSampleInOrder(_this._txtTrack.samples, { type: 3, pts: pes.pts, bytes: byteArray });
                       }
                     }
                   }
@@ -8664,7 +9094,7 @@ var TSDemuxer = function () {
               track.height = config.height;
               track.pixelRatio = config.pixelRatio;
               track.sps = [unit.data];
-              track.duration = _this3._duration;
+              track.duration = _this._duration;
               var codecarray = unit.data.subarray(1, 4);
               var codecstring = 'avc1.';
               for (i = 0; i < 3; i++) {
@@ -8691,9 +9121,9 @@ var TSDemuxer = function () {
           case 9:
             push = false;
             if (avcSample) {
-              _this3.pushAccesUnit(avcSample, track);
+              _this.pushAccesUnit(avcSample, track);
             }
-            avcSample = _this3.avcSample = _this3._createAVCSample(false, pes.pts, pes.dts, debug ? 'AUD ' : '');
+            avcSample = _this.avcSample = _this._createAVCSample(false, pes.pts, pes.dts, debug ? 'AUD ' : '');
             break;
           // Filler Data
           case 12:
@@ -8965,7 +9395,6 @@ var TSDemuxer = function () {
         track.channelCount = config.channelCount;
         track.codec = config.codec;
         track.manifestCodec = config.manifestCodec;
-        track.duration = this._duration;
         _logger.logger.log('parsed codec:' + track.codec + ',rate:' + config.samplerate + ',nb channel:' + config.channelCount);
       }
       frameIndex = 0;
@@ -9019,85 +9448,7 @@ var TSDemuxer = function () {
   }, {
     key: '_parseMPEGPES',
     value: function _parseMPEGPES(pes) {
-      var data = pes.data;
-      var pts = pes.pts;
-      var length = data.length;
-      var frameIndex = 0;
-      var offset = 0;
-      var parsed;
-
-      while (offset < length && (parsed = this._parseMpeg(data, offset, length, frameIndex++, pts)) > 0) {
-        offset += parsed;
-      }
-    }
-  }, {
-    key: '_onMpegFrame',
-    value: function _onMpegFrame(data, bitRate, sampleRate, channelCount, frameIndex, pts) {
-      var frameDuration = 1152 / sampleRate * 1000;
-      var stamp = pts + frameIndex * frameDuration;
-      var track = this._audioTrack;
-
-      track.config = [];
-      track.channelCount = channelCount;
-      track.samplerate = sampleRate;
-      track.duration = this._duration;
-      track.samples.push({ unit: data, pts: stamp, dts: stamp });
-      track.len += data.length;
-    }
-  }, {
-    key: '_onMpegNoise',
-    value: function _onMpegNoise(data) {
-      _logger.logger.warn('mpeg audio has noise: ' + data.length + ' bytes');
-    }
-  }, {
-    key: '_parseMpeg',
-    value: function _parseMpeg(data, start, end, frameIndex, pts) {
-      var BitratesMap = [32, 64, 96, 128, 160, 192, 224, 256, 288, 320, 352, 384, 416, 448, 32, 48, 56, 64, 80, 96, 112, 128, 160, 192, 224, 256, 320, 384, 32, 40, 48, 56, 64, 80, 96, 112, 128, 160, 192, 224, 256, 320, 32, 48, 56, 64, 80, 96, 112, 128, 144, 160, 176, 192, 224, 256, 8, 16, 24, 32, 40, 48, 56, 64, 80, 96, 112, 128, 144, 160];
-      var SamplingRateMap = [44100, 48000, 32000, 22050, 24000, 16000, 11025, 12000, 8000];
-
-      if (start + 2 > end) {
-        return -1; // we need at least 2 bytes to detect sync pattern
-      }
-      if (data[start] === 0xFF || (data[start + 1] & 0xE0) === 0xE0) {
-        // Using http://www.datavoyage.com/mpgscript/mpeghdr.htm as a reference
-        if (start + 24 > end) {
-          return -1;
-        }
-        var headerB = data[start + 1] >> 3 & 3;
-        var headerC = data[start + 1] >> 1 & 3;
-        var headerE = data[start + 2] >> 4 & 15;
-        var headerF = data[start + 2] >> 2 & 3;
-        var headerG = !!(data[start + 2] & 2);
-        if (headerB !== 1 && headerE !== 0 && headerE !== 15 && headerF !== 3) {
-          var columnInBitrates = headerB === 3 ? 3 - headerC : headerC === 3 ? 3 : 4;
-          var bitRate = BitratesMap[columnInBitrates * 14 + headerE - 1] * 1000;
-          var columnInSampleRates = headerB === 3 ? 0 : headerB === 2 ? 1 : 2;
-          var sampleRate = SamplingRateMap[columnInSampleRates * 3 + headerF];
-          var padding = headerG ? 1 : 0;
-          var channelCount = data[start + 3] >> 6 === 3 ? 1 : 2; // If bits of channel mode are `11` then it is a single channel (Mono)
-          var frameLength = headerC === 3 ? (headerB === 3 ? 12 : 6) * bitRate / sampleRate + padding << 2 : (headerB === 3 ? 144 : 72) * bitRate / sampleRate + padding | 0;
-          if (start + frameLength > end) {
-            return -1;
-          }
-          if (this._onMpegFrame) {
-            this._onMpegFrame(data.subarray(start, start + frameLength), bitRate, sampleRate, channelCount, frameIndex, pts);
-          }
-          return frameLength;
-        }
-      }
-      // noise or ID3, trying to skip
-      var offset = start + 2;
-      while (offset < end) {
-        if (data[offset - 1] === 0xFF && (data[offset] & 0xE0) === 0xE0) {
-          // sync pattern is found
-          if (this._onMpegNoise) {
-            this._onMpegNoise(data.subarray(start, offset - 1));
-          }
-          return offset - start - 1;
-        }
-        offset++;
-      }
-      return -1;
+      _mpegaudio2.default.parse(this._audioTrack, pes.data, 0, pes.pts);
     }
   }, {
     key: '_parseID3PES',
@@ -9121,7 +9472,7 @@ var TSDemuxer = function () {
 
 exports.default = TSDemuxer;
 
-},{"21":21,"25":25,"28":28,"30":30,"32":32,"50":50}],30:[function(_dereq_,module,exports){
+},{"22":22,"26":26,"30":30,"31":31,"33":33,"35":35,"53":53}],33:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9194,7 +9545,7 @@ var ErrorDetails = exports.ErrorDetails = {
   WEBVTT_EXCEPTION: 'webVTTException'
 };
 
-},{}],31:[function(_dereq_,module,exports){
+},{}],34:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9209,11 +9560,11 @@ var _createClass = function () { function defineProperties(target, props) { for 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      *
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      */
 
-var _logger = _dereq_(50);
+var _logger = _dereq_(53);
 
-var _errors = _dereq_(30);
+var _errors = _dereq_(33);
 
-var _events = _dereq_(32);
+var _events = _dereq_(35);
 
 var _events2 = _interopRequireDefault(_events);
 
@@ -9303,7 +9654,7 @@ var EventHandler = function () {
 
 exports.default = EventHandler;
 
-},{"30":30,"32":32,"50":50}],32:[function(_dereq_,module,exports){
+},{"33":33,"35":35,"53":53}],35:[function(_dereq_,module,exports){
 'use strict';
 
 module.exports = {
@@ -9315,27 +9666,27 @@ module.exports = {
   MEDIA_DETACHING: 'hlsMediaDetaching',
   // fired when MediaSource has been detached from media element - data: { }
   MEDIA_DETACHED: 'hlsMediaDetached',
-  // fired when we buffer is going to be resetted
+  // fired when we buffer is going to be reset - data: { }
   BUFFER_RESET: 'hlsBufferReset',
   // fired when we know about the codecs that we need buffers for to push into - data: {tracks : { container, codec, levelCodec, initSegment, metadata }}
   BUFFER_CODECS: 'hlsBufferCodecs',
-  // fired when sourcebuffers have been created data: { tracks : tracks}
+  // fired when sourcebuffers have been created - data: { tracks : tracks }
   BUFFER_CREATED: 'hlsBufferCreated',
   // fired when we append a segment to the buffer - data: { segment: segment object }
   BUFFER_APPENDING: 'hlsBufferAppending',
-  // fired when we are done with appending a media segment to the buffer data : { parent : segment parent that triggered BUFFER_APPENDING , pending : nb of segments waiting for appending for this segment parent}
+  // fired when we are done with appending a media segment to the buffer - data : { parent : segment parent that triggered BUFFER_APPENDING, pending : nb of segments waiting for appending for this segment parent}
   BUFFER_APPENDED: 'hlsBufferAppended',
-  // fired when the stream is finished and we want to notify the media buffer that there will be no more data
+  // fired when the stream is finished and we want to notify the media buffer that there will be no more data - data: { }
   BUFFER_EOS: 'hlsBufferEos',
-  // fired when the media buffer should be flushed - data {startOffset, endOffset}
+  // fired when the media buffer should be flushed - data { startOffset, endOffset }
   BUFFER_FLUSHING: 'hlsBufferFlushing',
-  // fired when the media has been flushed
+  // fired when the media buffer has been flushed - data: { }
   BUFFER_FLUSHED: 'hlsBufferFlushed',
   // fired to signal that a manifest loading starts - data: { url : manifestURL}
   MANIFEST_LOADING: 'hlsManifestLoading',
-  // fired after manifest has been loaded - data: { levels : [available quality levels] , audioTracks : [ available audio tracks], url : manifestURL, stats : { trequest, tfirst, tload, mtime}}
+  // fired after manifest has been loaded - data: { levels : [available quality levels], audioTracks : [ available audio tracks], url : manifestURL, stats : { trequest, tfirst, tload, mtime}}
   MANIFEST_LOADED: 'hlsManifestLoaded',
-  // fired after manifest has been parsed - data: { levels : [available quality levels] , firstLevel : index of first quality level appearing in Manifest}
+  // fired after manifest has been parsed - data: { levels : [available quality levels], firstLevel : index of first quality level appearing in Manifest}
   MANIFEST_PARSED: 'hlsManifestParsed',
   // fired when a level switch is requested - data: { level : id of new level } // deprecated in favor LEVEL_SWITCHING
   LEVEL_SWITCH: 'hlsLevelSwitch',
@@ -9343,79 +9694,79 @@ module.exports = {
   LEVEL_SWITCHING: 'hlsLevelSwitching',
   // fired when a level switch is effective - data: { level : id of new level }
   LEVEL_SWITCHED: 'hlsLevelSwitched',
-  // fired when a level playlist loading starts - data: { url : level URL  level : id of level being loaded}
+  // fired when a level playlist loading starts - data: { url : level URL, level : id of level being loaded}
   LEVEL_LOADING: 'hlsLevelLoading',
   // fired when a level playlist loading finishes - data: { details : levelDetails object, level : id of loaded level, stats : { trequest, tfirst, tload, mtime} }
   LEVEL_LOADED: 'hlsLevelLoaded',
-  // fired when a level's details have been updated based on previous details, after it has been loaded. - data: { details : levelDetails object, level : id of updated level }
+  // fired when a level's details have been updated based on previous details, after it has been loaded - data: { details : levelDetails object, level : id of updated level }
   LEVEL_UPDATED: 'hlsLevelUpdated',
   // fired when a level's PTS information has been updated after parsing a fragment - data: { details : levelDetails object, level : id of updated level, drift: PTS drift observed when parsing last fragment }
   LEVEL_PTS_UPDATED: 'hlsLevelPtsUpdated',
-  // fired to notify that audio track lists has been updated data: { audioTracks : audioTracks}
+  // fired to notify that audio track lists has been updated - data: { audioTracks : audioTracks }
   AUDIO_TRACKS_UPDATED: 'hlsAudioTracksUpdated',
-  // fired when an audio track switch occurs - data: {  id : audio track id} // deprecated in favor AUDIO_TRACK_SWITCHING
+  // fired when an audio track switch occurs - data: { id : audio track id } // deprecated in favor AUDIO_TRACK_SWITCHING
   AUDIO_TRACK_SWITCH: 'hlsAudioTrackSwitch',
-  // fired when an audio track switching is requested - data: {  id : audio track id}
+  // fired when an audio track switching is requested - data: { id : audio track id }
   AUDIO_TRACK_SWITCHING: 'hlsAudioTrackSwitching',
-  // fired when an audio track switch actually occurs - data: {  id : audio track id}
+  // fired when an audio track switch actually occurs - data: { id : audio track id }
   AUDIO_TRACK_SWITCHED: 'hlsAudioTrackSwitched',
-  // fired when an audio track loading starts - data: { url : audio track URL  id : audio track id}
+  // fired when an audio track loading starts - data: { url : audio track URL, id : audio track id }
   AUDIO_TRACK_LOADING: 'hlsAudioTrackLoading',
-  // fired when an audio track loading  finishes - data: { details : levelDetails object, id : audio track id, stats : { trequest, tfirst, tload, mtime} }
+  // fired when an audio track loading finishes - data: { details : levelDetails object, id : audio track id, stats : { trequest, tfirst, tload, mtime } }
   AUDIO_TRACK_LOADED: 'hlsAudioTrackLoaded',
-  // fired to notify that subtitle track lists has been updated data: { subtitleTracks : subtitleTracks}
+  // fired to notify that subtitle track lists has been updated - data: { subtitleTracks : subtitleTracks }
   SUBTITLE_TRACKS_UPDATED: 'hlsSubtitleTracksUpdated',
-  // fired when an subtitle track switch occurs - data: {  id : subtitle track id}
+  // fired when an subtitle track switch occurs - data: { id : subtitle track id }
   SUBTITLE_TRACK_SWITCH: 'hlsSubtitleTrackSwitch',
-  // fired when an subtitle track loading starts - data: { url : subtitle track URL  id : subtitle track id}
+  // fired when a subtitle track loading starts - data: { url : subtitle track URL, id : subtitle track id }
   SUBTITLE_TRACK_LOADING: 'hlsSubtitleTrackLoading',
-  // fired when an subtitle track loading  finishes - data: { details : levelDetails object, id : subtitle track id, stats : { trequest, tfirst, tload, mtime} }
+  // fired when a subtitle track loading finishes - data: { details : levelDetails object, id : subtitle track id, stats : { trequest, tfirst, tload, mtime } }
   SUBTITLE_TRACK_LOADED: 'hlsSubtitleTrackLoaded',
-  // fired when a subtitle fragment has been processed - data: { success : boolean, frag : the processed frag}
+  // fired when a subtitle fragment has been processed - data: { success : boolean, frag : the processed frag }
   SUBTITLE_FRAG_PROCESSED: 'hlsSubtitleFragProcessed',
-  // fired when the first timestamp is found. - data: { id : demuxer id, initPTS: initPTS , frag : fragment object}
+  // fired when the first timestamp is found - data: { id : demuxer id, initPTS: initPTS, frag : fragment object }
   INIT_PTS_FOUND: 'hlsInitPtsFound',
-  // fired when a fragment loading starts - data: { frag : fragment object}
+  // fired when a fragment loading starts - data: { frag : fragment object }
   FRAG_LOADING: 'hlsFragLoading',
-  // fired when a fragment loading is progressing - data: { frag : fragment object, { trequest, tfirst, loaded}}
+  // fired when a fragment loading is progressing - data: { frag : fragment object, { trequest, tfirst, loaded } }
   FRAG_LOAD_PROGRESS: 'hlsFragLoadProgress',
-  // Identifier for fragment load aborting for emergency switch down - data: {frag : fragment object}
+  // Identifier for fragment load aborting for emergency switch down - data: { frag : fragment object }
   FRAG_LOAD_EMERGENCY_ABORTED: 'hlsFragLoadEmergencyAborted',
-  // fired when a fragment loading is completed - data: { frag : fragment object, payload : fragment payload, stats : { trequest, tfirst, tload, length}}
+  // fired when a fragment loading is completed - data: { frag : fragment object, payload : fragment payload, stats : { trequest, tfirst, tload, length } }
   FRAG_LOADED: 'hlsFragLoaded',
-  // fired when a fragment has finished decrypting - data: { id : demuxer id, frag: fragment object, stats : {tstart,tdecrypt} }
+  // fired when a fragment has finished decrypting - data: { id : demuxer id, frag: fragment object, stats : { tstart, tdecrypt } }
   FRAG_DECRYPTED: 'hlsFragDecrypted',
-  // fired when Init Segment has been extracted from fragment - data: { id : demuxer id, frag: fragment object, moov : moov MP4 box, codecs : codecs found while parsing fragment}
+  // fired when Init Segment has been extracted from fragment - data: { id : demuxer id, frag: fragment object, moov : moov MP4 box, codecs : codecs found while parsing fragment }
   FRAG_PARSING_INIT_SEGMENT: 'hlsFragParsingInitSegment',
-  // fired when parsing sei text is completed - data: { id : demuxer id, , frag: fragment object, samples : [ sei samples pes ] }
+  // fired when parsing sei text is completed - data: { id : demuxer id, frag: fragment object, samples : [ sei samples pes ] }
   FRAG_PARSING_USERDATA: 'hlsFragParsingUserdata',
   // fired when parsing id3 is completed - data: { id : demuxer id, frag: fragment object, samples : [ id3 samples pes ] }
   FRAG_PARSING_METADATA: 'hlsFragParsingMetadata',
   // fired when data have been extracted from fragment - data: { id : demuxer id, frag: fragment object, data1 : moof MP4 box or TS fragments, data2 : mdat MP4 box or null}
   FRAG_PARSING_DATA: 'hlsFragParsingData',
-  // fired when fragment parsing is completed - data: { id : demuxer id,frag: fragment object }
+  // fired when fragment parsing is completed - data: { id : demuxer id, frag: fragment object }
   FRAG_PARSED: 'hlsFragParsed',
-  // fired when fragment remuxed MP4 boxes have all been appended into SourceBuffer - data: { id : demuxer id,frag : fragment object, stats : { trequest, tfirst, tload, tparsed, tbuffered, length} }
+  // fired when fragment remuxed MP4 boxes have all been appended into SourceBuffer - data: { id : demuxer id, frag : fragment object, stats : { trequest, tfirst, tload, tparsed, tbuffered, length, bwEstimate } }
   FRAG_BUFFERED: 'hlsFragBuffered',
   // fired when fragment matching with current media position is changing - data : { id : demuxer id, frag : fragment object }
   FRAG_CHANGED: 'hlsFragChanged',
-  // Identifier for a FPS drop event - data: {curentDropped, currentDecoded, totalDroppedFrames}
+  // Identifier for a FPS drop event - data: { curentDropped, currentDecoded, totalDroppedFrames }
   FPS_DROP: 'hlsFpsDrop',
-  //triggered when FPS drop triggers auto level capping - data: {level, droppedlevel}
+  //triggered when FPS drop triggers auto level capping - data: { level, droppedlevel }
   FPS_DROP_LEVEL_CAPPING: 'hlsFpsDropLevelCapping',
-  // Identifier for an error event - data: { type : error type, details : error details, fatal : if true, hls.js cannot/will not try to recover, if false, hls.js will try to recover,other error specific data}
+  // Identifier for an error event - data: { type : error type, details : error details, fatal : if true, hls.js cannot/will not try to recover, if false, hls.js will try to recover,other error specific data }
   ERROR: 'hlsError',
-  // fired when hls.js instance starts destroying. Different from MEDIA_DETACHED as one could want to detach and reattach a media to the instance of hls.js to handle mid-rolls for example
+  // fired when hls.js instance starts destroying. Different from MEDIA_DETACHED as one could want to detach and reattach a media to the instance of hls.js to handle mid-rolls for example - data: { }
   DESTROYING: 'hlsDestroying',
-  // fired when a decrypt key loading starts - data: { frag : fragment object}
+  // fired when a decrypt key loading starts - data: { frag : fragment object }
   KEY_LOADING: 'hlsKeyLoading',
-  // fired when a decrypt key loading is completed - data: { frag : fragment object, payload : key payload, stats : { trequest, tfirst, tload, length}}
+  // fired when a decrypt key loading is completed - data: { frag : fragment object, payload : key payload, stats : { trequest, tfirst, tload, length } }
   KEY_LOADED: 'hlsKeyLoaded',
-  // fired upon stream controller state transitions - data: {previousState, nextState}
+  // fired upon stream controller state transitions - data: { previousState, nextState }
   STREAM_STATE_TRANSITION: 'hlsStreamStateTransition'
 };
 
-},{}],33:[function(_dereq_,module,exports){
+},{}],36:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9477,7 +9828,7 @@ var AAC = function () {
 
 exports.default = AAC;
 
-},{}],34:[function(_dereq_,module,exports){
+},{}],37:[function(_dereq_,module,exports){
 "use strict";
 
 /**
@@ -9574,10 +9925,10 @@ var BufferHelper = {
 
 module.exports = BufferHelper;
 
-},{}],35:[function(_dereq_,module,exports){
+},{}],38:[function(_dereq_,module,exports){
 'use strict';
 
-var _logger = _dereq_(50);
+var _logger = _dereq_(53);
 
 var LevelHelper = {
 
@@ -9619,7 +9970,7 @@ var LevelHelper = {
 
     // if at least one fragment contains PTS info, recompute PTS information for all fragments
     if (PTSFrag) {
-      LevelHelper.updateFragPTSDTS(newDetails, PTSFrag.sn, PTSFrag.startPTS, PTSFrag.endPTS, PTSFrag.startDTS, PTSFrag.endDTS);
+      LevelHelper.updateFragPTSDTS(newDetails, PTSFrag, PTSFrag.startPTS, PTSFrag.endPTS, PTSFrag.startDTS, PTSFrag.endDTS);
     } else {
       // ensure that delta is within oldfragments range
       // also adjust sliding in case delta is 0 (we could have old=[50-60] and new=old=[50-61])
@@ -9638,15 +9989,8 @@ var LevelHelper = {
     return;
   },
 
-  updateFragPTSDTS: function updateFragPTSDTS(details, sn, startPTS, endPTS, startDTS, endDTS) {
-    var fragIdx, fragments, frag, i;
-    // exit if sn out of range
-    if (!details || sn < details.startSN || sn > details.endSN) {
-      return 0;
-    }
-    fragIdx = sn - details.startSN;
-    fragments = details.fragments;
-    frag = fragments[fragIdx];
+  updateFragPTSDTS: function updateFragPTSDTS(details, frag, startPTS, endPTS, startDTS, endDTS) {
+    // update frag PTS/DTS
     if (!isNaN(frag.startPTS)) {
       // delta PTS between audio and video
       var deltaPTS = Math.abs(frag.startPTS - startPTS);
@@ -9662,12 +10006,21 @@ var LevelHelper = {
     }
 
     var drift = startPTS - frag.start;
-
     frag.start = frag.startPTS = startPTS;
     frag.endPTS = endPTS;
     frag.startDTS = startDTS;
     frag.endDTS = endDTS;
     frag.duration = endPTS - startPTS;
+
+    var sn = frag.sn;
+    // exit if sn out of range
+    if (!details || sn < details.startSN || sn > details.endSN) {
+      return 0;
+    }
+    var fragIdx, fragments, i;
+    fragIdx = sn - details.startSN;
+    fragments = details.fragments;
+    frag = fragments[fragIdx];
     // adjust fragment PTS/duration from seqnum-1 to frag 0
     for (i = fragIdx; i > 0; i--) {
       LevelHelper.updatePTS(fragments, i, i - 1);
@@ -9707,7 +10060,7 @@ var LevelHelper = {
       if (toIdx > fromIdx) {
         fragTo.start = fragFrom.start + fragFrom.duration;
       } else {
-        fragTo.start = fragFrom.start - fragTo.duration;
+        fragTo.start = Math.max(fragFrom.start - fragTo.duration, 0);
       }
     }
   }
@@ -9717,7 +10070,7 @@ var LevelHelper = {
 
 module.exports = LevelHelper;
 
-},{"50":50}],36:[function(_dereq_,module,exports){
+},{"53":53}],39:[function(_dereq_,module,exports){
 /**
  * HLS interface
  */
@@ -9729,33 +10082,41 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _events = _dereq_(32);
+var _urlToolkit = _dereq_(2);
+
+var _urlToolkit2 = _interopRequireDefault(_urlToolkit);
+
+var _events = _dereq_(35);
 
 var _events2 = _interopRequireDefault(_events);
 
-var _errors = _dereq_(30);
+var _errors = _dereq_(33);
 
-var _playlistLoader = _dereq_(40);
+var _playlistLoader = _dereq_(43);
 
 var _playlistLoader2 = _interopRequireDefault(_playlistLoader);
 
-var _fragmentLoader = _dereq_(38);
+var _fragmentLoader = _dereq_(41);
 
 var _fragmentLoader2 = _interopRequireDefault(_fragmentLoader);
 
-var _keyLoader = _dereq_(39);
+var _keyLoader = _dereq_(42);
 
 var _keyLoader2 = _interopRequireDefault(_keyLoader);
 
-var _streamController = _dereq_(12);
+var _streamController = _dereq_(13);
 
 var _streamController2 = _interopRequireDefault(_streamController);
 
-var _levelController = _dereq_(11);
+var _levelController = _dereq_(12);
 
 var _levelController2 = _interopRequireDefault(_levelController);
 
-var _logger = _dereq_(50);
+var _id3TrackController = _dereq_(11);
+
+var _id3TrackController2 = _interopRequireDefault(_id3TrackController);
+
+var _logger = _dereq_(53);
 
 var _events3 = _dereq_(1);
 
@@ -9772,13 +10133,20 @@ var Hls = function () {
     key: 'isSupported',
     value: function isSupported() {
       window.MediaSource = window.MediaSource || window.WebKitMediaSource;
-      return window.MediaSource && typeof window.MediaSource.isTypeSupported === 'function' && window.MediaSource.isTypeSupported('video/mp4; codecs="avc1.42E01E,mp4a.40.2"');
+      window.SourceBuffer = window.SourceBuffer || window.WebKitSourceBuffer;
+
+      var isTypeSupported = window.MediaSource && typeof window.MediaSource.isTypeSupported === 'function' && window.MediaSource.isTypeSupported('video/mp4; codecs="avc1.42E01E,mp4a.40.2"');
+      var hasSupportedSourceBuffer = window.SourceBuffer && window.SourceBuffer.prototype && typeof window.SourceBuffer.prototype.appendBuffer === 'function' && typeof window.SourceBuffer.prototype.remove === 'function';
+      var isSafari = navigator.vendor && navigator.vendor.indexOf('Apple') > -1;
+
+      // safari does not expose SourceBuffer globally so checking SourceBuffer.prototype is impossible
+      return isTypeSupported && (hasSupportedSourceBuffer || isSafari);
     }
   }, {
     key: 'version',
     get: function get() {
       // replaced with browserify-versionify transform
-      return '0.7.4';
+      return '0.7.8';
     }
   }, {
     key: 'Events',
@@ -9868,6 +10236,7 @@ var Hls = function () {
     var playListLoader = new _playlistLoader2.default(this);
     var fragmentLoader = new _fragmentLoader2.default(this);
     var keyLoader = new _keyLoader2.default(this);
+    var id3TrackController = new _id3TrackController2.default(this);
 
     // network controllers
     var levelController = this.levelController = new _levelController2.default(this);
@@ -9881,7 +10250,7 @@ var Hls = function () {
     }
     this.networkControllers = networkControllers;
 
-    var coreComponents = [playListLoader, fragmentLoader, keyLoader, abrController, bufferController, capLevelController, fpsController];
+    var coreComponents = [playListLoader, fragmentLoader, keyLoader, abrController, bufferController, capLevelController, fpsController, id3TrackController];
 
     // optional audio track and subtitle controller
     Controller = config.audioTrackController;
@@ -9937,6 +10306,7 @@ var Hls = function () {
   }, {
     key: 'loadSource',
     value: function loadSource(url) {
+      url = _urlToolkit2.default.buildAbsoluteURL(window.location.href, url, { alwaysNormalize: true });
       _logger.logger.log('loadSource:' + url);
       this.url = url;
       // when attaching to a source URL, trigger a playlist load
@@ -10237,15 +10607,15 @@ var Hls = function () {
 
 exports.default = Hls;
 
-},{"1":1,"11":11,"12":12,"30":30,"32":32,"38":38,"39":39,"4":4,"40":40,"50":50}],37:[function(_dereq_,module,exports){
+},{"1":1,"11":11,"12":12,"13":13,"2":2,"33":33,"35":35,"4":4,"41":41,"42":42,"43":43,"53":53}],40:[function(_dereq_,module,exports){
 'use strict';
 
 // This is mostly for support of the es6 module export
 // syntax with the babel compiler, it looks like it doesnt support
 // function exports like we are used to in node/commonjs
-module.exports = _dereq_(36).default;
+module.exports = _dereq_(39).default;
 
-},{"36":36}],38:[function(_dereq_,module,exports){
+},{"39":39}],41:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10254,17 +10624,17 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _events = _dereq_(32);
+var _events = _dereq_(35);
 
 var _events2 = _interopRequireDefault(_events);
 
-var _eventHandler = _dereq_(31);
+var _eventHandler = _dereq_(34);
 
 var _eventHandler2 = _interopRequireDefault(_eventHandler);
 
-var _errors = _dereq_(30);
+var _errors = _dereq_(33);
 
-var _logger = _dereq_(50);
+var _logger = _dereq_(53);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10378,7 +10748,7 @@ var FragmentLoader = function (_EventHandler) {
 
 exports.default = FragmentLoader;
 
-},{"30":30,"31":31,"32":32,"50":50}],39:[function(_dereq_,module,exports){
+},{"33":33,"34":34,"35":35,"53":53}],42:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10387,17 +10757,17 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _events = _dereq_(32);
+var _events = _dereq_(35);
 
 var _events2 = _interopRequireDefault(_events);
 
-var _eventHandler = _dereq_(31);
+var _eventHandler = _dereq_(34);
 
 var _eventHandler2 = _interopRequireDefault(_eventHandler);
 
-var _errors = _dereq_(30);
+var _errors = _dereq_(33);
 
-var _logger = _dereq_(50);
+var _logger = _dereq_(53);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10507,7 +10877,7 @@ var KeyLoader = function (_EventHandler) {
 
 exports.default = KeyLoader;
 
-},{"30":30,"31":31,"32":32,"50":50}],40:[function(_dereq_,module,exports){
+},{"33":33,"34":34,"35":35,"53":53}],43:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10522,21 +10892,21 @@ var _urlToolkit = _dereq_(2);
 
 var _urlToolkit2 = _interopRequireDefault(_urlToolkit);
 
-var _events = _dereq_(32);
+var _events = _dereq_(35);
 
 var _events2 = _interopRequireDefault(_events);
 
-var _eventHandler = _dereq_(31);
+var _eventHandler = _dereq_(34);
 
 var _eventHandler2 = _interopRequireDefault(_eventHandler);
 
-var _errors = _dereq_(30);
+var _errors = _dereq_(33);
 
-var _attrList = _dereq_(44);
+var _attrList = _dereq_(47);
 
 var _attrList2 = _interopRequireDefault(_attrList);
 
-var _logger = _dereq_(50);
+var _logger = _dereq_(53);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11148,7 +11518,7 @@ var PlaylistLoader = function (_EventHandler) {
 
 exports.default = PlaylistLoader;
 
-},{"2":2,"30":30,"31":31,"32":32,"44":44,"50":50}],41:[function(_dereq_,module,exports){
+},{"2":2,"33":33,"34":34,"35":35,"47":47,"53":53}],44:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11683,7 +12053,7 @@ var MP4 = function () {
 
 exports.default = MP4;
 
-},{}],42:[function(_dereq_,module,exports){
+},{}],45:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11694,25 +12064,28 @@ var _createClass = function () { function defineProperties(target, props) { for 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       * fMP4 remuxer
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      */
 
-var _aac = _dereq_(33);
+var _aac = _dereq_(36);
 
 var _aac2 = _interopRequireDefault(_aac);
 
-var _events = _dereq_(32);
+var _events = _dereq_(35);
 
 var _events2 = _interopRequireDefault(_events);
 
-var _logger = _dereq_(50);
+var _logger = _dereq_(53);
 
-var _mp4Generator = _dereq_(41);
+var _mp4Generator = _dereq_(44);
 
 var _mp4Generator2 = _interopRequireDefault(_mp4Generator);
 
-var _errors = _dereq_(30);
+var _errors = _dereq_(33);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+// 10 seconds
+var MAX_SILENT_FRAME_DURATION = 10 * 1000;
 
 var MP4Remuxer = function () {
   function MP4Remuxer(observer, config, typeSupported, vendor) {
@@ -11752,12 +12125,22 @@ var MP4Remuxer = function () {
         // calculated in remuxAudio.
         //logger.log('nb AAC samples:' + audioTrack.samples.length);
         if (audioTrack.samples.length) {
+          // if initSegment was generated without video samples, regenerate it again
+          if (!audioTrack.timescale) {
+            _logger.logger.warn('regenerate InitSegment as audio detected');
+            this.generateIS(audioTrack, videoTrack, timeOffset);
+          }
           var audioData = this.remuxAudio(audioTrack, timeOffset, contiguous, accurateTimeOffset);
           //logger.log('nb AVC samples:' + videoTrack.samples.length);
           if (videoTrack.samples.length) {
             var audioTrackLength = void 0;
             if (audioData) {
               audioTrackLength = audioData.endPTS - audioData.startPTS;
+            }
+            // if initSegment was generated without video samples, regenerate it again
+            if (!videoTrack.timescale) {
+              _logger.logger.warn('regenerate InitSegment as video detected');
+              this.generateIS(audioTrack, videoTrack, timeOffset);
             }
             this.remuxVideo(videoTrack, timeOffset, contiguous, audioTrackLength);
           }
@@ -12147,14 +12530,14 @@ var MP4Remuxer = function () {
       // for audio samples, also consider consecutive fragments as being contiguous (even if a level switch occurs),
       // for sake of clarity:
       // consecutive fragments are frags with
-      //  - less than 100ms gaps between new time offset and next expected PTS OR
+      //  - less than 100ms gaps between new time offset (if accurate) and next expected PTS OR
       //  - less than 20 audio frames distance
       // contiguous fragments are consecutive fragments from same quality level (same level, new SN = old SN + 1)
       // this helps ensuring audio continuity
       // and this also avoids audio glitches/cut when switching quality, or reporting wrong duration on first audio frame
 
       nextAudioPts = this.nextAudioPts;
-      contiguous |= inputSamples.length && nextAudioPts && (Math.abs(timeOffset - nextAudioPts / inputTimeScale) < 0.1 || Math.abs(inputSamples[0].pts - nextAudioPts - initDTS) < 20 * inputSampleDuration);
+      contiguous |= inputSamples.length && nextAudioPts && (accurateTimeOffset && Math.abs(timeOffset - nextAudioPts / inputTimeScale) < 0.1 || Math.abs(inputSamples[0].pts - nextAudioPts - initDTS) < 20 * inputSampleDuration);
 
       if (!contiguous) {
         // if fragments are not contiguous, let's use timeOffset to compute next Audio PTS
@@ -12174,18 +12557,23 @@ var MP4Remuxer = function () {
               ptsNorm = ptsNormalize(sample.pts - initDTS, nextAudioPts),
               delta = ptsNorm - nextPtsNorm;
 
+          var duration = Math.abs(1000 * delta / inputTimeScale);
+
           // If we're overlapping by more than a duration, drop this sample
           if (delta <= -inputSampleDuration) {
-            _logger.logger.warn('Dropping 1 audio frame @ ' + (nextPtsNorm / inputTimeScale).toFixed(3) + 's due to ' + Math.abs(1000 * delta / inputTimeScale) + ' ms overlap.');
+            _logger.logger.warn('Dropping 1 audio frame @ ' + (nextPtsNorm / inputTimeScale).toFixed(3) + 's due to ' + duration + ' ms overlap.');
             inputSamples.splice(i, 1);
             track.len -= sample.unit.length;
             // Don't touch nextPtsNorm or i
           }
-          // Otherwise, if we're more than a frame away from where we should be, insert missing frames
-          // also only inject silent audio frames if currentTime !== 0 (nextPtsNorm !== 0)
-          else if (delta >= inputSampleDuration && nextPtsNorm) {
+
+          // Insert missing frames if:
+          // 1: We're more than one frame away
+          // 2: Not more than MAX_SILENT_FRAME_DURATION away
+          // 3: currentTime (aka nextPtsNorm) is not 0
+          else if (delta >= inputSampleDuration && duration < MAX_SILENT_FRAME_DURATION && nextPtsNorm) {
               var missing = Math.round(delta / inputSampleDuration);
-              _logger.logger.warn('Injecting ' + missing + ' audio frame @ ' + (nextPtsNorm / inputTimeScale).toFixed(3) + 's due to ' + 1000 * delta / inputTimeScale + ' ms gap.');
+              _logger.logger.warn('Injecting ' + missing + ' audio frame @ ' + (nextPtsNorm / inputTimeScale).toFixed(3) + 's due to ' + Math.round(1000 * delta / inputTimeScale) + ' ms gap.');
               for (var j = 0; j < missing; j++) {
                 newStamp = nextPtsNorm + initDTS;
                 newStamp = Math.max(newStamp, initDTS);
@@ -12205,10 +12593,10 @@ var MP4Remuxer = function () {
               nextPtsNorm += inputSampleDuration;
               i += 1;
             }
-            // Otherwise, we're within half a frame duration, so just adjust pts
+            // Otherwise, just adjust pts
             else {
                 if (Math.abs(delta) > 0.1 * inputSampleDuration) {
-                  //logger.log(`Invalid frame delta ${Math.round(ptsNorm - nextPtsNorm + inputSampleDuration)} at PTS ${Math.round(ptsNorm / 90)} (should be ${Math.round(inputSampleDuration)}).`);
+                  // logger.log(`Invalid frame delta ${Math.round(ptsNorm - nextPtsNorm + inputSampleDuration)} at PTS ${Math.round(ptsNorm / 90)} (should be ${Math.round(inputSampleDuration)}).`);
                 }
                 nextPtsNorm += inputSampleDuration;
                 if (i === 0) {
@@ -12242,7 +12630,7 @@ var MP4Remuxer = function () {
           if (contiguous && track.isAAC) {
             // log delta
             if (_delta) {
-              if (_delta > 0) {
+              if (_delta > 0 && _delta < MAX_SILENT_FRAME_DURATION) {
                 numMissingFrames = Math.round((ptsnorm - nextAudioPts) / inputSampleDuration);
                 _logger.logger.log(_delta + ' ms hole between AAC samples detected,filling it');
                 if (numMissingFrames > 0) {
@@ -12255,7 +12643,7 @@ var MP4Remuxer = function () {
                 // if we have frame overlap, overlapping for more than half a frame duraion
               } else if (_delta < -12) {
                 // drop overlapping audio frames... browser will deal with it
-                _logger.logger.log(-_delta + ' ms overlapping between AAC samples detected, drop frame');
+                _logger.logger.log('drop overlapping AAC sample, expected/parsed/delta:' + (nextAudioPts / inputTimeScale).toFixed(3) + 's/' + (ptsnorm / inputTimeScale).toFixed(3) + 's/' + -_delta + 'ms');
                 track.len -= unit.byteLength;
                 continue;
               }
@@ -12486,7 +12874,7 @@ var MP4Remuxer = function () {
 
 exports.default = MP4Remuxer;
 
-},{"30":30,"32":32,"33":33,"41":41,"50":50}],43:[function(_dereq_,module,exports){
+},{"33":33,"35":35,"36":36,"44":44,"53":53}],46:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -12498,7 +12886,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      */
 
 
-var _events = _dereq_(32);
+var _events = _dereq_(35);
 
 var _events2 = _interopRequireDefault(_events);
 
@@ -12551,7 +12939,7 @@ var PassThroughRemuxer = function () {
 
 exports.default = PassThroughRemuxer;
 
-},{"32":32}],44:[function(_dereq_,module,exports){
+},{"35":35}],47:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -12661,7 +13049,7 @@ var AttrList = function () {
 
 exports.default = AttrList;
 
-},{}],45:[function(_dereq_,module,exports){
+},{}],48:[function(_dereq_,module,exports){
 "use strict";
 
 var BinarySearch = {
@@ -12706,7 +13094,7 @@ var BinarySearch = {
 
 module.exports = BinarySearch;
 
-},{}],46:[function(_dereq_,module,exports){
+},{}],49:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14033,10 +14421,10 @@ var Cea608Parser = function () {
 
 exports.default = Cea608Parser;
 
-},{}],47:[function(_dereq_,module,exports){
+},{}],50:[function(_dereq_,module,exports){
 'use strict';
 
-var _vttparser = _dereq_(53);
+var _vttparser = _dereq_(56);
 
 var Cues = {
 
@@ -14098,7 +14486,7 @@ var Cues = {
 
 module.exports = Cues;
 
-},{"53":53}],48:[function(_dereq_,module,exports){
+},{"56":56}],51:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14113,7 +14501,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       * different half-lives.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       */
 
-var _ewma = _dereq_(49);
+var _ewma = _dereq_(52);
 
 var _ewma2 = _interopRequireDefault(_ewma);
 
@@ -14174,7 +14562,7 @@ var EwmaBandWidthEstimator = function () {
 
 exports.default = EwmaBandWidthEstimator;
 
-},{"49":49}],49:[function(_dereq_,module,exports){
+},{"52":52}],52:[function(_dereq_,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -14232,7 +14620,7 @@ var EWMA = function () {
 
 exports.default = EWMA;
 
-},{}],50:[function(_dereq_,module,exports){
+},{}],53:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14317,7 +14705,7 @@ var enableLogs = exports.enableLogs = function enableLogs(debugConfig) {
 
 var logger = exports.logger = exportedLogger;
 
-},{}],51:[function(_dereq_,module,exports){
+},{}],54:[function(_dereq_,module,exports){
 'use strict';
 
 /**
@@ -14337,7 +14725,7 @@ var TimeRanges = {
 
 module.exports = TimeRanges;
 
-},{}],52:[function(_dereq_,module,exports){
+},{}],55:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14649,7 +15037,7 @@ exports.default = function () {
   return VTTCue;
 }();
 
-},{}],53:[function(_dereq_,module,exports){
+},{}],56:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14657,7 +15045,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.fixLineBreaks = undefined;
 
-var _vttcue = _dereq_(52);
+var _vttcue = _dereq_(55);
 
 var _vttcue2 = _interopRequireDefault(_vttcue);
 
@@ -15095,14 +15483,19 @@ VTTParser.prototype = {
 exports.fixLineBreaks = fixLineBreaks;
 exports.default = VTTParser;
 
-},{"52":52}],54:[function(_dereq_,module,exports){
+},{"55":55}],57:[function(_dereq_,module,exports){
 'use strict';
 
-var _vttparser = _dereq_(53);
+var _vttparser = _dereq_(56);
 
 var _vttparser2 = _interopRequireDefault(_vttparser);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// String.prototype.startsWith is not supported in IE11
+var startsWith = function startsWith(inputString, searchString, position) {
+    return inputString.substr(position || 0, searchString.length) === searchString;
+};
 
 var cueString2millis = function cueString2millis(timeString) {
     var ts = parseInt(timeString.substr(-3));
@@ -15119,6 +15512,16 @@ var cueString2millis = function cueString2millis(timeString) {
     ts += 60 * 60 * 1000 * hours;
 
     return ts;
+};
+
+// From https://github.com/darkskyapp/string-hash
+var hash = function hash(text) {
+    var hash = 5381;
+    var i = text.length;
+    while (i) {
+        hash = hash * 33 ^ text.charCodeAt(--i);
+    }
+    return (hash >>> 0).toString();
 };
 
 var calculateOffset = function calculateOffset(vttCCs, cc, presentationTime) {
@@ -15177,13 +15580,17 @@ var WebVTTParser = {
                 }
             }
 
-            if (presentationTime && !localTime) {
-                // If we have MPEGTS but no LOCAL time, offset = presentation time + discontinuity offset
+            if (presentationTime) {
+                // If we have MPEGTS, offset = presentation time + discontinuity offset
                 cueOffset = presentationTime + vttCCs.ccOffset - vttCCs.presentationOffset;
             }
 
             cue.startTime += cueOffset - localTime;
             cue.endTime += cueOffset - localTime;
+
+            // Create a unique hash id for a cue based on start/end times and text.
+            // This helps timeline-controller to avoid showing repeated captions.
+            cue.id = hash(cue.startTime) + hash(cue.endTime) + hash(cue.text);
 
             // Fix encoding of special characters. TODO: Test with all sorts of weird characters.
             cue.text = decodeURIComponent(escape(cue.text));
@@ -15208,14 +15615,14 @@ var WebVTTParser = {
         vttLines.forEach(function (line) {
             if (inHeader) {
                 // Look for X-TIMESTAMP-MAP in header.
-                if (line.startsWith('X-TIMESTAMP-MAP=')) {
+                if (startsWith(line, 'X-TIMESTAMP-MAP=')) {
                     // Once found, no more are allowed anyway, so stop searching.
                     inHeader = false;
                     // Extract LOCAL and MPEGTS.
                     line.substr(16).split(',').forEach(function (timestamp) {
-                        if (timestamp.startsWith('LOCAL:')) {
+                        if (startsWith(timestamp, 'LOCAL:')) {
                             cueTime = timestamp.substr(6);
-                        } else if (timestamp.startsWith('MPEGTS:')) {
+                        } else if (startsWith(timestamp, 'MPEGTS:')) {
                             mpegTs = parseInt(timestamp.substr(7));
                         }
                     });
@@ -15252,7 +15659,7 @@ var WebVTTParser = {
 
 module.exports = WebVTTParser;
 
-},{"53":53}],55:[function(_dereq_,module,exports){
+},{"56":56}],58:[function(_dereq_,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -15263,7 +15670,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       * XHR based logger
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      */
 
-var _logger = _dereq_(50);
+var _logger = _dereq_(53);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -15317,22 +15724,38 @@ var XhrLoader = function () {
       } else {
         xhr = this.loader = new XMLHttpRequest();
       }
+      var stats = this.stats;
+      stats.tfirst = 0;
+      stats.loaded = 0;
+      var xhrSetup = this.xhrSetup;
 
-      xhr.onreadystatechange = this.readystatechange.bind(this);
-      xhr.onprogress = this.loadprogress.bind(this);
-
-      xhr.open('GET', context.url, true);
+      try {
+        if (xhrSetup) {
+          try {
+            xhrSetup(xhr, context.url);
+          } catch (e) {
+            // fix xhrSetup: (xhr, url) => {xhr.setRequestHeader("Content-Language", "test");}
+            // not working, as xhr.setRequestHeader expects xhr.readyState === OPEN
+            xhr.open('GET', context.url, true);
+            xhrSetup(xhr, context.url);
+          }
+        }
+        if (!xhr.readyState) {
+          xhr.open('GET', context.url, true);
+        }
+      } catch (e) {
+        // IE11 throws an exception on xhr.open if attempting to access an HTTP resource over HTTPS
+        this.callbacks.onError({ code: xhr.status, text: e.message }, context);
+        return;
+      }
 
       if (context.rangeEnd) {
         xhr.setRequestHeader('Range', 'bytes=' + context.rangeStart + '-' + (context.rangeEnd - 1));
       }
+      xhr.onreadystatechange = this.readystatechange.bind(this);
+      xhr.onprogress = this.loadprogress.bind(this);
       xhr.responseType = context.responseType;
-      var stats = this.stats;
-      stats.tfirst = 0;
-      stats.loaded = 0;
-      if (this.xhrSetup) {
-        this.xhrSetup(xhr, context.url);
-      }
+
       // setup timeout before we perform request
       this.requestTimeout = window.setTimeout(this.loadtimeout.bind(this), this.config.timeout);
       xhr.send();
@@ -15425,6 +15848,6 @@ var XhrLoader = function () {
 
 exports.default = XhrLoader;
 
-},{"50":50}]},{},[37])(37)
+},{"53":53}]},{},[40])(40)
 });
 //# sourceMappingURL=hls.js.map

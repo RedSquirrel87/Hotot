@@ -25,21 +25,21 @@ function init() {
 	var dst_lang = conf.get_current_profile().preferences.dst_lang;
 	var tweet_id = ui.Main.active_tweet_id;
 	var text = $.trim(ui.ContextMenu.selected_string)
-	ui.Main.do_bing_translate(dst_lang, text,
+	ui.Main.do_translate(dst_lang, text,
 	function (result) {
 	        var content = '';
 	        if (result.responseStatus == 200) {
 			content = $("<span>").text("→" + dst_lang + ": ")
 				.append($("<span>").text(result.responseData.translatedText))
 				.css({
-					'background' : 'transparent url(image/ic16_translate_bing.png) no-repeat',
+					'background' : 'transparent url(image/ic16_translate.png) no-repeat',
 					'padding-left' : '20px'
 				});
 		} else {
 			content = $("<span>").text("ERROR: ")
 				.append($("<span>").text(result.responseDetails))
 				.css({
-					'background' : 'transparent url(image/ic16_translate_bing.png) no-repeat',
+					'background' : 'transparent url(image/ic16_translate.png) no-repeat',
 					'padding-left' : '20px'
 				});
 		}

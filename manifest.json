@@ -7,7 +7,6 @@
       "default_icon": "image/ic24_hotot.png",
       "default_title": "__MSG_hotot_goto__"
    },
-   "content_security_policy": "script-src 'self' 'unsafe-eval' https://maps.googleapis.com/ https://*.twitter.com; object-src 'self' https://www.youtube.com",
    "default_locale": "en",
    "description": "__MSG_hotot_description__",
    "homepage_url": "http://www.redsquirrel87.com/Hotot+.php",
@@ -23,5 +22,5 @@
    "name": "Hotot+",
    "permissions": [ "contextMenus", "tabs", "unlimitedStorage", "notifications", "storage", "*://*/*" ],
    "short_name": "Hotot+",
-   "version": "10.1"
+   "version": "10.2"
 }

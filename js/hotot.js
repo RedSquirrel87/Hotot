@@ -717,7 +717,7 @@ function on_load_finish() {
 		// 3.5: New version check:
 		if (conf.settings.installed_version != conf.vars.version) {
 			ui.Main.new_version_popup();
-			if (conf.vars.version.substr(conf.vars.version.length - 1)  === "k") {
+			if (conf.vars.force_token_reset) {
 				db.get_all_profiles(function (result) {
 					for (var i = 0; i < result.length; i++) {
 						conf.clear_token(result[i].name);

@@ -3,12 +3,13 @@ conf = {
 
 vars: {
       'platform': 'Chrome'
-    , 'version': '10.1'
-    , 'consumer_key': 'Vc5nXsSN4K5vJoWr8JrnbpjlB'
-    , 'consumer_secret': '7HflXSzdU16JAa9CR2zhXWE1NQdDwQqMEX41Ak6k35hTCAtOnw'
+    , 'version': '10.2'
+    , 'consumer_key': 'q0lHWWFGUZU68cx76H5U06S9e'
+    , 'consumer_secret': 'fRX4rAMqrqSsQTAPJ3MmqVMblZ5KlJTgtAzL3WjBZWfUwkWAus'
     , 'column_max_width': 400
     , 'trim_bound': 100
     , 'builtin_themes': ['New Hope','Classic', 'Classic Boy', 'Classic Remix', 'Classic Remix Variant', 'Iron Heart', 'Bare', 'Summer', 'Ocean', 'Grass', 'Lady', 'Smoke' ]
+    , 'force_token_reset': true
 },
 
 default_settings: {

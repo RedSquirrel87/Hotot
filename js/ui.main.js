@@ -17,9 +17,6 @@ default_color: [
         '#2E3333', '#7A005A', '#FF6C00', '#B4FC2C', 
         '#00FC50', '#F4F50A', '#DBFFDB', '#277077'],
 
-bing_token: '',
-bing_expires: '2015-05-02',
-
 // info of blocks. all pages use as containers to display tweets.
 views: {
 },
@@ -237,21 +234,21 @@ function init () {
 	var dst_lang = conf.get_current_profile().preferences.dst_lang;
 	var tweet_id = ui.Main.active_tweet_id;
 	var text = $(tweet_id).find('.text_inner:eq(0)');
-	ui.Main.do_bing_translate(dst_lang, text.attr('alt')||text.text(),
+	ui.Main.do_translate(dst_lang, text.attr('alt')||text.text(),
 	function (result) {
 	        var content = '';
 	        if (result.responseStatus == 200) {
 			content = $("<span>").text("→" + dst_lang + ": ")
 				.append($("<span>").text(result.responseData.translatedText))
 				.css({
-					'background' : 'transparent url(image/ic16_translate_bing.png) no-repeat',
+					'background' : 'transparent url(image/ic16_translate.png) no-repeat',
 					'padding-left' : '20px'
 				});
 		} else {
 			content = $("<span>").text("ERROR: ")
 				.append($("<span>").text(result.responseDetails))
 				.css({
-					'background' : 'transparent url(image/ic16_translate_bing.png) no-repeat',
+					'background' : 'transparent url(image/ic16_translate.png) no-repeat',
 					'padding-left' : '20px'
 				});
 		}
@@ -1969,19 +1966,22 @@ function ctrl_btn_to_li(btn) {
     return $($(btn).parents('.card')[0]);
 },
 
-get_bing_translated_text:
-function get_bing_translated_text(dst_lang, text, callback) {
-	var url = "http://api.microsofttranslator.com/V2/Ajax.svc/Translate" + "?appId=Bearer " 
-	+ encodeURIComponent(ui.Main.bing_token) + "&from=&to=" 
-	+ encodeURIComponent(dst_lang) + "&text=" 
-	+ encodeURIComponent(text.replace(ui.Template.reg_link_g, ""));
+get_google_translate_text:
+function get_google_translate_text(dst_lang, text, callback) {
+	var url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=" + 
+	encodeURIComponent(dst_lang) + "&dt=t&q=" + encodeURIComponent(text.replace(ui.Template.reg_link_g, ""));
 
 	var processData = function (data) {
 		var result = {};
 	        result.responseData = {};
 	        result.lang = "";
 	        result.responseStatus = 200;
-	        result.responseData.translatedText = util.unicodeToChars(data).replace(new RegExp('\\\\', 'g'),'');
+		result.responseData.translatedText = "";
+		var text_array = data[0];
+		for (var key in text_array) {
+			result.responseData.translatedText += util.unicodeToChars(text_array[key][0]).replace(new RegExp('\\\\', 'g'),'');
+		}
+		result.responseData.translatedText = result.responseData.translatedText.replace(new RegExp('…', 'g'),'');
 	        callback(result);
 		toast.set(_('successfully')).show(1);
 	} 
@@ -1992,7 +1992,6 @@ function get_bing_translated_text(dst_lang, text, callback) {
 			processData(data);
 		},
 		error: function(jqXHR, textStatus, errorThrown) {
-			ui.Main.bing_expires = '2015-05-02'; // Try resetting token next time...
 			if (jqXHR.status === 200) {
 				processData(jqXHR.responseText);
 			} else {
@@ -2004,37 +2003,10 @@ function get_bing_translated_text(dst_lang, text, callback) {
 	});
 },
 
-get_bing_access_token:
-function get_bing_access_token(dst_lang, text, callback) { 
-	var url = "https://datamarket.accesscontrol.windows.net/v2/OAuth2-13";
-        var params = {
-            'grant_type': 'client_credentials',
-	    'client_id': 'redsquirrel87',
-            'client_secret': '+yo88zl7KA9/lovCZezyOIe0psc2dVvlJPD1LBR3ZdA=',
-	    'scope': 'http://api.microsofttranslator.com'
-        };
-        globals.twitterClient.post(url, params, 
-	function (result) {
-		if (result && result.access_token) {
-			ui.Main.bing_expires = new Date();
-			ui.Main.bing_token = result.access_token;
-			ui.Main.get_bing_translated_text(dst_lang, text, callback);
-		}
-	},
-	function (error) {
-		toast.set(_('translate_access_token_error')).show(3);
-	});
-},
-
-do_bing_translate:
-function do_bing_translate(dst_lang, text, callback) {	
+do_translate:
+function do_translate(dst_lang, text, callback) {	
     toast.set(_("translating")).show(5);
-    var last = new Date(ui.Main.bing_expires), now = new Date(), diff = new Date(now-last), seconds = diff/1000;
-    if (seconds > 555) { 
-	ui.Main.get_bing_access_token(dst_lang, text, callback);
-    } else {
-	ui.Main.get_bing_translated_text(dst_lang, text, callback);
-    }
+    ui.Main.get_google_translate_text(dst_lang, text, callback);
 },
 
 new_version_popup:
