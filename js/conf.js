@@ -3,13 +3,13 @@ conf = {
 
 vars: {
       'platform': 'Chrome'
-    , 'version': '10.2'
+    , 'version': '10.3'
     , 'consumer_key': 'q0lHWWFGUZU68cx76H5U06S9e'
     , 'consumer_secret': 'fRX4rAMqrqSsQTAPJ3MmqVMblZ5KlJTgtAzL3WjBZWfUwkWAus'
     , 'column_max_width': 400
     , 'trim_bound': 100
     , 'builtin_themes': ['New Hope','Classic', 'Classic Boy', 'Classic Remix', 'Classic Remix Variant', 'Iron Heart', 'Bare', 'Summer', 'Ocean', 'Grass', 'Lady', 'Smoke' ]
-    , 'force_token_reset': true
+    , 'force_token_reset': false
 },
 
 default_settings: {
@@ -33,6 +33,8 @@ default_prefs: {
     'twitter': {
           // Account
         'access_token': ''
+	, 'mentions_count' : 0
+	, 'mentions_reset' : '2017-06-10'
           // Look & Feels
         , 'lang': 'en'
         , 'theme': 'Classic'

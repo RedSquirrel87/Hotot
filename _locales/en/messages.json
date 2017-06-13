@@ -121,7 +121,7 @@
    },   
    "api_error_429": {
       "description": "data/js/lib.twitter.js",
-      "message": "Rate limit exceeded."
+      "message": "Rate limit exceeded. Please retry in a few minutes."
    },   
    "api_error_500": {
       "description": "data/js/lib.twitter.js",
@@ -2531,6 +2531,10 @@
       "description": "data/js/ui.template.js",
       "message": "Unmute"
    },   
+   "unsolicited_mentions": {
+      "description": "data/js/ui.status_box.js",
+      "message": "Unsolicited mentions limit exceeded. Please retry in a few minutes."
+   }, 
    "update": {
       "description": "data/index.html",
       "message": "Update"

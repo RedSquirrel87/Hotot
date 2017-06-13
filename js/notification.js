@@ -75,6 +75,7 @@ function notify_error(text) {
 	isClickable: true
     };
     notification.create(options);
+    $('#audio_error').get(0).play();
 },
 
 notify_fav:

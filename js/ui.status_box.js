@@ -486,28 +486,9 @@ function change_mode(mode) {
     ui.StatusBox.update_status_len();
 },
 
-update_status:
-function update_status(status_text) {
-    if (status_text.length != 0) {
-    
-	var hashtags = status_text.match(ui.Template.reg_hash_tag);
-	db.dump_hashtags(hashtags);
-	
-        toast.set(_('updating_dots')).show();
-        var draft = {
-            'mode': ui.StatusBox.MODE_TWEET,
-            'text': status_text
-        };
-        if (ui.StatusBox.current_mode == ui.StatusBox.MODE_REPLY) {
-            draft.mode = ui.StatusBox.MODE_REPLY;
-            draft.reply_to_id = ui.StatusBox.reply_to_id;
-            draft.recipient = encodeURIComponent($('#status_box .who').text());
-            draft.reply_text = encodeURIComponent($('#status_box .quote').text());
-        }
-	if (ui.StatusBox.MODE_QUOTE) {
-		draft.quote_link = encodeURIComponent($('#status_box .quote_link').text());
-	}
-	
+update_status_go:
+function update_status_go(status_text, draft) {
+	toast.set(_('updating_dots')).show();	
         ui.StatusBox.reset();
 
 	if (conf.get_current_profile().preferences.free_support) {
@@ -552,6 +533,96 @@ function update_status(status_text) {
 	});	
 
         ui.StatusBox.close('slide');
+},
+
+update_status:
+function update_status(status_text) {
+    if (status_text.length != 0) {
+    
+	var hashtags = status_text.match(ui.Template.reg_hash_tag);
+	db.dump_hashtags(hashtags);
+	
+        var draft = {
+            'mode': ui.StatusBox.MODE_TWEET,
+            'text': status_text
+        };
+        if (ui.StatusBox.current_mode == ui.StatusBox.MODE_REPLY) {
+            draft.mode = ui.StatusBox.MODE_REPLY;
+            draft.reply_to_id = ui.StatusBox.reply_to_id;
+            draft.recipient = encodeURIComponent($('#status_box .who').text());
+            draft.reply_text = encodeURIComponent($('#status_box .quote').text());
+        }
+	if (ui.StatusBox.MODE_QUOTE) {
+		draft.quote_link = encodeURIComponent($('#status_box .quote_link').text());
+	}
+		
+	/* Unsolicited mentions check */
+	if (ui.StatusBox.current_mode !== ui.StatusBox.MODE_REPLY) {
+		var mentions = [];
+		var match = ui.Template.reg_user.exec(status_text);
+		while (match != null) {
+			if (match[2].toLowerCase() !== globals.myself.screen_name.toLowerCase()) {
+				mentions.push(match[2]);
+			}
+			match = ui.Template.reg_user.exec(status_text);
+		}
+		if (mentions.length > 0) {
+			var prefs = conf.get_current_profile().preferences;
+			var last = new Date(prefs.mentions_reset), now = new Date(), diff = new Date(now-last), minutes = diff/1000/60;
+			
+			if (minutes > 15) {
+				prefs.mentions_reset = now;
+				prefs.mentions_count = 0;
+				conf.save_prefs(conf.current_name);
+			} else {
+				if (prefs.mentions_count > 5) {
+					notification.notify_error(_('unsolicited_mentions'));
+					ui.StatusBox.last_sent_text = '';
+					ui.StatusBox.save_draft(draft);
+					ui.StatusBox.close('slide');
+					return this;
+				}						
+			}
+								
+			globals.twitterClient.lookup_friendships(mentions, function(result) {
+				if (result.length && result.length > 0) {
+					var mentions_check = false;
+					
+					for (var i = 0; i < result.length; i++) {
+						if ($.inArray("followed_by",result[i].connections) < 0) {
+							prefs.mentions_count++;
+							if (prefs.mentions_count > 5) {
+								mentions_check = true;
+								i = result.length;
+							}
+						}
+					}
+					conf.save_prefs(conf.current_name);
+					
+					if (mentions_check) {
+						notification.notify_error(_('unsolicited_mentions'));
+						ui.StatusBox.last_sent_text = '';
+						ui.StatusBox.save_draft(draft);
+						ui.StatusBox.close('slide');
+					} else {
+						ui.StatusBox.update_status_go(status_text, draft);
+					}
+				} else {
+					ui.StatusBox.update_status_go(status_text, draft);
+				}
+			}, function(error) {
+				notification.notify_error(_('unsolicited_mentions'));
+				ui.StatusBox.last_sent_text = '';
+				ui.StatusBox.save_draft(draft);
+				ui.StatusBox.close('slide');				
+			});
+		} else {
+			ui.StatusBox.update_status_go(status_text, draft);
+		}
+	} else {
+		ui.StatusBox.update_status_go(status_text, draft);
+	}
+	
     }
     return this;
 },

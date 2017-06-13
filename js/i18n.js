@@ -46,7 +46,7 @@ function change(code, callback) {
 	});
 
     if (code != 'en') {
-	$.getScript('_locales/' + code + '/timestring.js').always(function () {
+	$.getScript('js/' + code + '.js').always(function () {
 		moment.locale(false);
 	});
     }

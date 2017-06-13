@@ -2536,6 +2536,10 @@
       "description": "data/js/ui.template.js",
       "message": "Ridai voce"
    },   
+   "unsolicited_mentions": {
+      "description": "data/js/ui.status_box.js",
+      "message": "Hai superato il limite di menzioni non richieste. Riprova tra qualche minuto."
+   }, 
    "update": {
       "description": "data/index.html",
       "message": "Invia"

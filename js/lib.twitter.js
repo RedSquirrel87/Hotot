@@ -582,6 +582,15 @@ function TwitterClient() {
         self.post(url, params, on_success);
     };
 
+    self.lookup_friendships = function lookup_friendships(screen_names, on_success, on_error) {
+        var url = self.api_base + '1.1/friendships/lookup.json';
+        var params = {
+            'screen_name': screen_names.join(),
+	    'tweet_mode': 'extended'
+        };
+        self.get(url, params, on_success, on_error);
+    };
+    
     self.show_friendships = function show_friendships(source, target, on_success) {
         var url = self.api_base + '1.1/friendships/show.json';
         var params = {
